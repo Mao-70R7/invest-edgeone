@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.2.0",
+  "generatedAt": "2026-09-03T14:00:55+08:00",
+  "packagedAt": "2026-09-03T14:02:45+08:00",
+  "runId": "20260903T140002263_github_publish_29580",
+  "pages": [
+    "index.html",
+    "products.html",
+    "detail.html"
+  ],
+  "catalog": "data/catalog.js.gz",
+  "counts": {
+    "catalogProducts": 6178,
+    "detailFiles": 6178,
+    "defaultScatterPlottable": 5382,
+    "defaultScatterEvidenceRail": 796,
+    "sourceProducts": {
+      "geshang": 307,
+      "gffunds_highend": 69,
+      "howbuy": 158,
+      "simuwang": 5644
+    },
+    "metricDefinitions": 17,
+    "gffundsProducts": 69
+  },
+  "sourceCounts": {
+    "geshang": 307,
+    "gffunds_highend": 69,
+    "howbuy": 158,
+    "simuwang": 5644
+  },
+  "accessScope": "public_catalog_plus_scoped_performance_analytics",
+  "authenticatedPerformanceAnalyticsIncluded": true,
+  "restrictedRawDataIncluded": false,
+  "productIdentity": "source_isolated",
+  "comparability": {
+    "defaultMode": "verified_shared_axis",
+    "crossSourceRankingAllowed": true,
+    "crossSourceScoringAllowed": true,
+    "researchPeerRankingAllowed": true,
+    "referenceOnly": true,
+    "formulaAlignment": "formula_aligned_only",
+    "warning": "同图仅表示公式与尺度统一；格上复权净值、排排网复权收益、广发累计净值的费用与估值频率未完全统一。排名为分类内研究参考。"
+  },
+  "allProductMarksContract": {
+    "totalEligible": 6178,
+    "plottableRule": "selected_x_and_y_are_strict_numeric",
+    "missingRule": "every_non_plottable_product_is_rendered_in_evidence_rail"
+  },
+  "detailFileCount": 6178,
+  "compression": "deterministic_gzip_browser_decompression",
+  "navigation": [
+    "数据总览",
+    "产品列表"
+  ]
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>产品列表｜天眼私募</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./assets/private-fund.css?v=20260903T140002263_github_publish_29580">
+</head>
+<body data-page="private-fund-list">
+  <a class="skip-link" href="#mainContent">跳到主要内容</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./index.html"><span class="brand-mark">天眼</span><strong>天眼私募</strong></a>
+      <nav class="nav" aria-label="私募页面导航">
+        <a class="nav-link" href="./index.html">数据总览</a>
+        <a class="nav-link is-active" href="./products.html">产品列表</a>
+        <a class="nav-link advisor-link" href="https://gfinvest.site/">天眼投顾 ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main id="mainContent" class="page-shell" tabindex="-1">
+    <section class="loading-panel page-boot" aria-live="polite">
+      <strong id="pageLoadTitle">正在加载产品列表</strong>
+      <span id="pageLoadText">正在初始化静态数据包…</span>
+      <span class="loading-track" aria-hidden="true"><i id="pageLoadBar"></i></span>
+    </section>
+  </main>
+  <script src="./manifest.js?v=20260903T140002263_github_publish_29580"></script>
+  <script src="./assets/private-fund-static-loader.js?v=20260903T140002263_github_publish_29580"></script>
+  <script src="./assets/private-fund-common.js?v=20260903T140002263_github_publish_29580"></script>
+  <script src="./assets/private-fund-business-text.js?v=20260903T140002263_github_publish_29580"></script>
+  <script src="./assets/private-fund-experience.js?v=20260903T140002263_github_publish_29580"></script>
+  <script>
+    window.PrivateFundStaticLoader.boot({
+      catalogUrl: "./data/catalog.js.gz?v=20260903T140002263_github_publish_29580",
+      appUrl: "./assets/private-fund-list.js?v=20260903T140002263_github_publish_29580",
+      label: "正在加载产品列表"
+    });
+  </script>
+</body>
+</html>

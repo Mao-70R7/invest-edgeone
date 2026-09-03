@@ -1,0 +1,38 @@
+{
+  "status": "ready",
+  "generatedAt": "2026-09-03T14:02:48+08:00",
+  "checks": {
+    "pageCount": 3,
+    "detailFileCount": 6178,
+    "catalogRowCount": 6178,
+    "navigation": {
+      "index.html": [
+        "数据总览",
+        "产品列表",
+        "天眼投顾 ↗"
+      ],
+      "products.html": [
+        "数据总览",
+        "产品列表",
+        "天眼投顾 ↗"
+      ],
+      "detail.html": [
+        "数据总览",
+        "产品列表",
+        "天眼投顾 ↗"
+      ]
+    },
+    "sourceValidationStatus": "passed",
+    "sourceAuditStatus": "ok",
+    "accessScope": "public_catalog_plus_scoped_performance_analytics",
+    "authenticatedPerformanceAnalyticsIncluded": true,
+    "restrictedAnalyticsDetailCount": 5507,
+    "restrictedRawDataIncluded": false,
+    "rawDetailBytes": 388877867,
+    "compressedDetailBytes": 45361406,
+    "compressionRatio": 0.116647,
+    "maxCompressedDetailBytes": 85373,
+    "maxCompressedDetailFile": "2b/geshang__P185594__7a3cbb046f.js.gz",
+    "oversizedFileCount": 0
+  }
+}
