@@ -1,0 +1,93 @@
+{
+  "status": "ready",
+  "generatedAt": "2026-09-11T18:06:30+08:00",
+  "checks": {
+    "pageCount": 5,
+    "detailFileCount": 9552,
+    "catalogRowCount": 9552,
+    "cmbPublication": "cmb_display_20260911_v1",
+    "cmbQuality": {
+      "version": "cmb_display_20260911_v1",
+      "generatedAt": "2026-09-11T17:59:06+08:00",
+      "products": 2892,
+      "issueCount": 18,
+      "issueShare": 0.006224066390041493,
+      "maxIssueShare": 0.05,
+      "incomeCurveProducts": 14,
+      "expectedNoHistoryProducts": 3
+    },
+    "scatterControls": {
+      "status": "passed",
+      "version": 1,
+      "multiSelect": [
+        "company",
+        "strategy"
+      ],
+      "defaultProductScope": "all",
+      "paletteStorage": "browser_local",
+      "companyMatching": "exact_disclosed_name",
+      "helperSha256": "44ac4a0b5448793fb00b4e7898d7c5076cb439b47a262ec8f6dc712796dcd218"
+    },
+    "gffundsZone": {
+      "status": "passed",
+      "productCount": 69,
+      "managerCount": 21,
+      "publicReportProductCount": 54,
+      "partialHoldingProductCount": 53,
+      "sourceFreshness": {
+        "status": "passed",
+        "basis": "authenticated_history_cache_latest_date_vs_database_page",
+        "cacheProductCount": 123,
+        "checkedZoneProductCount": 69,
+        "staleProductCount": 0,
+        "latestCacheDate": "2026-09-10"
+      },
+      "restrictedRawDataIncluded": false
+    },
+    "detailExperience": "peer_benchmark_gffunds_attribution_v2",
+    "navigation": {
+      "index.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "天眼投顾 ↗"
+      ],
+      "products.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "天眼投顾 ↗"
+      ],
+      "detail.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "天眼投顾 ↗"
+      ],
+      "gffunds.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "天眼投顾 ↗"
+      ],
+      "gffunds-manager.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "天眼投顾 ↗"
+      ]
+    },
+    "sourceValidationStatus": "passed",
+    "sourceAuditStatus": "warn",
+    "accessScope": "public_catalog_plus_scoped_performance_analytics",
+    "authenticatedPerformanceAnalyticsIncluded": true,
+    "restrictedAnalyticsDetailCount": 5517,
+    "restrictedRawDataIncluded": false,
+    "rawDetailBytes": 772349499,
+    "compressedDetailBytes": 97914775,
+    "compressionRatio": 0.126775,
+    "maxCompressedDetailBytes": 85709,
+    "maxCompressedDetailFile": "2b/geshang__P185594__7a3cbb046f.js.gz",
+    "oversizedFileCount": 0
+  }
+}
