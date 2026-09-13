@@ -1,14 +1,14 @@
 {
   "status": "ready",
-  "generatedAt": "2026-09-13T21:28:40+08:00",
+  "generatedAt": "2026-09-13T22:23:56+08:00",
   "checks": {
     "pageCount": 5,
-    "detailFileCount": 9552,
-    "catalogRowCount": 9552,
+    "detailFileCount": 9550,
+    "catalogRowCount": 9550,
     "cmbPublication": "cmb_display_20260911_v1",
     "cmbQuality": {
       "version": "cmb_display_20260911_v1",
-      "generatedAt": "2026-09-13T20:43:28+08:00",
+      "generatedAt": "2026-09-13T22:15:23+08:00",
       "products": 2892,
       "issueCount": 18,
       "issueShare": 0.006224066390041493,
@@ -30,15 +30,15 @@
     },
     "gffundsZone": {
       "status": "passed",
-      "productCount": 69,
-      "managerCount": 21,
-      "publicReportProductCount": 54,
-      "partialHoldingProductCount": 53,
+      "productCount": 67,
+      "managerCount": 20,
+      "publicReportProductCount": 52,
+      "partialHoldingProductCount": 51,
       "sourceFreshness": {
         "status": "passed",
         "basis": "authenticated_history_cache_latest_date_vs_database_page",
         "cacheProductCount": 123,
-        "checkedZoneProductCount": 69,
+        "checkedZoneProductCount": 67,
         "staleProductCount": 0,
         "latestCacheDate": "2026-09-11"
       },
@@ -81,12 +81,12 @@
     "sourceAuditStatus": "warn",
     "accessScope": "public_catalog_plus_scoped_performance_analytics",
     "authenticatedPerformanceAnalyticsIncluded": true,
-    "restrictedAnalyticsDetailCount": 5517,
+    "restrictedAnalyticsDetailCount": 5515,
     "restrictedRawDataIncluded": false,
-    "rawDetailBytes": 776914876,
-    "compressedDetailBytes": 99632082,
-    "compressionRatio": 0.128241,
-    "maxCompressedDetailBytes": 85727,
+    "rawDetailBytes": 776296614,
+    "compressedDetailBytes": 99536172,
+    "compressionRatio": 0.128219,
+    "maxCompressedDetailBytes": 85728,
     "maxCompressedDetailFile": "2b/geshang__P185594__7a3cbb046f.js.gz",
     "oversizedFileCount": 0
   }
