@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-09-13T20:08:43+08:00",
-  "packagedAt": "2026-09-13T20:23:36+08:00",
-  "runId": "20260913T202224274_github_publish_29872",
+  "generatedAt": "2026-09-13T20:43:28+08:00",
+  "packagedAt": "2026-09-13T20:49:20+08:00",
+  "runId": "20260913T204810674_github_publish_28924",
   "pages": [
     "index.html",
     "products.html",
@@ -73,7 +73,7 @@
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-09-13T20:08:43+08:00",
+    "generatedAt": "2026-09-13T20:43:28+08:00",
     "products": 2892,
     "issueCount": 18,
     "issueShare": 0.006224066390041493,
