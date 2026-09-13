@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "runId": "20260913T204810674_github_publish_28924",
-  "generatedAt": "2026-09-13T20:49:24+08:00",
+  "runId": "20260913T212730758_github_publish_28264",
+  "generatedAt": "2026-09-13T21:28:40+08:00",
   "entry": "index.html",
   "stats": {
     "productCount": 9552,
     "detailFileCount": 9552,
-    "fileCountExcludingManifest": 9584,
-    "totalBytesExcludingManifest": 106918645,
+    "fileCountExcludingManifest": 9579,
+    "totalBytesExcludingManifest": 104478140,
     "rawDetailBytes": 776914876,
     "compressedDetailBytes": 99632082,
     "maxCompressedDetailBytes": 85727
@@ -40,8 +40,8 @@
     },
     {
       "path": "assets/private-fund-experience.js",
-      "size": 10582,
-      "sha256": "035be6bbbbab70c9f4eec75ddc9cc0c822e41d4a1be7954d333c385760b2ffca"
+      "size": 10674,
+      "sha256": "ec3197f90a3351f728236f761018a390df5f8c80624ee73224799e91f274ebd9"
     },
     {
       "path": "assets/private-fund-gffunds-detail.js",
@@ -62,21 +62,6 @@
       "path": "assets/private-fund-list.js",
       "size": 43397,
       "sha256": "abee2c98021d3c14e5442c8362a6a052fccc8c664a9a4758ef4cc37112f62023"
-    },
-    {
-      "path": "assets/private-fund-manager-insights.css",
-      "size": 9744,
-      "sha256": "e460562bee64178c8ad67dcbd3b1e67c01df65f14c78a9f9218cdfdbc09eac22"
-    },
-    {
-      "path": "assets/private-fund-manager-insights.js",
-      "size": 19773,
-      "sha256": "dfa56744518d8f9dd99f11b09de38fb44947b1a28af9a1b8a63d01408700a67e"
-    },
-    {
-      "path": "assets/private-fund-managers.js",
-      "size": 29162,
-      "sha256": "62768065ad37fc8ce73bf6ba6f4df1154b19f76546d1eec724567c33c79ff5d1"
     },
     {
       "path": "assets/private-fund-overview.js",
@@ -47874,59 +47859,49 @@
       "sha256": "b3fc9ec5f10c2822556c49b8b46167cd53059f08972289940e7b7b86040480f3"
     },
     {
-      "path": "data/managers.js.gz",
-      "size": 2378029,
-      "sha256": "ebb6d117f2b4eb1ce2b1a311d4f8dd29a48b91d2add96c79a1a655c23a7f8b06"
-    },
-    {
       "path": "detail.html",
-      "size": 60511,
-      "sha256": "8d681d9f5f304ed8293123be633ae536718edcc705b46d67094f6b48ba459a72"
+      "size": 60447,
+      "sha256": "76339193da44e6a95f5e590205466412db9162374c23c0f5ce958eba3d678418"
     },
     {
       "path": "gffunds-manager.html",
-      "size": 2539,
-      "sha256": "414fae2bb640840e6a8b69cb0eb273a6c38e1103046386bf03b5c1305c5ea150"
+      "size": 2472,
+      "sha256": "69e5a7a28f1674794565a59bb51300e3efcbe9ccfe8ec0d61b9ad7b253b6c145"
     },
     {
       "path": "gffunds.html",
-      "size": 2489,
-      "sha256": "f08489e9418cbf8fc812977b34154704119496319e34bb2575bd52e3b98bf310"
+      "size": 2422,
+      "sha256": "34ba4595cdd2379a64279f1058aa7aa12efc1d685a016e497fbfa5716cd1fb63"
     },
     {
       "path": "index.html",
-      "size": 2422,
-      "sha256": "952b0d0536f1ab6b65066f88081e5bf60e0ffee3d8118dd89644a9f162e7fbff"
-    },
-    {
-      "path": "managers.html",
-      "size": 2709,
-      "sha256": "d677e0414e266c24ad0eea1e203ebe878edc2d1ecde200bb92de7ae0f2f36968"
+      "size": 2355,
+      "sha256": "b464bbbf0864384d73e9f764c1b9b893436b324b4c1d1a47655400d88edcd508"
     },
     {
       "path": "manifest.js",
-      "size": 3247,
-      "sha256": "df67e8998591757a689782c20b992ed3ad75e3bb56fc8845fa3379628f91e81c"
+      "size": 2994,
+      "sha256": "be6b5f3aa07b864b5683fb2ecd1f2cced2def55c3f0d1c6ca2ce295e9d93bc1f"
     },
     {
       "path": "manifest.json",
-      "size": 3864,
-      "sha256": "8619abcb85541603713677dd7926454ac4cb863ce0d8fb9bcee67a8d528d4ce4"
+      "size": 3546,
+      "sha256": "990ef0b0b7ce7c12582b0a513e815b035b0bde8872e10654324fc70e22c548d1"
     },
     {
       "path": "package_validation.json",
-      "size": 2962,
-      "sha256": "cd35ebaf71b1b1ce8e7aea7c7b1dc5bd5f4517434dcbc1d9cc979df4433a6e34"
+      "size": 2685,
+      "sha256": "b7e20bdf24f962c345e0629515e5dbfee23d70ef2e565fb8c002a6477320fd7c"
     },
     {
       "path": "products.html",
-      "size": 2414,
-      "sha256": "77d61de2377eca0995c1b03e3df0ab330f03d78c1d7f8c70438e3452fcfeeebe"
+      "size": 2347,
+      "sha256": "28d4022f6b6047d25275c560e748a9dbbfc4a0c1fd13d7d89214f590fec1de7d"
     },
     {
       "path": "version.json",
       "size": 148,
-      "sha256": "e24132eb5ce16a6b2068b5f46708d491f51b52f632e04822826d2776970597c4"
+      "sha256": "7e7f56cbcfb1f3cf2955986761e45bd214847458e16546a4e7608aaee05ea1b0"
     },
     {
       "path": "招商产品App核对清单.md",

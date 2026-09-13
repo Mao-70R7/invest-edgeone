@@ -1,27 +1,16 @@
 {
   "schemaVersion": "1.4.0",
   "generatedAt": "2026-09-13T20:43:28+08:00",
-  "packagedAt": "2026-09-13T20:49:20+08:00",
-  "runId": "20260913T204810674_github_publish_28924",
+  "packagedAt": "2026-09-13T21:28:36+08:00",
+  "runId": "20260913T212730758_github_publish_28264",
   "pages": [
     "index.html",
     "products.html",
     "detail.html",
-    "managers.html",
     "gffunds.html",
     "gffunds-manager.html"
   ],
-  "managerZone": "data/managers.js.gz",
-  "managerZoneSummary": {
-    "managerCount": 2887,
-    "assignedProducts": 3992,
-    "unassignedProducts": 5560,
-    "knownTenureCount": 61,
-    "profileCount": 2882,
-    "biographyCount": 2726,
-    "supplementedCount": 73,
-    "crossChannelCandidateCount": 127
-  },
+  "managerZoneEnabled": false,
   "catalog": "data/catalog.js.gz",
   "gffundsZone": "data/gffunds-zone.js.gz",
   "gffundsZoneSummary": {
@@ -104,7 +93,6 @@
   "navigation": [
     "数据总览",
     "产品列表",
-    "经理专区",
     "广发专区"
   ],
   "scatterControls": {

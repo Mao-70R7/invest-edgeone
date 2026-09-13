@@ -1,3 +1,4 @@
+window.PrivateFundManagerZoneEnabled = false;
 /* Pure, source-preserving view models shared by the overview and history chart. */
 (() => {
   const DAY = 86400000;
@@ -148,7 +149,7 @@
       if(table._pfSort)sortTable(table,table._pfSort.index,table._pfSort.direction);
     });
     const nav=document.querySelector('nav.nav,nav.siteNav');
-    if(nav&&!nav.querySelector('a[href*="managers.html"]')){
+    if(window.PrivateFundManagerZoneEnabled!==false&&nav&&!nav.querySelector('a[href*="managers.html"]')){
       const a=document.createElement('a');a.href='./managers.html';a.textContent='经理专区';a.className='nav-link back';
       nav.insertBefore(a,nav.querySelector('a[href*="gffunds.html"]')||nav.querySelector('.advisor-link'));
     }

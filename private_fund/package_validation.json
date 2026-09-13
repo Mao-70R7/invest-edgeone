@@ -1,8 +1,8 @@
 {
   "status": "ready",
-  "generatedAt": "2026-09-13T20:49:24+08:00",
+  "generatedAt": "2026-09-13T21:28:40+08:00",
   "checks": {
-    "pageCount": 6,
+    "pageCount": 5,
     "detailFileCount": 9552,
     "catalogRowCount": 9552,
     "cmbPublication": "cmb_display_20260911_v1",
@@ -46,45 +46,33 @@
     },
     "detailExperience": "peer_benchmark_gffunds_attribution_v2",
     "navigation": {
-      "managers.html": [
-        "数据总览",
-        "产品列表",
-        "经理专区",
-        "广发专区",
-        "天眼投顾 ↗"
-      ],
       "index.html": [
         "数据总览",
         "产品列表",
-        "经理专区",
         "广发专区",
         "天眼投顾 ↗"
       ],
       "products.html": [
         "数据总览",
         "产品列表",
-        "经理专区",
         "广发专区",
         "天眼投顾 ↗"
       ],
       "detail.html": [
         "数据总览",
         "产品列表",
-        "经理专区",
         "广发专区",
         "天眼投顾 ↗"
       ],
       "gffunds.html": [
         "数据总览",
         "产品列表",
-        "经理专区",
         "广发专区",
         "天眼投顾 ↗"
       ],
       "gffunds-manager.html": [
         "数据总览",
         "产品列表",
-        "经理专区",
         "广发专区",
         "天眼投顾 ↗"
       ]
