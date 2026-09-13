@@ -96,3 +96,66 @@
   }
   window.PrivateFundExperience={ranges,sources,stamp,today,shiftMonths,historyWindow,latestDate,freshness,inceptionYears};
 })();
+
+/* Shared list sorting. Data-paginated tables supply their own complete-row sort. */
+(() => {
+  const missing = v => v == null || v === '' || (typeof v === 'number' && !Number.isFinite(v));
+  const compare = (a,b,direction='asc') => {
+    if (missing(a) || missing(b)) return missing(a) ? (missing(b)?0:1) : -1;
+    const n = typeof a === 'number' && typeof b === 'number' ? a-b : String(a).localeCompare(String(b),'zh-CN',{numeric:true});
+    return direction === 'desc' ? -n : n;
+  };
+  const sorted = (rows, getter, direction) => rows.map((row,i)=>({row,i})).sort((a,b)=>compare(getter(a.row),getter(b.row),direction)||a.i-b.i).map(x=>x.row);
+  function value(cell) {
+    if (!cell) return null;
+    if ('sortValue' in cell.dataset) return cell.dataset.sortValue === '' ? null : (/^-?\d+(\.\d+)?$/.test(cell.dataset.sortValue)?Number(cell.dataset.sortValue):cell.dataset.sortValue);
+    const clone=cell.cloneNode(true);clone.querySelectorAll('small,.cell-sub,.pmeta').forEach(n=>n.remove());
+    const text=clone.textContent.trim();
+    if (/^(?:—|--|未披露|暂无|未知|所选指标暂缺)$/.test(text)) return null;
+    const numeric=text.replace(/,/g,'').match(/^([+-]?\d+(?:\.\d+)?)\s*(?:%|年|只|条|项|点)?$/);
+    return numeric?Number(numeric[1]):text;
+  }
+  function header(th,label,active,direction,onSort) {
+    th.setAttribute('aria-sort',active?(direction==='desc'?'descending':'ascending'):'none');
+    const button=document.createElement('button');button.type='button';button.className='pf-sort-button';
+    button.textContent=label+(active?(direction==='desc'?' ↓':' ↑'):' ↕');
+    button.style.cssText='font:inherit;color:inherit;background:transparent;border:0;padding:6px 0;text-align:inherit;cursor:pointer;white-space:normal;min-height:36px';
+    button.onclick=onSort;th.replaceChildren(button);
+  }
+  let observer;
+  const observe=()=>observer.observe(document.body,{childList:true,subtree:true});
+  function sortTable(table,index,direction) {
+    const body=table.tBodies[0];if(!body)return;
+    const rows=[...body.rows], visible=rows.filter(r=>!r.hidden).length, hasHidden=rows.some(r=>r.hidden)&&rows.every(r=>r.classList.contains('gf-nav-row'));
+    sorted(rows,r=>value(r.cells[index]),direction).forEach((r,i)=>{if(hasHidden)r.hidden=i>=visible;body.appendChild(r);});
+  }
+  function enhance() {
+    observer.disconnect();
+    document.querySelectorAll('table:not([data-external-sort])').forEach(table=>{
+      const heads=[...(table.tHead?.rows[0]?.cells||[])];
+      if(!heads.length || !table.tBodies.length || heads.some(h=>h.colSpan>1))return;
+      heads.forEach((th,index)=>{
+        if(th.querySelector('input,select') || th.dataset.pfSortable)return;
+        th.dataset.pfSortable='1';const label=th.textContent.trim();
+        header(th,label,false,'asc',()=>{
+          observer.disconnect();
+          const direction=table._pfSort?.index===index && table._pfSort.direction==='asc'?'desc':'asc';
+          table._pfSort={index,direction};sortTable(table,index,direction);
+          heads.forEach((h,i)=>{h.setAttribute('aria-sort',i===index?(direction==='asc'?'ascending':'descending'):'none');const b=h.querySelector('.pf-sort-button');if(b)b.textContent=b.textContent.replace(/ [↕↑↓]$/,'')+(i===index?(direction==='asc'?' ↑':' ↓'):' ↕');});
+          observe();
+        });
+      });
+      if(table._pfSort)sortTable(table,table._pfSort.index,table._pfSort.direction);
+    });
+    const nav=document.querySelector('nav.nav,nav.siteNav');
+    if(nav&&!nav.querySelector('a[href*="managers.html"]')){
+      const a=document.createElement('a');a.href='./managers.html';a.textContent='经理专区';a.className='nav-link back';
+      nav.insertBefore(a,nav.querySelector('a[href*="gffunds.html"]')||nav.querySelector('.advisor-link'));
+    }
+    observe();
+  }
+  window.PrivateFundTables={compare,sorted,header,value};
+  if(typeof document==='undefined' || typeof MutationObserver==='undefined')return;
+  function start(){observer=new MutationObserver(enhance);enhance();}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
+})();

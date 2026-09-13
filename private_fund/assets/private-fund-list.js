@@ -21,7 +21,7 @@
     query: "", source: "", companies: [], strategies: [],
     xMetric: pack.meta.defaultXMetric || metrics[0]?.code || "",
     yMetric: pack.meta.defaultYMetric || metrics[1]?.code || metrics[0]?.code || "",
-    selected: "", page: 1, pageSize: 60, focus: true, cardOpen: true,
+    selected: "", page: 1, pageSize: 60, focus: true, cardOpen: true, sort: 'x', direction: 'desc',
   };
   let currentFiltered = [];
   let scatterHits = [];
@@ -47,6 +47,8 @@
     state.focus = params.get('view') !== 'all';
     state.cardOpen = params.get('card') !== 'folded';
     state.page = Math.max(1, Number(params.get("page")) || 1);
+    state.sort = ['name','source','company','strategy','inception','latest','x','y','ready'].includes(params.get('sort')) ? params.get('sort') : 'x';
+    state.direction = params.get('direction') === 'asc' ? 'asc' : 'desc';
   }
   applyParams();
 
@@ -63,7 +65,7 @@
   }
 
   function filterRows() {
-    return C.filter(rows, state);
+    return window.PrivateFundTables.sorted(C.filter(rows, state), row => ({name:row.name,source:row.sourceLabel,company:[row.company,...(row.managers||[])].join('、'),strategy:row.strategy1,inception:row.inceptionDate,latest:row.analysisLatestDate||row.latestNavDate,x:metricValue(row,state.xMetric),y:metricValue(row,state.yMetric),ready:Number(isPlottable(row))})[state.sort], state.direction);
   }
 
   function syncUrl() {
@@ -75,6 +77,7 @@
     set("x", state.xMetric, pack.meta.defaultXMetric);
     set("y", state.yMetric, pack.meta.defaultYMetric);
     set("selected", state.selected);
+    set('sort',state.sort,'x');set('direction',state.direction,'desc');
     set('view', state.focus ? '' : 'all');
     set('card', state.selected && !state.cardOpen ? 'folded' : '');
     if (state.page > 1) url.searchParams.set("page", String(state.page)); else url.searchParams.delete("page");
@@ -108,7 +111,7 @@
       </div>
       <div id="summaryStrip" class="summary-strip"></div>
       <div class="table-wrap">
-        <table class="product-table">
+        <table class="product-table" data-external-sort="true">
           <thead><tr><th>产品</th><th>来源</th><th>管理人 / 经理</th><th>策略</th><th>成立日</th><th>最新业绩 / 序列</th><th id="xTableHead"></th><th id="yTableHead"></th><th>坐标状态</th></tr></thead>
           <tbody id="productTableBody"></tbody>
         </table>
@@ -306,6 +309,9 @@
     const pageRows = filtered.slice(start, start + state.pageSize);
     elements.xHead.textContent = metricLabel(state.xMetric);
     elements.yHead.textContent = metricLabel(state.yMetric);
+    const keys=['name','source','company','strategy','inception','latest','x','y','ready'];
+    const labels=['产品','来源','管理人 / 经理','策略','成立日','最新业绩 / 序列',metricLabel(state.xMetric),metricLabel(state.yMetric),'坐标状态'];
+    elements.body.closest('table').querySelectorAll('thead th').forEach((th,i)=>window.PrivateFundTables.header(th,labels[i],state.sort===keys[i],state.direction,()=>{state.direction=state.sort===keys[i]&&state.direction==='desc'?'asc':'desc';state.sort=keys[i];state.page=1;render();}));
     const backQuery = window.location.search.replace(/^\?/, "");
     elements.body.innerHTML = pageRows.map((row) => {
       const ready = isPlottable(row);

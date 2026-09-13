@@ -176,7 +176,7 @@
       root.innerHTML = '<section class="empty-panel"><strong>未找到基金经理产品族</strong><div><a class="gf-primary-link" href="./gffunds.html">返回广发专区</a></div></section>';
       return;
     }
-    const items = (manager.productKeys || []).map((key) => productByKey.get(key)).filter(Boolean).sort((left, right) => String(left.name).localeCompare(String(right.name), "zh-CN"));
+    const items = window.PrivateFundTables.sorted((manager.productKeys || []).map((key) => productByKey.get(key)).filter(Boolean), product => number(metric(product, 'return1y')), 'desc');
     document.title = `${manager.name}｜广发专区｜天眼私募`;
     root.innerHTML = `<a class="gf-back" href="./gffunds.html">← 返回广发专区</a>
     ${hero(

@@ -1,15 +1,27 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-09-11T17:59:06+08:00",
-  "packagedAt": "2026-09-11T18:06:26+08:00",
-  "runId": "20260911T175755319_github_publish_30332",
+  "generatedAt": "2026-09-13T20:08:43+08:00",
+  "packagedAt": "2026-09-13T20:23:36+08:00",
+  "runId": "20260913T202224274_github_publish_29872",
   "pages": [
     "index.html",
     "products.html",
     "detail.html",
+    "managers.html",
     "gffunds.html",
     "gffunds-manager.html"
   ],
+  "managerZone": "data/managers.js.gz",
+  "managerZoneSummary": {
+    "managerCount": 2887,
+    "assignedProducts": 3992,
+    "unassignedProducts": 5560,
+    "knownTenureCount": 61,
+    "profileCount": 2882,
+    "biographyCount": 2726,
+    "supplementedCount": 73,
+    "crossChannelCandidateCount": 127
+  },
   "catalog": "data/catalog.js.gz",
   "gffundsZone": "data/gffunds-zone.js.gz",
   "gffundsZoneSummary": {
@@ -19,12 +31,12 @@
     "unassignedProductCount": 3,
     "activeProductCount": 65,
     "historyReadyCount": 68,
-    "verifiedOneYearMetricCount": 37,
+    "verifiedOneYearMetricCount": 38,
     "publicReportProductCount": 54,
     "partialHoldingProductCount": 53,
     "fullPortfolioProductCount": 0,
-    "latestPerformanceDate": "2026-09-10",
-    "activeCutoffDate": "2026-08-10",
+    "latestPerformanceDate": "2026-09-11",
+    "activeCutoffDate": "2026-08-11",
     "latestPublicReportDate": "2026-07-21",
     "latestPositionDate": "2026-07-21",
     "invalidPositionWeightCount": 0
@@ -32,8 +44,8 @@
   "counts": {
     "catalogProducts": 9552,
     "detailFiles": 9552,
-    "defaultScatterPlottable": 7998,
-    "defaultScatterEvidenceRail": 1554,
+    "defaultScatterPlottable": 8000,
+    "defaultScatterEvidenceRail": 1552,
     "sourceProducts": {
       "cmb_private_investment": 2892,
       "geshang": 308,
@@ -61,7 +73,7 @@
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-09-11T17:59:06+08:00",
+    "generatedAt": "2026-09-13T20:08:43+08:00",
     "products": 2892,
     "issueCount": 18,
     "issueShare": 0.006224066390041493,
@@ -92,6 +104,7 @@
   "navigation": [
     "数据总览",
     "产品列表",
+    "经理专区",
     "广发专区"
   ],
   "scatterControls": {
