@@ -1,11 +1,12 @@
 (() => {
   const sourceColors = {
-    gffunds_highend: { label: "广发高端理财", color: "#B86B3E", pale: "#FAF0E8", shape: "circle" },
+    gffunds_highend: { label: "广发高端理财", color: "#B72F32", pale: "#FAEEEE", shape: "circle" },
     geshang: { label: "格上", color: "#146C94", pale: "#E8F4F8", shape: "circle" },
     simuwang: { label: "私募排排网", color: "#A14E28", pale: "#F8EEE8", shape: "square" },
     howbuy: { label: "好买", color: "#5B6F3A", pale: "#EEF2E6", shape: "diamond" },
     jsfund_highend: { label: "嘉实高端理财", color: "#929aa2", pale: "#F1F3F5", shape: "circle" },
     ruiyuan_highend: { label: "睿远专户", color: "#929aa2", pale: "#F1F3F5", shape: "circle" },
+    xueqiu: { label: "雪球私募", color: "#6559a0", pale: "#F1F3F5", shape: "circle" },
     cmb_private_investment: { label: "招商银行私享投资", color: "#929aa2", pale: "#F1F3F5", shape: "circle" },
   };
 

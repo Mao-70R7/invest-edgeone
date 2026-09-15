@@ -10,6 +10,10 @@
   }
 
   const rows = pack.rows;
+  const F = window.PrivateFundFilters;
+  const filterAsOf = pack.meta.generatedAt.slice(0,10);
+  let advanced = F.read(P.params());
+  const activeFields = Object.fromEntries(F.groups.map(g=>[g,F.fields.find(f=>f.group===g).id]));
   const metrics = (pack.metrics || []).filter((metric) => Number(metric.coverageTotal || 0) > 0);
   const metricMap = new Map(metrics.map((metric) => [metric.code, metric]));
   const xMetrics = metrics.filter(m => m.group === 'return');
@@ -38,6 +42,7 @@
 
   function applyParams() {
     const params = P.params();
+    advanced = F.read(params);
     state.query = P.clean(params.get("q"));
     state.source = P.clean(params.get("source"));
     Object.assign(state, C.readFilters(params, rows));
@@ -65,7 +70,7 @@
   }
 
   function filterRows() {
-    return window.PrivateFundTables.sorted(C.filter(rows, state), row => ({name:row.name,source:row.sourceLabel,company:[row.company,...(row.managers||[])].join('、'),strategy:row.strategy1,inception:row.inceptionDate,latest:row.analysisLatestDate||row.latestNavDate,x:metricValue(row,state.xMetric),y:metricValue(row,state.yMetric),ready:Number(isPlottable(row))})[state.sort], state.direction);
+    return window.PrivateFundTables.sorted(C.filter(rows, state).filter(r=>F.matches(r,advanced,filterAsOf)), row => ({name:row.name,source:row.sourceLabel,company:[row.company,...(row.managers||[])].join('、'),strategy:row.strategy1,inception:row.inceptionDate,latest:row.analysisLatestDate||row.latestNavDate,x:metricValue(row,state.xMetric),y:metricValue(row,state.yMetric),ready:Number(isPlottable(row))})[state.sort], state.direction);
   }
 
   function syncUrl() {
@@ -74,6 +79,7 @@
     set("q", state.query);
     set("source", state.source);
     C.writeFilters(url.searchParams, state);
+    F.write(url.searchParams, advanced);
     set("x", state.xMetric, pack.meta.defaultXMetric);
     set("y", state.yMetric, pack.meta.defaultYMetric);
     set("selected", state.selected);
@@ -93,7 +99,7 @@
   }
 
   root.innerHTML = `
-    ${pack.meta.audience === 'internal' ? '<aside class="empty-panel" role="note">本地内部研究：包含招商银行私享投资已入库快照，采集仍可能未完成；未入库历史不参与计算。本页面禁止公开发布。</aside>' : ''}
+    ${pack.meta.audience === 'internal' ? '<aside class="empty-panel" role="note">本地内部研究：包含雪球、招商等受限渠道的已入库快照；未披露或未采集的数据不补零，历史起点以实际披露为准。本页面禁止公开发布。</aside>' : ''}
     <section class="page-heading">
       <div><span class="eyebrow">PRIVATE FUND</span><h1>私募筛选</h1></div>
       <div class="asof-block"><strong>${rows.length.toLocaleString("zh-CN")}</strong><span>${P.esc(sourceCountText())}</span><time>${P.esc(P.formatDateTime(pack.meta.latestObservedAt))}</time></div>
@@ -101,6 +107,7 @@
     <section id="productListPanel" class="panel" aria-labelledby="filterTitle">
       <div class="panel-head"><h2 id="filterTitle">产品列表</h2><span id="filterCount" class="panel-count"></span></div>
       <div class="filter-panel">
+        <div id="rankFilters" class="rank-filters"></div>
         <div class="filter-grid">
           <label class="field"><span>产品 / 管理人 / 经理 / 备案号</span><input id="productSearch" type="search" autocomplete="off" placeholder="输入产品、机构或经理" value="${P.esc(state.query)}"></label>
           <label class="field"><span>数据来源</span><select id="sourceFilter">${option("", "全部来源", state.source)}${sourceOrder.map((id) => option(id, P.sourceColors[id]?.label || id, state.source)).join("")}</select></label>
@@ -433,7 +440,25 @@
     Object.assign(canvas.dataset,{visibleCount:String(model.visible.length),outsideCount:String(model.outside.length),xMedian:String(model.xMedian),yMedian:String(model.yMedian),redCount:String(colorCounts[C.RED]||0),grayCount:String(colorCounts[C.GRAY]||0),colorCounts:JSON.stringify(colorCounts),selected:state.selected});
   }
 
+  function renderAdvanced() {
+    const coverage = f => F.coverage(f, rows, filterAsOf);
+    const button = (f,v,label) => `<button type="button" data-condition="${P.esc(f.id)}" data-value="${P.esc(v)}" aria-pressed="${(advanced[f.id]||'')===v}">${P.esc(label)}</button>`;
+    document.getElementById('rankFilters').innerHTML = F.groups.map(group=>{
+      const fields=F.fields.filter(f=>f.group===group), f=fields.find(f=>f.id===activeFields[group])||fields[0], c=coverage(f), opts=F.options(f,rows,filterAsOf);
+      return `<div class="rank-filter-row"><h3>${group}</h3><div class="rank-filter-content"><div class="rank-field-tabs">${fields.map(field=>{const cov=coverage(field);return `<button type="button" data-field="${field.id}" aria-pressed="${f.id===field.id}" title="${cov.count}/${cov.total}只具备可用值${advanced[field.id]?' · 已选择条件':''}">${field.label}<small>（${cov.pct.toFixed(1)}%）</small>${advanced[field.id]?'<b> ·</b>':''}</button>`;}).join('')}</div><div class="rank-options">${button(f,'','不限')}${button(f,'__present','有数据')}${button(f,'__missing','数据缺失')}${opts.length<=14?opts.map(o=>button(f,o.value,o.label)).join(''):`<select data-condition-select="${f.id}" aria-label="${f.label}"><option value="">全部分类（${opts.length}项）</option>${opts.map(o=>option(o.value,o.label,advanced[f.id])).join('')}</select>`}</div>${f.bands?`<div class="rank-custom"><span>自定义（${f.unit}）</span><input type="number" step="any" data-min="${f.id}" aria-label="${f.label}下限" placeholder="下限 ≥"><span>至</span><input type="number" step="any" data-max="${f.id}" aria-label="${f.label}上限" placeholder="上限 <"><button type="button" data-custom="${f.id}">应用</button></div>`:''}<p class="rank-help">${P.esc(f.note||'不同字段取交集；同一字段选择一个条件。区间左闭右开，100%月胜率与零回撤包含端点。')} 可用 ${c.count.toLocaleString()} / ${c.total.toLocaleString()} 只。</p></div></div>`;
+    }).join('')+`<div class="rank-selected" aria-live="polite">${Object.keys(advanced).length?F.fields.filter(f=>advanced[f.id]).map(f=>`<button type="button" data-condition="${f.id}" data-value="">${f.label}：${P.esc(F.options(f,rows,filterAsOf).find(o=>o.value===advanced[f.id])?.label||({'__present':'有数据','__missing':'数据缺失'})[advanced[f.id]]||advanced[f.id])} ×</button>`).join(''):'尚未选择附加条件'}</div><p class="rank-help">覆盖率分母为当前页面全部 ${rows.length.toLocaleString()} 条渠道产品记录，不随筛选缩小；同一基金跨渠道不合并。成立年限截至 ${filterAsOf}；业绩指标截至各产品最新可用日。完整可用期不保证覆盖真实成立以来。缺失不补零。</p>`;
+  }
+  document.getElementById('rankFilters').addEventListener('click',event=>{
+    const tab=event.target.closest('[data-field]');
+    if(tab){const f=F.fields.find(f=>f.id===tab.dataset.field);activeFields[f.group]=f.id;renderAdvanced();document.querySelector(`[data-field="${f.id}"]`).focus();return;}
+    const b=event.target.closest('[data-condition]');
+    if(b){if(b.dataset.value)advanced[b.dataset.condition]=b.dataset.value;else delete advanced[b.dataset.condition];state.page=1;render({announce:true});return;}
+    const custom=event.target.closest('[data-custom]');if(custom){const id=custom.dataset.custom;const a=F.number(document.querySelector(`[data-min="${id}"]`).value),b=F.number(document.querySelector(`[data-max="${id}"]`).value);if(a!==null&&b!==null&&a>=b){P.announce('下限必须小于上限');return;}if(a===null&&b===null)delete advanced[id];else advanced[id]=JSON.stringify([a,b]);state.page=1;render({announce:true});}
+  });
+  document.getElementById('rankFilters').addEventListener('change',event=>{const id=event.target.dataset.conditionSelect;if(id){if(event.target.value)advanced[id]=event.target.value;else delete advanced[id];state.page=1;render({announce:true});}});
+
   function render({ announce = false } = {}) {
+    renderAdvanced();
     currentFiltered = filterRows();
     const readyCount = currentFiltered.filter(isPlottable).length;
     syncUrl();
@@ -464,6 +489,7 @@
   document.getElementById('focusView').addEventListener('click',()=>{state.focus=true;renderScatter(currentFiltered);syncUrl();});
   document.getElementById('allView').addEventListener('click',()=>{state.focus=false;renderScatter(currentFiltered);syncUrl();});
   elements.reset.addEventListener("click", () => {
+    advanced = {};
     Object.assign(state, { query: "", source: "", companies: [], strategies: [], xMetric: pack.meta.defaultXMetric, yMetric: pack.meta.defaultYMetric, selected: "", page: 1,focus:true,cardOpen:true });
     elements.search.value = ""; elements.source.value = ""; elements.xMetric.value = state.xMetric; elements.yMetric.value = state.yMetric;
     [elements.company,elements.strategy].forEach(host=>{host.querySelector('input[type="search"]').value='';host.querySelector('details').open=false;});

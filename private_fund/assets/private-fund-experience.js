@@ -7,6 +7,10 @@ window.PrivateFundManagerZoneEnabled = false;
     {id:'simuwang',label:'排排网',color:'#27835b'},
     {id:'geshang',label:'格上',color:'#e8bd3e'},
     {id:'gffunds_highend',label:'广发基金',color:'#c52a30'},
+    {id:'cmb_private_investment',label:'招商银行',color:'#537994'},
+    {id:'xueqiu',label:'雪球',color:'#6559a0'},
+    {id:'jsfund_highend',label:'嘉实',color:'#9c7954'},
+    {id:'ruiyuan_highend',label:'睿远',color:'#657c78'},
   ];
   function stamp(value) {
     const text=String(value||'').slice(0,10);
