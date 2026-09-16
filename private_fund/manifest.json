@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "1.4.0",
+  "generatedAt": "2026-09-16T14:07:00+08:00",
+  "packagedAt": "2026-09-16T14:15:28+08:00",
+  "runId": "20260916T140541528_github_publish_19568",
+  "pages": [
+    "index.html",
+    "products.html",
+    "detail.html",
+    "gffunds.html",
+    "gffunds-manager.html"
+  ],
+  "managerZoneEnabled": false,
+  "catalog": "data/catalog.js.gz",
+  "gffundsZone": "data/gffunds-zone.js.gz",
+  "gffundsZoneSummary": {
+    "productCount": 67,
+    "managerCount": 19,
+    "managerGroupCount": 20,
+    "unassignedProductCount": 3,
+    "activeProductCount": 63,
+    "historyReadyCount": 66,
+    "verifiedOneYearMetricCount": 37,
+    "publicReportProductCount": 52,
+    "partialHoldingProductCount": 51,
+    "fullPortfolioProductCount": 0,
+    "latestPerformanceDate": "2026-09-14",
+    "activeCutoffDate": "2026-08-14",
+    "latestPublicReportDate": "2026-07-21",
+    "latestPositionDate": "2026-07-21",
+    "invalidPositionWeightCount": 0
+  },
+  "counts": {
+    "catalogProducts": 10018,
+    "detailFiles": 10018,
+    "defaultScatterPlottable": 8496,
+    "defaultScatterEvidenceRail": 1522,
+    "sourceProducts": {
+      "cmb_private_investment": 2892,
+      "geshang": 310,
+      "gffunds_highend": 67,
+      "jsfund_highend": 345,
+      "ruiyuan_highend": 136,
+      "simuwang": 5644,
+      "xueqiu": 624
+    },
+    "metricDefinitions": 17,
+    "gffundsProducts": 67,
+    "gffundsZoneProducts": 67,
+    "gffundsZoneManagers": 20,
+    "gffundsZoneStaleProducts": 0
+  },
+  "sourceCounts": {
+    "cmb_private_investment": 2892,
+    "geshang": 310,
+    "gffunds_highend": 67,
+    "jsfund_highend": 345,
+    "ruiyuan_highend": 136,
+    "simuwang": 5644,
+    "xueqiu": 624
+  },
+  "cmbPublication": "cmb_display_20260911_v1",
+  "cmbQuality": {
+    "version": "cmb_display_20260911_v1",
+    "generatedAt": "2026-09-16T14:07:00+08:00",
+    "products": 2892,
+    "issueCount": 17,
+    "issueShare": 0.005878284923928077,
+    "maxIssueShare": 0.05,
+    "incomeCurveProducts": 14,
+    "expectedNoHistoryProducts": 3
+  },
+  "accessScope": "public_catalog_plus_scoped_performance_analytics",
+  "authenticatedPerformanceAnalyticsIncluded": true,
+  "restrictedRawDataIncluded": false,
+  "productIdentity": "source_isolated",
+  "comparability": {
+    "defaultMode": "verified_shared_axis",
+    "crossSourceRankingAllowed": true,
+    "crossSourceScoringAllowed": true,
+    "researchPeerRankingAllowed": true,
+    "referenceOnly": true,
+    "formulaAlignment": "formula_aligned_only",
+    "warning": "同图仅表示公式与尺度统一；格上复权净值、排排网复权收益与广发/嘉实/睿远/招商来源累计净值的费用、分红处理和估值频率未完全统一。累计净值不等同于分红再投资收益；排名仅作分类内研究参考。"
+  },
+  "allProductMarksContract": {
+    "totalEligible": 10018,
+    "plottableRule": "selected_x_and_y_are_strict_numeric",
+    "missingRule": "every_non_plottable_product_is_rendered_in_evidence_rail"
+  },
+  "detailFileCount": 10018,
+  "compression": "deterministic_gzip_browser_decompression",
+  "navigation": [
+    "数据总览",
+    "产品列表",
+    "广发专区"
+  ],
+  "scatterControls": {
+    "status": "passed",
+    "version": 1,
+    "multiSelect": [
+      "company",
+      "strategy"
+    ],
+    "defaultProductScope": "all",
+    "paletteStorage": "browser_local",
+    "companyMatching": "exact_disclosed_name",
+    "helperSha256": "44ac4a0b5448793fb00b4e7898d7c5076cb439b47a262ec8f6dc712796dcd218"
+  },
+  "detailExperience": "peer_benchmark_gffunds_attribution_v2"
+}
