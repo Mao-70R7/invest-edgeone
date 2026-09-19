@@ -6,8 +6,8 @@
   "stats": {
     "productCount": 10018,
     "detailFileCount": 10018,
-    "fileCountExcludingManifest": 10047,
-    "totalBytesExcludingManifest": 163666784,
+    "fileCountExcludingManifest": 10048,
+    "totalBytesExcludingManifest": 163671236,
     "rawDetailBytes": 953426754,
     "compressedDetailBytes": 137277351,
     "maxCompressedDetailBytes": 88952
@@ -17,6 +17,11 @@
       "path": "README.md",
       "size": 765,
       "sha256": "843920c8615e21f4921ffb9ef6a450bb277265721055fbc3b35f2d4b1f33ca05"
+    },
+    {
+      "path": "assets/business-query.js",
+      "size": 4200,
+      "sha256": "4992c89bd43ea24abd4294666cf70508820336425ce50bc2b923a446e5244cf4"
     },
     {
       "path": "assets/private-fund-analysis-static.js",
@@ -70,8 +75,8 @@
     },
     {
       "path": "assets/private-fund-list.js",
-      "size": 54163,
-      "sha256": "d65133a269199ee05f55367008fa3ff4078477d1c6b76c7c169fcffb828022c4"
+      "size": 54364,
+      "sha256": "775df330dd45b223ac8274045ec5098e37b4f1f21eef14bb45c3cf710e71af61"
     },
     {
       "path": "assets/private-fund-overview.js",
@@ -50235,8 +50240,8 @@
     },
     {
       "path": "products.html",
-      "size": 2557,
-      "sha256": "1157368635f884abc6c55b8a5ded0dffcfccd212248a390b9ffa22461229fcdf"
+      "size": 2608,
+      "sha256": "7d84594866c6efe31336daaebef79160900934c994fef82effa12bf0dc9bc521"
     },
     {
       "path": "version.json",
@@ -50248,5 +50253,7 @@
       "size": 3548,
       "sha256": "0cff39cd6fdaff76078f7de0af2cc18d6762008b0a8c260af6cc4124fe3ba987"
     }
-  ]
+  ],
+  "presentationUpdatedAt": "2026-09-19T19:50:16.145512+08:00",
+  "presentationRevision": "business_query_v1"
 }

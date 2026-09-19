@@ -1,4 +1,4 @@
-(() => {
+(async () => {
   const B = window.BasicData;
   const summary = B.state.summary;
   const root = B.byId("strategyListPage");
@@ -461,6 +461,8 @@
     </section>
   `;
 
+  const businessQuery = await window.BusinessQuery.create(allStrategies, row => String(row.统一策略ID), root);
+
   function scatterQuantile(values, fraction) {
     const sorted = values.slice().sort((a, b) => a - b);
     if (!sorted.length) return null;
@@ -595,7 +597,7 @@
     const channel = B.byId("channelSelect").value;
     const reportTypes = multiValues("reportTypeSelect");
     const businesses = multiValues("businessSelect");
-    return allStrategies.filter((row) => {
+    return businessQuery.apply(allStrategies).filter((row) => {
       if (!matchesProductScope(row, productStatus)) return false;
       if (state.incomingGlobalFiltersActive && !B.matchesGlobalStrategyFilters(row)) return false;
       if (state.hiddenStrategyScope === "gf" && !isGfStrategy(row)) return false;
@@ -618,6 +620,7 @@
       return state.sortDir === "asc" ? compared : -compared;
     });
     state.rows = rows;
+    businessQuery.describe(rows.length);
     renderStrategyScatter(rows);
     const activeLabels = [...root.querySelectorAll("[data-multi-filter]")].filter(control => multiValues(control.id).length).map(control => control.querySelector("summary span").textContent);
     B.byId("strategyActiveFilters").textContent = `${rows.length.toLocaleString("zh-CN")} 只 · ${activeLabels.join(" / ") || "全部分类"}`;
@@ -741,6 +744,7 @@
     window.location.href = `./compare.html?${params.toString()}`;
   });
   B.byId("resetButton").addEventListener("click", () => {
+    businessQuery.clear();
     B.byId("searchInput").value = "";
     B.byId("productStatusSelect").value = "recommended";
     B.byId("clientScopeSelect").value = "";

@@ -68,10 +68,12 @@
     "detailCompressedBytes": 123389736,
     "preservedPublishPathCount": 1,
     "preservedPublishFileCount": 1,
-    "preservedPublishBytes": 278034
+    "preservedPublishBytes": 278034,
+    "fileCountExcludingManifest": 2016,
+    "totalBytesExcludingManifest": 143158534
   },
-  "fileCount": 2015,
-  "totalBytes": 143154097,
+  "fileCount": 2016,
+  "totalBytes": 143158534,
   "files": [
     {
       "path": ".github/workflows/pages.yml",
@@ -92,6 +94,16 @@
       "path": ".stignore",
       "size": 31,
       "sha256": "9eeb110538f7b4c5e1e5af9b0598d8de165579bc604b7eae34c6a242e9e24d38"
+    },
+    {
+      "path": "README.md",
+      "size": 2316,
+      "sha256": "59c83f285af0cef14c76b6a47030d760d47457a38c481485777e98645dc63fd2"
+    },
+    {
+      "path": "README_部署说明.md",
+      "size": 2316,
+      "sha256": "59c83f285af0cef14c76b6a47030d760d47457a38c481485777e98645dc63fd2"
     },
     {
       "path": "basic_data/advisor_quota_workbench/index.html",
@@ -124,6 +136,11 @@
       "sha256": "d096a111e307d641b0c473a519a9fb5e530f380179bbe7be33a5526f27419a10"
     },
     {
+      "path": "basic_data/assets/business-query.js",
+      "size": 4200,
+      "sha256": "4992c89bd43ea24abd4294666cf70508820336425ce50bc2b923a446e5244cf4"
+    },
+    {
       "path": "basic_data/assets/insights.js",
       "size": 358061,
       "sha256": "53f5170a3632a50812d202d48ebf65bbaade0fb1e30100d7960b0be266cfb560"
@@ -145,8 +162,8 @@
     },
     {
       "path": "basic_data/assets/strategies.js",
-      "size": 46641,
-      "sha256": "1a1d1f4d701631228729d373dda39b35ac317954a6f5eb8d289ea6ac94096978"
+      "size": 46852,
+      "sha256": "394c4efee9c85f8e74df6dac1e875807ab870cfff6402e248410eb0069dfa736"
     },
     {
       "path": "basic_data/assets/strategy-detail.js",
@@ -10045,8 +10062,8 @@
     },
     {
       "path": "basic_data/strategies.html",
-      "size": 2424,
-      "sha256": "080ac343291398f0635034fe124f555c033809c1e0a59bd64fd13be759e995c1"
+      "size": 2450,
+      "sha256": "b342f17103f126635c123dd2976d7085c1128394d96b520fef4a3249d8a26a9e"
     },
     {
       "path": "basic_data/strategy.html",
@@ -10062,16 +10079,6 @@
       "path": "package_validation.json",
       "size": 3670,
       "sha256": "4a7d41dd48e5ada3ecf4822a763543adefa4d8a8cb653b05a3c2be39051b6603"
-    },
-    {
-      "path": "README.md",
-      "size": 2316,
-      "sha256": "59c83f285af0cef14c76b6a47030d760d47457a38c481485777e98645dc63fd2"
-    },
-    {
-      "path": "README_部署说明.md",
-      "size": 2316,
-      "sha256": "59c83f285af0cef14c76b6a47030d760d47457a38c481485777e98645dc63fd2"
     },
     {
       "path": "scripts/ai_strategy_codex_proxy.mjs",
@@ -10148,5 +10155,7 @@
       "size": 58,
       "sha256": "fde8860405e951900cdc0080196dc927fb16da60ffe7464e5d2c068490a4fac5"
     }
-  ]
+  ],
+  "presentationUpdatedAt": "2026-09-19T19:50:16.135934+08:00",
+  "presentationRevision": "business_query_v1"
 }

@@ -1,4 +1,4 @@
-(() => {
+(async () => {
   const P = window.PrivateFund || {};
   const C = window.PrivateFundScatterControls;
   const pack = window.__PRIVATE_FUND_CATALOG__;
@@ -71,7 +71,7 @@
   }
 
   function filterRows() {
-    return window.PrivateFundTables.sorted(C.filter(rows, state).filter(r=>F.matches(r,advanced,filterAsOf)), row => ({name:row.name,source:row.sourceLabel,company:[row.company,...(row.managers||[])].join('、'),strategy:row.strategy1,inception:row.inceptionDate||row.filterFacts?.firstDate,latest:row.analysisLatestDate||row.latestNavDate,x:metricValue(row,state.xMetric),y:metricValue(row,state.yMetric),ready:Number(isPlottable(row))})[state.sort], state.direction);
+    return window.PrivateFundTables.sorted(C.filter(businessQuery.apply(rows), state).filter(r=>F.matches(r,advanced,filterAsOf)), row => ({name:row.name,source:row.sourceLabel,company:[row.company,...(row.managers||[])].join('、'),strategy:row.strategy1,inception:row.inceptionDate||row.filterFacts?.firstDate,latest:row.analysisLatestDate||row.latestNavDate,x:metricValue(row,state.xMetric),y:metricValue(row,state.yMetric),ready:Number(isPlottable(row))})[state.sort], state.direction);
   }
 
   function syncUrl() {
@@ -170,6 +170,7 @@
   selectionPanel.setAttribute('aria-label','当前选中产品');
   root.insertBefore(selectionPanel,document.getElementById('productListPanel'));
 
+  const businessQuery = await window.BusinessQuery.create(rows, row => String(row.key), root);
   const elements = {
     search: document.getElementById("productSearch"), source: document.getElementById("sourceFilter"),
     company: document.getElementById("companyFilter"), strategy: document.getElementById("strategyFilter"),
@@ -508,6 +509,7 @@
   function render({ announce = false } = {}) {
     renderAdvanced();
     currentFiltered = filterRows();
+    businessQuery.describe(currentFiltered.length);
     const readyCount = currentFiltered.filter(isPlottable).length;
     syncUrl();
     elements.count.textContent = `${currentFiltered.length.toLocaleString("zh-CN")} / ${rows.length.toLocaleString("zh-CN")} 个产品`;
@@ -538,6 +540,7 @@
   document.getElementById('focusView').addEventListener('click',()=>{state.focus=true;renderScatter(currentFiltered);syncUrl();});
   document.getElementById('allView').addEventListener('click',()=>{state.focus=false;renderScatter(currentFiltered);syncUrl();});
   elements.reset.addEventListener("click", () => {
+    businessQuery.clear();
     advanced = {};
     F.setBenchmark('sh000300');
     Object.assign(state, { query: "", source: "", companies: [], strategies: [], xMetric: pack.meta.defaultXMetric, yMetric: pack.meta.defaultYMetric, selected: "", page: 1,focus:true,cardOpen:true });
