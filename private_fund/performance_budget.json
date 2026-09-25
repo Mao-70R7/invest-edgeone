@@ -1,0 +1,12 @@
+{
+  "method": "lossless_record_encoding_and_route_specific_data",
+  "baselineCatalogBytes": 265643180,
+  "baselineCatalogGzipBytes": 30901668,
+  "encodedCatalogBytes": 67966469,
+  "routeDataGzipBytes": {
+    "catalog": 10133426,
+    "overview": 321599,
+    "peers": 5822133,
+    "awards-zone": 442633
+  }
+}

@@ -1,0 +1,659 @@
+(async () => {
+  const P = window.PrivateFund || {};
+  const C = window.PrivateFundScatterControls;
+  const A = window.PrivateFundAwards;
+  const pack = window.__PRIVATE_FUND_CATALOG__;
+  const root = document.getElementById("mainContent");
+  if (!root) return;
+  if (!pack || !Array.isArray(pack.rows) || !C) {
+    root.innerHTML = '<section class="empty-panel">数据暂不可用</section>';
+    return;
+  }
+
+  const rows = pack.rows;
+  const F = window.PrivateFundFilters;
+  const filterAsOf = pack.meta.generatedAt.slice(0,10);
+  let advanced = F.read(P.params());
+  try { await window.PrivateFundStaticLoader?.ensureBenchmark(pack,F.getBenchmark()); }
+  catch(error) {root.innerHTML='<section class="empty-panel">指数数据加载失败，请刷新重试。</section>';console.error(error);return;}
+  const activeFields = Object.fromEntries(F.groups.map(g=>[g,F.fields.find(f=>f.group===g).id]));
+  const metrics = (pack.metrics || []).filter((metric) => Number(metric.coverageTotal || 0) > 0);
+  const metricMap = new Map(metrics.map((metric) => [metric.code, metric]));
+  const xMetrics = metrics.filter(m => m.group === 'return');
+  const yMetrics = metrics.filter(m => m.group === 'risk');
+  const companies = C.values(rows, 'company');
+  const strategies = C.values(rows, 'strategy');
+  const sourceOrder = [...new Set(["gffunds_highend", "geshang", "simuwang", "howbuy", ...rows.map(row => row.source)])].filter(source => rows.some(row => row.source === source));
+  const state = {
+    query: "", source: "", companies: [], strategies: [],
+    xMetric: pack.meta.defaultXMetric || metrics[0]?.code || "",
+    yMetric: pack.meta.defaultYMetric || metrics[1]?.code || metrics[0]?.code || "",
+    selected: "", page: 1, pageSize: 60, focus: true, cardOpen: true, sort: 'x', direction: 'desc',
+  };
+  let currentFiltered = [];
+  let scatterHits = [];
+  let keyboardIndex = -1;
+  let resizeObserver = null;
+  let palette = C.defaults();
+  let paletteNotice = '';
+  try {
+    const saved=window.localStorage.getItem(C.STORAGE_KEY);
+    if(saved) palette=C.normalizePalette(JSON.parse(saved));
+  } catch { paletteNotice='浏览器无法读取已保存配色，当前使用默认配色。'; }
+  let companyStyle=C.resolver(palette);
+  let businessQuery=null;
+  const pointStyle=row=>businessQuery?.highlightColor?{color:businessQuery.highlightColor,highlighted:true}:(state.colorBy==='award'?A.style(row,state):companyStyle(row));
+  let editingCompany='';
+
+  function applyParams() {
+    const params = P.params();
+    advanced = F.read(params);
+    A.read(params,state);
+    F.fields.filter(f=>advanced[f.id]).forEach(f=>{activeFields[f.group]=f.id;});
+    state.query = P.clean(params.get("q"));
+    state.source = P.clean(params.get("source"));
+    Object.assign(state, C.readFilters(params, rows));
+    state.xMetric = xMetrics.some(m => m.code === params.get("x")) ? params.get("x") : (pack.meta.defaultXMetric || xMetrics[0]?.code || "");
+    state.yMetric = yMetrics.some(m => m.code === params.get("y")) ? params.get("y") : (pack.meta.defaultYMetric || yMetrics[0]?.code || "");
+    state.selected = rows.some(r=>r.key===params.get("selected")) ? params.get("selected") : "";
+    state.focus = params.get('view') !== 'all';
+    state.cardOpen = params.get('card') !== 'folded';
+    state.page = Math.max(1, Number(params.get("page")) || 1);
+    state.sort = ['name','source','company','strategy','inception','latest','x','y','ready'].includes(params.get('sort')) ? params.get('sort') : 'x';
+    state.direction = params.get('direction') === 'asc' ? 'asc' : 'desc';
+  }
+  applyParams();
+
+  function metricLabel(code) {
+    return metricMap.get(code)?.label || code || "未选择";
+  }
+
+  function metricValue(row, code) {
+    return P.number(row?.metrics?.[code]?.value);
+  }
+
+  function isPlottable(row) {
+    return metricValue(row, state.xMetric) !== null && metricValue(row, state.yMetric) !== null;
+  }
+
+  function filterRows() {
+    return window.PrivateFundTables.sorted(C.filter(businessQuery.apply(rows), state).filter(r=>F.matches(r,advanced,filterAsOf)&&A.matches(r,state)), row => ({name:row.name,source:row.sourceLabel,company:[row.company,...(row.managers||[])].join('、'),strategy:row.strategy1,inception:row.inceptionDate||row.filterFacts?.firstDate,latest:row.analysisLatestDate||row.latestNavDate,x:metricValue(row,state.xMetric),y:metricValue(row,state.yMetric),ready:Number(isPlottable(row))})[state.sort], state.direction);
+  }
+
+  function syncUrl() {
+    const url = new URL(window.location.href);
+    const set = (key, value, empty = "") => value && value !== empty ? url.searchParams.set(key, value) : url.searchParams.delete(key);
+    set("q", state.query);
+    set("source", state.source);
+    C.writeFilters(url.searchParams, state);
+    F.write(url.searchParams, advanced);
+    A.write(url.searchParams,state);
+    set("x", state.xMetric, pack.meta.defaultXMetric);
+    set("y", state.yMetric, pack.meta.defaultYMetric);
+    set("selected", state.selected);
+    set('sort',state.sort,'x');set('direction',state.direction,'desc');
+    set('view', state.focus ? '' : 'all');
+    set('card', state.selected && !state.cardOpen ? 'folded' : '');
+    if (state.page > 1) url.searchParams.set("page", String(state.page)); else url.searchParams.delete("page");
+    window.history.replaceState({}, "", `${url.pathname}${url.search}`);
+  }
+
+  function option(value, label, selected) {
+    return `<option value="${P.esc(value)}"${value === selected ? " selected" : ""}>${P.esc(label)}</option>`;
+  }
+
+  function sourceCountText() {
+    return sourceOrder.map((source) => `${P.sourceColors[source]?.label || source} ${Number(pack.meta.sourceCounts?.[source] || 0).toLocaleString("zh-CN")}`).join(" · ");
+  }
+
+  root.innerHTML = `
+    ${pack.meta.audience === 'internal' ? '<aside class="empty-panel" role="note">本地内部研究：包含雪球、招商等受限渠道的已入库快照；未披露或未采集的数据不补零，历史起点以实际披露为准。本页面禁止公开发布。</aside>' : ''}
+    <section class="page-heading">
+      <div><span class="eyebrow">PRIVATE FUND</span><h1>私募筛选</h1></div>
+      <div class="asof-block"><strong>${rows.length.toLocaleString("zh-CN")}</strong><span>${P.esc(sourceCountText())}</span><time>${P.esc(P.formatDateTime(pack.meta.latestObservedAt))}</time></div>
+    </section>
+    <section id="productListPanel" class="panel" aria-labelledby="filterTitle">
+      <div class="panel-head"><h2 id="filterTitle">产品列表</h2><span id="filterCount" class="panel-count"></span></div>
+      <div class="filter-panel">
+        <div id="rankFilters" class="rank-filters"></div>
+        <div class="filter-grid">
+          <label class="field"><span>产品 / 管理人 / 经理 / 备案号</span><input id="productSearch" type="search" autocomplete="off" placeholder="输入产品、机构或经理" value="${P.esc(state.query)}"></label>
+          <label class="field"><span>数据来源</span><select id="sourceFilter">${option("", "全部来源", state.source)}${sourceOrder.map((id) => option(id, P.sourceColors[id]?.label || id, state.source)).join("")}</select></label>
+          <div class="field" id="companyFilter"></div>
+          <div class="field" id="strategyFilter"></div>
+          <button id="resetFilters" class="secondary-button" type="button">重置</button>
+        </div>
+      </div>
+      <div id="summaryStrip" class="summary-strip"></div>
+      <div class="table-wrap">
+        <table class="product-table" data-external-sort="true">
+          <thead><tr><th>产品</th><th>来源</th><th>管理人 / 经理</th><th>策略</th><th>成立日</th><th>最新业绩 / 序列</th><th id="xTableHead"></th><th id="yTableHead"></th><th>坐标状态</th></tr></thead>
+          <tbody id="productTableBody"></tbody>
+        </table>
+      </div>
+      <div id="pager" class="pager"></div>
+    </section>
+    <section id="scatterPanel" class="panel" aria-labelledby="scatterTitle">
+      <div class="panel-head"><h2 id="scatterTitle">全部产品业绩点阵</h2><span id="scatterCount" class="panel-count"></span></div>
+      <div class="scatter-toolbar">
+        <label class="field"><span>X 轴 · 区间收益</span><select id="xMetric">${xMetrics.map((metric) => option(metric.code, `${metric.label} · ${metric.coverageTotal}只`, state.xMetric)).join("")}</select></label>
+        <label class="field"><span>Y 轴 · 风险指标</span><select id="yMetric">${yMetrics.map((metric) => option(metric.code, `${metric.label} · ${metric.coverageTotal}只`, state.yMetric)).join("")}</select></label>
+        <div class="scatter-view-controls" role="group" aria-label="点阵视图"><button type="button" id="focusView">聚焦主分布</button><button type="button" id="allView">全样本</button></div>
+      </div>
+      <details id="companyColors" class="company-colors">
+        <summary>基金公司配色 <span>自定义 / 本浏览器保存</span></summary>
+        <div class="palette-panel">
+          <p class="palette-help">按基金公司名称精确匹配，可从目录选择或输入新公司；不会把名称相似的不同机构合并。修改只影响点阵颜色。</p>
+          <form id="companyColorForm" class="palette-form">
+            <label class="field"><span>基金公司名称</span><input id="colorCompany" list="colorCompanyOptions" maxlength="160" required placeholder="选择或输入，例如中欧基金" autocomplete="off"></label>
+            <datalist id="colorCompanyOptions">${companies.filter(v=>v!==C.MISSING).map(v=>`<option value="${P.esc(v)}"></option>`).join('')}</datalist>
+            <label class="field"><span>颜色</span><input id="companyColorValue" type="color" value="#16845b"></label>
+            <button id="saveCompanyColor" type="submit" class="secondary-button">新增配色</button>
+            <button id="cancelCompanyColor" type="button" class="secondary-button" hidden>取消修改</button>
+          </form>
+          <div id="companyColorRules" class="palette-rules"></div>
+          <div class="palette-defaults"><label>其他产品 <input id="otherProductColor" type="color" aria-label="其他产品颜色"></label><button id="resetCompanyColors" type="button" class="secondary-button">恢复默认配色</button><span>默认：广发红色，其他灰色；删除公司配色后使用“其他产品”颜色。</span></div>
+          <p id="paletteStatus" role="status" class="palette-status"></p>
+        </div>
+      </details>
+      <div class="scatter-guide"><div id="companyColorLegend" class="legend-row"></div><span id="viewNote"></span></div>
+      <p id="quadrantRule" class="quadrant-rule"></p>
+      <div id="scatterStage" class="scatter-stage">
+        <canvas id="performanceScatter" height="540" tabindex="0" role="img" aria-describedby="scatterAccessibleSummary"></canvas>
+        <div id="scatterTooltip" class="chart-tooltip" hidden></div>
+      </div>
+      <p id="scatterAccessibleSummary" class="sr-only"></p>
+      <div id="missingSummary" class="missing-summary"></div>
+      <details class="comparability-note"><summary>日期与比较口径</summary><p>${P.esc(pack.meta.comparability?.warning || '')} 指标取各产品最新业绩日，实际日期见产品卡。象限仅表示当前筛选样本的相对高低，并非绝对优劣。聚焦视图分别取各轴2.5%—97.5%分位范围，并纳入当前选中产品；未删除数据。</p></details>
+    </section>`;
+  const scatterPanel = document.getElementById('scatterPanel');
+  root.insertBefore(scatterPanel, root.children[1]);
+  const filterDisclosure=document.createElement('details');
+  filterDisclosure.className='filter-disclosure';filterDisclosure.open=window.innerWidth>760;
+  filterDisclosure.innerHTML='<summary>筛选产品 <span id="activeFilters"></span></summary>';
+  filterDisclosure.appendChild(root.querySelector('.filter-panel'));
+  scatterPanel.insertBefore(filterDisclosure, scatterPanel.querySelector('.scatter-toolbar'));
+  const selectionPanel=document.createElement('section');selectionPanel.id='selectedProductPanel';
+  selectionPanel.setAttribute('aria-label','当前选中产品');
+  root.insertBefore(selectionPanel,document.getElementById('productListPanel'));
+
+  const syncAwards=A.mount(root.querySelector('.filter-panel .filter-grid'),root.querySelector('.scatter-toolbar'),rows,state,()=>{if(state.selected&&!filterRows().some(r=>r.key===state.selected))state.selected="";render({announce:true});},pack.meta.awards);
+  businessQuery = await window.BusinessQuery.create(rows, row => String(row.key), root);
+  const elements = {
+    search: document.getElementById("productSearch"), source: document.getElementById("sourceFilter"),
+    company: document.getElementById("companyFilter"), strategy: document.getElementById("strategyFilter"),
+    reset: document.getElementById("resetFilters"), count: document.getElementById("filterCount"),
+    summary: document.getElementById("summaryStrip"), body: document.getElementById("productTableBody"),
+    pager: document.getElementById("pager"), xHead: document.getElementById("xTableHead"), yHead: document.getElementById("yTableHead"),
+    xMetric: document.getElementById("xMetric"), yMetric: document.getElementById("yMetric"),
+    scatterCount: document.getElementById("scatterCount"), canvas: document.getElementById("performanceScatter"),
+    tooltip: document.getElementById("scatterTooltip"), summaryText: document.getElementById("scatterAccessibleSummary"),
+  };
+
+  // Searchable checkbox selectors: OR within a field, AND between fields.
+  function createMultiSelect(host, key, field, choices, title) {
+    const institutionSearch=field==='company'?C.companySearchIndex(rows):null;
+    host.innerHTML=`<span>${title}</span><details class="multi-select"><summary aria-label="${title}多选"><span class="multi-select-value"></span><span aria-hidden="true">⌄</span></summary><div class="multi-select-menu"><input type="search" aria-label="搜索${title}" placeholder="搜索${title}" autocomplete="off"><div class="multi-select-actions"><span class="multi-select-count"></span><button type="button" data-clear>清空选择</button><button type="button" data-close>完成</button></div><div class="multi-select-options" role="group" aria-label="${title}选项"></div><button type="button" data-more hidden>显示更多</button></div></details>`;
+    const details=host.querySelector('details'), search=host.querySelector('input'), options=host.querySelector('.multi-select-options');
+    let limit=60;
+    function refresh() {
+      const chosen=state[key], query=search.value.trim().toLocaleLowerCase('zh-CN');
+      const matched=choices.filter(value=>(institutionSearch?.get(value)||C.label(value,field).toLocaleLowerCase('zh-CN')).includes(query));
+      const visible=matched.slice(0,limit);
+      host.querySelector('.multi-select-value').textContent=chosen.length ? (chosen.length===1 ? C.label(chosen[0],field) : `已选 ${chosen.length} 项`) : `全部${title}`;
+      host.querySelector('.multi-select-count').textContent=`已选 ${chosen.length} / 可选 ${choices.length}`;
+      const countByValue=new Map();C.filter(rows,{...state,[key]:[]}).filter(r=>F.matches(r,advanced,filterAsOf)&&A.matches(r,state)).forEach(r=>{const v=String(r[field]||'').trim()||'__not_disclosed__';countByValue.set(v,(countByValue.get(v)||0)+1);});
+      options.innerHTML=visible.map(value=>`<label><input type="checkbox" value="${P.esc(value)}"${chosen.includes(value)?' checked':''}><span>${P.esc(C.label(value,field))}<small>（${(countByValue.get(value)||0).toLocaleString()}只 · ${((countByValue.get(value)||0)/rows.length*100).toFixed(1)}%）</small></span></label>`).join('')||'<p>没有匹配选项</p>';
+      host.querySelector('[data-more]').hidden=matched.length<=limit;
+    }
+    search.addEventListener('input',()=>{limit=60;refresh();});
+    options.addEventListener('change',event=>{
+      const input=event.target.closest('input[type="checkbox"]'); if(!input)return;
+      updateFilter(key,input.checked?[...state[key],input.value]:state[key].filter(value=>value!==input.value));
+      // Keep focus on the toggled checkbox for consecutive keyboard selections.
+      refresh(); [...options.querySelectorAll('input')].find(node=>node.value===input.value)?.focus();
+    });
+    host.querySelector('[data-clear]').addEventListener('click',()=>{updateFilter(key,[]);refresh();});
+    host.querySelector('[data-close]').addEventListener('click',()=>{details.open=false;details.querySelector('summary').focus();});
+    host.querySelector('[data-more]').addEventListener('click',()=>{limit+=60;refresh();});
+    details.addEventListener('toggle',()=>{
+      if(details.open)document.querySelectorAll('.multi-select[open]').forEach(other=>{if(other!==details)other.open=false;});
+    });
+    details.addEventListener('keydown',event=>{if(event.key==='Escape'){details.open=false;details.querySelector('summary').focus();}});
+    refresh(); return refresh;
+  }
+  const refreshCompany=createMultiSelect(elements.company,'companies','company',companies,'基金公司');
+  const refreshStrategy=createMultiSelect(elements.strategy,'strategies','strategy',strategies,'策略类型');
+  document.addEventListener('click',event=>document.querySelectorAll('.multi-select[open]').forEach(node=>{if(!node.contains(event.target))node.open=false;}));
+
+  function renderPalette() {
+    document.getElementById('companyColorRules').innerHTML=palette.rules.map(rule=>{
+      const count=rows.filter(row=>C.company(row)===rule.company).length;
+      return `<div class="palette-rule"><i class="legend-mark" style="--mark:${rule.color}"></i><div><strong>${P.esc(rule.company)}</strong><span>${rule.color} · 当前目录匹配 ${count} 只${count?'':'（新增产品后自动生效）'}</span></div><button type="button" data-edit="${P.esc(rule.company)}" aria-label="修改${P.esc(rule.company)}配色">修改</button><button type="button" data-delete="${P.esc(rule.company)}" aria-label="删除${P.esc(rule.company)}配色">删除</button></div>`;
+    }).join('')||'<p class="palette-help">未配置公司配色，全部使用“其他产品”颜色。</p>';
+    document.getElementById('otherProductColor').value=palette.other;
+    document.getElementById('paletteStatus').textContent=paletteNotice;
+  }
+  function savePalette(next, message) {
+    businessQuery.clearHighlight();
+    palette=C.normalizePalette(next);companyStyle=C.resolver(palette);
+    try { window.localStorage.setItem(C.STORAGE_KEY,JSON.stringify(palette));paletteNotice=`${message} 已保存到当前浏览器。`; }
+    catch { paletteNotice=`${message} 浏览器禁止保存，仅本次页面生效。`; }
+    renderPalette();renderScatter(currentFiltered);P.announce(paletteNotice);
+  }
+  function clearColorEditor() {
+    editingCompany='';document.getElementById('colorCompany').value='';
+    document.getElementById('companyColorValue').value='#16845b';
+    document.getElementById('saveCompanyColor').textContent='新增配色';document.getElementById('cancelCompanyColor').hidden=true;
+  }
+  document.getElementById('companyColorForm').addEventListener('submit',event=>{
+    event.preventDefault();
+    try {
+      savePalette(C.upsertRule(palette,document.getElementById('colorCompany').value,document.getElementById('companyColorValue').value,editingCompany),editingCompany?'配色已修改。':'配色已新增。');
+      clearColorEditor();
+    } catch(error) { document.getElementById('paletteStatus').textContent=error.message; }
+  });
+  document.getElementById('cancelCompanyColor').addEventListener('click',clearColorEditor);
+  document.getElementById('companyColorRules').addEventListener('click',event=>{
+    const edit=event.target.closest('[data-edit]'),remove=event.target.closest('[data-delete]');
+    if(edit){
+      const rule=palette.rules.find(rule=>rule.company===edit.dataset.edit);if(!rule)return;
+      editingCompany=rule.company;document.getElementById('colorCompany').value=rule.company;document.getElementById('companyColorValue').value=rule.color;
+      document.getElementById('saveCompanyColor').textContent='保存修改';document.getElementById('cancelCompanyColor').hidden=false;
+      document.getElementById('colorCompany').focus();
+    }
+    if(remove){savePalette(C.removeRule(palette,remove.dataset.delete),'公司配色已删除。');if(editingCompany===remove.dataset.delete)clearColorEditor();}
+  });
+  document.getElementById('otherProductColor').addEventListener('change',event=>savePalette({...palette,other:event.target.value},'其他产品颜色已修改。'));
+  document.getElementById('resetCompanyColors').addEventListener('click',()=>{savePalette(C.defaults(),'已恢复默认配色。');clearColorEditor();});
+  window.addEventListener('storage',event=>{
+    if(event.key!==C.STORAGE_KEY)return;
+    try {palette=C.normalizePalette(event.newValue?JSON.parse(event.newValue):null);pointStyle=C.resolver(palette);paletteNotice='已同步其他窗口的配色。';renderPalette();renderScatter(currentFiltered);} catch { /* Keep the last valid palette. */ }
+  });
+  renderPalette();
+
+  function renderSummary(filtered) {
+    const ready = filtered.filter(isPlottable).length;
+    const sourceCount = new Set(filtered.map((row) => row.source)).size;
+    const managerCount = new Set(filtered.map((row) => P.clean(row.company)).filter(Boolean)).size;
+    const analysisCount = filtered.filter((row) => Number(row.analysisPointCount || 0) >= 2).length;
+    const derivedCount = filtered.filter((row) => Number(row.derivedMetricCount || 0) > 0).length;
+    const metrics = [
+      ["筛选产品", filtered.length.toLocaleString("zh-CN")],
+      ["二维坐标", ready.toLocaleString("zh-CN")],
+      ["指标缺失", (filtered.length - ready).toLocaleString("zh-CN")],
+      ["管理人机构", managerCount.toLocaleString("zh-CN")],
+      ["可用序列 / 衍生指标", `${analysisCount.toLocaleString("zh-CN")} / ${derivedCount.toLocaleString("zh-CN")}`],
+      ["数据来源", sourceCount.toLocaleString("zh-CN")],
+    ];
+    elements.summary.innerHTML = metrics.map(([label, value]) => `<div class="summary-metric"><span>${P.esc(label)}</span><strong>${P.esc(value)}</strong></div>`).join("");
+  }
+
+  function renderMetricCell(row, code) {
+    const metric = row.metrics?.[code];
+    if (!metric || P.number(metric.value) === null) {const reason=P.missingReason(row,code);return `<span class="metric-raw is-missing">—</span><span class="cell-sub metric-missing" title="${P.esc(reason.message)}">${P.esc(reason.label)}</span>`;}
+    return `<span class="metric-raw ${P.metricTone(code,metric.value)}" title="${P.esc([metric.windowStart,metric.windowEnd,metric.formula].filter(Boolean).join(' · '))}">${P.esc(P.formatNumber(metric.value, 2))}${metric.unit === 'percent' ? '%' : ''}</span><span class="cell-sub">${P.esc(P.formatDate(metric.asOf))} · ${metric.origin === 'calculated' ? '历史计算' : '来源披露'}</span>`;
+  }
+
+  function renderSelectedCard() {
+    const row=rows.find(r=>r.key===state.selected);
+    if(!row){selectionPanel.innerHTML='<div class="selection-hint">点选图中的产品，或点击列表行，查看产品关键指标卡。</div>';return;}
+    const codes=[...new Set([state.xMetric,state.yMetric,'return_1m','return_3m','return_6m','return_ytd','return_1y','return_since','annual_return_since','drawdown_1y','volatility_since','sharpe_since','sortino_since','calmar_since','monthly_win_since'])];
+    selectionPanel.innerHTML=`<details class="selected-product-card" ${state.cardOpen?'open':''}><summary><div><span class="selection-eyebrow">当前选中 · ${P.esc(P.sourceColors[row.source]?.label || row.source)}</span><a class="selected-product-name" href="${P.esc(P.detailHref(row.key,location.search.slice(1)))}">${P.esc(row.name||row.id)} ↗</a><span class="cell-sub">${P.esc(row.id)} · ${P.esc(row.strategy1||'策略未披露')}</span></div><span class="selection-toggle"><span class="when-open">收起指标</span><span class="when-closed">展开指标</span>⌄</span></summary><div class="selection-basics">${[[row.inceptionDate?'成立日期':'净值起点（补充）',row.inceptionDate||row.filterFacts?.firstDate],['基金经理',(row.managers||[]).join('、')],['管理机构',row.company],['业绩截止',row.analysisLatestDate||row.latestNavDate]].map(([label,value])=>`<div><span>${label}</span><strong>${P.esc(value||'未披露')}</strong></div>`).join('')}</div>${A.badges(row)}<div class="selection-metrics">${codes.map(code=>`<div><span class="selection-metric-label">${P.esc(metricLabel(code))}</span>${renderMetricCell(row,code)}${!row.metrics?.[code]?`<small>${P.esc(P.missingReason(row,code).message)}</small>`:''}</div>`).join('')}</div></details>`;
+    const details=selectionPanel.querySelector('details');
+    details.querySelector('summary').addEventListener('click',event=>{
+      if(event.target.closest('a'))return;
+      event.preventDefault();
+      state.cardOpen=!details.open;details.open=state.cardOpen;syncUrl();
+    });
+    details.addEventListener('toggle',()=>{
+      if(!details.isConnected)return;
+      state.cardOpen=details.open;syncUrl();
+    });
+    selectionPanel.querySelector('a').addEventListener('click',event=>event.stopPropagation());
+  }
+
+  function selectProduct(key, moveToCard=false) {
+    state.selected=key;state.cardOpen=true;
+    const index=currentFiltered.findIndex(r=>r.key===key);
+    if(index>=0)state.page=Math.floor(index/state.pageSize)+1;
+    syncUrl();renderSelectedCard();renderTable(currentFiltered);renderScatter(currentFiltered);
+    if(moveToCard)selectionPanel.scrollIntoView({block:'start',behavior:'auto'});
+    const row=rows.find(r=>r.key===key);P.announce(`已选择 ${row?.name||key}，产品卡位于列表上方。`);
+  }
+
+  function renderTable(filtered) {
+    const pages = Math.max(1, Math.ceil(filtered.length / state.pageSize));
+    state.page = Math.min(Math.max(1, state.page), pages);
+    const start = (state.page - 1) * state.pageSize;
+    const pageRows = filtered.slice(start, start + state.pageSize);
+    elements.xHead.textContent = metricLabel(state.xMetric);
+    elements.yHead.textContent = metricLabel(state.yMetric);
+    const keys=['name','source','company','strategy','inception','latest','x','y','ready'];
+    const labels=['产品','来源','管理人 / 经理','策略','成立日','最新业绩 / 序列',metricLabel(state.xMetric),metricLabel(state.yMetric),'坐标状态'];
+    elements.body.closest('table').querySelectorAll('thead th').forEach((th,i)=>window.PrivateFundTables.header(th,labels[i],state.sort===keys[i],state.direction,()=>{state.direction=state.sort===keys[i]&&state.direction==='desc'?'asc':'desc';state.sort=keys[i];state.page=1;render();}));
+    const backQuery = window.location.search.replace(/^\?/, "");
+    elements.body.innerHTML = pageRows.map((row) => {
+      const ready = isPlottable(row);
+      const company = P.clean(row.company) || "未披露管理人";
+      const managers = (row.managers || []).join("、");
+      return `<tr data-key="${P.esc(row.key)}" tabindex="0" aria-selected="${row.key === state.selected}" class="${row.key === state.selected ? "is-selected " : ""}${row.source === "gffunds_highend" ? "is-gffunds" : ""}">
+        <td><a class="product-link" href="${P.esc(P.detailHref(row.key, backQuery))}">${P.esc(row.name || row.id)}</a><span class="cell-sub">${P.esc(row.id)}${row.registrationNumber ? ` · ${P.esc(row.registrationNumber)}` : ""}</span>${A.badges(row)}</td>
+        <td>${P.sourceBadge(row.source)}</td>
+        <td>${P.esc(company)}${managers ? `<span class="cell-sub">经理：${P.esc(managers)}</span>` : ""}</td>
+        <td>${P.esc(row.strategy1 || "未分类")}<span class="cell-sub">${P.esc(row.strategy2 || row.strategy3 || "")}</span></td>
+        <td>${P.esc(P.formatDate(row.inceptionDate||row.filterFacts?.firstDate))}${!row.inceptionDate&&row.filterFacts?.firstDate?'<span class="cell-sub">净值起点</span>':''}</td>
+        <td>${P.esc(P.formatDate(row.analysisLatestDate || row.latestNavDate))}<span class="cell-sub">${Number(row.analysisPointCount || 0).toLocaleString("zh-CN")}点${row.derivedMetricCount ? ` · ${Number(row.derivedMetricCount).toLocaleString("zh-CN")}项衍生指标` : ""}</span></td>
+        <td>${renderMetricCell(row, state.xMetric)}</td><td>${renderMetricCell(row, state.yMetric)}</td>
+        <td><span class="data-state ${ready ? "is-ready" : ""}">${ready ? "可绘制" : "所选指标暂缺"}</span></td>
+      </tr>`;
+    }).join("") || '<tr><td colspan="9">没有符合条件的产品。</td></tr>';
+    elements.pager.innerHTML = `<span>第 ${state.page.toLocaleString("zh-CN")} / ${pages.toLocaleString("zh-CN")} 页 · 每页 ${state.pageSize} 条</span><div class="pager-actions"><button type="button" data-page="prev" ${state.page <= 1 ? "disabled" : ""}>上一页</button><button type="button" data-page="next" ${state.page >= pages ? "disabled" : ""}>下一页</button></div>`;
+  }
+
+  function renderScatter(filtered) {
+    const canvas=elements.canvas, width=Math.max(300,Math.round(canvas.clientWidth||900)), height=Math.max(480,Math.round(canvas.clientHeight||600));
+    const dpr=Math.min(2,window.devicePixelRatio||1), ctx=canvas.getContext('2d');
+    canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,width,height);ctx.fillStyle='#fff';ctx.fillRect(0,0,width,height);
+    const model=P.scatterModel(filtered,state.xMetric,state.yMetric,state.focus,state.selected);
+    const missing=filtered.filter(r=>!isPlottable(r)), small=width<600;
+    const L=small?48:64,R=width-22,T=48,B=height-122;
+    const sx=v=>L+(v-model.xDomain[0])/(model.xDomain[1]-model.xDomain[0])*(R-L);
+    const sy=v=>B-(v-model.yDomain[0])/(model.yDomain[1]-model.yDomain[0])*(B-T);
+    const fmt=(v,code)=>`${P.formatNumber(v,2)}${metricMap.get(code)?.unit==='percent'?'%':''}`;
+    const yName=state.yMetric.startsWith('drawdown')?'回撤':state.yMetric.startsWith('volatility')?'波动':'夏普';
+    const mx=sx(model.xMedian),my=sy(model.yMedian);
+    scatterHits=[];
+    ctx.textBaseline='middle';ctx.font='12px "Microsoft YaHei",sans-serif';ctx.fillStyle='#48545e';ctx.textAlign='left';
+    ctx.fillText(`${metricLabel(state.yMetric)}${metricMap.get(state.yMetric)?.unit==='percent'?' (%)':''}`,L,20);
+    if(model.valid.length){
+      if(model.valid.length>=2){
+        ctx.fillStyle='rgba(197,42,48,.035)';
+        ctx.fillRect(mx,model.higherYBetter?T:my,R-mx,model.higherYBetter?my-T:B-my);
+        ctx.fillStyle='rgba(22,132,91,.035)';
+        ctx.fillRect(L,model.higherYBetter?my:T,mx-L,model.higherYBetter?B-my:my-T);
+      }
+      ctx.font='11px "Segoe UI","Microsoft YaHei",sans-serif';
+      const ticks=small?3:4;
+      for(let i=0;i<=ticks;i++){
+        const t=i/ticks,xx=L+t*(R-L),yy=B-t*(B-T);
+        ctx.strokeStyle='#e8ecef';ctx.lineWidth=1;ctx.setLineDash([]);
+        ctx.beginPath();ctx.moveTo(xx,T);ctx.lineTo(xx,B);ctx.moveTo(L,yy);ctx.lineTo(R,yy);ctx.stroke();
+        ctx.fillStyle='#75808a';ctx.textAlign='center';
+        ctx.fillText(P.formatNumber(model.xDomain[0]+t*(model.xDomain[1]-model.xDomain[0]),1),xx,B+17);
+        ctx.textAlign='right';ctx.fillText(P.formatNumber(model.yDomain[0]+t*(model.yDomain[1]-model.yDomain[0]),1),L-7,yy);
+      }
+      if(model.valid.length>=2){
+        ctx.setLineDash([6,5]);ctx.strokeStyle='#64717d';ctx.lineWidth=1.25;
+        ctx.beginPath();ctx.moveTo(mx,T);ctx.lineTo(mx,B);ctx.moveTo(L,my);ctx.lineTo(R,my);ctx.stroke();ctx.setLineDash([]);
+      }
+      const ordered=[...model.visible].sort((a,b)=>Number(pointStyle(a).highlighted)-Number(pointStyle(b).highlighted));
+      const point=(row,selected=false)=>{
+        const x=sx(metricValue(row,state.xMetric)),y=sy(metricValue(row,state.yMetric)),style=pointStyle(row);
+        ctx.globalAlpha=selected?1:style.highlighted?.95:.40;ctx.fillStyle=style.color;ctx.beginPath();ctx.arc(x,y,selected?5:style.highlighted?3.8:1.5,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;
+        if(style.highlighted||selected){ctx.strokeStyle='#fff';ctx.lineWidth=.8;ctx.stroke();}
+        if(selected){ctx.strokeStyle='#142431';ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y,8,0,Math.PI*2);ctx.stroke();canvas.dataset.selectedX=String(x);canvas.dataset.selectedY=String(y);}
+        return {x,y,row,kind:'plot'};
+      };
+      ordered.forEach(r=>scatterHits.push(point(r)));
+      const chosen=ordered.find(r=>r.key===state.selected);if(chosen)point(chosen,true);
+      if(model.valid.length>=2){
+        const labels=[
+          ['low_bad',false,!model.higherYBetter],['high_bad',true,!model.higherYBetter],
+          ['low_good',false,model.higherYBetter],['high_good',true,model.higherYBetter]
+        ];
+        labels.forEach(([key,right,top])=>{
+          const high=key.startsWith('high'),good=key.endsWith('good');
+          const text=small?`${high?'高':'低'}收 · ${good===model.higherYBetter?'高':'低'}${yName}`:`较${high?'高':'低'}收益 · 较${good===model.higherYBetter?'高':'低'}${yName}`;
+          const count=`${model.counts[key].toLocaleString('zh-CN')}只`;
+          ctx.font=`600 ${small?11:12}px "Microsoft YaHei",sans-serif`;
+          const w=Math.max(ctx.measureText(text).width,ctx.measureText(count).width)+14, x=right?R-w-7:L+7,y=top?T+7:B-47;
+          ctx.fillStyle='rgba(255,255,255,.92)';ctx.fillRect(x,y,w,39);
+          ctx.fillStyle=key==='high_good'?'#a72831':key==='low_bad'?'#197653':'#56616b';ctx.textAlign='left';
+          ctx.fillText(text,x+7,y+11);ctx.font='11px "Segoe UI",sans-serif';ctx.fillText(count,x+7,y+28);
+        });
+      }
+    }else{
+      ctx.fillStyle='#75808a';ctx.textAlign='center';ctx.fillText('所选指标暂无可绘制产品',width/2,(T+B)/2);
+      ctx.fillText('请切换指标，或查看下方缺失原因',width/2,(T+B)/2+25);
+    }
+    ctx.font='11px "Microsoft YaHei",sans-serif';ctx.fillStyle='#48545e';ctx.textAlign='center';
+    ctx.fillText(`${metricLabel(state.xMetric)}${metricMap.get(state.xMetric)?.unit==='percent'?' (%)':''}`,width/2,B+38);
+    const bandTop=height-65, bandHeight=49;
+    ctx.fillStyle='#f6f7f8';ctx.fillRect(L,bandTop,R-L,bandHeight);ctx.fillStyle='#68747e';ctx.textAlign='left';
+    ctx.fillText(`指标暂缺 ${missing.length.toLocaleString('zh-CN')}只 · 可点选查看原因`,L+7,bandTop+11);
+    const cols=Math.max(1,Math.floor((R-L-14)/2.5)),nr=Math.max(1,Math.ceil(missing.length/cols)),pitch=Math.min(2.5,23/nr);
+    missing.forEach((row,i)=>{
+      const x=L+7+i%cols*2.5,y=bandTop+24+Math.floor(i/cols)*pitch;
+      ctx.fillStyle=pointStyle(row).color;ctx.globalAlpha=.65;ctx.fillRect(x,y,1.4,1.4);ctx.globalAlpha=1;
+      scatterHits.push({x:x+.7,y:y+.7,row,kind:'missing'});
+      if(row.key===state.selected){ctx.strokeStyle='#142431';ctx.strokeRect(x-3,y-3,7.4,7.4);}
+    });
+    const reasonNames={inception_short:'成立时间不足',history_short:'可用历史不足',no_series:'历史序列缺失',anchor_missing:'区间起点缺净值',monthly_insufficient:'月度样本不足',zero_denominator:'分母为零',calculation_unavailable:'其他计算条件不足'};
+    const counts={};
+    missing.forEach(row=>{
+      const reasons=[state.xMetric,state.yMetric].filter(c=>!row.metrics?.[c]).map(c=>P.missingReason(row,c));
+      const primary=reasons.find(r=>r.code==='inception_short')||reasons[0];
+      if(primary)counts[primary.code]=(counts[primary.code]||0)+1;
+    });
+    document.getElementById('missingSummary').innerHTML=`<strong>缺失原因</strong>${Object.entries(counts).map(([c,n])=>`<span>${reasonNames[c]||c} <b>${n.toLocaleString('zh-CN')}</b></span>`).join('')||'<span>当前两个指标均齐全</span>'}<small>按每只产品的主要原因归类；具体条件见产品卡。</small>`;
+    document.getElementById('focusView').setAttribute('aria-pressed',String(state.focus));
+    document.getElementById('allView').setAttribute('aria-pressed',String(!state.focus));
+    document.getElementById('viewNote').textContent=`${state.focus&&model.valid.length>40?'主分布视图':'全样本视图'} · 视窗内${model.visible.length}只${model.outside.length?` / 视窗外${model.outside.length}只（广发${model.outside.filter(r=>r.source==='gffunds_highend').length}只）`:''}`;
+    document.getElementById('quadrantRule').innerHTML=model.valid.length>=2?`虚线＝当前筛选样本中位数：收益 <b class="${P.metricTone(state.xMetric,model.xMedian)}">${fmt(model.xMedian,state.xMetric)}</b> / ${yName} <b class="${P.metricTone(state.yMetric,model.yMedian)}">${fmt(model.yMedian,state.yMetric)}</b>。${model.higherYBetter?'右上':'右下'}为相对高收益、${model.higherYBetter?'高夏普':'低'+yName}区；象限计数包含视窗外产品。`:'有效样本不足2只，不进行四象限比较。';
+    elements.scatterCount.textContent=`可绘制 ${model.valid.length.toLocaleString('zh-CN')} · 指标暂缺 ${missing.length.toLocaleString('zh-CN')}`;
+    const companyCounts=new Map();filtered.forEach(row=>companyCounts.set(C.company(row),(companyCounts.get(C.company(row))||0)+1));
+    const coloredRules=palette.rules.filter(rule=>companyCounts.has(rule.company));
+    const otherCount=filtered.filter(row=>!pointStyle(row).highlighted).length;
+    document.getElementById('companyColorLegend').innerHTML=coloredRules.map(rule=>`<span class="legend-item"><i class="legend-mark" style="--mark:${rule.color}"></i>${P.esc(rule.company)} · ${companyCounts.get(rule.company)}只</span>`).join('')+`<span class="legend-item"><i class="legend-mark" style="--mark:${palette.other}"></i>其他产品 · ${otherCount}只</span><span class="legend-item"><i class="selected-key"></i>当前选中</span>`;
+    if(state.colorBy==='award')document.getElementById('companyColorLegend').innerHTML=A.legend(filtered,state);
+    document.getElementById('companyColors').hidden=state.colorBy==='award';
+    if(businessQuery.highlightColor)document.getElementById('companyColorLegend').innerHTML=`<span class="legend-item"><i class="legend-mark" style="--mark:${businessQuery.highlightColor}"></i>筛选命中产品 · ${filtered.length}只</span><span class="legend-item"><i class="selected-key"></i>当前选中</span>`;
+    const accessible=`${metricLabel(state.xMetric)}与${metricLabel(state.yMetric)}。${businessQuery.highlightColor?'筛选命中产品使用蓝色':('按'+(state.colorBy==='award'?'获奖榜单':'基金公司')+'配色')}，名称与数量见图例；当前选中使用深色外圈。筛选${filtered.length}只，可绘制${model.valid.length}只，视窗内${model.visible.length}只，视窗外${model.outside.length}只，指标缺失${missing.length}只。虚线采用全筛选样本中位数。`;
+    canvas.setAttribute('aria-label',accessible);elements.summaryText.textContent=accessible;
+    const colorCounts={};model.visible.forEach(row=>{const hex=pointStyle(row).color;colorCounts[hex]=(colorCounts[hex]||0)+1;});
+    Object.assign(canvas.dataset,{visibleCount:String(model.visible.length),outsideCount:String(model.outside.length),xMedian:String(model.xMedian),yMedian:String(model.yMedian),redCount:String(colorCounts[C.RED]||0),grayCount:String(colorCounts[C.GRAY]||0),colorCounts:JSON.stringify(colorCounts),selected:state.selected});
+  }
+
+  const help = (label,note) => {
+    const blocks=String(note).split(/(?=【)/).filter(Boolean).map(block=>{
+      const title=block.match(/^【([^】]+)】/);const body=block.replace(/^【[^】]+】/,'');
+      return (title?'<h4>'+P.esc(title[1])+'</h4>':'')+body.split(/(?<=[。；])/).filter(Boolean).map(t=>'<p'+(/[＝÷×√^]/.test(t)?' class="help-formula"':'')+'>'+P.esc(t)+'</p>').join('');
+    }).join('');
+    return '<details class="filter-definition"><summary aria-label="'+P.esc(label)+'说明">?</summary><div><strong>'+P.esc(label)+'</strong>'+blocks+'</div></details>';
+  };
+  document.addEventListener('click',event=>{
+    const summary=event.target.closest('.filter-definition>summary');if(!summary)return;
+    const box=summary.parentElement.querySelector('div'),rect=summary.getBoundingClientRect();
+    requestAnimationFrame(()=>{if(!summary.parentElement.open)return;
+      const x=event.clientX||rect.left,y=event.clientY||rect.bottom;
+      box.style.setProperty('left',Math.max(12,Math.min(x+12,innerWidth-box.offsetWidth-12))+'px','important');
+      box.style.setProperty('top',Math.max(12,Math.min(y+12,innerHeight-box.offsetHeight-12))+'px','important');
+      box.style.setProperty('right','auto','important');box.style.setProperty('bottom','auto','important');
+    });
+  });
+  for(const [selector,label,note] of [['#productSearch','产品搜索','按产品名、管理人、基金经理或备案号匹配，输入任一关键词即可。'],['#sourceFilter','数据来源','按产品信息提供渠道筛选。同一产品在不同渠道展示时分别保留。']]){const el=document.querySelector(selector);el.parentElement.querySelector('span').insertAdjacentHTML('beforeend',help(label,note));}
+  document.querySelector('#companyFilter>span').insertAdjacentHTML('beforeend',help('管理人','按管理机构选择，可同时选择多家；与其他筛选条件同时生效。'));
+  const basicGrid=document.querySelector('.filter-panel .filter-grid');
+  const basicSection=document.createElement('div');basicSection.className='rank-filter-row basic-filter-row';
+  basicSection.innerHTML='<h3>基础筛选</h3><div class="rank-filter-content"></div>';
+  basicGrid.parentNode.insertBefore(basicSection,document.getElementById('rankFilters'));
+  basicSection.lastElementChild.appendChild(basicGrid);
+  const amount=n=>n.toLocaleString()+'只 · '+(rows.length?n/rows.length*100:0).toFixed(1)+'%';
+  function renderBusinessFilters(){
+    const base=C.filter(rows,state).filter(r=>A.matches(r,state)),cache=new Map();
+    const candidates=f=>{if(!cache.has(f.id)){const other={...advanced};delete other[f.id];if(f.id==='strategy')delete other.subStrategy;cache.set(f.id,base.filter(r=>F.matches(r,other,filterAsOf)));}return cache.get(f.id);};
+    const count=(f,v)=>candidates(f).filter(r=>F.matches(r,{[f.id]:v},filterAsOf)).length;
+    const tabCount=f=>count(f,advanced[f.id]||(f.feature?'符合':'__present'));
+    const button=(f,v,label)=>'<button type="button" data-condition="'+f.id+'" data-value="'+P.esc(v)+'" aria-pressed="'+((advanced[f.id]||'')===v)+'">'+P.esc(label)+'<small>（'+amount(count(f,v))+'）</small></button>';
+    document.getElementById('rankFilters').innerHTML=F.groups.map(group=>{
+      const fs=F.fields.filter(f=>f.group===group),f=fs.find(f=>f.id===activeFields[group])||fs[0];
+      const tabs=fs.filter((v,i)=>!v.family||fs.findIndex(x=>x.family===v.family)===i).map(first=>first.family?(fs.find(x=>x.family===first.family&&x.period===f.period)||fs.find(x=>x.family===first.family&&x.period==='1y')||first):first);
+      const opts=F.options(f,f.id==='subStrategy'&&advanced.strategy?rows.filter(r=>F.matches(r,{strategy:advanced.strategy},filterAsOf)):rows,filterAsOf);
+      const status=f.feature?button(f,'__unconfirmed','条件不足'):f.family?button(f,'__age','成立不足')+button(f,'__data','数据缺失')+button(f,'__unconfirmed','条件待确认'):button(f,'__data','未披露');
+      const indexBar=group==='超额指标'?'<div class="rank-benchmarks"><strong>对照指数</strong>'+((pack.meta.marketBenchmarks||[]).map(b=>'<button type="button" data-benchmark="'+b.id+'" aria-pressed="'+(F.getBenchmark()===b.id)+'">'+P.esc(b.name)+'</button>').join('')||'<span>指数历史尚未准备</span>')+'</div>':'';
+      const selectedIndex=(pack.meta.marketBenchmarks||[]).find(b=>b.id===F.getBenchmark());
+      return '<div class="rank-filter-row"><h3>'+group+'</h3><div class="rank-filter-content">'+indexBar+'<div class="rank-field-tabs">'+tabs.map(t=>'<span class="filter-tab"><button type="button" data-field="'+t.id+'" aria-pressed="'+(t.family?t.family===f.family:t.id===f.id)+'">'+P.esc(t.familyLabel||t.label)+'<small>（'+amount(tabCount(t))+'）</small></button>'+help(t.familyLabel||t.label,t.note)+'</span>').join('')+'</div>'+
+        (f.family?'<div class="rank-periods" aria-label="'+f.familyLabel+'时间区间">'+fs.filter(x=>x.family===f.family).map(t=>'<button type="button" data-field="'+t.id+'" aria-pressed="'+(f.id===t.id)+'">'+F.periods[t.period]+'<small>（'+amount(tabCount(t))+'）</small></button>').join('')+'</div>':'')+
+        '<div class="rank-options">'+button(f,'','不限')+button(f,'__present','有数据')+status+opts.map(o=>'<span class="filter-tab">'+button(f,o.value,o.label)+(['strategy','subStrategy'].includes(f.id)?help(o.label,F.typeNote(f,o.value)):'')+'</span>').join('')+'</div>'+
+        (f.bands?'<div class="rank-custom"><span>自定义（'+f.unit+'）</span><input type="number" step="any" data-min="'+f.id+'" aria-label="'+f.label+'下限" placeholder="下限 ≥"><span>至</span><input type="number" step="any" data-max="'+f.id+'" aria-label="'+f.label+'上限" placeholder="上限 <"><button type="button" data-custom="'+f.id+'">应用</button></div>':'')+
+        '<p class="rank-help">'+P.esc(f.label)+' · 当前条件 '+amount(tabCount(f))+(selectedIndex&&group==='超额指标'?' · '+P.esc(selectedIndex.name)+'可用收盘历史 '+selectedIndex.firstDate+' 至 '+selectedIndex.lastDate:'')+(f.feature?' · 全部条件同时满足才入选':'')+'</p></div></div>';
+    }).join('')+'<div class="rank-selected" aria-live="polite">'+(F.fields.filter(f=>advanced[f.id]).map(f=>'<button type="button" data-condition="'+f.id+'" data-value="">'+P.esc(f.label)+'：'+P.esc(F.options(f,rows,filterAsOf).find(o=>o.value===advanced[f.id])?.label||({'__present':'有数据','__missing':'全部缺失','__age':'成立不足','__data':'数据缺失','__unconfirmed':'条件不足'})[advanced[f.id]]||advanced[f.id])+' ×</button>').join('')||'尚未选择附加条件')+'</div><p class="rank-help">数量保留其他已选条件，显示切换本项后的匹配产品数；占比以全部 '+rows.length.toLocaleString()+' 条渠道产品为分母。指标未设阈值时计可计算产品，特色标签计符合产品。同一基金跨渠道分别计数。'+help('统计与缺失标准','区间下限含、上限不含；100%月胜率和零回撤含端点。成立不足指成立时间不能覆盖区间；数据缺失指所需历史缺口；条件待确认指币种、同类范围等依据不足或比率无法计算。各产品以最新可共同计算的业绩日为截止日。')+'</p>';
+    const sourceCandidates=C.filter(rows,{...state,source:''}).filter(r=>F.matches(r,advanced,filterAsOf)&&A.matches(r,state));
+    for(const option of elements.source.options){const n=sourceCandidates.filter(r=>!option.value||r.source===option.value).length;option.textContent=(option.value?P.sourceColors[option.value]?.label||option.value:'全部来源')+'（'+amount(n)+'）';}
+    refreshCompany();
+  }
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')document.querySelectorAll('.filter-definition[open]').forEach(d=>{d.open=false;d.querySelector('summary').focus();});});
+  document.addEventListener('click',event=>document.querySelectorAll('.filter-definition[open]').forEach(d=>{if(!d.contains(event.target))d.open=false;}));
+  function renderAdvanced() {
+    return renderBusinessFilters();
+  }
+  let benchmarkSelection=0;
+  document.getElementById('rankFilters').addEventListener('click',async event=>{
+    const benchmark=event.target.closest('[data-benchmark]');if(benchmark){
+      const seq=++benchmarkSelection,id=benchmark.dataset.benchmark;
+      benchmark.disabled=true;benchmark.textContent+=' · 加载中';
+      try{await window.PrivateFundStaticLoader?.ensureBenchmark(pack,id);if(seq!==benchmarkSelection)return;F.setBenchmark(id);state.page=1;render({announce:true});}
+      catch(error){if(seq===benchmarkSelection){renderAdvanced();P.announce('指数数据加载失败，保留原基准，请重试。');console.error(error);}}
+      return;
+    }
+    const tab=event.target.closest('[data-field]');
+    if(tab){const f=F.fields.find(f=>f.id===tab.dataset.field);activeFields[f.group]=f.id;renderAdvanced();document.querySelector(`[data-field="${f.id}"]`)?.focus();return;}
+    const b=event.target.closest('[data-condition]');
+    if(b){if(b.dataset.value)advanced[b.dataset.condition]=b.dataset.value;else delete advanced[b.dataset.condition];if(b.dataset.condition==='strategy')delete advanced.subStrategy;state.page=1;render({announce:true});return;}
+    const custom=event.target.closest('[data-custom]');if(custom){const id=custom.dataset.custom;const a=F.number(document.querySelector(`[data-min="${id}"]`).value),b=F.number(document.querySelector(`[data-max="${id}"]`).value);if(a!==null&&b!==null&&a>=b){P.announce('下限必须小于上限');return;}if(a===null&&b===null)delete advanced[id];else advanced[id]=JSON.stringify([a,b]);state.page=1;render({announce:true});}
+  });
+  document.getElementById('rankFilters').addEventListener('change',event=>{const id=event.target.dataset.conditionSelect;if(id){if(event.target.value)advanced[id]=event.target.value;else delete advanced[id];state.page=1;render({announce:true});}});
+
+  function render({ announce = false } = {}) {
+    syncAwards();
+    renderAdvanced();
+    currentFiltered = filterRows();
+    businessQuery.describe(currentFiltered.length);
+    const readyCount = currentFiltered.filter(isPlottable).length;
+    syncUrl();
+    elements.count.textContent = `${currentFiltered.length.toLocaleString("zh-CN")} / ${rows.length.toLocaleString("zh-CN")} 个产品`;
+    renderSummary(currentFiltered);
+    renderSelectedCard();
+    renderTable(currentFiltered);
+    renderScatter(currentFiltered);
+    document.getElementById('activeFilters').textContent=[state.query,P.sourceColors[state.source]?.label,...state.companies.map(value=>C.label(value,'company')),...state.strategies.map(value=>C.label(value,'strategy'))].filter(Boolean).join(' · ')||'全部产品';
+    if(state.award||state.awardYear||state.awardStatus)document.getElementById('activeFilters').textContent+=' · 奖单筛选已生效';
+    if(Object.keys(advanced).length) document.getElementById('activeFilters').textContent += ` · 已选 ${Object.keys(advanced).length} 项附加条件`;
+    if (announce) P.announce(`筛选后 ${currentFiltered.length} 个产品，${readyCount} 个进入二维坐标。`);
+  }
+
+  function updateFilter(key, value) {
+    state[key] = value;
+    state.page = 1;
+    if (state.selected && !filterRows().some((row) => row.key === state.selected)) state.selected = "";
+    render({ announce: true });
+  }
+
+  let searchTimer = null;
+  elements.search.addEventListener("input", () => {
+    window.clearTimeout(searchTimer);
+    searchTimer = window.setTimeout(() => updateFilter("query", elements.search.value), 160);
+  });
+  elements.source.addEventListener("change", () => updateFilter("source", elements.source.value));
+  elements.xMetric.addEventListener("change", () => updateFilter("xMetric", elements.xMetric.value));
+  elements.yMetric.addEventListener("change", () => updateFilter("yMetric", elements.yMetric.value));
+  document.getElementById('focusView').addEventListener('click',()=>{state.focus=true;renderScatter(currentFiltered);syncUrl();});
+  document.getElementById('allView').addEventListener('click',()=>{state.focus=false;renderScatter(currentFiltered);syncUrl();});
+  elements.reset.addEventListener("click", () => {
+    businessQuery.clear();
+    advanced = {};
+    benchmarkSelection++;F.setBenchmark('sh000300');
+    Object.assign(state, { award:"",awardYear:"",awardStatus:"",colorBy:"company",query: "", source: "", companies: [], strategies: [], xMetric: pack.meta.defaultXMetric, yMetric: pack.meta.defaultYMetric, selected: "", page: 1,focus:true,cardOpen:true });
+    elements.search.value = ""; elements.source.value = ""; elements.xMetric.value = state.xMetric; elements.yMetric.value = state.yMetric;
+    [elements.company,elements.strategy].forEach(host=>{host.querySelector('input[type="search"]').value='';host.querySelector('details').open=false;});
+    refreshCompany();refreshStrategy();
+    render({ announce: true });
+  });
+  elements.pager.addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-page]");
+    if (!button || button.disabled) return;
+    state.page += button.dataset.page === "next" ? 1 : -1;
+    renderTable(currentFiltered); syncUrl();
+    elements.body.closest(".table-wrap").scrollTop = 0;
+  });
+  elements.body.addEventListener("click", (event) => {
+    if (event.target.closest("a,.award-records")) return;
+    const rowNode = event.target.closest("tr[data-key]");
+    if (!rowNode) return;
+    selectProduct(rowNode.dataset.key,true);
+  });
+  elements.body.addEventListener('keydown',event=>{
+    if(!['Enter',' '].includes(event.key)||event.target.closest('a,.award-records'))return;
+    const rowNode=event.target.closest('tr[data-key]');
+    if(!rowNode)return;
+    event.preventDefault();selectProduct(rowNode.dataset.key,true);
+    selectionPanel.querySelector('summary')?.focus();
+  });
+
+  function nearestHit(event) {
+    const rect = elements.canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    let best = null;
+    let bestDistance = event.pointerType==='touch' ? 484 : 121;
+    for (const hit of scatterHits) {
+      const distance = ((hit.x - x) ** 2 + (hit.y - y) ** 2) * (pointStyle(hit.row).highlighted ? .8 : 1);
+      if (distance <= bestDistance) { bestDistance = distance; best = hit; }
+    }
+    return best ? { ...best, pointerX: x, pointerY: y } : null;
+  }
+
+  function showTooltip(hit) {
+    if (!hit) { elements.tooltip.hidden = true; return; }
+    const row = hit.row;
+    const x = row.metrics?.[state.xMetric];
+    const y = row.metrics?.[state.yMetric];
+    const tipMetric = (metric, code) => `${P.esc(metricLabel(code))}：${metric ? `<b class="${P.metricTone(code,metric.value)}">${P.esc(P.formatNumber(metric.value, 2))}${metric.unit === 'percent' ? '%' : ''}</b>` : P.esc(P.missingReason(row,code).label)}<br>${metric ? P.esc(`${metric.windowStart || '来源'} — ${metric.windowEnd || metric.asOf || '--'} · ${metric.origin === 'calculated' ? '历史计算' : '来源披露'}`) : P.esc(P.missingReason(row,code).message)}`;
+    elements.tooltip.innerHTML = `<strong>${P.esc(row.name || row.id)}</strong><span>${P.esc(P.sourceColors[row.source]?.label || row.source)} · ${P.esc(row.company || "管理人未披露")}</span><span>${P.esc(A.summary(row))}</span><span>${tipMetric(x, state.xMetric)}</span><span>${tipMetric(y, state.yMetric)}</span>`;
+    elements.tooltip.hidden = false;
+    const stageRect = elements.canvas.parentElement.getBoundingClientRect();
+    const left = Math.max(8,Math.min(stageRect.width - elements.tooltip.offsetWidth - 8, hit.pointerX + 16));
+    const top = Math.max(8,Math.min(stageRect.height-elements.tooltip.offsetHeight-8,hit.pointerY-30));
+    elements.tooltip.style.left = `${left}px`;
+    elements.tooltip.style.top = `${top}px`;
+  }
+
+  elements.canvas.addEventListener("pointermove", (event) => showTooltip(nearestHit(event)));
+  elements.canvas.addEventListener("pointerleave", () => showTooltip(null));
+  elements.canvas.addEventListener("click", (event) => {
+    const hit = nearestHit(event);
+    if (!hit) return;
+    showTooltip(null);selectProduct(hit.row.key,true);
+  });
+  elements.canvas.addEventListener("keydown", (event) => {
+    if (!["ArrowRight", "ArrowLeft", "Enter"].includes(event.key) || !scatterHits.length) return;
+    event.preventDefault();
+    if (event.key === "Enter") {
+      const row = rows.find(r=>r.key===state.selected) || scatterHits[Math.max(0, keyboardIndex)]?.row;
+      if (row) window.location.href = P.detailHref(row.key, window.location.search.replace(/^\?/, ""));
+      return;
+    }
+    keyboardIndex = scatterHits.findIndex(hit=>hit.row.key===state.selected);
+    keyboardIndex = (keyboardIndex + (event.key === "ArrowRight" ? 1 : -1) + scatterHits.length) % scatterHits.length;
+    const row = scatterHits[keyboardIndex].row;
+    selectProduct(row.key);
+    P.announce(`${row.name || row.id}，${keyboardIndex + 1}/${scatterHits.length}`);
+  });
+
+  resizeObserver = new ResizeObserver(() => window.requestAnimationFrame(() => renderScatter(currentFiltered)));
+  resizeObserver.observe(elements.canvas.parentElement);
+  window.addEventListener("popstate", async () => {
+    const seq=++benchmarkSelection;
+    try{await window.PrivateFundStaticLoader?.ensureBenchmark(pack,new URLSearchParams(location.search).get('benchmark')||'sh000300');}
+    catch(error){P.announce('历史筛选的指数加载失败，暂保留原结果，请刷新重试。');console.error(error);return;}
+    if(seq!==benchmarkSelection)return;
+    window.clearTimeout(searchTimer);applyParams();
+    elements.search.value=state.query;elements.source.value=state.source;refreshCompany();refreshStrategy();
+    elements.xMetric.value=state.xMetric;elements.yMetric.value=state.yMetric;
+    render();
+  });
+  render();
+  document.body.dataset.ready = "true";
+})();
