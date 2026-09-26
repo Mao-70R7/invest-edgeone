@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-09-24T15:07:26+08:00",
-  "packagedAt": "2026-09-24T15:23:49+08:00",
-  "runId": "20260924T151934591_github_publish_31912",
+  "generatedAt": "2026-09-27T02:18:09+08:00",
+  "packagedAt": "2026-09-27T02:29:04+08:00",
+  "runId": "20260927T022617430_github_publish_35788",
   "pages": [
     "index.html",
     "products.html",
@@ -25,22 +25,22 @@
     "publicReportProductCount": 52,
     "partialHoldingProductCount": 51,
     "fullPortfolioProductCount": 0,
-    "latestPerformanceDate": "2026-09-23",
-    "activeCutoffDate": "2026-08-23",
+    "latestPerformanceDate": "2026-09-24",
+    "activeCutoffDate": "2026-08-24",
     "latestPublicReportDate": "2026-07-21",
     "latestPositionDate": "2026-07-21",
     "invalidPositionWeightCount": 0
   },
   "counts": {
-    "catalogProducts": 10026,
-    "detailFiles": 10026,
-    "defaultScatterPlottable": 8646,
-    "defaultScatterEvidenceRail": 1380,
+    "catalogProducts": 10027,
+    "detailFiles": 10027,
+    "defaultScatterPlottable": 8696,
+    "defaultScatterEvidenceRail": 1331,
     "sourceProducts": {
       "cmb_private_investment": 2899,
       "geshang": 310,
       "gffunds_highend": 67,
-      "jsfund_highend": 346,
+      "jsfund_highend": 347,
       "ruiyuan_highend": 136,
       "simuwang": 5644,
       "xueqiu": 624
@@ -55,7 +55,7 @@
     "cmb_private_investment": 2899,
     "geshang": 310,
     "gffunds_highend": 67,
-    "jsfund_highend": 346,
+    "jsfund_highend": 347,
     "ruiyuan_highend": 136,
     "simuwang": 5644,
     "xueqiu": 624
@@ -63,7 +63,7 @@
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-09-24T15:07:26+08:00",
+    "generatedAt": "2026-09-27T02:18:09+08:00",
     "products": 2899,
     "issueCount": 9,
     "issueShare": 0.003104518799586064,
@@ -85,11 +85,11 @@
     "warning": "同图仅表示公式与尺度统一；格上复权净值、排排网复权收益与广发/嘉实/睿远/招商来源累计净值的费用、分红处理和估值频率未完全统一。累计净值不等同于分红再投资收益；排名仅作分类内研究参考。"
   },
   "allProductMarksContract": {
-    "totalEligible": 10026,
+    "totalEligible": 10027,
     "plottableRule": "selected_x_and_y_are_strict_numeric",
     "missingRule": "every_non_plottable_product_is_rendered_in_evidence_rail"
   },
-  "detailFileCount": 10026,
+  "detailFileCount": 10027,
   "compression": "deterministic_gzip_browser_decompression",
   "navigation": [
     "数据总览",
@@ -124,14 +124,14 @@
   },
   "performance": {
     "method": "lossless_record_encoding_and_route_specific_data",
-    "baselineCatalogBytes": 265643180,
-    "baselineCatalogGzipBytes": 30901668,
-    "encodedCatalogBytes": 67966469,
+    "baselineCatalogBytes": 266424610,
+    "baselineCatalogGzipBytes": 31017325,
+    "encodedCatalogBytes": 68242424,
     "routeDataGzipBytes": {
-      "catalog": 10133426,
-      "overview": 321599,
-      "peers": 5822133,
-      "awards-zone": 442633
+      "catalog": 10188627,
+      "overview": 321708,
+      "peers": 5850471,
+      "awards-zone": 443078
     }
   },
   "scatterControls": {
