@@ -1,0 +1,105 @@
+{
+  "status": "ready",
+  "generatedAt": "2026-09-28T13:08:11+08:00",
+  "checks": {
+    "pageCount": 6,
+    "detailFileCount": 10028,
+    "catalogRowCount": 10028,
+    "cmbPublication": "cmb_display_20260911_v1",
+    "cmbQuality": {
+      "version": "cmb_display_20260911_v1",
+      "generatedAt": "2026-09-28T12:56:19+08:00",
+      "products": 2900,
+      "issueCount": 7,
+      "issueShare": 0.002413793103448276,
+      "maxIssueShare": 0.05,
+      "incomeCurveProducts": 14,
+      "expectedNoHistoryProducts": 0
+    },
+    "scatterControls": {
+      "status": "passed",
+      "version": 1,
+      "multiSelect": [
+        "company",
+        "strategy"
+      ],
+      "defaultProductScope": "all",
+      "paletteStorage": "browser_local",
+      "companyMatching": "exact_disclosed_name",
+      "helperSha256": "b0b22547b34ad3433025bd9cbe495278bb46a5940125780f482ff67b0ec9711c"
+    },
+    "gffundsZone": {
+      "status": "passed",
+      "productCount": 67,
+      "managerCount": 21,
+      "publicReportProductCount": 52,
+      "partialHoldingProductCount": 51,
+      "sourceFreshness": {
+        "status": "passed",
+        "basis": "authenticated_history_cache_latest_date_vs_database_page",
+        "cacheProductCount": 123,
+        "checkedZoneProductCount": 67,
+        "staleProductCount": 0,
+        "latestCacheDate": "2026-09-24"
+      },
+      "restrictedRawDataIncluded": false
+    },
+    "detailExperience": "peer_benchmark_gffunds_attribution_v2",
+    "navigation": {
+      "index.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "获奖专区",
+        "天眼投顾 ↗"
+      ],
+      "products.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "获奖专区",
+        "天眼投顾 ↗"
+      ],
+      "detail.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "获奖专区",
+        "天眼投顾 ↗"
+      ],
+      "gffunds.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "获奖专区",
+        "天眼投顾 ↗"
+      ],
+      "gffunds-manager.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "获奖专区",
+        "天眼投顾 ↗"
+      ],
+      "awards.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "获奖专区",
+        "天眼投顾 ↗"
+      ]
+    },
+    "sourceValidationStatus": "passed",
+    "sourceAuditStatus": "warn",
+    "accessScope": "public_catalog_plus_scoped_performance_analytics",
+    "authenticatedPerformanceAnalyticsIncluded": true,
+    "restrictedAnalyticsDetailCount": 5670,
+    "restrictedRawDataIncluded": false,
+    "rawDetailBytes": 1057832065,
+    "compressedDetailBytes": 152339950,
+    "compressionRatio": 0.144011,
+    "maxCompressedDetailBytes": 89605,
+    "maxCompressedDetailFile": "2b/geshang__P185594__7a3cbb046f.js.gz",
+    "oversizedFileCount": 0
+  }
+}
