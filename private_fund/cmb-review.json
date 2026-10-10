@@ -1,0 +1,60 @@
+{
+  "version": "cmb_display_20260911_v1",
+  "generatedAt": "2026-10-09T10:01:50+08:00",
+  "products": 2901,
+  "issueCount": 6,
+  "issueShare": 0.002068252326783868,
+  "maxIssueShare": 0.05,
+  "incomeCurveProducts": 14,
+  "expectedNoHistoryProducts": 0,
+  "issues": [
+    {
+      "id": "T1F018",
+      "name": "华润信托-鹏扬稳利2期尊享AG号",
+      "company": "华润深国投信托有限公司",
+      "latestNavDate": "2026-09-30",
+      "analysisPointCount": 0,
+      "dataQualityNote": "仅有1个净值日期，尚不足以绘制走势；请核对App可见历史"
+    },
+    {
+      "id": "XTEGZ8",
+      "name": "相聚芒格B期",
+      "company": "中国对外经济贸易信托有限公司",
+      "latestNavDate": null,
+      "analysisPointCount": 0,
+      "dataQualityNote": "历史接口此前返回空；请核对App是否有业绩走势"
+    },
+    {
+      "id": "XTEGZ9",
+      "name": "相聚芒格C期",
+      "company": "中国对外经济贸易信托有限公司",
+      "latestNavDate": null,
+      "analysisPointCount": 0,
+      "dataQualityNote": "历史接口此前返回空；请核对App是否有业绩走势"
+    },
+    {
+      "id": "XTEGZA",
+      "name": "相聚芒格D期",
+      "company": "中国对外经济贸易信托有限公司",
+      "latestNavDate": null,
+      "analysisPointCount": 0,
+      "dataQualityNote": "历史接口此前返回空；请核对App是否有业绩走势"
+    },
+    {
+      "id": "XTEL5G",
+      "name": "外贸信托-天演对冲金享16期",
+      "company": "中国对外经济贸易信托有限公司",
+      "latestNavDate": "2026-09-24",
+      "analysisPointCount": 0,
+      "dataQualityNote": "仅有1个净值日期，尚不足以绘制走势；请核对App可见历史"
+    },
+    {
+      "id": "XTEL6P",
+      "name": "外贸信托-兴全臻鑫金享14期",
+      "company": "中国对外经济贸易信托有限公司",
+      "latestNavDate": "2026-09-30",
+      "analysisPointCount": 0,
+      "dataQualityNote": "仅有1个净值日期，尚不足以绘制走势；请核对App可见历史"
+    }
+  ]
+}

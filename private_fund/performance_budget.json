@@ -1,0 +1,20 @@
+{
+  "method": "lossless_record_encoding_and_route_specific_data",
+  "productTransport": {
+    "products": 10040,
+    "bytes": 852011,
+    "filterBytes": 67200,
+    "extraBytes": 6310689
+  },
+  "baselineCatalogBytes": 267047682,
+  "baselineCatalogGzipBytes": 31013241,
+  "encodedCatalogBytes": 67751846,
+  "routeDataGzipBytes": {
+    "catalog": 10168401,
+    "products": 852011,
+    "overview": 320902,
+    "peers": 5933293,
+    "detail-index": 3015298,
+    "awards-zone": 831792
+  }
+}

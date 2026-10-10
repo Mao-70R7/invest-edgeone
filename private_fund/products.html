@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>产品列表｜天眼私募</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./assets/private-fund.css?v=20261009T164410098_github_publish_38496">
+  <link rel="stylesheet" href="./assets/private-fund-filters.css?v=20261009T164410098_github_publish_38496">
+
+<!-- tianyan-web-assistant -->
+  <link rel="stylesheet" href="./assets/tianyan-assistant.css?v=navigation-speed-20261010T122925">
+  <script src="./assets/tianyan-assistant-config.js?v=assistant-20261009T203352"></script>
+  <script defer src="./assets/tianyan-assistant.js?v=navigation-speed-20261010T122925"></script>
+  <!-- /tianyan-web-assistant -->
+</head>
+<body data-page="private-fund-list">
+  <a class="skip-link" href="#mainContent">跳到主要内容</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./index.html"><span class="brand-mark">天眼</span><strong>天眼私募</strong></a>
+      <nav class="nav" aria-label="私募页面导航">
+        <a class="nav-link" href="./index.html">数据总览</a>
+        <a class="nav-link is-active" href="./products.html">产品列表</a>
+
+        <a class="nav-link" href="./gffunds.html">广发专区</a>
+        <a class="nav-link" href="./awards.html">获奖专区</a>
+        <a class="nav-link advisor-link" href="https://gfinvest.site/">天眼投顾 ↗</a>
+        <button type="button" class="nav-link ty-assistant-trigger" data-tianyan-assistant>AI助手</button>
+      </nav>
+    </div>
+  </header>
+  <main id="mainContent" class="page-shell" data-product-shell tabindex="-1">
+    <section class="page-heading">
+      <div><span class="eyebrow">PRIVATE FUND</span><h1>私募筛选</h1></div>
+      <div class="asof-block"><strong>—</strong><span>产品数量与披露日期加载中</span></div>
+    </section>
+    <section class="panel" aria-labelledby="loadingScatterTitle">
+      <div class="panel-head"><h2 id="loadingScatterTitle">全部产品业绩点阵</h2><span class="panel-count">数据加载中</span></div>
+      <div class="product-shell-filters"><strong>筛选产品</strong><div class="product-shell-filter-grid">
+        <label>产品 / 管理人 / 经理 / 备案号<input type="search" placeholder="数据就绪后可搜索" disabled></label>
+        <label>数据来源<select disabled><option>正在加载来源</option></select></label>
+        <label>基金公司<select disabled><option>正在加载公司</option></select></label>
+      </div></div>
+      <div class="product-load-region product-load-chart" data-product-load-region="chart" aria-busy="true">
+        <strong>正在准备业绩点阵</strong><span data-product-load-text>等待产品数据…</span>
+        <span class="loading-track" aria-hidden="true"><i data-product-load-bar></i></span>
+        <button type="button" data-product-load-retry hidden>重新加载</button>
+      </div>
+    </section>
+    <section class="panel" aria-labelledby="loadingTableTitle">
+      <div class="panel-head"><h2 id="loadingTableTitle">产品列表</h2><span class="panel-count">数据加载中</span></div>
+      <div class="table-wrap"><table class="product-table"><thead><tr><th>产品</th><th>来源</th><th>管理人 / 经理</th><th>策略</th><th>成立日</th><th>最新业绩 / 序列</th><th>收益指标</th><th>风险指标</th><th>坐标状态</th></tr></thead></table></div>
+      <div class="product-load-region product-load-table" data-product-load-region="table" aria-busy="true">
+        <strong>正在准备产品列表</strong><span data-product-load-text>等待产品数据…</span>
+        <span class="loading-track" aria-hidden="true"><i data-product-load-bar></i></span>
+        <button type="button" data-product-load-retry hidden>重新加载</button>
+      </div>
+    </section>
+  </main>
+  <script src="./manifest.js?v=20261009T164410098_github_publish_38496"></script>
+  <script src="./assets/private-fund-static-loader.js?v=20261009T164410098_github_publish_38496&nav=navigation-speed-20261010T130509"></script>
+  <script src="./assets/private-fund-common.js?v=20261009T164410098_github_publish_38496"></script>
+  <script src="./assets/private-fund-business-text.js?v=20261009T164410098_github_publish_38496"></script>
+  <script src="./assets/private-fund-experience.js?v=20261009T164410098_github_publish_38496"></script>
+  <script src="./assets/private-fund-scatter-controls.js?v=20261009T164410098_github_publish_38496"></script>
+  <script src="./assets/private-fund-awards.js?v=20261009T164410098_github_publish_38496"></script>
+  <script src="./assets/private-fund-filters.js?v=20261009T164410098_github_publish_38496"></script>
+  <script src="./assets/business-query.js?v=navigation-speed-20261010T130509"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>setTimeout(()=>window.PrivateFundStaticLoader.bootProducts({
+filterUrl: "./data/products-filters.js.gz?v=20261009T164410098_github_publish_38496", previewUrl: "./assets/private-fund-list-preview.js?v=20261009T164410098_github_publish_38496",
+      catalogUrl: (new URLSearchParams(location.search).has("bf") || new URLSearchParams(location.search).has("result") || window.BusinessQuery?.requiresFullCatalog) ? "./data/catalog.js.gz?v=20261009T164410098_github_publish_38496" : "./data/products.js.gz?v=20261009T164410098_github_publish_38496",
+      dataUrls: [],
+      appUrl: "./assets/private-fund-list.js?v=navigation-speed-20261010T122925",
+      label: "正在加载产品列表"
+    }),0)),{once:true});
+  </script>
+</body>
+</html>
