@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-17T17:12:18+08:00",
+  "status": "ready",
+  "checks": {
+    "monthlyRebalanceMonthCount": 12,
+    "strategySummaryCount": 2576,
+    "strategyDetailCount": 2576,
+    "strategyDetailMissingCount": 0,
+    "strategyDetailParseErrorCount": 0,
+    "strategyDetailDeclaredIncompleteCount": 688,
+    "strategyDetailWithoutHoldingCount": 437,
+    "strategyDetailWithoutCurveCount": 425,
+    "strategyDetailReferencedFundCount": 6364,
+    "selectedFundCount": 0,
+    "enhancedFundDetailCount": 0,
+    "baseOnlyFundCount": 0,
+    "brokenFundDetailCount": 0,
+    "forbiddenFundDetailPageCount": 0,
+    "forbiddenFundDetailFileCount": 0,
+    "strategyDetailSourceCount": 2576,
+    "strategyDetailDeclaredCompleteCount": 1888,
+    "activeStrategyCount": 2014,
+    "activeStrategyWithoutCurveCount": 292,
+    "currentHoldingStrategyCount": 2114,
+    "currentHoldingFundReferenceCount": 37494,
+    "currentHoldingRankMissingReferenceCount": 200,
+    "activeCurrentHoldingRankMissingReferenceCount": 183,
+    "inactiveCurrentHoldingRankMissingReferenceCount": 17,
+    "currentHoldingScaleErrorReferenceCount": 0,
+    "historyRebalanceStrategyCount": 1990,
+    "assessedHistoryRebalanceStrategyCount": 1685,
+    "unassessedHistoryRebalanceStrategyCount": 305,
+    "officialPerformanceImageReferenceCount": 0,
+    "officialPerformanceImageInvalidReferenceCount": 0,
+    "officialPerformanceImageMissingSourceAssetCount": 0,
+    "currentHolding近一月RankedReferenceCount": 37430,
+    "currentHolding近三月RankedReferenceCount": 37434,
+    "currentHolding近6月RankedReferenceCount": 37431,
+    "currentHolding近1年RankedReferenceCount": 37300,
+    "officialPerformanceImagePublishedAssetCount": 0,
+    "officialPerformanceImageMissingPublishedAssetCount": 0,
+    "fundDetailParsedCount": 0,
+    "fundDetailNavChartCount": 0,
+    "fundDetailNavChartMissingCount": 0,
+    "fundDetailBenchmarkChartCount": 0,
+    "fundDetailChartScaleErrorCount": 0,
+    "fundDetailParseErrorCount": 0,
+    "holdingSnapshotSourceRowCount": 665553,
+    "holdingSnapshotPublishedRowCount": 198586,
+    "holdingSnapshotStrategyCount": 2101,
+    "strategy-lookthroughFileCount": 5473,
+    "strategy-lookthroughBytes": 1333541337,
+    "monthly-rebalance-reportsFileCount": 14,
+    "monthly-rebalance-reportsBytes": 21469341
+  },
+  "policy": {
+    "blockingZeroChecks": [
+      "strategyDetailMissingCount",
+      "strategyDetailParseErrorCount",
+      "officialPerformanceImageInvalidReferenceCount",
+      "officialPerformanceImageMissingSourceAssetCount",
+      "officialPerformanceImageMissingPublishedAssetCount",
+      "forbiddenFundDetailPageCount",
+      "forbiddenFundDetailFileCount",
+      "currentHoldingScaleErrorReferenceCount"
+    ],
+    "warningOnlyChecks": [
+      "activeCurrentHoldingRankMissingReferenceCount"
+    ],
+    "warningCounts": {
+      "activeCurrentHoldingRankMissingReferenceCount": 183
+    }
+  },
+  "warnings": [
+    {
+      "type": "source_strategy_data_incomplete",
+      "count": 688,
+      "note": "源数据已明确标记不完整，发布集保留真实缺失状态，不做推测补齐。"
+    },
+    {
+      "type": "active_strategy_without_curve",
+      "count": 292,
+      "note": "活跃策略没有任何可画曲线时保留真实缺失状态；正常披露策略应为0。"
+    },
+    {
+      "type": "current_holding_rank_missing",
+      "count": 200,
+      "activeCount": 183,
+      "inactiveCount": 17,
+      "note": "同类排名缺失属于可披露的覆盖率缺口，不阻断其他准确数据发布；页面不把缺失仓位计为前50%。"
+    },
+    {
+      "type": "history_rebalance_unassessed",
+      "count": 305,
+      "note": "历史事件仅为建仓或底层净值不足时不计算胜率，页面展示具体原因。"
+    }
+  ],
+  "pageVersionValidation": {
+    "status": "passed",
+    "buildId": "minimal-e1fb5aad8474",
+    "pageCount": 19
+  },
+  "monthlyRebalanceValidation": {
+    "status": "passed",
+    "monthCount": 12,
+    "latestMonth": "2026-09",
+    "databaseRecomputed": true
+  },
+  "sourceValidation": {
+    "status": "passed",
+    "validatedAt": "2026-10-17T23:39:33+08:00",
+    "databasePath": "E:\\天眼系统\\数据库\\analysis_zh_current.sqlite",
+    "dbIndependentRecompute": true,
+    "checksComplete": true,
+    "inputSnapshotAudit": null,
+    "errorCount": 0
+  },
+  "presentationRefreshedAt": "2026-10-17T22:11:16+08:00",
+  "presentationChangeType": "lookthrough_export_disclosure"
+}
