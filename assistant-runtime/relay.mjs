@@ -1,3 +1,4 @@
+import {publicPresentation} from './presentation.mjs';
 import {createHash,randomBytes,timingSafeEqual} from 'node:crypto';
 import {createMirror} from './feishu-mirror.mjs';
 import {visitor,reference} from './visitor.mjs';
@@ -108,7 +109,7 @@ export function createHandler(config,store,clock=()=>Date.now()/1000,fetcher=fet
       const token=(request.headers.get('authorization')||'').replace(/^Bearer /,'');
       if(path==='/v1/health' && request.method==='GET'){
         const seen=await get('meta/worker');
-        return respond({ok:true,version:'tianyan-blob-relay-v3-recovery1',session_recovery:true,public_access:!!config.publicAccess,feishu_mirror:!!mirror,worker_online:!!seen && clock()-seen.seen<45,queued:(await list('queue/')).length});
+        return respond({ok:true,version:'tianyan-blob-relay-v3-recovery1',presentation_version:1,session_recovery:true,public_access:!!config.publicAccess,feishu_mirror:!!mirror,worker_online:!!seen && clock()-seen.seen<45,queued:(await list('queue/')).length});
       }
       if(path==='/v1/sessions' && request.method==='POST'){
         const body=await jsonBody(request,80000);
@@ -184,7 +185,11 @@ export function createHandler(config,store,clock=()=>Date.now()/1000,fetcher=fet
         if(terminal.has(task.status) && body.status==='processing')return respond({ok:true});
         task.status=body.status;task.stage=String(body.stage||'处理中').slice(0,80);task.lease_until=clock()+600;
         if(body.answer!==undefined)task.answer=body.answer;
-        if(body.result){task.result={};for(const key of ['business_status','options','clarification','reason','slot_type','original_question'])if(key in body.result)task.result[key]=body.result[key];}
+        if(body.result){
+          task.result={};for(const key of ['business_status','options','clarification','reason','slot_type','original_question'])if(key in body.result)task.result[key]=body.result[key];
+          const presentation=publicPresentation(body.result.presentation,task.answer||'');
+          if(presentation && body.status==='answer')task.result.presentation=presentation;
+        }
         await put(taskKey(task.session_id,task.id),task);await heartbeat(task.owner);
         if(terminal.has(task.status))await archive(task,'answer');
         if(terminal.has(task.status) && mirror)await mirror.enqueue(task,'answer');

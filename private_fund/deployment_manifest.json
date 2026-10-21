@@ -135,18 +135,18 @@
     },
     {
       "path": "assets/tianyan-assistant.css",
-      "size": 6814,
-      "sha256": "2b8af63e8cbd173f59d7f2b18daefce75c5c15e5312b73aef576ed0a00d466b4"
+      "size": 10764,
+      "sha256": "64acb2f896a6f96aa5e7f72374064c397fd7dfe1ce2147d0ac96d23378a9d06b"
     },
     {
       "path": "assets/tianyan-assistant.js",
-      "size": 17110,
-      "sha256": "5ff7ec3bb59882e5cc3a098f18c8070d9e6a3402e2aeba1ef72b4cef3fc97ed9"
+      "size": 26980,
+      "sha256": "9c6d8c8dd87e55bde0e172d1ec8fffd7ce1163cffa37b9b38017fe0e67f0a906"
     },
     {
       "path": "awards.html",
-      "size": 143651,
-      "sha256": "4de5de6b28d01f4e1ca536c0091439f3398ebbebef98b7a53caeff62e7d5c4ed"
+      "size": 143763,
+      "sha256": "ab7ef000fc8b6320b4c8a206a6fe73e0f3dbcad4e94388ddf8657e3b34782773"
     },
     {
       "path": "cmb-review.json",
@@ -64385,23 +64385,23 @@
     },
     {
       "path": "detail.html",
-      "size": 159045,
-      "sha256": "07caaaf56d77d2fb38c6004b2e950bf233c6d497bcb6b01cfd23197fbecebdc1"
+      "size": 159157,
+      "sha256": "b93e932e49803c519972946dae9b9d843e9fc58c9580575f5fde869111bf466a"
     },
     {
       "path": "gffunds-manager.html",
-      "size": 113306,
-      "sha256": "75fceb6b9e0df14244b1444948cc8de6385c0b0bfcd9592066d0205b06947612"
+      "size": 113418,
+      "sha256": "a4495f7fa2202fc484f05865e85120286b43cab2768773cabbdd3b6ae572f310"
     },
     {
       "path": "gffunds.html",
-      "size": 113256,
-      "sha256": "3435c9da2099ce180de24185f6fca4bd6cca49c3eb52c07edb5edf3154e84b82"
+      "size": 113368,
+      "sha256": "504e35ef3ccef0527736692195df794515c326d460fe853db07714876057bda2"
     },
     {
       "path": "index.html",
-      "size": 169068,
-      "sha256": "2d6b83dace00a92ac95913443c16aa5bd9930c1527a0d65d722e019f6ccb2af3"
+      "size": 169180,
+      "sha256": "979d463c9b750845c5b7d8e06dd46b86cc92d3a9bca0011266ea25da15026114"
     },
     {
       "path": "manifest.js",
@@ -64425,18 +64425,23 @@
     },
     {
       "path": "products.html",
-      "size": 5844,
-      "sha256": "7736201921195c82a8bbd663de32c16dc1d433fdece794bc445caee41ec0c1fa"
+      "size": 6012,
+      "sha256": "461ee14986395b4b297cab0a6ac953600880bb7df7be7b79a9ebae829c1de2b8"
     },
     {
       "path": "version.json",
-      "size": 151,
-      "sha256": "66dc9b0e3c4389c301a77595a608d400f71708bf3dbe526a48d9c5373a3dd3a6"
+      "size": 288,
+      "sha256": "561b23f0a137a76a6c10f7909222035517adfd7ac177e3ec4d2c89ef12bb1540"
     },
     {
       "path": "招商产品App核对清单.md",
       "size": 1197,
       "sha256": "c06026f571006f2e9aedaea508276052703c416dffbdbb24b1653d875856b9d9"
     }
-  ]
+  ],
+  "assistantRecoveryBuildId": "assistant-templates-20261021T111342",
+  "assistantRecoveryPublishedAt": "2026-10-21T11:13:42.703992+08:00",
+  "fileCount": 12885,
+  "totalBytes": 246418555,
+  "assistantTemplateBuild": "assistant-templates-20261021T111342"
 }

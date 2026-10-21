@@ -6,6 +6,7 @@
   const storageKey = "tianyan_assistant_session_v1";
   let session = null, busy = false, timer = null, opener = null, opened = false, connecting = null;
   let submitting = false, workerOnline = null, taskConnectionOk = true, activeTasks = [], generation = 0, refreshId = 0;
+  const renderedStates = new Map();
   const active = task => ["queued", "processing"].includes(task.status);
   try { session = JSON.parse(sessionStorage.getItem(storageKey) || "null"); } catch (_) {}
   const el = (tag, className, text) => {
@@ -86,6 +87,131 @@
       throw error;
     } finally { clearTimeout(timeout); }
   }
+  function safeResultURL(value) {
+    try { const u = new URL(value); return u.protocol === "https:" && u.hostname === "gfinvest.site" && !u.username && !u.password && (!u.port || u.port === "443"); } catch (_) { return false; }
+  }
+  function resultLink(label, url) {
+    if (!safeResultURL(url)) return null;
+    const a = el("a", "ty-result-link", label); a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer"; return a;
+  }
+  function plotResult(chart) {
+    if (!chart || !["line", "bar"].includes(chart.kind) || !Array.isArray(chart.points) || !chart.points.length || chart.points.length > 400) return null;
+    const points = chart.points;
+    if (points.some(p => !Array.isArray(p) || typeof p[1] !== "number" || !Number.isFinite(p[1]))) return null;
+    const fig = el("figure", "ty-result-chart"); fig.append(el("figcaption", "", chart.title + " · " + chart.unit));
+    const ns = "http://www.w3.org/2000/svg", svg = document.createElementNS(ns, "svg");
+    const width = 640, height = chart.kind === "bar" ? Math.max(170, points.length * 36 + 30) : 220;
+    svg.setAttribute("viewBox", "0 0 " + width + " " + height); svg.setAttribute("role", "img"); svg.setAttribute("aria-label", chart.title);
+    const node = (tag, attributes, content) => {
+      const n = document.createElementNS(ns, tag); for (const key in attributes) n.setAttribute(key, attributes[key]);
+      if (content !== undefined) n.textContent = content; svg.append(n); return n;
+    };
+    if (chart.kind === "line") {
+      const values = points.map(p => p[1]), lo = Math.min(0, ...values), hi = Math.max(0, ...values), span = hi - lo || 1;
+      const y = v => 180 - (v - lo) / span * 145, x = i => 52 + i / Math.max(1, points.length - 1) * 530;
+      node("line", { x1: 52, x2: 590, y1: y(0), y2: y(0), stroke: "#DCE2E7" });
+      node("polyline", { points: points.map((p, i) => x(i) + "," + y(p[1])).join(" "), fill: "none", stroke: "#17324D", "stroke-width": 2.5 });
+      node("text", { x: 6, y: 38, fill: "#66717E", "font-size": 12 }, hi.toFixed(2) + "%");
+      node("text", { x: 6, y: 183, fill: "#66717E", "font-size": 12 }, lo.toFixed(2) + "%");
+      node("text", { x: 52, y: 209, fill: "#66717E", "font-size": 12 }, points[0][0]);
+      node("text", { x: 590, y: 209, fill: "#66717E", "font-size": 12, "text-anchor": "end" }, points[points.length - 1][0]);
+      const last = values[values.length - 1];
+      node("text", { x: 635, y: 20, fill: last > 0 ? "#B72F32" : last < 0 ? "#17744B" : "#66717E", "font-size": 14, "text-anchor": "end" }, last.toFixed(2) + "%");
+    } else {
+      const extent = Math.max(...points.map(p => Math.abs(p[1])), 1), zero = 360;
+      node("line", { x1: zero, x2: zero, y1: 12, y2: height - 12, stroke: "#DCE2E7" });
+      points.forEach((p, i) => {
+        const y = i * 36 + 30, w = Math.abs(p[1]) / extent * 180;
+        node("text", { x: 8, y: y + 4, fill: "#17324D", "font-size": 13 }, p[0]);
+        node("rect", { x: p[1] >= 0 ? zero : zero - w, y: y - 11, width: Math.max(.5, w), height: 18, fill: "#758CA0" });
+        node("text", { x: 628, y: y + 4, fill: "#17324D", "font-size": 12, "text-anchor": "end" }, (p[1] > 0 ? "+" : "") + p[1].toFixed(2));
+      });
+    }
+    fig.append(svg); return fig;
+  }
+  function renderPresentation(body, data, task) {
+    if (!data || data.version !== 1 || !["product_screen", "product_detail", "business_weekly"].includes(data.template) ||
+        !Array.isArray(data.sections) || !data.sections.length || data.sections.length > 12) return false;
+    const card = el("div", "ty-result"); card.dataset.template = data.template;
+    card.append(el("p", "ty-result-eyebrow", "天眼数据 · " + data.title));
+    if (data.summary) card.append(el("p", "ty-result-summary", data.summary));
+    const critical = (data.notes || []).filter(n => /待核|缺失|缺口|非精确|补齐|未知|不可比/.test(n));
+    if (critical.length) card.append(el("p", "ty-result-boundary", critical.slice(0, 3).join("；")));
+    for (const section of data.sections) {
+      if (!Array.isArray(section.columns) || !Array.isArray(section.rows) || section.rows.length > 40 || section.columns.length > 12 ||
+          section.rows.some(r => !Array.isArray(r.cells) || r.cells.length !== section.columns.length)) return false;
+      const block = el("section", "ty-result-section"); block.append(el("h3", "", section.title));
+      if (section.scope) { const scope = el("details", "ty-result-scope"); scope.append(el("summary", "", "筛选范围与口径"), el("p", "", section.scope)); block.append(scope); }
+      if (section.total > section.rows.length) block.append(el("p", "ty-result-count", "共 " + section.total + " 条，本段展示 " + section.rows.length + " 条"));
+      if (!section.rows.length) block.append(el("p", "ty-result-empty", "本次范围内暂无可完整核对的记录；请结合覆盖说明查看。"));
+      else if (section.rows.length === 1 && data.template !== "product_screen") {
+        const row = section.rows[0], metrics = el("div", "ty-result-metrics"), facts = el("dl", "ty-result-facts");
+        let metricCount = 0;
+        row.cells.forEach((item, i) => {
+          if (section.columns[i].numeric && metricCount < 4) {
+            const metric = el("div", "ty-result-metric");
+            metric.append(el("span", "ty-result-metric-label", section.columns[i].label),
+              el("strong", "ty-result-" + (["positive", "negative", "neutral"].includes(item.tone) ? item.tone : "neutral"), item.display));
+            metrics.append(metric); metricCount++;
+          } else {
+            facts.append(el("dt", "", section.columns[i].label), el("dd", "", item.display));
+          }
+        });
+        if (metricCount) block.append(metrics); if (facts.children.length) block.append(facts);
+        const detail = resultLink("查看产品详情", row.detail_url); if (detail) block.append(detail);
+      } else {
+        const wrap = el("div", "ty-result-table-wrap"), table = el("table", "ty-result-table"), head = el("thead"), hr = el("tr"), tbody = el("tbody");
+        let order = section.rows.slice(), sortIndex = -1, descending = true;
+        const draw = () => {
+          tbody.replaceChildren();
+          for (const row of order) {
+            const tr = el("tr");
+            row.cells.forEach((item, i) => {
+              const td = el("td", section.columns[i].numeric ? "ty-result-number" : "");
+              td.dataset.label = section.columns[i].label;
+              const span = el("span", "ty-result-" + (["positive", "negative", "neutral"].includes(item.tone) ? item.tone : "neutral"), item.display);
+              td.append(span); tr.append(td);
+            });
+            if (section.rows.some(r => r.detail_url)) {
+              const td = el("td", "ty-result-action"); td.dataset.label = "详情"; const a = resultLink("查看详情", row.detail_url); if (a) td.append(a); tr.append(td);
+            }
+            tbody.append(tr);
+          }
+        };
+        section.columns.forEach((c, i) => {
+          const th = el("th", c.numeric ? "ty-result-number" : ""), button = el("button", "ty-result-sort", c.label);
+          button.type = "button"; button.title = "按此列排序";
+          button.onclick = () => {
+            descending = sortIndex === i ? !descending : true; sortIndex = i;
+            order.sort((a, b) => {
+              const x = a.cells[i].value, y = b.cells[i].value;
+              if (x === null) return y === null ? 0 : 1; if (y === null) return -1;
+              return (typeof x === "number" && typeof y === "number" ? x - y : String(x).localeCompare(String(y), "zh-CN")) * (descending ? -1 : 1);
+            }); draw();
+          };
+          th.append(button); hr.append(th);
+        });
+        if (section.rows.some(r => r.detail_url)) hr.append(el("th", "", "详情"));
+        head.append(hr); table.append(head, tbody); wrap.append(table); block.append(wrap); draw();
+      }
+      const list = resultLink("查看全部结果", section.list_url); if (list) block.append(list);
+      card.append(block);
+    }
+    const chart = plotResult(data.chart);
+    if (chart) { const first = card.querySelector(".ty-result-section"); card.insertBefore(chart, first ? first.nextSibling : null); }
+    const details = el("details", "ty-result-methods"); details.append(el("summary", "", "数据说明与完整文字答复"));
+    for (const note of data.notes || []) details.append(el("p", "", note));
+    const fallback = el("div", "ty-result-fallback"); businessText(fallback, task.answer); details.append(fallback); card.append(details);
+    if (data.followups && data.followups.length) {
+      const followups = el("div", "ty-assistant-options");
+      for (const q of data.followups.slice(0, 2)) {
+        const b = el("button", "ty-assistant-option", q); b.type = "button";
+        b.onclick = () => { input.value = q; input.focus(); }; followups.append(b);
+      }
+      card.append(followups);
+    }
+    body.classList.add("ty-assistant-structured"); body.append(card); return true;
+  }
   function businessText(node, text) {
     // Render a small Markdown subset without innerHTML, embedded scripts or remote HTML.
     const regex = /\[([^\]\n]+)\]\((https?:\/\/[^\s)]+)\)|\*\*([^*]+)\*\*/g;
@@ -116,7 +242,10 @@
     } catch (error) { showNotice(error.message); }
   }
   function render(tasks) {
+    const keepBottom = transcript.scrollHeight - transcript.scrollTop - transcript.clientHeight < 80;
+    const previousScroll = transcript.scrollTop;
     transcript.replaceChildren();
+    let newlyCompleted = null;
     if (!tasks.length) {
       const welcome = el("div", "ty-assistant-welcome");
       welcome.append(el("p", "ty-assistant-eyebrow", "从一个具体问题开始"), el("h3", "", "把产品筛选和评价条件说清楚"),
@@ -131,7 +260,11 @@
       const user = el("article", "ty-assistant-message ty-assistant-user"); user.append(el("span", "ty-assistant-role", "你"), el("div", "ty-assistant-content", task.question));
       const answer = el("article", "ty-assistant-message ty-assistant-answer"); answer.append(el("span", "ty-assistant-role", "天眼助手"));
       const body = el("div", "ty-assistant-content");
-      if (task.answer) businessText(body, task.answer);
+      if (task.answer) {
+        let rendered = false;
+        try { rendered = renderPresentation(body, task.result && task.result.presentation, task); } catch (_) {}
+        if (!rendered) { body.replaceChildren(); businessText(body, task.answer); }
+      }
       else body.append(el("p", "ty-assistant-progress", task.stage || "问题已提交"));
       answer.append(body);
       if (task.status === "clarification") {
@@ -149,8 +282,13 @@
         button.type = "button"; button.onclick = () => download(task, file); files.append(button);
       }
       answer.append(files); transcript.append(user, answer);
+      if (task.answer && renderedStates.get(task.id) !== task.status) newlyCompleted = answer;
+      renderedStates.set(task.id, task.status);
     }
-    transcript.scrollTop = transcript.scrollHeight;
+    const target = keepBottom && newlyCompleted ?
+      transcript.scrollTop + newlyCompleted.getBoundingClientRect().top - transcript.getBoundingClientRect().top - 8 :
+      keepBottom ? transcript.scrollHeight : previousScroll;
+    transcript.scrollTo({top:Math.max(0,target),behavior:"instant"});
   }
   async function refresh() {
     if (!session || !opened) return;

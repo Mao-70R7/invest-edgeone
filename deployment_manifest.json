@@ -76,8 +76,8 @@
     "preservedPublishFileCount": 0,
     "preservedPublishBytes": 0
   },
-  "fileCount": 5809,
-  "totalBytes": 371455191,
+  "fileCount": 5810,
+  "totalBytes": 371475425,
   "files": [
     {
       "path": ".gitattributes",
@@ -105,6 +105,16 @@
       "sha256": "9eeb110538f7b4c5e1e5af9b0598d8de165579bc604b7eae34c6a242e9e24d38"
     },
     {
+      "path": "README.md",
+      "size": 2005,
+      "sha256": "66f16ef2865edc88ef10ab31a0e1b111b4226bd37f30aa807c3f6735812793ce"
+    },
+    {
+      "path": "README_部署说明.md",
+      "size": 2005,
+      "sha256": "66f16ef2865edc88ef10ab31a0e1b111b4226bd37f30aa807c3f6735812793ce"
+    },
+    {
       "path": "assistant-runtime/auth-config.mjs",
       "size": 190,
       "sha256": "1b1086c5a8ebd7edb6ce10e000c925fc2aa5f00b006c6b71ef37650fbc06cd6d"
@@ -115,9 +125,14 @@
       "sha256": "0822c14aed6b63fde85989628b9666e076aeee75f669c23b3b5667697884d15f"
     },
     {
+      "path": "assistant-runtime/presentation.mjs",
+      "size": 2811,
+      "sha256": "91e5a0dc9972ceab3bd7739066952a94c7c2ba8487a82b3d7a830971ebb72818"
+    },
+    {
       "path": "assistant-runtime/relay.mjs",
-      "size": 18662,
-      "sha256": "9f413ecf6de81d74da707c67c313f7b003ab5cdd386d73e44076ced1ce6cac25"
+      "size": 18942,
+      "sha256": "13d008619be9ca570057f2122a9dcd7cd9c4164c92ceabb771587ac87e175333"
     },
     {
       "path": "assistant-runtime/vendor/pages-blob.cjs",
@@ -8750,6 +8765,11 @@
       "sha256": "933079b42ea84e5d2f9631e70d56250c508bc671b875fc30fc7d00a8e8ed4560"
     },
     {
+      "path": "basic_data/assets/strategy-lookthrough/Wind标准基金分类映射明细.csv",
+      "size": 9859528,
+      "sha256": "c05dbf37f6231fd9b9488b007007dc5cbdd065d03077c245b32a76f6d6cca944"
+    },
+    {
       "path": "basic_data/assets/strategy-lookthrough/a005b4b17f1e98b7001b00f2.json.gz",
       "size": 57186,
       "sha256": "e44ae5faadd07d56e87d7c2ba4667b29b3e92d4461a5d4de9a7e4d2c841b5b38"
@@ -14375,11 +14395,6 @@
       "sha256": "e0acb02d0d0d2cbf104302b4c41f1457b690b31d53df5822905d8fafc86c35d3"
     },
     {
-      "path": "basic_data/assets/strategy-lookthrough/Wind标准基金分类映射明细.csv",
-      "size": 9859528,
-      "sha256": "c05dbf37f6231fd9b9488b007007dc5cbdd065d03077c245b32a76f6d6cca944"
-    },
-    {
       "path": "basic_data/assets/strategy-lookthrough/基金报告时效明细.csv",
       "size": 8625552,
       "sha256": "defef5a9928aeb25fa1204dccbf35496545c2b6deb3588fd0aa66cdb41334857"
@@ -14391,13 +14406,13 @@
     },
     {
       "path": "basic_data/assets/tianyan-assistant.css",
-      "size": 6814,
-      "sha256": "2b8af63e8cbd173f59d7f2b18daefce75c5c15e5312b73aef576ed0a00d466b4"
+      "size": 10764,
+      "sha256": "64acb2f896a6f96aa5e7f72374064c397fd7dfe1ce2147d0ac96d23378a9d06b"
     },
     {
       "path": "basic_data/assets/tianyan-assistant.js",
-      "size": 17110,
-      "sha256": "5ff7ec3bb59882e5cc3a098f18c8070d9e6a3402e2aeba1ef72b4cef3fc97ed9"
+      "size": 26980,
+      "sha256": "9c6d8c8dd87e55bde0e172d1ec8fffd7ce1163cffa37b9b38017fe0e67f0a906"
     },
     {
       "path": "basic_data/assets/tianyan-navigation.css",
@@ -14405,14 +14420,14 @@
       "sha256": "0870f1c8ced6a7b7a810407a78a416d749d09e5bd311f84de31c9dd67e5b63d5"
     },
     {
-      "path": "basic_data/assets/vendor/html-to-image.js",
-      "size": 20562,
-      "sha256": "a90b42909d80964269ef6d5f3d1e4a5a7e2a4c263a5d2a76a9e7151901343262"
-    },
-    {
       "path": "basic_data/assets/vendor/html-to-image.LICENSE",
       "size": 1066,
       "sha256": "9fe73723f7a9e91057f73aafc9b6a3c3b2174db2b3ddc0a3a6a8ddf2bad68e37"
+    },
+    {
+      "path": "basic_data/assets/vendor/html-to-image.js",
+      "size": 20562,
+      "sha256": "a90b42909d80964269ef6d5f3d1e4a5a7e2a4c263a5d2a76a9e7151901343262"
     },
     {
       "path": "basic_data/assets/vendor/html-to-image.source.json",
@@ -14421,8 +14436,8 @@
     },
     {
       "path": "basic_data/compare.html",
-      "size": 3212,
-      "sha256": "18b4bb092d3bc2084128da81e023a08c98b81813ea91bc860913b4c7a2845dc8"
+      "size": 3380,
+      "sha256": "e916c0dbd4560cfaa54e6890a5a363133223c5763e26a401f583cdb3211a32fb"
     },
     {
       "path": "basic_data/data/basic_summary_core.js.gz",
@@ -19635,14 +19650,14 @@
       "sha256": "5c3b139215f9a4dbfb524305767eaea218acca9bf57282dc3aa9e5d16ac11c75"
     },
     {
-      "path": "basic_data/data/details/64/fullgoal__mantianxing.js.gz",
-      "size": 4755,
-      "sha256": "21d4c0d834040deb646e1b110de72d623d82c0af22f95e0e8ca2b78ce9a7a874"
-    },
-    {
       "path": "basic_data/data/details/64/fullgoal__ZYZXZH001.js.gz",
       "size": 14362,
       "sha256": "20a777f16cd637c53160f01f17b13e65546ff9fbb81afe2fff7c760b93bf63a8"
+    },
+    {
+      "path": "basic_data/data/details/64/fullgoal__mantianxing.js.gz",
+      "size": 4755,
+      "sha256": "21d4c0d834040deb646e1b110de72d623d82c0af22f95e0e8ca2b78ce9a7a874"
     },
     {
       "path": "basic_data/data/details/64/gfbank_cgb__ui-name-1b815a69a228100b.js.gz",
@@ -28956,93 +28971,93 @@
     },
     {
       "path": "basic_data/institutions.html",
-      "size": 3180,
-      "sha256": "e85fc0e25493c2f1315d55fa3ff49f3b5510abca72dc7386806564775296612b"
+      "size": 3348,
+      "sha256": "9106124fdb2c529fb9e34d477e6033cded2b55a3edf664f6acda5719c7fc17bd"
     },
     {
       "path": "basic_data/mixed-performance-scatter.html",
-      "size": 3279,
-      "sha256": "a2b9390d29630c5f7c0269fd9bec6f66e7d7297c3d6cf4c63ad6d5ed6df3b9f1"
+      "size": 3447,
+      "sha256": "e2ef56cd1b738a627c0117b6707d0cc7e5c5f63757fa8115d7bb4f7167c0b3a0"
     },
     {
       "path": "basic_data/monthly-rebalance-report-202510.html",
-      "size": 180174,
-      "sha256": "ab4f2f25c0a0912fd62fc95a94be33e48f1112f361feabd617d229d3d5fdb3e1"
+      "size": 180342,
+      "sha256": "bf1b86f0dbf01ec92de29174af719453497199e03ac2fd4de35bb8a4f5df8c3f"
     },
     {
       "path": "basic_data/monthly-rebalance-report-202511.html",
-      "size": 187468,
-      "sha256": "5de40e2e8589adaea515a6ed7c4f4f375c490b2d143c61b323bccd8ab551e3b7"
+      "size": 187636,
+      "sha256": "16428f8faafc119ef142542804eb3bc7f4d637c4d29bb2c69443e1951521ec24"
     },
     {
       "path": "basic_data/monthly-rebalance-report-202512.html",
-      "size": 204020,
-      "sha256": "d54ae1f5cf788410db55e92db3d2d53fba86902a6c68a228c4391ca522b3c8a1"
+      "size": 204188,
+      "sha256": "ed07af36c03312074cf378e51908bbde0d2d86a9cc6ccc56e0f05a238454cd8c"
     },
     {
       "path": "basic_data/monthly-rebalance-report-202601.html",
-      "size": 189666,
-      "sha256": "19c5089bfa29a93ced60e235239d42e8820b518dfcc4f1082808fa1ea4f07bcd"
+      "size": 189834,
+      "sha256": "928f750967714c23b1dd1ce42c542158c824d77ae532f14230b63fc7d3271b77"
     },
     {
       "path": "basic_data/monthly-rebalance-report-202602.html",
-      "size": 193193,
-      "sha256": "cdb75beba811cc542e5825bf55ed9d311d21ea31f309c98bda9dd5ff0e3fc115"
+      "size": 193361,
+      "sha256": "dce4aca9f50e471f648a6859b00667922ea2032c856662ded1404516c94ea3ef"
     },
     {
       "path": "basic_data/monthly-rebalance-report-202603.html",
-      "size": 219634,
-      "sha256": "c401689f6e2817e2769e475084efd4f50b3ce67898fa4ff499a654be65fbf3b1"
+      "size": 219802,
+      "sha256": "29f908a0f81133d64b3d852d8e8638e52920bb4d8b081c7b6fb43cfda5f6eae9"
     },
     {
       "path": "basic_data/monthly-rebalance-report-202604.html",
-      "size": 199670,
-      "sha256": "47c705c840e4f1794bc05c24598c97526ef07e081b5362700178e7347a90c10e"
+      "size": 199838,
+      "sha256": "40f282fb45c813f0f93a9d5f063f04ea0f7141b7f9233b17903a1200bbfb433d"
     },
     {
       "path": "basic_data/monthly-rebalance-report-202605.html",
-      "size": 188310,
-      "sha256": "dd82bef2b6cee406ae41a4f7f4bfef802aeebc4c058a5b8aff891fe2c803569a"
+      "size": 188478,
+      "sha256": "ed47527ff2b8c9dea193baa131ba2a993a620fbd0e7725e4876a69dfd92bbae9"
     },
     {
       "path": "basic_data/monthly-rebalance-report-202606.html",
-      "size": 239498,
-      "sha256": "4e2c242f95a8502ac4e95f6cdba8cf19c8f1a8dffa4d6edeb321bce4a5345d74"
+      "size": 239666,
+      "sha256": "4afb01d69817cc84672a82510872273ac59526bfdfa7a61be8169f4f5b61d791"
     },
     {
       "path": "basic_data/monthly-rebalance-report-202607.html",
-      "size": 195613,
-      "sha256": "2bf8279aa8c3e46a60063f3d8de668459b791dc25544567289f9de1567faff94"
+      "size": 195781,
+      "sha256": "6872b2317a4139a7e81574a529c1f84fbacec1138b11c63d0e50425ac4298d9f"
     },
     {
       "path": "basic_data/monthly-rebalance-report-202608.html",
-      "size": 207662,
-      "sha256": "9c9db111ece4ae9502e70e4003b88aa6af4fb6577fe0023b793cfcb11dc07211"
+      "size": 207830,
+      "sha256": "aa8416686d9281c632d16259e7b204d69d8da0a97298f62f28e798da54894d5f"
     },
     {
       "path": "basic_data/monthly-rebalance-report-202609.html",
-      "size": 175192,
-      "sha256": "efb3ccaadd610b11485e5f9c089f5281bc1990eb0701d4222c720b9d1ed136bb"
+      "size": 175360,
+      "sha256": "9869d20416785d921b8331c715d4414a6635d09b7d11f0eb95aef880d61fa260"
     },
     {
       "path": "basic_data/monthly-rebalance-report.html",
-      "size": 175192,
-      "sha256": "efb3ccaadd610b11485e5f9c089f5281bc1990eb0701d4222c720b9d1ed136bb"
+      "size": 175360,
+      "sha256": "9869d20416785d921b8331c715d4414a6635d09b7d11f0eb95aef880d61fa260"
     },
     {
       "path": "basic_data/strategies.html",
-      "size": 3119,
-      "sha256": "48c1de3d4bfa3ab332b50b16141603f602ec7dd63e31a1942823a3546214dc17"
+      "size": 3287,
+      "sha256": "feba449c83510fca208cf75c97f44a93391c6e8144e1ee31901286ff68433510"
     },
     {
       "path": "basic_data/strategy-lookthrough.html",
-      "size": 1501235,
-      "sha256": "65f8c07193cac053264b9023f9606ca1d8585611b89c439dca87a35da180efcc"
+      "size": 1501403,
+      "sha256": "e110de78058e14eb90f0b7ec19ea3fd1f0caeb9bbef6adc46ecefb68eb63f7d7"
     },
     {
       "path": "basic_data/strategy.html",
-      "size": 3241,
-      "sha256": "ae47146f7686819f5789e0205d38a02be11ed841c3e242a2a78751f7bfbcb28c"
+      "size": 3409,
+      "sha256": "11c3aa4abe9c64e5a5736117acd823bb03a66b6c0c8608806ee1bc98d17368e4"
     },
     {
       "path": "cloud-functions/ai-api/[[default]].js",
@@ -29075,16 +29090,6 @@
       "sha256": "d4f5e03b4718fe8ae98f1d443a0fa774205f5eb3bd67869397f196536b72c62a"
     },
     {
-      "path": "README.md",
-      "size": 2005,
-      "sha256": "66f16ef2865edc88ef10ab31a0e1b111b4226bd37f30aa807c3f6735812793ce"
-    },
-    {
-      "path": "README_部署说明.md",
-      "size": 2005,
-      "sha256": "66f16ef2865edc88ef10ab31a0e1b111b4226bd37f30aa807c3f6735812793ce"
-    },
-    {
       "path": "scripts/serve_basic_data_site.py",
       "size": 8340,
       "sha256": "566d56934194f0c7d35f1d1419e6934287a538cb171e98bfdc0344850859bfb0"
@@ -29111,8 +29116,8 @@
     },
     {
       "path": "version.json",
-      "size": 151,
-      "sha256": "e478807b63f2cc8ff2c7e776cb8a18a56c65a61bbc1387d5a17ce2e40ddc5289"
+      "size": 282,
+      "sha256": "55d11284e41afc9e075aa1d165623fdf9fdb70888c2da4e561b1879a27c1f386"
     },
     {
       "path": "停止最小发布集.cmd",
@@ -29153,5 +29158,8 @@
     "changeType": "accepted_admission_refresh",
     "admissionRunId": "20261021_gap_recovery",
     "asOf": "2026-10-21"
-  }
+  },
+  "assistantRecoveryBuildId": "assistant-templates-20261021T111342",
+  "assistantRecoveryPublishedAt": "2026-10-21T11:13:42.703992+08:00",
+  "assistantTemplateBuild": "assistant-templates-20261021T111342"
 }

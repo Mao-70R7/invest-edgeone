@@ -2,5 +2,7 @@
   "version": 1,
   "buildId": "minimal-4e09ef7314e9",
   "generatedAt": "2026-10-21T10:37:21+08:00",
-  "entry": "basic_data/institutions.html"
+  "entry": "basic_data/institutions.html",
+  "assistantTemplateBuild": "assistant-templates-20261021T111342",
+  "assistantTemplatePublishedAt": "2026-10-21T11:13:42.703992+08:00"
 }
