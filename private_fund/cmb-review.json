@@ -1,0 +1,44 @@
+{
+  "version": "cmb_display_20260911_v1",
+  "generatedAt": "2026-10-21T01:09:19+08:00",
+  "products": 2903,
+  "issueCount": 4,
+  "issueShare": 0.0013778849466069584,
+  "maxIssueShare": 0.05,
+  "incomeCurveProducts": 14,
+  "expectedNoHistoryProducts": 0,
+  "issues": [
+    {
+      "id": "XTEGZ8",
+      "name": "相聚芒格B期",
+      "company": "中国对外经济贸易信托有限公司",
+      "latestNavDate": null,
+      "analysisPointCount": 0,
+      "dataQualityNote": "历史接口此前返回空；请核对App是否有业绩走势"
+    },
+    {
+      "id": "XTEGZ9",
+      "name": "相聚芒格C期",
+      "company": "中国对外经济贸易信托有限公司",
+      "latestNavDate": null,
+      "analysisPointCount": 0,
+      "dataQualityNote": "历史接口此前返回空；请核对App是否有业绩走势"
+    },
+    {
+      "id": "XTEGZA",
+      "name": "相聚芒格D期",
+      "company": "中国对外经济贸易信托有限公司",
+      "latestNavDate": null,
+      "analysisPointCount": 0,
+      "dataQualityNote": "历史接口此前返回空；请核对App是否有业绩走势"
+    },
+    {
+      "id": "XTELBR",
+      "name": "外贸-嘉实睿见高增长低混金享29期",
+      "company": "中国对外经济贸易信托有限公司",
+      "latestNavDate": "2026-10-14",
+      "analysisPointCount": 0,
+      "dataQualityNote": "仅有1个净值日期，尚不足以绘制走势；请核对App可见历史"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-19T05:12:24+08:00",
+  "status": "ready",
+  "checks": {
+    "monthlyRebalanceMonthCount": 12,
+    "strategySummaryCount": 2619,
+    "strategyDetailCount": 2619,
+    "strategyDetailMissingCount": 0,
+    "strategyDetailParseErrorCount": 0,
+    "strategyDetailDeclaredIncompleteCount": 720,
+    "strategyDetailWithoutHoldingCount": 437,
+    "strategyDetailWithoutCurveCount": 426,
+    "strategyDetailReferencedFundCount": 6367,
+    "selectedFundCount": 0,
+    "enhancedFundDetailCount": 0,
+    "baseOnlyFundCount": 0,
+    "brokenFundDetailCount": 0,
+    "forbiddenFundDetailPageCount": 0,
+    "forbiddenFundDetailFileCount": 0,
+    "strategyDetailSourceCount": 2619,
+    "strategyDetailDeclaredCompleteCount": 1899,
+    "activeStrategyCount": 2043,
+    "activeStrategyWithoutCurveCount": 293,
+    "currentHoldingStrategyCount": 2157,
+    "currentHoldingFundReferenceCount": 38415,
+    "currentHoldingRankMissingReferenceCount": 200,
+    "activeCurrentHoldingRankMissingReferenceCount": 183,
+    "inactiveCurrentHoldingRankMissingReferenceCount": 17,
+    "currentHoldingScaleErrorReferenceCount": 0,
+    "historyRebalanceStrategyCount": 2025,
+    "assessedHistoryRebalanceStrategyCount": 1720,
+    "unassessedHistoryRebalanceStrategyCount": 305,
+    "officialPerformanceImageReferenceCount": 0,
+    "officialPerformanceImageInvalidReferenceCount": 0,
+    "officialPerformanceImageMissingSourceAssetCount": 0,
+    "currentHolding近一月RankedReferenceCount": 38351,
+    "currentHolding近三月RankedReferenceCount": 38355,
+    "currentHolding近6月RankedReferenceCount": 38352,
+    "currentHolding近1年RankedReferenceCount": 38221,
+    "officialPerformanceImagePublishedAssetCount": 0,
+    "officialPerformanceImageMissingPublishedAssetCount": 0,
+    "fundDetailParsedCount": 0,
+    "fundDetailNavChartCount": 0,
+    "fundDetailNavChartMissingCount": 0,
+    "fundDetailBenchmarkChartCount": 0,
+    "fundDetailChartScaleErrorCount": 0,
+    "fundDetailParseErrorCount": 0,
+    "holdingSnapshotSourceRowCount": 671983,
+    "holdingSnapshotPublishedRowCount": 201828,
+    "holdingSnapshotStrategyCount": 2142,
+    "strategy-lookthroughFileCount": 5477,
+    "strategy-lookthroughBytes": 1334838194,
+    "monthly-rebalance-reportsFileCount": 14,
+    "monthly-rebalance-reportsBytes": 21468444
+  },
+  "policy": {
+    "blockingZeroChecks": [
+      "strategyDetailMissingCount",
+      "strategyDetailParseErrorCount",
+      "officialPerformanceImageInvalidReferenceCount",
+      "officialPerformanceImageMissingSourceAssetCount",
+      "officialPerformanceImageMissingPublishedAssetCount",
+      "forbiddenFundDetailPageCount",
+      "forbiddenFundDetailFileCount",
+      "currentHoldingScaleErrorReferenceCount"
+    ],
+    "warningOnlyChecks": [
+      "activeCurrentHoldingRankMissingReferenceCount"
+    ],
+    "warningCounts": {
+      "activeCurrentHoldingRankMissingReferenceCount": 183
+    }
+  },
+  "warnings": [
+    {
+      "type": "source_strategy_data_incomplete",
+      "count": 720,
+      "note": "源数据已明确标记不完整，发布集保留真实缺失状态，不做推测补齐。"
+    },
+    {
+      "type": "active_strategy_without_curve",
+      "count": 293,
+      "note": "活跃策略没有任何可画曲线时保留真实缺失状态；正常披露策略应为0。"
+    },
+    {
+      "type": "current_holding_rank_missing",
+      "count": 200,
+      "activeCount": 183,
+      "inactiveCount": 17,
+      "note": "同类排名缺失属于可披露的覆盖率缺口，不阻断其他准确数据发布；页面不把缺失仓位计为前50%。"
+    },
+    {
+      "type": "history_rebalance_unassessed",
+      "count": 305,
+      "note": "历史事件仅为建仓或底层净值不足时不计算胜率，页面展示具体原因。"
+    }
+  ],
+  "pageVersionValidation": {
+    "status": "passed",
+    "buildId": "minimal-c35779b9dab7",
+    "pageCount": 19
+  },
+  "monthlyRebalanceValidation": {
+    "status": "passed",
+    "monthCount": 12,
+    "latestMonth": "2026-09",
+    "databaseRecomputed": true
+  },
+  "sourceValidation": {
+    "status": "passed",
+    "errorCount": 0,
+    "dbIndependentRecompute": true,
+    "checksComplete": true,
+    "scopeIds": [
+      "gffunds__GFJJ000009",
+      "gffunds__GFJJ000012",
+      "gffunds__GFJJ000759",
+      "gffunds__GFJJ000939",
+      "gffunds__GFJJ001181",
+      "gffunds__GFJJ001204",
+      "gffunds__GFJJ001262",
+      "gffunds__GFJJ001331",
+      "gffunds__GFJJ001400",
+      "gffunds__GFJJ001412",
+      "gffunds__GFJJ001421",
+      "gffunds__GFJJ001662",
+      "gffunds__GFJJ001663",
+      "gffunds__GFJJ001721",
+      "gffunds__GFJJ002102",
+      "gffunds__GFJJ002103",
+      "gffunds__GFJJ002194",
+      "gffunds__GFJJ002982"
+    ],
+    "retainedPublishedBytesVerified": true,
+    "validatedAt": "2026-10-21T10:56:50+08:00"
+  },
+  "scopeIds": [
+    "gffunds__GFJJ000009",
+    "gffunds__GFJJ000012",
+    "gffunds__GFJJ000759",
+    "gffunds__GFJJ000939",
+    "gffunds__GFJJ001181",
+    "gffunds__GFJJ001204",
+    "gffunds__GFJJ001262",
+    "gffunds__GFJJ001331",
+    "gffunds__GFJJ001400",
+    "gffunds__GFJJ001412",
+    "gffunds__GFJJ001421",
+    "gffunds__GFJJ001662",
+    "gffunds__GFJJ001663",
+    "gffunds__GFJJ001721",
+    "gffunds__GFJJ002102",
+    "gffunds__GFJJ002103",
+    "gffunds__GFJJ002194",
+    "gffunds__GFJJ002982"
+  ],
+  "scopedDataAsOf": "2026-10-21",
+  "retainedBuildId": "minimal-edf1ce8b3365",
+  "scopedManualAudit": {
+    "runId": "20261020T2350_overview_dependencies_audit",
+    "sha256": "7f9c3e7c2e22d321977b1221103fc2361799bb05c17afcac497bf09cb9aac9b8"
+  }
+}
