@@ -1,0 +1,6657 @@
+{
+  "id": "qieman__ZH164292",
+  "name": "富国多元低波稳健理财",
+  "parentId": "qieman__ZH164292",
+  "family": "富国多元低波稳健理财",
+  "isParent": true,
+  "holdingStatus": "issue_source_rows",
+  "sourceUrl": null,
+  "sourceUpdatedAt": "2026-10-22T23:05:29+08:00",
+  "holdingDate": "2026-10-22",
+  "holdingCount": 14,
+  "weightSum": 100.0,
+  "ageDays": 1,
+  "reportCoverageWeight": 100.00000000000001,
+  "reportPeriods": {
+    "2026-06-30": 100.00000000000001
+  },
+  "laterReportWeight": 0.0,
+  "lowBreakdownWeight": 26.66,
+  "metrics": {
+    "股票": 0.004502331193071967,
+    "债券": 87.66709219338048,
+    "现金": 1.3449361499742245,
+    "基金": 9.428935819255589,
+    "商品": 0.0,
+    "存托凭证": 0.0,
+    "其他": 1.554533506196641
+  },
+  "unexplained": 0.0,
+  "grossExcess": 7.633166999999996,
+  "fundTypeMajor": {
+    "债券类": 88.67,
+    "权益类": 8.090000000000002,
+    "海外/QDII": 2.23,
+    "现金类": 1.01
+  },
+  "fundTypeMinor": [
+    {
+      "major": "债券类",
+      "minor": "指数型-固收",
+      "value": 88.67
+    },
+    {
+      "major": "权益类",
+      "minor": "指数型-其他",
+      "value": 2.81
+    },
+    {
+      "major": "海外/QDII",
+      "minor": "指数型-海外股票",
+      "value": 2.23
+    },
+    {
+      "major": "权益类",
+      "minor": "指数型-股票",
+      "value": 5.28
+    },
+    {
+      "major": "现金类",
+      "minor": "货币型-普通货币",
+      "value": 1.01
+    }
+  ],
+  "stockIndustryMajor": {
+    "计算机": 0.0,
+    "电子": 0.00029067809809305353,
+    "通信": 0.0003438123811559004,
+    "国防军工": 0.0,
+    "基础化工": 4.6729485318043226e-05,
+    "机械设备": 0.0,
+    "医药生物": 8.305088516944387e-05,
+    "电力设备": 0.0,
+    "个护用品": 0.0,
+    "医疗美容": 0.0,
+    "纺织服饰": 9.345897063608645e-05,
+    "社会服务": 4.6729485318043226e-05,
+    "食品饮料": 0.0014849354447107408,
+    "农林牧渔": 0.0,
+    "家用电器": 0.00028037691190825934,
+    "商贸零售": 0.00014018845595412967,
+    "轻工制造": 9.345897063608645e-05,
+    "美容护理": 4.6729485318043226e-05,
+    "银行": 0.0001245763277541658,
+    "普钢": 0.0,
+    "石油石化": 0.0,
+    "非银金融": 8.305088516944387e-05,
+    "汽车": 0.0,
+    "有色金属": 4.1525442584721936e-05,
+    "建筑材料": 0.0,
+    "工程咨询服务Ⅱ": 0.0,
+    "综合Ⅱ": 0.0,
+    "公用事业": 4.1525442584721936e-05,
+    "油气开采Ⅱ": 0.0,
+    "交通运输": 0.0,
+    "煤炭": 0.0,
+    "基础建设": 0.0,
+    "房屋建设Ⅱ": 0.0
+  },
+  "stockIndustryMinor": [
+    {
+      "major": "计算机",
+      "minor": "软件开发",
+      "value": 0.0
+    },
+    {
+      "major": "电子",
+      "minor": "半导体",
+      "value": 0.00024915265550833163
+    },
+    {
+      "major": "通信",
+      "minor": "通信设备",
+      "value": 0.0003438123811559004
+    },
+    {
+      "major": "国防军工",
+      "minor": "军工电子Ⅱ",
+      "value": 0.0
+    },
+    {
+      "major": "基础化工",
+      "minor": "塑料",
+      "value": 0.0
+    },
+    {
+      "major": "计算机",
+      "minor": "IT服务Ⅱ",
+      "value": 0.0
+    },
+    {
+      "major": "机械设备",
+      "minor": "通用设备",
+      "value": 0.0
+    },
+    {
+      "major": "医药生物",
+      "minor": "医疗器械",
+      "value": 0.0
+    },
+    {
+      "major": "电力设备",
+      "minor": "光伏设备",
+      "value": 0.0
+    },
+    {
+      "major": "电子",
+      "minor": "消费电子",
+      "value": 0.0
+    },
+    {
+      "major": "个护用品",
+      "minor": "个护用品",
+      "value": 0.0
+    },
+    {
+      "major": "医疗美容",
+      "minor": "医疗美容",
+      "value": 0.0
+    },
+    {
+      "major": "纺织服饰",
+      "minor": "纺织制造",
+      "value": 0.0
+    },
+    {
+      "major": "纺织服饰",
+      "minor": "服装家纺",
+      "value": 9.345897063608645e-05
+    },
+    {
+      "major": "社会服务",
+      "minor": "酒店餐饮",
+      "value": 4.6729485318043226e-05
+    },
+    {
+      "major": "食品饮料",
+      "minor": "调味发酵品Ⅱ",
+      "value": 0.0001869179412721729
+    },
+    {
+      "major": "食品饮料",
+      "minor": "白酒Ⅱ",
+      "value": 0.0007839931649400924
+    },
+    {
+      "major": "农林牧渔",
+      "minor": "种植业",
+      "value": 0.0
+    },
+    {
+      "major": "家用电器",
+      "minor": "白色家电",
+      "value": 0.0001869179412721729
+    },
+    {
+      "major": "商贸零售",
+      "minor": "一般零售",
+      "value": 0.0
+    },
+    {
+      "major": "基础化工",
+      "minor": "化学制品",
+      "value": 4.6729485318043226e-05
+    },
+    {
+      "major": "食品饮料",
+      "minor": "饮料乳品",
+      "value": 0.0005140243384984755
+    },
+    {
+      "major": "商贸零售",
+      "minor": "旅游零售Ⅱ",
+      "value": 0.00014018845595412967
+    },
+    {
+      "major": "轻工制造",
+      "minor": "家居用品",
+      "value": 9.345897063608645e-05
+    },
+    {
+      "major": "家用电器",
+      "minor": "小家电",
+      "value": 9.345897063608645e-05
+    },
+    {
+      "major": "美容护理",
+      "minor": "化妆品",
+      "value": 4.6729485318043226e-05
+    },
+    {
+      "major": "银行",
+      "minor": "银行Ⅱ",
+      "value": 0.0001245763277541658
+    },
+    {
+      "major": "普钢",
+      "minor": "普钢",
+      "value": 0.0
+    },
+    {
+      "major": "石油石化",
+      "minor": "炼化及贸易",
+      "value": 0.0
+    },
+    {
+      "major": "非银金融",
+      "minor": "证券Ⅱ",
+      "value": 4.1525442584721936e-05
+    },
+    {
+      "major": "机械设备",
+      "minor": "工程机械",
+      "value": 0.0
+    },
+    {
+      "major": "通信",
+      "minor": "通信服务",
+      "value": 0.0
+    },
+    {
+      "major": "汽车",
+      "minor": "商用车",
+      "value": 0.0
+    },
+    {
+      "major": "电力设备",
+      "minor": "电网设备",
+      "value": 0.0
+    },
+    {
+      "major": "基础化工",
+      "minor": "农化制品",
+      "value": 0.0
+    },
+    {
+      "major": "汽车",
+      "minor": "乘用车",
+      "value": 0.0
+    },
+    {
+      "major": "有色金属",
+      "minor": "小金属",
+      "value": 0.0
+    },
+    {
+      "major": "国防军工",
+      "minor": "航天装备Ⅱ",
+      "value": 0.0
+    },
+    {
+      "major": "国防军工",
+      "minor": "航海装备Ⅱ",
+      "value": 0.0
+    },
+    {
+      "major": "建筑材料",
+      "minor": "玻璃玻纤",
+      "value": 0.0
+    },
+    {
+      "major": "电子",
+      "minor": "元件",
+      "value": 4.1525442584721936e-05
+    },
+    {
+      "major": "医药生物",
+      "minor": "化学制药",
+      "value": 4.1525442584721936e-05
+    },
+    {
+      "major": "电力设备",
+      "minor": "其他电源设备Ⅱ",
+      "value": 0.0
+    },
+    {
+      "major": "有色金属",
+      "minor": "贵金属",
+      "value": 0.0
+    },
+    {
+      "major": "有色金属",
+      "minor": "工业金属",
+      "value": 4.1525442584721936e-05
+    },
+    {
+      "major": "建筑材料",
+      "minor": "水泥",
+      "value": 0.0
+    },
+    {
+      "major": "汽车",
+      "minor": "汽车零部件",
+      "value": 0.0
+    },
+    {
+      "major": "工程咨询服务Ⅱ",
+      "minor": "工程咨询服务Ⅱ",
+      "value": 0.0
+    },
+    {
+      "major": "综合Ⅱ",
+      "minor": "综合Ⅱ",
+      "value": 0.0
+    },
+    {
+      "major": "国防军工",
+      "minor": "航空装备Ⅱ",
+      "value": 0.0
+    },
+    {
+      "major": "公用事业",
+      "minor": "电力",
+      "value": 4.1525442584721936e-05
+    },
+    {
+      "major": "油气开采Ⅱ",
+      "minor": "油气开采Ⅱ",
+      "value": 0.0
+    },
+    {
+      "major": "基础化工",
+      "minor": "化学原料",
+      "value": 0.0
+    },
+    {
+      "major": "交通运输",
+      "minor": "铁路公路",
+      "value": 0.0
+    },
+    {
+      "major": "煤炭",
+      "minor": "煤炭开采",
+      "value": 0.0
+    },
+    {
+      "major": "非银金融",
+      "minor": "保险Ⅱ",
+      "value": 4.1525442584721936e-05
+    },
+    {
+      "major": "基础建设",
+      "minor": "基础建设",
+      "value": 0.0
+    },
+    {
+      "major": "房屋建设Ⅱ",
+      "minor": "房屋建设Ⅱ",
+      "value": 0.0
+    },
+    {
+      "major": "机械设备",
+      "minor": "轨交设备Ⅱ",
+      "value": 0.0
+    },
+    {
+      "major": "交通运输",
+      "minor": "航运港口",
+      "value": 0.0
+    },
+    {
+      "major": "计算机",
+      "minor": "计算机设备",
+      "value": 0.0
+    },
+    {
+      "major": "医药生物",
+      "minor": "生物制品",
+      "value": 0.0
+    },
+    {
+      "major": "医药生物",
+      "minor": "医疗服务",
+      "value": 4.1525442584721936e-05
+    },
+    {
+      "major": "有色金属",
+      "minor": "能源金属",
+      "value": 0.0
+    }
+  ],
+  "stockSampleContribution": 0.0032408266723108837,
+  "stockSampleRows": 150,
+  "stockSampleRawContribution": 0.003383000000000001,
+  "stockSampleRawRows": 150,
+  "sampleQualityIssues": [],
+  "bondTypeMajor": {
+    "利率债/政策性金融债": 41.232603152215376,
+    "金融债": 0.17832417191601263
+  },
+  "bondSampleContribution": 41.41092732413139,
+  "bondSampleRawContribution": 47.37803200000002,
+  "bondSampleRows": 56,
+  "holdings": [
+    {
+      "strategyId": "qieman__ZH164292",
+      "strategyName": "富国多元低波稳健理财",
+      "parentId": "qieman__ZH164292",
+      "isParent": true,
+      "holdingDate": "2026-10-22",
+      "holdingSnapshotId": "qieman-ZH164292-2026-10-22-3f1899a407b6",
+      "holdingConfidence": "official_stargate_exact_current_composition",
+      "fundCode": "002659",
+      "fundName": "兴业中债1-3年政金债A",
+      "weight": 20.29,
+      "fundClassMajor": "债券类",
+      "fundClassMinor": "指数型-固收",
+      "fundClassSource": "天天基金_fundcode_search",
+      "reportDate": "2026-06-30",
+      "reportSource": "东财F10资产配置",
+      "reportSnapshotId": "eastmoney_f10_all_market-asset_allocation-002659-0-b18e11c5ca764fb0",
+      "reportUrl": "https://fundf10.eastmoney.com/zcpz_002659.html",
+      "assets": {
+        "股票": 0.0,
+        "债券": 99.44368228475065,
+        "现金": 0.5541800395451001,
+        "基金": 0.0,
+        "商品": 0.0,
+        "存托凭证": 0.0,
+        "其他": 0.002137675704250656
+      },
+      "disclosedSum": 100.0,
+      "unexplainedContribution": 0.0,
+      "interactionBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 8.029630662375425
+        },
+        "stockRows": 0
+      },
+      "rawNavAssets": {
+        "股票": null,
+        "债券": 99.46,
+        "现金": 0.55,
+        "基金": null,
+        "商品": null,
+        "存托凭证": null,
+        "其他": null
+      },
+      "rawNavBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 8.030782
+        },
+        "stockRows": 0
+      },
+      "rawNavUnexplainedContribution": 0.0,
+      "assetBasis": "fund_total_assets",
+      "assetCompositionSource": {
+        "fundCode": "002659",
+        "reportDate": "2026-06-30",
+        "capturedAt": "2026-10-23T03:20:39+08:00",
+        "announcementResponseSha256": "e3169e5125bfd3a2cbd7d7f9ee91d6d9b7c17577611173f1cbb1b0a1c5957c5f",
+        "rawAnnouncementPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\JJGG_002659_e3169e5125bfd3a2cbd7d7f9ee91d6d9b7c17577611173f1cbb1b0a1c5957c5f.json",
+        "announcement": {
+          "FUNDCODE": "002659",
+          "TITLE": "兴业中债1-3年政策性金融债指数证券投资基金2026年中期报告",
+          "ShortTitle": "兴业中债1-3政策性金融债A",
+          "NEWCATEGORY": "3",
+          "PUBLISHDATE": "2026-08-29T00:00:00",
+          "PUBLISHDATEDesc": "2026-08-29",
+          "ATTACHTYPE": "0",
+          "ID": "AN202608291828679507"
+        },
+        "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608291828679507_1.pdf",
+        "announcementCheckedAsOf": "2026-10-23",
+        "basis": "fund_total_assets",
+        "totalAssets": 3538287863.29,
+        "amounts": {
+          "股票": 0.0,
+          "债券": 3518603741.09,
+          "现金": 19608485.08,
+          "基金": 0.0,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 75637.12
+        },
+        "assets": {
+          "股票": 0.0,
+          "债券": 99.44368228475065,
+          "现金": 0.5541800395451001,
+          "基金": 0.0,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 0.002137675704250656
+        },
+        "portfolioRows": [
+          {
+            "rank": 1,
+            "label": "权益投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 2,
+            "label": "基金投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 3,
+            "label": "固定收益投资",
+            "amount": 3518603741.09,
+            "reportedPercent": 99.44
+          },
+          {
+            "rank": 4,
+            "label": "贵金属投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 5,
+            "label": "金融衍生品投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 6,
+            "label": "买入返售金融资产",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 7,
+            "label": "银行存款和结算备付金合计",
+            "amount": 19608485.08,
+            "reportedPercent": 0.55
+          },
+          {
+            "rank": 8,
+            "label": "其他各项资产",
+            "amount": 75637.12,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 9,
+            "label": "合计",
+            "amount": 3538287863.29,
+            "reportedPercent": 100.0
+          }
+        ],
+        "balance": {
+          "totalAssets": 3538287863.29,
+          "netAssets": 3537780594.64,
+          "liabilities": 507268.65,
+          "navToTotalAssets": 0.9998566344317931
+        },
+        "section": "7.1",
+        "status": "verified",
+        "pdfSha256": "9450a22093d0be74395aa6502a114a20decf1a4a99ff4b2a8f18ae45b99892c0",
+        "pdfBytes": 897813,
+        "textSha256": "27c83005886183f5a41113370850f7b8fb3c1c1a063fe2e79c9c7d8ffda52d90",
+        "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608291828679507.pdf",
+        "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\9450a22093d0be74395aa6502a114a20decf1a4a99ff4b2a8f18ae45b99892c0.txt.gz",
+        "textExtractor": {
+          "contract": "page_get_text_default_join_newline_v1",
+          "binding": "1.28.2",
+          "engine": "1.28.2"
+        }
+      },
+      "reportRawTags": {
+        "基金代码": "002659",
+        "天天基金细分类": "指数型-固收",
+        "标准资产大类": "债券",
+        "标准资产细类": "债券-固收",
+        "是否纯债": 0,
+        "是否短债": 0,
+        "是否指数增强": 0,
+        "是否商品黄金": 0,
+        "是否QDII": 0,
+        "分类来源": "天天基金_fundcode_search",
+        "最近更新时间": "2026-06-11T11:27:39+08:00"
+      },
+      "businessLookthrough": {
+        "assets": {
+          "固定收益": 20.177123135575908,
+          "现金及货币工具": 0.11244313002370081,
+          "其他资产": 0.00043373440039245814
+        },
+        "assetChildren": {
+          "现金及货币工具": [
+            {
+              "name": "存款与结算备付金",
+              "value": 0.11244313002370081
+            }
+          ],
+          "固定收益": [
+            {
+              "name": "国家债券",
+              "value": 0.16941461355352413
+            },
+            {
+              "name": "金融债券",
+              "value": 20.007708522022384
+            }
+          ],
+          "其他资产": [
+            {
+              "name": "其他资产未细分",
+              "value": 0.00043373440039245814
+            }
+          ]
+        },
+        "styles": {},
+        "fundTypeMajor": "固收类",
+        "fundTypeMinor": "其他固收",
+        "stockComplete": true,
+        "bondComplete": true,
+        "stockStatus": "报告股票总额为零",
+        "stockGapReason": "",
+        "stockCoveragePercent": null,
+        "bondStatus": "债券品种汇总表金额核验",
+        "fullStockRows": 0,
+        "detailsSource": {
+          "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608291828679507_1.pdf",
+          "pdfSha256": "9450a22093d0be74395aa6502a114a20decf1a4a99ff4b2a8f18ae45b99892c0",
+          "textSha256": "27c83005886183f5a41113370850f7b8fb3c1c1a063fe2e79c9c7d8ffda52d90",
+          "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\9450a22093d0be74395aa6502a114a20decf1a4a99ff4b2a8f18ae45b99892c0.txt.gz",
+          "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608291828679507.pdf",
+          "parserFingerprint": "41f11e657223b75f5e562f8d53a073d5282066a3503dff459f1774b335becbdd",
+          "sourceCapturedAt": "2026-10-23T03:20:39+08:00"
+        },
+        "reportPeriod": "2026-06-30",
+        "foreignSectorEvidence": null,
+        "stockDetailGapContribution": 0.0,
+        "productDefinition": null,
+        "fundTypeBasis": "source_product_dictionary",
+        "supplementalTags": {
+          "基金代码": "002659",
+          "天天基金细分类": "指数型-固收",
+          "标准资产大类": "债券",
+          "标准资产细类": "债券-固收",
+          "是否纯债": 0,
+          "是否短债": 0,
+          "是否指数增强": 0,
+          "是否商品黄金": 0,
+          "是否QDII": 0,
+          "分类来源": "天天基金_fundcode_search",
+          "最近更新时间": "2026-06-11T11:27:39+08:00"
+        }
+      },
+      "windFundClassification": {
+        "major": "债券型",
+        "minor": "被动指数债券型",
+        "level3Source": null,
+        "resolved": true,
+        "reason": "source_index_category_and_enhancement_flag",
+        "sourceLabel": "指数型-固收",
+        "source": "天天基金_fundcode_search",
+        "sourceUpdatedAt": "2026-06-11T11:27:39+08:00",
+        "standardVersion": "public_reference_csisc_202311",
+        "isWindDirectData": false
+      },
+      "bondVarietiesCsv": "002659_2026-06-30_bond_varieties.csv",
+      "baseWeight": 20.29,
+      "weightChange": 0.0,
+      "weightDate": "2026-10-22",
+      "weightBasis": "source_latest",
+      "allocationBasis": "latest_observed_current",
+      "allocationLabel": "最新库内披露仓位",
+      "latestObservedHoldingDate": "2026-10-22",
+      "referenceParentId": null,
+      "referenceParentName": null,
+      "sourceAssetVerification": {
+        "status": "核验记录已过期，需刷新",
+        "latestSourcePeriod": "2026-06-30",
+        "checkedAt": "2026-10-07T12:23:01+08:00",
+        "scope": "F10资产配置期次"
+      },
+      "bondRawCsv": "002659_2026-06-30_bond.csv"
+    },
+    {
+      "strategyId": "qieman__ZH164292",
+      "strategyName": "富国多元低波稳健理财",
+      "parentId": "qieman__ZH164292",
+      "isParent": true,
+      "holdingDate": "2026-10-22",
+      "holdingSnapshotId": "qieman-ZH164292-2026-10-22-3f1899a407b6",
+      "holdingConfidence": "official_stargate_exact_current_composition",
+      "fundCode": "006409",
+      "fundName": "富国中债-1-3年国开行债券指数A",
+      "weight": 20.27,
+      "fundClassMajor": "债券类",
+      "fundClassMinor": "指数型-固收",
+      "fundClassSource": "天天基金_fundcode_search",
+      "reportDate": "2026-06-30",
+      "reportSource": "东财F10资产配置",
+      "reportSnapshotId": "eastmoney_f10_all_market-asset_allocation-006409-0-b2d6b5ef3a7c53c7",
+      "reportUrl": "https://fundf10.eastmoney.com/zcpz_006409.html",
+      "assets": {
+        "股票": 0.0,
+        "债券": 93.23943289270014,
+        "现金": 0.011587561099753542,
+        "基金": 0.0,
+        "商品": 0.0,
+        "存托凭证": 0.0,
+        "其他": 6.748979546200109
+      },
+      "disclosedSum": 100.0,
+      "unexplainedContribution": 0.0,
+      "interactionBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 9.438232865683611
+        },
+        "stockRows": 0
+      },
+      "rawNavAssets": {
+        "股票": null,
+        "债券": 96.26,
+        "现金": 0.01,
+        "基金": null,
+        "商品": null,
+        "存托凭证": null,
+        "其他": null
+      },
+      "rawNavBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 9.743789
+        },
+        "stockRows": 0
+      },
+      "rawNavUnexplainedContribution": 0.7560709999999979,
+      "assetBasis": "fund_total_assets",
+      "assetCompositionSource": {
+        "fundCode": "006409",
+        "reportDate": "2026-06-30",
+        "capturedAt": "2026-10-23T03:20:58+08:00",
+        "announcementResponseSha256": "7ff0a4b35f9cc866037165a4d916e2c1c7e61975dd13c896d5542c0f2f6fa6dc",
+        "rawAnnouncementPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\JJGG_006409_7ff0a4b35f9cc866037165a4d916e2c1c7e61975dd13c896d5542c0f2f6fa6dc.json",
+        "announcement": {
+          "FUNDCODE": "006409",
+          "TITLE": "富国中债-1-3年国开行债券指数证券投资基金二0二六年中期报告",
+          "ShortTitle": "富国中债-1-3年国开行债券指数A",
+          "NEWCATEGORY": "3",
+          "PUBLISHDATE": "2026-08-31T00:00:00",
+          "PUBLISHDATEDesc": "2026-08-31",
+          "ATTACHTYPE": "0",
+          "ID": "AN202608311828782605"
+        },
+        "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828782605_1.pdf",
+        "announcementCheckedAsOf": "2026-10-23",
+        "basis": "fund_total_assets",
+        "totalAssets": 4766148245.05,
+        "amounts": {
+          "股票": 0.0,
+          "债券": 4443929594.51,
+          "现金": 552280.34,
+          "基金": 0.0,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 321666370.2
+        },
+        "assets": {
+          "股票": 0.0,
+          "债券": 93.23943289270014,
+          "现金": 0.011587561099753542,
+          "基金": 0.0,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 6.748979546200109
+        },
+        "portfolioRows": [
+          {
+            "rank": 1,
+            "label": "权益投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 2,
+            "label": "基金投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 3,
+            "label": "固定收益投资",
+            "amount": 4443929594.51,
+            "reportedPercent": 93.24
+          },
+          {
+            "rank": 4,
+            "label": "贵金属投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 5,
+            "label": "金融衍生品投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 6,
+            "label": "买入返售金融资产",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 7,
+            "label": "银行存款和结算备付金合计",
+            "amount": 552280.34,
+            "reportedPercent": 0.01
+          },
+          {
+            "rank": 8,
+            "label": "其他各项资产",
+            "amount": 321666370.2,
+            "reportedPercent": 6.75
+          },
+          {
+            "rank": 9,
+            "label": "合计",
+            "amount": 4766148245.05,
+            "reportedPercent": 100.0
+          }
+        ],
+        "balance": {
+          "totalAssets": 4766148245.05,
+          "netAssets": 4616686281.81,
+          "liabilities": 149461963.24,
+          "navToTotalAssets": 0.9686409327709797
+        },
+        "section": "7.1",
+        "status": "verified",
+        "pdfSha256": "022a582caef281a292a81b352552ddea07bd5f35b46da4d512fd5e19111795d7",
+        "pdfBytes": 1024067,
+        "textSha256": "40c0cb98b7f19d1c440d0eb1033d7a4f59b1776a83227b04117a0421882a1b6c",
+        "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828782605.pdf",
+        "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\022a582caef281a292a81b352552ddea07bd5f35b46da4d512fd5e19111795d7.txt.gz",
+        "textExtractor": {
+          "contract": "page_get_text_default_join_newline_v1",
+          "binding": "1.28.2",
+          "engine": "1.28.2"
+        }
+      },
+      "reportRawTags": {
+        "基金代码": "006409",
+        "天天基金细分类": "指数型-固收",
+        "标准资产大类": "债券",
+        "标准资产细类": "债券-固收",
+        "是否纯债": 0,
+        "是否短债": 0,
+        "是否指数增强": 0,
+        "是否商品黄金": 0,
+        "是否QDII": 0,
+        "分类来源": "天天基金_fundcode_search",
+        "最近更新时间": "2026-06-11T11:27:39+08:00"
+      },
+      "businessLookthrough": {
+        "assets": {
+          "固定收益": 18.899633047350317,
+          "现金及货币工具": 0.0023487986349200432,
+          "其他资产": 1.3680181540147622
+        },
+        "assetChildren": {
+          "现金及货币工具": [
+            {
+              "name": "存款与结算备付金",
+              "value": 0.0023487986349200432
+            }
+          ],
+          "固定收益": [
+            {
+              "name": "金融债券",
+              "value": 18.899633047350317
+            }
+          ],
+          "其他资产": [
+            {
+              "name": "其他资产未细分",
+              "value": 1.3680181540147622
+            }
+          ]
+        },
+        "styles": {},
+        "fundTypeMajor": "固收类",
+        "fundTypeMinor": "其他固收",
+        "stockComplete": true,
+        "bondComplete": true,
+        "stockStatus": "报告股票总额为零",
+        "stockGapReason": "",
+        "stockCoveragePercent": null,
+        "bondStatus": "债券品种汇总表金额核验",
+        "fullStockRows": 0,
+        "detailsSource": {
+          "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828782605_1.pdf",
+          "pdfSha256": "022a582caef281a292a81b352552ddea07bd5f35b46da4d512fd5e19111795d7",
+          "textSha256": "40c0cb98b7f19d1c440d0eb1033d7a4f59b1776a83227b04117a0421882a1b6c",
+          "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\022a582caef281a292a81b352552ddea07bd5f35b46da4d512fd5e19111795d7.txt.gz",
+          "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828782605.pdf",
+          "parserFingerprint": "41f11e657223b75f5e562f8d53a073d5282066a3503dff459f1774b335becbdd",
+          "sourceCapturedAt": "2026-10-23T03:20:58+08:00"
+        },
+        "reportPeriod": "2026-06-30",
+        "foreignSectorEvidence": null,
+        "stockDetailGapContribution": 0.0,
+        "productDefinition": null,
+        "fundTypeBasis": "source_product_dictionary",
+        "supplementalTags": {
+          "基金代码": "006409",
+          "天天基金细分类": "指数型-固收",
+          "标准资产大类": "债券",
+          "标准资产细类": "债券-固收",
+          "是否纯债": 0,
+          "是否短债": 0,
+          "是否指数增强": 0,
+          "是否商品黄金": 0,
+          "是否QDII": 0,
+          "分类来源": "天天基金_fundcode_search",
+          "最近更新时间": "2026-06-11T11:27:39+08:00"
+        }
+      },
+      "windFundClassification": {
+        "major": "债券型",
+        "minor": "被动指数债券型",
+        "level3Source": null,
+        "resolved": true,
+        "reason": "source_index_category_and_enhancement_flag",
+        "sourceLabel": "指数型-固收",
+        "source": "天天基金_fundcode_search",
+        "sourceUpdatedAt": "2026-06-11T11:27:39+08:00",
+        "standardVersion": "public_reference_csisc_202311",
+        "isWindDirectData": false
+      },
+      "bondVarietiesCsv": "006409_2026-06-30_bond_varieties.csv",
+      "baseWeight": 20.27,
+      "weightChange": 0.0,
+      "weightDate": "2026-10-22",
+      "weightBasis": "source_latest",
+      "allocationBasis": "latest_observed_current",
+      "allocationLabel": "最新库内披露仓位",
+      "latestObservedHoldingDate": "2026-10-22",
+      "referenceParentId": null,
+      "referenceParentName": null,
+      "sourceAssetVerification": {
+        "status": "核验记录已过期，需刷新",
+        "latestSourcePeriod": "2026-06-30",
+        "checkedAt": "2026-10-07T12:24:19+08:00",
+        "scope": "F10资产配置期次"
+      },
+      "bondRawCsv": "006409_2026-06-30_bond.csv"
+    },
+    {
+      "strategyId": "qieman__ZH164292",
+      "strategyName": "富国多元低波稳健理财",
+      "parentId": "qieman__ZH164292",
+      "isParent": true,
+      "holdingDate": "2026-10-22",
+      "holdingSnapshotId": "qieman-ZH164292-2026-10-22-3f1899a407b6",
+      "holdingConfidence": "official_stargate_exact_current_composition",
+      "fundCode": "006961",
+      "fundName": "南方7-10年国开债A",
+      "weight": 15.36,
+      "fundClassMajor": "债券类",
+      "fundClassMinor": "指数型-固收",
+      "fundClassSource": "天天基金_fundcode_search",
+      "reportDate": "2026-06-30",
+      "reportSource": "东财F10资产配置",
+      "reportSnapshotId": "eastmoney_f10_all_market-asset_allocation-006961-0-b1769f8be0d765fd",
+      "reportUrl": "https://fundf10.eastmoney.com/zcpz_006961.html",
+      "assets": {
+        "股票": 0.0,
+        "债券": 99.68407936700602,
+        "现金": 0.0019559090052480464,
+        "基金": 0.0,
+        "商品": 0.0,
+        "存托凭证": 0.0,
+        "其他": 0.31396472398873393
+      },
+      "disclosedSum": 100.0,
+      "unexplainedContribution": 0.0,
+      "interactionBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 12.10877428224431
+        },
+        "stockRows": 0
+      },
+      "rawNavAssets": {
+        "股票": null,
+        "债券": 125.78,
+        "现金": 0.0,
+        "基金": null,
+        "商品": null,
+        "存托凭证": null,
+        "其他": null
+      },
+      "rawNavBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 15.278592
+        },
+        "stockRows": 0
+      },
+      "rawNavUnexplainedContribution": 0.0,
+      "assetBasis": "fund_total_assets",
+      "assetCompositionSource": {
+        "fundCode": "006961",
+        "reportDate": "2026-06-30",
+        "capturedAt": "2026-10-23T03:21:02+08:00",
+        "announcementResponseSha256": "a0e35b4482f1eb8614f14ca41c3e2123cb46e9d5b91cd702bdac3cf01be319eb",
+        "rawAnnouncementPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\JJGG_006961_a0e35b4482f1eb8614f14ca41c3e2123cb46e9d5b91cd702bdac3cf01be319eb.json",
+        "announcement": {
+          "FUNDCODE": "006961",
+          "TITLE": "南方中债7-10年国开行债券指数证券投资基金2026年中期报告",
+          "ShortTitle": "南方中债7-10年国开行债券指数A",
+          "NEWCATEGORY": "3",
+          "PUBLISHDATE": "2026-08-31T00:00:00",
+          "PUBLISHDATEDesc": "2026-08-31",
+          "ATTACHTYPE": "0",
+          "ID": "AN202608311828755681"
+        },
+        "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828755681_1.pdf",
+        "announcementCheckedAsOf": "2026-10-23",
+        "basis": "fund_total_assets",
+        "totalAssets": 24645605123.07,
+        "amounts": {
+          "股票": 0.0,
+          "债券": 24567744571.36,
+          "现金": 482045.61,
+          "基金": 0.0,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 77378506.1
+        },
+        "assets": {
+          "股票": 0.0,
+          "债券": 99.68407936700602,
+          "现金": 0.0019559090052480464,
+          "基金": 0.0,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 0.31396472398873393
+        },
+        "portfolioRows": [
+          {
+            "rank": 1,
+            "label": "权益投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 2,
+            "label": "基金投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 3,
+            "label": "固定收益投资",
+            "amount": 24567744571.36,
+            "reportedPercent": 99.68
+          },
+          {
+            "rank": 4,
+            "label": "贵金属投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 5,
+            "label": "金融衍生品投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 6,
+            "label": "买入返售金融资产",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 7,
+            "label": "银行存款和结算备付金合计",
+            "amount": 482045.61,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 8,
+            "label": "其他各项资产",
+            "amount": 77378506.1,
+            "reportedPercent": 0.31
+          },
+          {
+            "rank": 9,
+            "label": "合计",
+            "amount": 24645605123.07,
+            "reportedPercent": 100.0
+          }
+        ],
+        "balance": {
+          "totalAssets": 24645605123.07,
+          "netAssets": 19532432666.87,
+          "liabilities": 5113172456.2,
+          "navToTotalAssets": 0.7925320790190817
+        },
+        "section": "7.1",
+        "status": "verified",
+        "pdfSha256": "64d5c643711bed9a86e52e77bf32fb57b0d1182e88ae00e179338f7294ff1862",
+        "pdfBytes": 589119,
+        "textSha256": "8c6101232878ea6b5a36bc85dc9e8e9550f3a9eacda3c6d3943abf421aedd631",
+        "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828755681.pdf",
+        "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\64d5c643711bed9a86e52e77bf32fb57b0d1182e88ae00e179338f7294ff1862.txt.gz",
+        "textExtractor": {
+          "contract": "page_get_text_default_join_newline_v1",
+          "binding": "1.28.2",
+          "engine": "1.28.2"
+        }
+      },
+      "reportRawTags": {
+        "基金代码": "006961",
+        "天天基金细分类": "指数型-固收",
+        "标准资产大类": "债券",
+        "标准资产细类": "债券-固收",
+        "是否纯债": 0,
+        "是否短债": 0,
+        "是否指数增强": 0,
+        "是否商品黄金": 0,
+        "是否QDII": 0,
+        "分类来源": "天天基金_fundcode_search",
+        "最近更新时间": "2026-06-11T11:27:39+08:00"
+      },
+      "businessLookthrough": {
+        "assets": {
+          "固定收益": 15.311474590772125,
+          "现金及货币工具": 0.00030042762320609993,
+          "其他资产": 0.04822498160466954
+        },
+        "assetChildren": {
+          "现金及货币工具": [
+            {
+              "name": "存款与结算备付金",
+              "value": 0.00030042762320609993
+            }
+          ],
+          "固定收益": [
+            {
+              "name": "国家债券",
+              "value": 0.582178283186577
+            },
+            {
+              "name": "金融债券",
+              "value": 14.729296307585548
+            }
+          ],
+          "其他资产": [
+            {
+              "name": "其他资产未细分",
+              "value": 0.04822498160466954
+            }
+          ]
+        },
+        "styles": {},
+        "fundTypeMajor": "固收类",
+        "fundTypeMinor": "其他固收",
+        "stockComplete": true,
+        "bondComplete": true,
+        "stockStatus": "报告股票总额为零",
+        "stockGapReason": "",
+        "stockCoveragePercent": null,
+        "bondStatus": "债券品种汇总表金额核验",
+        "fullStockRows": 0,
+        "detailsSource": {
+          "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828755681_1.pdf",
+          "pdfSha256": "64d5c643711bed9a86e52e77bf32fb57b0d1182e88ae00e179338f7294ff1862",
+          "textSha256": "8c6101232878ea6b5a36bc85dc9e8e9550f3a9eacda3c6d3943abf421aedd631",
+          "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\64d5c643711bed9a86e52e77bf32fb57b0d1182e88ae00e179338f7294ff1862.txt.gz",
+          "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828755681.pdf",
+          "parserFingerprint": "41f11e657223b75f5e562f8d53a073d5282066a3503dff459f1774b335becbdd",
+          "sourceCapturedAt": "2026-10-23T03:21:02+08:00"
+        },
+        "reportPeriod": "2026-06-30",
+        "foreignSectorEvidence": null,
+        "stockDetailGapContribution": 0.0,
+        "productDefinition": null,
+        "fundTypeBasis": "source_product_dictionary",
+        "supplementalTags": {
+          "基金代码": "006961",
+          "天天基金细分类": "指数型-固收",
+          "标准资产大类": "债券",
+          "标准资产细类": "债券-固收",
+          "是否纯债": 0,
+          "是否短债": 0,
+          "是否指数增强": 0,
+          "是否商品黄金": 0,
+          "是否QDII": 0,
+          "分类来源": "天天基金_fundcode_search",
+          "最近更新时间": "2026-06-11T11:27:39+08:00"
+        }
+      },
+      "windFundClassification": {
+        "major": "债券型",
+        "minor": "被动指数债券型",
+        "level3Source": null,
+        "resolved": true,
+        "reason": "source_index_category_and_enhancement_flag",
+        "sourceLabel": "指数型-固收",
+        "source": "天天基金_fundcode_search",
+        "sourceUpdatedAt": "2026-06-11T11:27:39+08:00",
+        "standardVersion": "public_reference_csisc_202311",
+        "isWindDirectData": false
+      },
+      "bondVarietiesCsv": "006961_2026-06-30_bond_varieties.csv",
+      "baseWeight": 15.36,
+      "weightChange": 0.0,
+      "weightDate": "2026-10-22",
+      "weightBasis": "source_latest",
+      "allocationBasis": "latest_observed_current",
+      "allocationLabel": "最新库内披露仓位",
+      "latestObservedHoldingDate": "2026-10-22",
+      "referenceParentId": null,
+      "referenceParentName": null,
+      "sourceAssetVerification": {
+        "status": "核验记录已过期，需刷新",
+        "latestSourcePeriod": "2026-06-30",
+        "checkedAt": "2026-10-07T12:24:45+08:00",
+        "scope": "F10资产配置期次"
+      },
+      "bondRawCsv": "006961_2026-06-30_bond.csv"
+    },
+    {
+      "strategyId": "qieman__ZH164292",
+      "strategyName": "富国多元低波稳健理财",
+      "parentId": "qieman__ZH164292",
+      "isParent": true,
+      "holdingDate": "2026-10-22",
+      "holdingSnapshotId": "qieman-ZH164292-2026-10-22-3f1899a407b6",
+      "holdingConfidence": "official_stargate_exact_current_composition",
+      "fundCode": "018266",
+      "fundName": "富国中债7-10年政策性金融债ETF联接A",
+      "weight": 15.33,
+      "fundClassMajor": "债券类",
+      "fundClassMinor": "指数型-固收",
+      "fundClassSource": "天天基金_fundcode_search",
+      "reportDate": "2026-06-30",
+      "reportSource": "东财F10资产配置",
+      "reportSnapshotId": "eastmoney_f10_all_market-asset_allocation-018266-0-d3a82802504f4c1d",
+      "reportUrl": "https://fundf10.eastmoney.com/zcpz_018266.html",
+      "assets": {
+        "股票": 0.0,
+        "债券": 16.9598515022209,
+        "现金": 2.1245173267636455,
+        "基金": 80.85349949196674,
+        "商品": 0.0,
+        "存托凭证": 0.0,
+        "其他": 0.062131679048714736
+      },
+      "disclosedSum": 100.0,
+      "unexplainedContribution": 0.0,
+      "interactionBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 1.7551341304200487
+        },
+        "stockRows": 0
+      },
+      "rawNavAssets": {
+        "股票": null,
+        "债券": 21.45,
+        "现金": 2.69,
+        "基金": null,
+        "商品": null,
+        "存托凭证": null,
+        "其他": null
+      },
+      "rawNavBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 2.2197839999999998
+        },
+        "stockRows": 0
+      },
+      "rawNavUnexplainedContribution": 11.629338,
+      "assetBasis": "fund_total_assets",
+      "assetCompositionSource": {
+        "fundCode": "018266",
+        "reportDate": "2026-06-30",
+        "capturedAt": "2026-10-23T03:21:40+08:00",
+        "announcementResponseSha256": "c8ef86faf07264d2f0673a8ba44b19dfb9e338a9adf13790f58f4df79bd84725",
+        "rawAnnouncementPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\JJGG_018266_c8ef86faf07264d2f0673a8ba44b19dfb9e338a9adf13790f58f4df79bd84725.json",
+        "announcement": {
+          "FUNDCODE": "018266",
+          "TITLE": "富国中债7-10年政策性金融债交易型开放式指数证券投资基金发起式联接基金二0二六年中期报告",
+          "ShortTitle": "富国中债7-10年政策性金融债ETF发起式联接A",
+          "NEWCATEGORY": "3",
+          "PUBLISHDATE": "2026-08-31T00:00:00",
+          "PUBLISHDATEDesc": "2026-08-31",
+          "ATTACHTYPE": "0",
+          "ID": "AN202608311828784151"
+        },
+        "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828784151_1.pdf",
+        "announcementCheckedAsOf": "2026-10-23",
+        "basis": "fund_total_assets",
+        "totalAssets": 6167473032.55,
+        "amounts": {
+          "股票": 0.0,
+          "债券": 1045994267.76,
+          "现金": 131029033.2,
+          "基金": 4986617777.04,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 3831954.55
+        },
+        "assets": {
+          "股票": 0.0,
+          "债券": 16.9598515022209,
+          "现金": 2.1245173267636455,
+          "基金": 80.85349949196674,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 0.062131679048714736
+        },
+        "portfolioRows": [
+          {
+            "rank": 1,
+            "label": "权益投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 2,
+            "label": "基金投资",
+            "amount": 4986617777.04,
+            "reportedPercent": 80.85
+          },
+          {
+            "rank": 3,
+            "label": "固定收益投资",
+            "amount": 1045994267.76,
+            "reportedPercent": 16.96
+          },
+          {
+            "rank": 4,
+            "label": "贵金属投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 5,
+            "label": "金融衍生品投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 6,
+            "label": "买入返售金融资产",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 7,
+            "label": "银行存款和结算备付金合计",
+            "amount": 131029033.2,
+            "reportedPercent": 2.12
+          },
+          {
+            "rank": 8,
+            "label": "其他各项资产",
+            "amount": 3831954.55,
+            "reportedPercent": 0.06
+          },
+          {
+            "rank": 9,
+            "label": "合计",
+            "amount": 6167473032.55,
+            "reportedPercent": 100.0
+          }
+        ],
+        "balance": {
+          "totalAssets": 6167473032.55,
+          "netAssets": 4876484566.91,
+          "liabilities": 1290988465.64,
+          "navToTotalAssets": 0.7906778904704462
+        },
+        "section": "7.1",
+        "status": "verified",
+        "pdfSha256": "481d94b9eadb2f1203d7335e61fb7f5e3ef721ac4d064054b7dea4ff69084257",
+        "pdfBytes": 1187974,
+        "textSha256": "827e5d881b9c3cd93a3474ee3bbac803ef6520e1d317af89e49e542037426bba",
+        "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828784151.pdf",
+        "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\481d94b9eadb2f1203d7335e61fb7f5e3ef721ac4d064054b7dea4ff69084257.txt.gz",
+        "textExtractor": {
+          "contract": "page_get_text_default_join_newline_v1",
+          "binding": "1.28.2",
+          "engine": "1.28.2"
+        }
+      },
+      "reportRawTags": {
+        "基金代码": "018266",
+        "天天基金细分类": "指数型-固收",
+        "标准资产大类": "债券",
+        "标准资产细类": "债券-固收",
+        "是否纯债": 0,
+        "是否短债": 0,
+        "是否指数增强": 0,
+        "是否商品黄金": 0,
+        "是否QDII": 0,
+        "分类来源": "天天基金_fundcode_search",
+        "最近更新时间": "2026-06-11T11:27:39+08:00"
+      },
+      "businessLookthrough": {
+        "assets": {
+          "固定收益": 14.994786707408965,
+          "现金及货币工具": 0.3256885061928669,
+          "基金投资": 1.7763568394002505e-15,
+          "其他资产": 0.00952478639816797
+        },
+        "assetChildren": {
+          "现金及货币工具": [
+            {
+              "name": "存款与结算备付金",
+              "value": 0.3256885061928669
+            }
+          ],
+          "固定收益": [
+            {
+              "name": "国家债券",
+              "value": 0.5426606283025474
+            },
+            {
+              "name": "金融债券",
+              "value": 2.0572846069879165
+            },
+            {
+              "name": "政策性金融债（指数估算）",
+              "value": 12.3948414721185
+            }
+          ],
+          "基金投资": [
+            {
+              "name": "其他基金投资",
+              "value": 1.7763568394002505e-15
+            }
+          ],
+          "其他资产": [
+            {
+              "name": "其他资产未细分",
+              "value": 0.00952478639816797
+            }
+          ]
+        },
+        "styles": {},
+        "fundTypeMajor": "固收类",
+        "fundTypeMinor": "其他固收",
+        "stockComplete": true,
+        "bondComplete": true,
+        "stockStatus": "报告股票总额为零",
+        "stockGapReason": "",
+        "stockCoveragePercent": null,
+        "bondStatus": "债券品种汇总表金额核验",
+        "fullStockRows": 0,
+        "detailsSource": {
+          "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828784151_1.pdf",
+          "pdfSha256": "481d94b9eadb2f1203d7335e61fb7f5e3ef721ac4d064054b7dea4ff69084257",
+          "textSha256": "827e5d881b9c3cd93a3474ee3bbac803ef6520e1d317af89e49e542037426bba",
+          "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\481d94b9eadb2f1203d7335e61fb7f5e3ef721ac4d064054b7dea4ff69084257.txt.gz",
+          "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828784151.pdf",
+          "parserFingerprint": "41f11e657223b75f5e562f8d53a073d5282066a3503dff459f1774b335becbdd",
+          "sourceCapturedAt": "2026-10-23T03:21:40+08:00"
+        },
+        "reportPeriod": "2026-06-30",
+        "foreignSectorEvidence": null,
+        "stockDetailGapContribution": 0.0,
+        "productDefinition": null,
+        "fundTypeBasis": "source_product_dictionary",
+        "supplementalTags": {
+          "基金代码": "018266",
+          "天天基金细分类": "指数型-固收",
+          "标准资产大类": "债券",
+          "标准资产细类": "债券-固收",
+          "是否纯债": 0,
+          "是否短债": 0,
+          "是否指数增强": 0,
+          "是否商品黄金": 0,
+          "是否QDII": 0,
+          "分类来源": "天天基金_fundcode_search",
+          "最近更新时间": "2026-06-11T11:27:39+08:00"
+        }
+      },
+      "windFundClassification": {
+        "major": "债券型",
+        "minor": "被动指数债券型",
+        "level3Source": null,
+        "resolved": true,
+        "reason": "source_index_category_and_enhancement_flag",
+        "sourceLabel": "指数型-固收",
+        "source": "天天基金_fundcode_search",
+        "sourceUpdatedAt": "2026-06-11T11:27:39+08:00",
+        "standardVersion": "public_reference_csisc_202311",
+        "isWindDirectData": false
+      },
+      "bondVarietiesCsv": "018266_2026-06-30_bond_varieties.csv",
+      "baseWeight": 15.33,
+      "weightChange": 0.0,
+      "weightDate": "2026-10-22",
+      "weightBasis": "source_latest",
+      "allocationBasis": "latest_observed_current",
+      "allocationLabel": "最新库内披露仓位",
+      "latestObservedHoldingDate": "2026-10-22",
+      "referenceParentId": null,
+      "referenceParentName": null,
+      "sourceAssetVerification": {
+        "status": "核验记录已过期，需刷新",
+        "latestSourcePeriod": "2026-06-30",
+        "checkedAt": "2026-10-07T12:28:45+08:00",
+        "scope": "F10资产配置期次"
+      },
+      "bondRawCsv": "018266_2026-06-30_bond.csv",
+      "indexProxy": {
+        "target": "511520",
+        "index": "中债-7-10年政策性金融债指数",
+        "amount": 4986617777.04,
+        "contribution": 12.3948414721185,
+        "basis": "index_proxy_estimate",
+        "reportDate": "2026-06-30"
+      }
+    },
+    {
+      "strategyId": "qieman__ZH164292",
+      "strategyName": "富国多元低波稳健理财",
+      "parentId": "qieman__ZH164292",
+      "isParent": true,
+      "holdingDate": "2026-10-22",
+      "holdingSnapshotId": "qieman-ZH164292-2026-10-22-3f1899a407b6",
+      "holdingConfidence": "official_stargate_exact_current_composition",
+      "fundCode": "007165",
+      "fundName": "华夏中债1-3年政金债指数A",
+      "weight": 10.21,
+      "fundClassMajor": "债券类",
+      "fundClassMinor": "指数型-固收",
+      "fundClassSource": "天天基金_fundcode_search",
+      "reportDate": "2026-06-30",
+      "reportSource": "东财F10资产配置",
+      "reportSnapshotId": "eastmoney_f10_all_market-asset_allocation-007165-0-93d43ab2cb058bf9",
+      "reportUrl": "https://fundf10.eastmoney.com/zcpz_007165.html",
+      "assets": {
+        "股票": 0.0,
+        "债券": 99.92045309060953,
+        "现金": 0.07830670903848802,
+        "基金": 0.0,
+        "商品": 0.0,
+        "存托凭证": 0.0,
+        "其他": 0.0012402003519803519
+      },
+      "disclosedSum": 100.0,
+      "unexplainedContribution": 0.0,
+      "interactionBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 4.683906475177405
+        },
+        "stockRows": 0
+      },
+      "rawNavAssets": {
+        "股票": null,
+        "债券": 130.23,
+        "现金": 0.1,
+        "基金": null,
+        "商品": null,
+        "存托凭证": null,
+        "其他": null
+      },
+      "rawNavBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 6.104559
+        },
+        "stockRows": 0
+      },
+      "rawNavUnexplainedContribution": 0.0,
+      "assetBasis": "fund_total_assets",
+      "assetCompositionSource": {
+        "fundCode": "007165",
+        "reportDate": "2026-06-30",
+        "capturedAt": "2026-10-23T03:21:03+08:00",
+        "announcementResponseSha256": "a51721651e0c529315935d2e130bee907097270000ffd2912c15cb8ddd587f69",
+        "rawAnnouncementPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\JJGG_007165_a51721651e0c529315935d2e130bee907097270000ffd2912c15cb8ddd587f69.json",
+        "announcement": {
+          "FUNDCODE": "007165",
+          "TITLE": "华夏中债1-3年政策性金融债指数证券投资基金2026年中期报告",
+          "ShortTitle": "华夏中债1-3年政金债指数A",
+          "NEWCATEGORY": "3",
+          "PUBLISHDATE": "2026-08-31T00:00:00",
+          "PUBLISHDATEDesc": "2026-08-31",
+          "ATTACHTYPE": "0",
+          "ID": "AN202608311828781864"
+        },
+        "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828781864_1.pdf",
+        "announcementCheckedAsOf": "2026-10-23",
+        "basis": "fund_total_assets",
+        "totalAssets": 3911254332.62,
+        "amounts": {
+          "股票": 0.0,
+          "债券": 3908143050.68,
+          "现金": 3062774.55,
+          "基金": 0.0,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 48507.39
+        },
+        "assets": {
+          "股票": 0.0,
+          "债券": 99.92045309060953,
+          "现金": 0.07830670903848802,
+          "基金": 0.0,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 0.0012402003519803519
+        },
+        "portfolioRows": [
+          {
+            "rank": 1,
+            "label": "权益投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 2,
+            "label": "基金投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 3,
+            "label": "固定收益投资",
+            "amount": 3908143050.68,
+            "reportedPercent": 99.92
+          },
+          {
+            "rank": 4,
+            "label": "贵金属投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 5,
+            "label": "金融衍生品投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 6,
+            "label": "买入返售金融资产",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 7,
+            "label": "银行存款和结算备付金合计",
+            "amount": 3062774.55,
+            "reportedPercent": 0.08
+          },
+          {
+            "rank": 8,
+            "label": "其他各项资产",
+            "amount": 48507.39,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 9,
+            "label": "合计",
+            "amount": 3911254332.62,
+            "reportedPercent": 100.0
+          }
+        ],
+        "balance": {
+          "totalAssets": 3911254332.62,
+          "netAssets": 3001027509.87,
+          "liabilities": 910226822.75,
+          "navToTotalAssets": 0.7672800730040295
+        },
+        "section": "7.1",
+        "status": "verified",
+        "pdfSha256": "7f7bec97f03d1f4bbd6280391766de1bc90b6be61879ad1358937f31f5dd804c",
+        "pdfBytes": 1164867,
+        "textSha256": "4f21f6f2ebf675f59f3adb69ca63d8f1c9f4ebd772a99fcce7eb9de4329b8637",
+        "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828781864.pdf",
+        "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\7f7bec97f03d1f4bbd6280391766de1bc90b6be61879ad1358937f31f5dd804c.txt.gz",
+        "textExtractor": {
+          "contract": "page_get_text_default_join_newline_v1",
+          "binding": "1.28.2",
+          "engine": "1.28.2"
+        }
+      },
+      "reportRawTags": {
+        "基金代码": "007165",
+        "天天基金细分类": "指数型-固收",
+        "标准资产大类": "债券",
+        "标准资产细类": "债券-固收",
+        "是否纯债": 0,
+        "是否短债": 0,
+        "是否指数增强": 0,
+        "是否商品黄金": 0,
+        "是否QDII": 0,
+        "分类来源": "天天基金_fundcode_search",
+        "最近更新时间": "2026-06-11T11:27:39+08:00"
+      },
+      "businessLookthrough": {
+        "assets": {
+          "固定收益": 10.201878260551233,
+          "现金及货币工具": 0.007995114992829627,
+          "其他资产": 0.0001266244559371939
+        },
+        "assetChildren": {
+          "现金及货币工具": [
+            {
+              "name": "存款与结算备付金",
+              "value": 0.007995114992829627
+            }
+          ],
+          "固定收益": [
+            {
+              "name": "国家债券",
+              "value": 1.0284486416221787
+            },
+            {
+              "name": "金融债券",
+              "value": 9.173429618929054
+            }
+          ],
+          "其他资产": [
+            {
+              "name": "其他资产未细分",
+              "value": 0.0001266244559371939
+            }
+          ]
+        },
+        "styles": {},
+        "fundTypeMajor": "固收类",
+        "fundTypeMinor": "其他固收",
+        "stockComplete": true,
+        "bondComplete": true,
+        "stockStatus": "报告股票总额为零",
+        "stockGapReason": "",
+        "stockCoveragePercent": null,
+        "bondStatus": "债券品种汇总表金额核验",
+        "fullStockRows": 0,
+        "detailsSource": {
+          "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828781864_1.pdf",
+          "pdfSha256": "7f7bec97f03d1f4bbd6280391766de1bc90b6be61879ad1358937f31f5dd804c",
+          "textSha256": "4f21f6f2ebf675f59f3adb69ca63d8f1c9f4ebd772a99fcce7eb9de4329b8637",
+          "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\7f7bec97f03d1f4bbd6280391766de1bc90b6be61879ad1358937f31f5dd804c.txt.gz",
+          "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828781864.pdf",
+          "parserFingerprint": "41f11e657223b75f5e562f8d53a073d5282066a3503dff459f1774b335becbdd",
+          "sourceCapturedAt": "2026-10-23T03:21:03+08:00"
+        },
+        "reportPeriod": "2026-06-30",
+        "foreignSectorEvidence": null,
+        "stockDetailGapContribution": 0.0,
+        "productDefinition": null,
+        "fundTypeBasis": "source_product_dictionary",
+        "supplementalTags": {
+          "基金代码": "007165",
+          "天天基金细分类": "指数型-固收",
+          "标准资产大类": "债券",
+          "标准资产细类": "债券-固收",
+          "是否纯债": 0,
+          "是否短债": 0,
+          "是否指数增强": 0,
+          "是否商品黄金": 0,
+          "是否QDII": 0,
+          "分类来源": "天天基金_fundcode_search",
+          "最近更新时间": "2026-06-11T11:27:39+08:00"
+        }
+      },
+      "windFundClassification": {
+        "major": "债券型",
+        "minor": "被动指数债券型",
+        "level3Source": null,
+        "resolved": true,
+        "reason": "source_index_category_and_enhancement_flag",
+        "sourceLabel": "指数型-固收",
+        "source": "天天基金_fundcode_search",
+        "sourceUpdatedAt": "2026-06-11T11:27:39+08:00",
+        "standardVersion": "public_reference_csisc_202311",
+        "isWindDirectData": false
+      },
+      "bondVarietiesCsv": "007165_2026-06-30_bond_varieties.csv",
+      "baseWeight": 10.21,
+      "weightChange": 0.0,
+      "weightDate": "2026-10-22",
+      "weightBasis": "source_latest",
+      "allocationBasis": "latest_observed_current",
+      "allocationLabel": "最新库内披露仓位",
+      "latestObservedHoldingDate": "2026-10-22",
+      "referenceParentId": null,
+      "referenceParentName": null,
+      "sourceAssetVerification": {
+        "status": "核验记录已过期，需刷新",
+        "latestSourcePeriod": "2026-06-30",
+        "checkedAt": "2026-10-07T12:24:52+08:00",
+        "scope": "F10资产配置期次"
+      },
+      "bondRawCsv": "007165_2026-06-30_bond.csv"
+    },
+    {
+      "strategyId": "qieman__ZH164292",
+      "strategyName": "富国多元低波稳健理财",
+      "parentId": "qieman__ZH164292",
+      "isParent": true,
+      "holdingDate": "2026-10-22",
+      "holdingSnapshotId": "qieman-ZH164292-2026-10-22-3f1899a407b6",
+      "holdingConfidence": "official_stargate_exact_current_composition",
+      "fundCode": "008125",
+      "fundName": "创金合信中债1-3年国开债A",
+      "weight": 7.21,
+      "fundClassMajor": "债券类",
+      "fundClassMinor": "指数型-固收",
+      "fundClassSource": "天天基金_fundcode_search",
+      "reportDate": "2026-06-30",
+      "reportSource": "东财F10资产配置",
+      "reportSnapshotId": "eastmoney_f10_all_market-asset_allocation-008125-0-724862aa8e9024ba",
+      "reportUrl": "https://fundf10.eastmoney.com/zcpz_008125.html",
+      "assets": {
+        "股票": 0.0,
+        "债券": 99.94594616340233,
+        "现金": 0.05313980357435316,
+        "基金": 0.0,
+        "商品": 0.0,
+        "存托凭证": 0.0,
+        "其他": 0.0009140330233257659
+      },
+      "disclosedSum": 100.0,
+      "unexplainedContribution": 0.0,
+      "interactionBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 4.94692169940002
+        },
+        "stockRows": 0
+      },
+      "rawNavAssets": {
+        "股票": null,
+        "债券": 107.91,
+        "现金": 0.06,
+        "基金": null,
+        "商品": null,
+        "存托凭证": null,
+        "其他": null
+      },
+      "rawNavBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 5.341167999999999
+        },
+        "stockRows": 0
+      },
+      "rawNavUnexplainedContribution": 0.0,
+      "assetBasis": "fund_total_assets",
+      "assetCompositionSource": {
+        "fundCode": "008125",
+        "reportDate": "2026-06-30",
+        "capturedAt": "2026-10-23T03:21:08+08:00",
+        "announcementResponseSha256": "7d09fd14d843a04436eb3ef6b5a2a7d30f2a7b8875c0fee673e855289358bbcf",
+        "rawAnnouncementPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\JJGG_008125_7d09fd14d843a04436eb3ef6b5a2a7d30f2a7b8875c0fee673e855289358bbcf.json",
+        "announcement": {
+          "FUNDCODE": "008125",
+          "TITLE": "创金合信中债1-3年国开行债券指数证券投资基金2026年中期报告",
+          "ShortTitle": "创金合信中债1-3年国开债A",
+          "NEWCATEGORY": "3",
+          "PUBLISHDATE": "2026-08-28T00:00:00",
+          "PUBLISHDATEDesc": "2026-08-28",
+          "ATTACHTYPE": "0",
+          "ID": "AN202608281828563660"
+        },
+        "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608281828563660_1.pdf",
+        "announcementCheckedAsOf": "2026-10-23",
+        "basis": "fund_total_assets",
+        "totalAssets": 3287138345.47,
+        "amounts": {
+          "股票": 0.0,
+          "债券": 3285361521.08,
+          "现金": 1746778.86,
+          "基金": 0.0,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 30045.53
+        },
+        "assets": {
+          "股票": 0.0,
+          "债券": 99.94594616340233,
+          "现金": 0.05313980357435316,
+          "基金": 0.0,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 0.0009140330233257659
+        },
+        "portfolioRows": [
+          {
+            "rank": 1,
+            "label": "权益投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 2,
+            "label": "基金投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 3,
+            "label": "固定收益投资",
+            "amount": 3285361521.08,
+            "reportedPercent": 99.95
+          },
+          {
+            "rank": 4,
+            "label": "贵金属投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 5,
+            "label": "金融衍生品投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 6,
+            "label": "买入返售金融资产",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 7,
+            "label": "银行存款和结算备付金合计",
+            "amount": 1746778.86,
+            "reportedPercent": 0.05
+          },
+          {
+            "rank": 8,
+            "label": "其他各项资产",
+            "amount": 30045.53,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 9,
+            "label": "合计",
+            "amount": 3287138345.47,
+            "reportedPercent": 100.0
+          }
+        ],
+        "balance": {
+          "totalAssets": 3287138345.47,
+          "netAssets": 3044505623.14,
+          "liabilities": 242632722.33,
+          "navToTotalAssets": 0.9261872495678888
+        },
+        "section": "7.1",
+        "status": "verified",
+        "pdfSha256": "458b7b711d6aca2f8608ea37d9fa283e729a00f0c0a52e161504a9479f611db9",
+        "pdfBytes": 1485854,
+        "textSha256": "bfeb2a67c9af80a22a5bd1364a0e89ecb18b2621e39b876d659c2aca9a110905",
+        "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608281828563660.pdf",
+        "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\458b7b711d6aca2f8608ea37d9fa283e729a00f0c0a52e161504a9479f611db9.txt.gz",
+        "textExtractor": {
+          "contract": "page_get_text_default_join_newline_v1",
+          "binding": "1.28.2",
+          "engine": "1.28.2"
+        }
+      },
+      "reportRawTags": {
+        "基金代码": "008125",
+        "天天基金细分类": "指数型-固收",
+        "标准资产大类": "债券",
+        "标准资产细类": "债券-固收",
+        "是否纯债": 0,
+        "是否短债": 0,
+        "是否指数增强": 0,
+        "是否商品黄金": 0,
+        "是否QDII": 0,
+        "分类来源": "天天基金_fundcode_search",
+        "最近更新时间": "2026-06-11T11:27:39+08:00"
+      },
+      "businessLookthrough": {
+        "assets": {
+          "固定收益": 7.206102718381308,
+          "现金及货币工具": 0.003831379837710862,
+          "其他资产": 6.590178098178772e-05
+        },
+        "assetChildren": {
+          "现金及货币工具": [
+            {
+              "name": "存款与结算备付金",
+              "value": 0.003831379837710862
+            }
+          ],
+          "固定收益": [
+            {
+              "name": "国家债券",
+              "value": 0.15580172066745587
+            },
+            {
+              "name": "金融债券",
+              "value": 7.050300997713851
+            }
+          ],
+          "其他资产": [
+            {
+              "name": "其他资产未细分",
+              "value": 6.590178098178772e-05
+            }
+          ]
+        },
+        "styles": {},
+        "fundTypeMajor": "固收类",
+        "fundTypeMinor": "其他固收",
+        "stockComplete": true,
+        "bondComplete": true,
+        "stockStatus": "报告股票总额为零",
+        "stockGapReason": "",
+        "stockCoveragePercent": null,
+        "bondStatus": "债券品种汇总表金额核验",
+        "fullStockRows": 0,
+        "detailsSource": {
+          "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608281828563660_1.pdf",
+          "pdfSha256": "458b7b711d6aca2f8608ea37d9fa283e729a00f0c0a52e161504a9479f611db9",
+          "textSha256": "bfeb2a67c9af80a22a5bd1364a0e89ecb18b2621e39b876d659c2aca9a110905",
+          "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\458b7b711d6aca2f8608ea37d9fa283e729a00f0c0a52e161504a9479f611db9.txt.gz",
+          "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608281828563660.pdf",
+          "parserFingerprint": "41f11e657223b75f5e562f8d53a073d5282066a3503dff459f1774b335becbdd",
+          "sourceCapturedAt": "2026-10-23T03:21:08+08:00"
+        },
+        "reportPeriod": "2026-06-30",
+        "foreignSectorEvidence": null,
+        "stockDetailGapContribution": 0.0,
+        "productDefinition": null,
+        "fundTypeBasis": "source_product_dictionary",
+        "supplementalTags": {
+          "基金代码": "008125",
+          "天天基金细分类": "指数型-固收",
+          "标准资产大类": "债券",
+          "标准资产细类": "债券-固收",
+          "是否纯债": 0,
+          "是否短债": 0,
+          "是否指数增强": 0,
+          "是否商品黄金": 0,
+          "是否QDII": 0,
+          "分类来源": "天天基金_fundcode_search",
+          "最近更新时间": "2026-06-11T11:27:39+08:00"
+        }
+      },
+      "windFundClassification": {
+        "major": "债券型",
+        "minor": "被动指数债券型",
+        "level3Source": null,
+        "resolved": true,
+        "reason": "source_index_category_and_enhancement_flag",
+        "sourceLabel": "指数型-固收",
+        "source": "天天基金_fundcode_search",
+        "sourceUpdatedAt": "2026-06-11T11:27:39+08:00",
+        "standardVersion": "public_reference_csisc_202311",
+        "isWindDirectData": false
+      },
+      "bondVarietiesCsv": "008125_2026-06-30_bond_varieties.csv",
+      "baseWeight": 7.21,
+      "weightChange": 0.0,
+      "weightDate": "2026-10-22",
+      "weightBasis": "source_latest",
+      "allocationBasis": "latest_observed_current",
+      "allocationLabel": "最新库内披露仓位",
+      "latestObservedHoldingDate": "2026-10-22",
+      "referenceParentId": null,
+      "referenceParentName": null,
+      "sourceAssetVerification": {
+        "status": "核验记录已过期，需刷新",
+        "latestSourcePeriod": "2026-06-30",
+        "checkedAt": "2026-10-07T12:25:35+08:00",
+        "scope": "F10资产配置期次"
+      },
+      "bondRawCsv": "008125_2026-06-30_bond.csv"
+    },
+    {
+      "strategyId": "qieman__ZH164292",
+      "strategyName": "富国多元低波稳健理财",
+      "parentId": "qieman__ZH164292",
+      "isParent": true,
+      "holdingDate": "2026-10-22",
+      "holdingSnapshotId": "qieman-ZH164292-2026-10-22-3f1899a407b6",
+      "holdingConfidence": "official_stargate_exact_current_composition",
+      "fundCode": "009505",
+      "fundName": "富国上海金ETF联接C",
+      "weight": 2.81,
+      "fundClassMajor": "权益类",
+      "fundClassMinor": "指数型-其他",
+      "fundClassSource": "天天基金_fundcode_search",
+      "reportDate": "2026-06-30",
+      "reportSource": "东财F10资产配置",
+      "reportSnapshotId": "eastmoney_f10_all_market-asset_allocation-009505-0-3835578ab6d7719e",
+      "reportUrl": "https://fundf10.eastmoney.com/zcpz_009505.html",
+      "assets": {
+        "股票": 0.0,
+        "债券": 4.344248406325615,
+        "现金": 1.1638535728802615,
+        "基金": 92.51956999395628,
+        "商品": 0.0,
+        "存托凭证": 0.0,
+        "其他": 1.9723280268378356
+      },
+      "disclosedSum": 100.0,
+      "unexplainedContribution": 0.0,
+      "interactionBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 0.12192834691878461
+        },
+        "stockRows": 0
+      },
+      "rawNavAssets": {
+        "股票": null,
+        "债券": 4.43,
+        "现金": 1.19,
+        "基金": null,
+        "商品": null,
+        "存托凭证": null,
+        "其他": null
+      },
+      "rawNavBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 0.124202
+        },
+        "stockRows": 0
+      },
+      "rawNavUnexplainedContribution": 2.6520780000000004,
+      "assetBasis": "fund_total_assets",
+      "assetCompositionSource": {
+        "fundCode": "009505",
+        "reportDate": "2026-06-30",
+        "capturedAt": "2026-10-23T03:21:14+08:00",
+        "announcementResponseSha256": "b57442534c6a63038638dc8bbf2ce5aebad2d6c37dfbab91a0a11d30b098f522",
+        "rawAnnouncementPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\JJGG_009505_b57442534c6a63038638dc8bbf2ce5aebad2d6c37dfbab91a0a11d30b098f522.json",
+        "announcement": {
+          "FUNDCODE": "009505",
+          "TITLE": "富国上海金交易型开放式证券投资基金联接基金二0二六年中期报告",
+          "ShortTitle": "富国上海金ETF联接C",
+          "NEWCATEGORY": "3",
+          "PUBLISHDATE": "2026-08-31T00:00:00",
+          "PUBLISHDATEDesc": "2026-08-31",
+          "ATTACHTYPE": "0",
+          "ID": "AN202608311828787792"
+        },
+        "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828787792_1.pdf",
+        "announcementCheckedAsOf": "2026-10-23",
+        "basis": "fund_total_assets",
+        "totalAssets": 4482767675.91,
+        "amounts": {
+          "股票": 0.0,
+          "债券": 194742563.32,
+          "现金": 52172851.76,
+          "基金": 4147437377.58,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 88414883.25
+        },
+        "assets": {
+          "股票": 0.0,
+          "债券": 4.344248406325615,
+          "现金": 1.1638535728802615,
+          "基金": 92.51956999395628,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 1.9723280268378356
+        },
+        "portfolioRows": [
+          {
+            "rank": 1,
+            "label": "权益投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 2,
+            "label": "基金投资",
+            "amount": 4147437377.58,
+            "reportedPercent": 92.52
+          },
+          {
+            "rank": 3,
+            "label": "固定收益投资",
+            "amount": 194742563.32,
+            "reportedPercent": 4.34
+          },
+          {
+            "rank": 4,
+            "label": "贵金属投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 5,
+            "label": "金融衍生品投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 6,
+            "label": "买入返售金融资产",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 7,
+            "label": "银行存款和结算备付金合计",
+            "amount": 52172851.76,
+            "reportedPercent": 1.16
+          },
+          {
+            "rank": 8,
+            "label": "其他各项资产",
+            "amount": 88414883.25,
+            "reportedPercent": 1.97
+          },
+          {
+            "rank": 9,
+            "label": "合计",
+            "amount": 4482767675.91,
+            "reportedPercent": 100.0
+          }
+        ],
+        "balance": {
+          "totalAssets": 4482767675.91,
+          "netAssets": 4400705724.1,
+          "liabilities": 82061951.81,
+          "navToTotalAssets": 0.9816939092670376
+        },
+        "section": "7.1",
+        "status": "verified",
+        "pdfSha256": "b881fcbc3586c7da0903d0f710793c0d9c4221d09778dd39820d6a274d0f1b77",
+        "pdfBytes": 1000144,
+        "textSha256": "0af95c64b1265797da54fcbbed1028f9ab0043527d4f94b9be9aca7e6f26c9ce",
+        "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828787792.pdf",
+        "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\b881fcbc3586c7da0903d0f710793c0d9c4221d09778dd39820d6a274d0f1b77.txt.gz",
+        "textExtractor": {
+          "contract": "page_get_text_default_join_newline_v1",
+          "binding": "1.28.2",
+          "engine": "1.28.2"
+        }
+      },
+      "reportRawTags": {
+        "基金代码": "009505",
+        "天天基金细分类": "指数型-其他",
+        "标准资产大类": "权益",
+        "标准资产细类": "指数",
+        "是否纯债": 0,
+        "是否短债": 0,
+        "是否指数增强": 0,
+        "是否商品黄金": 0,
+        "是否QDII": 0,
+        "分类来源": "天天基金_fundcode_search",
+        "最近更新时间": "2026-06-11T11:27:39+08:00"
+      },
+      "businessLookthrough": {
+        "assets": {
+          "固定收益": 0.12207338021774979,
+          "现金及货币工具": 0.03270428539793535,
+          "基金投资": 2.5997999168301718,
+          "其他资产": 0.05542241755414318
+        },
+        "assetChildren": {
+          "现金及货币工具": [
+            {
+              "name": "存款与结算备付金",
+              "value": 0.03270428539793535
+            }
+          ],
+          "固定收益": [
+            {
+              "name": "国家债券",
+              "value": 0.12207338021774979
+            }
+          ],
+          "基金投资": [
+            {
+              "name": "基金投资未细分",
+              "value": 2.5997999168301718
+            }
+          ],
+          "其他资产": [
+            {
+              "name": "其他资产未细分",
+              "value": 0.05542241755414318
+            }
+          ]
+        },
+        "styles": {},
+        "fundTypeMajor": "商品及黄金类",
+        "fundTypeMinor": "黄金ETF及联接",
+        "stockComplete": true,
+        "bondComplete": true,
+        "stockStatus": "报告股票总额为零",
+        "stockGapReason": "",
+        "stockCoveragePercent": null,
+        "bondStatus": "债券品种汇总表金额核验",
+        "fullStockRows": 0,
+        "detailsSource": {
+          "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828787792_1.pdf",
+          "pdfSha256": "b881fcbc3586c7da0903d0f710793c0d9c4221d09778dd39820d6a274d0f1b77",
+          "textSha256": "0af95c64b1265797da54fcbbed1028f9ab0043527d4f94b9be9aca7e6f26c9ce",
+          "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\b881fcbc3586c7da0903d0f710793c0d9c4221d09778dd39820d6a274d0f1b77.txt.gz",
+          "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828787792.pdf",
+          "parserFingerprint": "41f11e657223b75f5e562f8d53a073d5282066a3503dff459f1774b335becbdd",
+          "sourceCapturedAt": "2026-10-23T03:21:14+08:00"
+        },
+        "reportPeriod": "2026-06-30",
+        "foreignSectorEvidence": null,
+        "stockDetailGapContribution": 0.0,
+        "productDefinition": {
+          "major": "商品及黄金类",
+          "minor": "黄金ETF及联接",
+          "pdfSha256": "b881fcbc3586c7da0903d0f710793c0d9c4221d09778dd39820d6a274d0f1b77",
+          "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828787792_1.pdf",
+          "definitionPages": [
+            5,
+            6
+          ],
+          "requiredTerms": [
+            "黄金现货"
+          ]
+        },
+        "fundTypeBasis": "verified_original_product_definition",
+        "supplementalTags": {
+          "基金代码": "009505",
+          "天天基金细分类": "指数型-其他",
+          "标准资产大类": "权益",
+          "标准资产细类": "指数",
+          "是否纯债": 0,
+          "是否短债": 0,
+          "是否指数增强": 0,
+          "是否商品黄金": 0,
+          "是否QDII": 0,
+          "分类来源": "天天基金_fundcode_search",
+          "最近更新时间": "2026-06-11T11:27:39+08:00"
+        }
+      },
+      "windFundClassification": {
+        "major": "另类投资",
+        "minor": "商品型基金",
+        "level3Source": null,
+        "resolved": true,
+        "reason": "verified_original_commodity_objective",
+        "sourceLabel": "指数型-其他",
+        "source": "天天基金_fundcode_search",
+        "sourceUpdatedAt": "2026-06-11T11:27:39+08:00",
+        "standardVersion": "public_reference_csisc_202311",
+        "isWindDirectData": false
+      },
+      "bondVarietiesCsv": "009505_2026-06-30_bond_varieties.csv",
+      "baseWeight": 2.81,
+      "weightChange": 0.0,
+      "weightDate": "2026-10-22",
+      "weightBasis": "source_latest",
+      "allocationBasis": "latest_observed_current",
+      "allocationLabel": "最新库内披露仓位",
+      "latestObservedHoldingDate": "2026-10-22",
+      "referenceParentId": null,
+      "referenceParentName": null,
+      "sourceAssetVerification": {
+        "status": "核验记录已过期，需刷新",
+        "latestSourcePeriod": "2026-06-30",
+        "checkedAt": "2026-10-07T12:26:11+08:00",
+        "scope": "F10资产配置期次"
+      },
+      "bondRawCsv": "009505_2026-06-30_bond.csv"
+    },
+    {
+      "strategyId": "qieman__ZH164292",
+      "strategyName": "富国多元低波稳健理财",
+      "parentId": "qieman__ZH164292",
+      "isParent": true,
+      "holdingDate": "2026-10-22",
+      "holdingSnapshotId": "qieman-ZH164292-2026-10-22-3f1899a407b6",
+      "holdingConfidence": "official_stargate_exact_current_composition",
+      "fundCode": "019524",
+      "fundName": "华泰柏瑞纳斯达克100ETF发起式联接(QDII)A",
+      "weight": 2.23,
+      "fundClassMajor": "海外/QDII",
+      "fundClassMinor": "指数型-海外股票",
+      "fundClassSource": "天天基金_fundcode_search",
+      "reportDate": "2026-06-30",
+      "reportSource": "东财F10资产配置",
+      "reportSnapshotId": "eastmoney_f10_all_market-asset_allocation-019524-0-940ba5df4fd62b52",
+      "reportUrl": "https://fundf10.eastmoney.com/zcpz_019524.html",
+      "assets": {
+        "股票": 0.0,
+        "债券": 0.0,
+        "现金": 9.040580796088452,
+        "基金": 90.37426095713921,
+        "商品": 0.0,
+        "存托凭证": 0.0,
+        "其他": 0.5851582467723447
+      },
+      "disclosedSum": 100.0,
+      "unexplainedContribution": 0.0,
+      "interactionBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {},
+        "stockRows": 0
+      },
+      "rawNavAssets": {
+        "股票": null,
+        "债券": null,
+        "现金": 9.11,
+        "基金": null,
+        "商品": null,
+        "存托凭证": null,
+        "其他": null
+      },
+      "rawNavBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {},
+        "stockRows": 0
+      },
+      "rawNavUnexplainedContribution": 2.026847,
+      "assetBasis": "fund_total_assets",
+      "assetCompositionSource": {
+        "fundCode": "019524",
+        "reportDate": "2026-06-30",
+        "capturedAt": "2026-10-23T03:21:43+08:00",
+        "announcementResponseSha256": "5c031c65f895ad74611fd9d1784c4bcf31310ca712fc156869fa29c3ef201e39",
+        "rawAnnouncementPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\JJGG_019524_5c031c65f895ad74611fd9d1784c4bcf31310ca712fc156869fa29c3ef201e39.json",
+        "announcement": {
+          "FUNDCODE": "019524",
+          "TITLE": "华泰柏瑞纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)2026年中期报告",
+          "ShortTitle": "华泰柏瑞纳斯达克100ETF发起式联接(QDII)A",
+          "NEWCATEGORY": "3",
+          "PUBLISHDATE": "2026-08-29T00:00:00",
+          "PUBLISHDATEDesc": "2026-08-29",
+          "ATTACHTYPE": "0",
+          "ID": "AN202608291828684974"
+        },
+        "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608291828684974_1.pdf",
+        "announcementCheckedAsOf": "2026-10-23",
+        "basis": "fund_total_assets",
+        "totalAssets": 1526006602.36,
+        "amounts": {
+          "股票": 0.0,
+          "债券": 0.0,
+          "现金": 137959859.84,
+          "基金": 1379117189.04,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 8929553.48
+        },
+        "assets": {
+          "股票": 0.0,
+          "债券": 0.0,
+          "现金": 9.040580796088452,
+          "基金": 90.37426095713921,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 0.5851582467723447
+        },
+        "portfolioRows": [
+          {
+            "rank": 1,
+            "label": "权益投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 2,
+            "label": "基金投资",
+            "amount": 1379117189.04,
+            "reportedPercent": 90.37
+          },
+          {
+            "rank": 3,
+            "label": "固定收益投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 4,
+            "label": "金融衍生品投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 5,
+            "label": "买入返售金融资产",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 6,
+            "label": "货币市场工具",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 7,
+            "label": "银行存款和结算备付金合计",
+            "amount": 137959859.84,
+            "reportedPercent": 9.04
+          },
+          {
+            "rank": 8,
+            "label": "其他各项资产",
+            "amount": 8929553.48,
+            "reportedPercent": 0.59
+          },
+          {
+            "rank": 9,
+            "label": "合计",
+            "amount": 1526006602.36,
+            "reportedPercent": 100.0
+          }
+        ],
+        "balance": {
+          "totalAssets": 1526006602.36,
+          "netAssets": 1514826152.23,
+          "liabilities": 11180450.13,
+          "navToTotalAssets": 0.9926733933439678
+        },
+        "section": "7.1",
+        "status": "verified",
+        "pdfSha256": "d1124c9ae981fc0a45b4516668366617ea150ed9cb2a31a5b70f202262feec43",
+        "pdfBytes": 1608300,
+        "textSha256": "cd26c02182d92300e5ce8c79da43887c3ec38ab0b19b69afa941458a77f265db",
+        "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608291828684974.pdf",
+        "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\d1124c9ae981fc0a45b4516668366617ea150ed9cb2a31a5b70f202262feec43.txt.gz",
+        "textExtractor": {
+          "contract": "page_get_text_default_join_newline_v1",
+          "binding": "1.28.2",
+          "engine": "1.28.2"
+        }
+      },
+      "reportRawTags": {
+        "基金代码": "019524",
+        "天天基金细分类": "指数型-海外股票",
+        "标准资产大类": "海外",
+        "标准资产细类": "海外权益/混合",
+        "是否纯债": 0,
+        "是否短债": 0,
+        "是否指数增强": 0,
+        "是否商品黄金": 0,
+        "是否QDII": 1,
+        "分类来源": "天天基金_fundcode_search",
+        "最近更新时间": "2026-06-11T11:27:39+08:00"
+      },
+      "businessLookthrough": {
+        "assets": {
+          "现金及货币工具": 0.20160495175277243,
+          "基金投资": 2.015346019344204,
+          "其他资产": 0.013049028903023284
+        },
+        "assetChildren": {
+          "现金及货币工具": [
+            {
+              "name": "存款与结算备付金",
+              "value": 0.20160495175277243
+            }
+          ],
+          "基金投资": [
+            {
+              "name": "基金投资未细分",
+              "value": 2.015346019344204
+            }
+          ],
+          "其他资产": [
+            {
+              "name": "其他资产未细分",
+              "value": 0.013049028903023284
+            }
+          ]
+        },
+        "styles": {},
+        "fundTypeMajor": "权益类",
+        "fundTypeMinor": "综合权益",
+        "stockComplete": true,
+        "bondComplete": true,
+        "stockStatus": "报告股票总额为零",
+        "stockGapReason": "",
+        "stockCoveragePercent": null,
+        "bondStatus": "报告固定收益总额为零",
+        "fullStockRows": 0,
+        "detailsSource": {
+          "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608291828684974_1.pdf",
+          "pdfSha256": "d1124c9ae981fc0a45b4516668366617ea150ed9cb2a31a5b70f202262feec43",
+          "textSha256": "cd26c02182d92300e5ce8c79da43887c3ec38ab0b19b69afa941458a77f265db",
+          "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\d1124c9ae981fc0a45b4516668366617ea150ed9cb2a31a5b70f202262feec43.txt.gz",
+          "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608291828684974.pdf",
+          "parserFingerprint": "41f11e657223b75f5e562f8d53a073d5282066a3503dff459f1774b335becbdd",
+          "sourceCapturedAt": "2026-10-23T03:21:43+08:00"
+        },
+        "reportPeriod": "2026-06-30",
+        "foreignSectorEvidence": null,
+        "stockDetailGapContribution": 0.0,
+        "productDefinition": null,
+        "fundTypeBasis": "source_product_dictionary",
+        "supplementalTags": {
+          "基金代码": "019524",
+          "天天基金细分类": "指数型-海外股票",
+          "标准资产大类": "海外",
+          "标准资产细类": "海外权益/混合",
+          "是否纯债": 0,
+          "是否短债": 0,
+          "是否指数增强": 0,
+          "是否商品黄金": 0,
+          "是否QDII": 1,
+          "分类来源": "天天基金_fundcode_search",
+          "最近更新时间": "2026-06-11T11:27:39+08:00"
+        }
+      },
+      "windFundClassification": {
+        "major": "QDII",
+        "minor": "QDII股票型",
+        "level3Source": "指数型-海外股票",
+        "resolved": true,
+        "reason": "explicit_source_region_and_type",
+        "sourceLabel": "指数型-海外股票",
+        "source": "天天基金_fundcode_search",
+        "sourceUpdatedAt": "2026-06-11T11:27:39+08:00",
+        "standardVersion": "public_reference_csisc_202311",
+        "isWindDirectData": false
+      },
+      "baseWeight": 2.23,
+      "weightChange": 0.0,
+      "weightDate": "2026-10-22",
+      "weightBasis": "source_latest",
+      "allocationBasis": "latest_observed_current",
+      "allocationLabel": "最新库内披露仓位",
+      "latestObservedHoldingDate": "2026-10-22",
+      "referenceParentId": null,
+      "referenceParentName": null,
+      "sourceAssetVerification": {
+        "status": "核验记录已过期，需刷新",
+        "latestSourcePeriod": "2026-06-30",
+        "checkedAt": "2026-10-07T13:12:53+08:00",
+        "scope": "F10资产配置期次"
+      }
+    },
+    {
+      "strategyId": "qieman__ZH164292",
+      "strategyName": "富国多元低波稳健理财",
+      "parentId": "qieman__ZH164292",
+      "isParent": true,
+      "holdingDate": "2026-10-22",
+      "holdingSnapshotId": "qieman-ZH164292-2026-10-22-3f1899a407b6",
+      "holdingConfidence": "official_stargate_exact_current_composition",
+      "fundCode": "161022",
+      "fundName": "富国创业板ETF联接(LOF)A",
+      "weight": 1.56,
+      "fundClassMajor": "权益类",
+      "fundClassMinor": "指数型-股票",
+      "fundClassSource": "天天基金_fundcode_search",
+      "reportDate": "2026-06-30",
+      "reportSource": "东财F10资产配置",
+      "reportSnapshotId": "eastmoney_f10_all_market-asset_allocation-161022-0-d5a5d619eafcfd08",
+      "reportUrl": "https://fundf10.eastmoney.com/zcpz_161022.html",
+      "assets": {
+        "股票": 0.05098759752224602,
+        "债券": 5.159087165819041,
+        "现金": 1.163002936848995,
+        "基金": 92.89258705151872,
+        "商品": 0.0,
+        "存托凭证": 0.0,
+        "其他": 0.7343352482910017
+      },
+      "disclosedSum": 100.0,
+      "unexplainedContribution": 0.0,
+      "interactionBreakdown": {
+        "stockMajor": {
+          "计算机": 0.0,
+          "电子": 0.0,
+          "通信": 0.00030228693857117843,
+          "国防军工": 0.0,
+          "基础化工": 0.0,
+          "机械设备": 0.0,
+          "医药生物": 0.0,
+          "电力设备": 0.0,
+          "个护用品": 0.0,
+          "医疗美容": 0.0,
+          "纺织服饰": 0.0
+        },
+        "stockMinor": [
+          {
+            "major": "计算机",
+            "minor": "软件开发",
+            "value": 0.0
+          },
+          {
+            "major": "电子",
+            "minor": "半导体",
+            "value": 0.0
+          },
+          {
+            "major": "通信",
+            "minor": "通信设备",
+            "value": 0.00030228693857117843
+          },
+          {
+            "major": "国防军工",
+            "minor": "军工电子Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "基础化工",
+            "minor": "塑料",
+            "value": 0.0
+          },
+          {
+            "major": "计算机",
+            "minor": "IT服务Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "机械设备",
+            "minor": "通用设备",
+            "value": 0.0
+          },
+          {
+            "major": "医药生物",
+            "minor": "医疗器械",
+            "value": 0.0
+          },
+          {
+            "major": "电力设备",
+            "minor": "光伏设备",
+            "value": 0.0
+          },
+          {
+            "major": "电子",
+            "minor": "消费电子",
+            "value": 0.0
+          },
+          {
+            "major": "个护用品",
+            "minor": "个护用品",
+            "value": 0.0
+          },
+          {
+            "major": "医疗美容",
+            "minor": "医疗美容",
+            "value": 0.0
+          },
+          {
+            "major": "纺织服饰",
+            "minor": "纺织制造",
+            "value": 0.0
+          }
+        ],
+        "bondTypes": {
+          "利率债/政策性金融债": 0.08040832565993346
+        },
+        "stockRows": 27
+      },
+      "rawNavAssets": {
+        "股票": 0.05,
+        "债券": 5.32,
+        "现金": 1.2,
+        "基金": null,
+        "商品": null,
+        "存托凭证": null,
+        "其他": null
+      },
+      "rawNavBreakdown": {
+        "stockMajor": {
+          "计算机": 0.0,
+          "电子": 0.0,
+          "通信": 0.000312,
+          "国防军工": 0.0,
+          "基础化工": 0.0,
+          "机械设备": 0.0,
+          "医药生物": 0.0,
+          "电力设备": 0.0,
+          "个护用品": 0.0,
+          "医疗美容": 0.0,
+          "纺织服饰": 0.0
+        },
+        "stockMinor": [
+          {
+            "major": "计算机",
+            "minor": "软件开发",
+            "value": 0.0
+          },
+          {
+            "major": "电子",
+            "minor": "半导体",
+            "value": 0.0
+          },
+          {
+            "major": "通信",
+            "minor": "通信设备",
+            "value": 0.000312
+          },
+          {
+            "major": "国防军工",
+            "minor": "军工电子Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "基础化工",
+            "minor": "塑料",
+            "value": 0.0
+          },
+          {
+            "major": "计算机",
+            "minor": "IT服务Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "机械设备",
+            "minor": "通用设备",
+            "value": 0.0
+          },
+          {
+            "major": "医药生物",
+            "minor": "医疗器械",
+            "value": 0.0
+          },
+          {
+            "major": "电力设备",
+            "minor": "光伏设备",
+            "value": 0.0
+          },
+          {
+            "major": "电子",
+            "minor": "消费电子",
+            "value": 0.0
+          },
+          {
+            "major": "个护用品",
+            "minor": "个护用品",
+            "value": 0.0
+          },
+          {
+            "major": "医疗美容",
+            "minor": "医疗美容",
+            "value": 0.0
+          },
+          {
+            "major": "纺织服饰",
+            "minor": "纺织制造",
+            "value": 0.0
+          }
+        ],
+        "bondTypes": {
+          "利率债/政策性金融债": 0.082992
+        },
+        "stockRows": 27
+      },
+      "rawNavUnexplainedContribution": 1.4575080000000002,
+      "assetBasis": "fund_total_assets",
+      "assetCompositionSource": {
+        "fundCode": "161022",
+        "reportDate": "2026-06-30",
+        "capturedAt": "2026-10-23T03:22:00+08:00",
+        "announcementResponseSha256": "147e40a7e985734b67891ecb1e6982827f36b3a2a689689ca2bbded8d1e63787",
+        "rawAnnouncementPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\JJGG_161022_147e40a7e985734b67891ecb1e6982827f36b3a2a689689ca2bbded8d1e63787.json",
+        "announcement": {
+          "FUNDCODE": "161022",
+          "TITLE": "富国创业板交易型开放式指数证券投资基金联接基金二0二六年中期报告",
+          "ShortTitle": "富国创业板ETF联接A",
+          "NEWCATEGORY": "3",
+          "PUBLISHDATE": "2026-08-31T00:00:00",
+          "PUBLISHDATEDesc": "2026-08-31",
+          "ATTACHTYPE": "0",
+          "ID": "AN202608301828736982"
+        },
+        "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608301828736982_1.pdf",
+        "announcementCheckedAsOf": "2026-10-23",
+        "basis": "fund_total_assets",
+        "totalAssets": 1598749577.57,
+        "amounts": {
+          "股票": 815164.0,
+          "债券": 82480884.27,
+          "现金": 18593504.54,
+          "基金": 1485119843.08,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 11740181.68
+        },
+        "assets": {
+          "股票": 0.05098759752224602,
+          "债券": 5.159087165819041,
+          "现金": 1.163002936848995,
+          "基金": 92.89258705151872,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 0.7343352482910017
+        },
+        "portfolioRows": [
+          {
+            "rank": 1,
+            "label": "权益投资",
+            "amount": 815164.0,
+            "reportedPercent": 0.05
+          },
+          {
+            "rank": 2,
+            "label": "基金投资",
+            "amount": 1485119843.08,
+            "reportedPercent": 92.89
+          },
+          {
+            "rank": 3,
+            "label": "固定收益投资",
+            "amount": 82480884.27,
+            "reportedPercent": 5.16
+          },
+          {
+            "rank": 4,
+            "label": "贵金属投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 5,
+            "label": "金融衍生品投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 6,
+            "label": "买入返售金融资产",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 7,
+            "label": "银行存款和结算备付金合计",
+            "amount": 18593504.54,
+            "reportedPercent": 1.16
+          },
+          {
+            "rank": 8,
+            "label": "其他各项资产",
+            "amount": 11740181.68,
+            "reportedPercent": 0.73
+          },
+          {
+            "rank": 9,
+            "label": "合计",
+            "amount": 1598749577.57,
+            "reportedPercent": 100.0
+          }
+        ],
+        "balance": {
+          "totalAssets": 1598749577.57,
+          "netAssets": 1548977933.8,
+          "liabilities": 49771643.77,
+          "navToTotalAssets": 0.9688683928563411
+        },
+        "section": "7.1",
+        "status": "verified",
+        "pdfSha256": "a04bd232f405b6890f70e8e6612a8c230461f649c0b3579afb1ca50f188f0cd4",
+        "pdfBytes": 1234994,
+        "textSha256": "6584a9928b486529f6a91032017afcf5d31de45b6799d40fbcdf957114514383",
+        "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608301828736982.pdf",
+        "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\a04bd232f405b6890f70e8e6612a8c230461f649c0b3579afb1ca50f188f0cd4.txt.gz",
+        "textExtractor": {
+          "contract": "page_get_text_default_join_newline_v1",
+          "binding": "1.28.2",
+          "engine": "1.28.2"
+        }
+      },
+      "reportRawTags": {
+        "基金代码": "161022",
+        "天天基金细分类": "指数型-股票",
+        "标准资产大类": "权益",
+        "标准资产细类": "指数权益",
+        "是否纯债": 0,
+        "是否短债": 0,
+        "是否指数增强": 0,
+        "是否商品黄金": 0,
+        "是否QDII": 0,
+        "分类来源": "天天基金_fundcode_search",
+        "最近更新时间": "2026-09-24T16:34:02+08:00"
+      },
+      "businessLookthrough": {
+        "assets": {
+          "股票": 0.0007954065213470378,
+          "固定收益": 0.08048175978677703,
+          "现金及货币工具": 0.01814284581484432,
+          "基金投资": 1.4491243580036919,
+          "其他资产": 0.011455629873339626
+        },
+        "assetChildren": {
+          "现金及货币工具": [
+            {
+              "name": "存款与结算备付金",
+              "value": 0.01814284581484432
+            }
+          ],
+          "股票": [
+            {
+              "name": "科技（TMT）",
+              "value": 0.0006779305622381282
+            },
+            {
+              "name": "先进制造",
+              "value": 8.58485668584895e-05
+            },
+            {
+              "name": "消费",
+              "value": 1.4142702720439036e-05
+            },
+            {
+              "name": "医药医疗",
+              "value": 1.1742326793001475e-05
+            },
+            {
+              "name": "周期",
+              "value": 5.7423627369796976e-06
+            }
+          ],
+          "固定收益": [
+            {
+              "name": "国家债券",
+              "value": 0.08048175978677703
+            }
+          ],
+          "基金投资": [
+            {
+              "name": "基金投资未细分",
+              "value": 1.4491243580036919
+            }
+          ],
+          "其他资产": [
+            {
+              "name": "其他资产未细分",
+              "value": 0.011455629873339626
+            }
+          ]
+        },
+        "styles": {
+          "科技（TMT）": [
+            {
+              "name": "通信",
+              "value": 0.00039889173948637216
+            },
+            {
+              "name": "电子",
+              "value": 0.0002284543152500118
+            },
+            {
+              "name": "计算机",
+              "value": 5.058450750174418e-05
+            }
+          ],
+          "先进制造": [
+            {
+              "name": "机械设备（除工程机械Ⅱ）",
+              "value": 3.099021929081991e-05
+            },
+            {
+              "name": "电力设备",
+              "value": 4.3266288210776e-05
+            },
+            {
+              "name": "国防军工",
+              "value": 1.1592059356893595e-05
+            }
+          ],
+          "消费": [
+            {
+              "name": "美容护理",
+              "value": 1.1239809068354993e-05
+            },
+            {
+              "name": "纺织服饰",
+              "value": 2.902893652084044e-06
+            }
+          ],
+          "医药医疗": [
+            {
+              "name": "医药生物",
+              "value": 1.1742326793001475e-05
+            }
+          ],
+          "周期": [
+            {
+              "name": "基础化工",
+              "value": 5.7423627369796976e-06
+            }
+          ]
+        },
+        "fundTypeMajor": "权益类",
+        "fundTypeMinor": "综合权益",
+        "stockComplete": true,
+        "bondComplete": true,
+        "stockStatus": "完整股票表金额提取",
+        "stockGapReason": "",
+        "stockCoveragePercent": 100.0,
+        "bondStatus": "债券品种汇总表金额核验",
+        "fullStockRows": 27,
+        "detailsSource": {
+          "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608301828736982_1.pdf",
+          "pdfSha256": "a04bd232f405b6890f70e8e6612a8c230461f649c0b3579afb1ca50f188f0cd4",
+          "textSha256": "6584a9928b486529f6a91032017afcf5d31de45b6799d40fbcdf957114514383",
+          "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\a04bd232f405b6890f70e8e6612a8c230461f649c0b3579afb1ca50f188f0cd4.txt.gz",
+          "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608301828736982.pdf",
+          "parserFingerprint": "41f11e657223b75f5e562f8d53a073d5282066a3503dff459f1774b335becbdd",
+          "sourceCapturedAt": "2026-10-23T03:22:00+08:00"
+        },
+        "reportPeriod": "2026-06-30",
+        "foreignSectorEvidence": null,
+        "stockDetailGapContribution": 1e-43,
+        "productDefinition": null,
+        "fundTypeBasis": "source_product_dictionary",
+        "supplementalTags": {
+          "基金代码": "161022",
+          "天天基金细分类": "指数型-股票",
+          "标准资产大类": "权益",
+          "标准资产细类": "指数权益",
+          "是否纯债": 0,
+          "是否短债": 0,
+          "是否指数增强": 0,
+          "是否商品黄金": 0,
+          "是否QDII": 0,
+          "分类来源": "天天基金_fundcode_search",
+          "最近更新时间": "2026-09-24T16:34:02+08:00"
+        }
+      },
+      "windFundClassification": {
+        "major": "股票型",
+        "minor": "被动指数型",
+        "level3Source": null,
+        "resolved": true,
+        "reason": "source_index_category_and_enhancement_flag",
+        "sourceLabel": "指数型-股票",
+        "source": "天天基金_fundcode_search",
+        "sourceUpdatedAt": "2026-09-24T16:34:02+08:00",
+        "standardVersion": "public_reference_csisc_202311",
+        "isWindDirectData": false
+      },
+      "fullStockCsv": "161022_2026-06-30_complete_stock.csv",
+      "bondVarietiesCsv": "161022_2026-06-30_bond_varieties.csv",
+      "baseWeight": 1.56,
+      "weightChange": 0.0,
+      "weightDate": "2026-10-22",
+      "weightBasis": "source_latest",
+      "allocationBasis": "latest_observed_current",
+      "allocationLabel": "最新库内披露仓位",
+      "latestObservedHoldingDate": "2026-10-22",
+      "referenceParentId": null,
+      "referenceParentName": null,
+      "sourceAssetVerification": {
+        "status": "核验记录已过期，需刷新",
+        "latestSourcePeriod": "2026-06-30",
+        "checkedAt": "2026-10-07T13:02:38+08:00",
+        "scope": "F10资产配置期次"
+      },
+      "stockRawCsv": "161022_2026-06-30_stock.csv",
+      "bondRawCsv": "161022_2026-06-30_bond.csv"
+    },
+    {
+      "strategyId": "qieman__ZH164292",
+      "strategyName": "富国多元低波稳健理财",
+      "parentId": "qieman__ZH164292",
+      "isParent": true,
+      "holdingDate": "2026-10-22",
+      "holdingSnapshotId": "qieman-ZH164292-2026-10-22-3f1899a407b6",
+      "holdingConfidence": "official_stargate_exact_current_composition",
+      "fundCode": "013313",
+      "fundName": "富国中证科创创业50ETF联接A",
+      "weight": 1.52,
+      "fundClassMajor": "权益类",
+      "fundClassMinor": "指数型-股票",
+      "fundClassSource": "天天基金_fundcode_search",
+      "reportDate": "2026-06-30",
+      "reportSource": "东财F10资产配置",
+      "reportSnapshotId": "eastmoney_f10_all_market-asset_allocation-013313-0-50f2fe9c0817f830",
+      "reportUrl": "https://fundf10.eastmoney.com/zcpz_013313.html",
+      "assets": {
+        "股票": 0.0,
+        "债券": 4.906381277980156,
+        "现金": 2.9717165686230596,
+        "基金": 89.63334082939892,
+        "商品": 0.0,
+        "存托凭证": 0.0,
+        "其他": 2.4885613239978657
+      },
+      "disclosedSum": 100.0,
+      "unexplainedContribution": 0.0,
+      "interactionBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {},
+        "stockRows": 0
+      },
+      "rawNavAssets": {
+        "股票": null,
+        "债券": 5.15,
+        "现金": 3.12,
+        "基金": null,
+        "商品": null,
+        "存托凭证": null,
+        "其他": null
+      },
+      "rawNavBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 0.078432
+        },
+        "stockRows": 0
+      },
+      "rawNavUnexplainedContribution": 1.394296,
+      "assetBasis": "fund_total_assets",
+      "assetCompositionSource": {
+        "fundCode": "013313",
+        "reportDate": "2026-06-30",
+        "capturedAt": "2026-10-23T03:21:26+08:00",
+        "announcementResponseSha256": "a700df7318ba284761f4c82b264ba0ae84f9ac3fb46adabc29f2ecbbb1448176",
+        "rawAnnouncementPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\JJGG_013313_a700df7318ba284761f4c82b264ba0ae84f9ac3fb46adabc29f2ecbbb1448176.json",
+        "announcement": {
+          "FUNDCODE": "013313",
+          "TITLE": "富国中证科创创业50交易型开放式指数证券投资基金联接基金二0二六年中期报告",
+          "ShortTitle": "富国中证科创创业50ETF联接A",
+          "NEWCATEGORY": "3",
+          "PUBLISHDATE": "2026-08-31T00:00:00",
+          "PUBLISHDATEDesc": "2026-08-31",
+          "ATTACHTYPE": "0",
+          "ID": "AN202608311828786500"
+        },
+        "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828786500_1.pdf",
+        "announcementCheckedAsOf": "2026-10-23",
+        "basis": "fund_total_assets",
+        "totalAssets": 1036977542.05,
+        "amounts": {
+          "股票": 0.0,
+          "债券": 50878071.98,
+          "现金": 30816033.43,
+          "基金": 929477614.59,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 25805822.05
+        },
+        "assets": {
+          "股票": 0.0,
+          "债券": 4.906381277980156,
+          "现金": 2.9717165686230596,
+          "基金": 89.63334082939892,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 2.4885613239978657
+        },
+        "portfolioRows": [
+          {
+            "rank": 1,
+            "label": "权益投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 2,
+            "label": "基金投资",
+            "amount": 929477614.59,
+            "reportedPercent": 89.63
+          },
+          {
+            "rank": 3,
+            "label": "固定收益投资",
+            "amount": 50878071.98,
+            "reportedPercent": 4.91
+          },
+          {
+            "rank": 4,
+            "label": "贵金属投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 5,
+            "label": "金融衍生品投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 6,
+            "label": "买入返售金融资产",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 7,
+            "label": "银行存款和结算备付金合计",
+            "amount": 30816033.43,
+            "reportedPercent": 2.97
+          },
+          {
+            "rank": 8,
+            "label": "其他各项资产",
+            "amount": 25805822.05,
+            "reportedPercent": 2.49
+          },
+          {
+            "rank": 9,
+            "label": "合计",
+            "amount": 1036977542.05,
+            "reportedPercent": 100.0
+          }
+        ],
+        "balance": {
+          "totalAssets": 1036977542.05,
+          "netAssets": 987460830.44,
+          "liabilities": 49516711.61,
+          "navToTotalAssets": 0.9522490028934375
+        },
+        "section": "7.1",
+        "status": "verified",
+        "pdfSha256": "045cb3705a3a9ae1084561cf900374ac98e59b68543c8ab5eeb357345d1665d5",
+        "pdfBytes": 1136165,
+        "textSha256": "19ea1e8ebf86517d60f2bd81d4681494db9b7d2e8ac7d2a153fca3eee763f892",
+        "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828786500.pdf",
+        "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\045cb3705a3a9ae1084561cf900374ac98e59b68543c8ab5eeb357345d1665d5.txt.gz",
+        "textExtractor": {
+          "contract": "page_get_text_default_join_newline_v1",
+          "binding": "1.28.2",
+          "engine": "1.28.2"
+        }
+      },
+      "reportRawTags": {
+        "基金代码": "013313",
+        "天天基金细分类": "指数型-股票",
+        "标准资产大类": "权益",
+        "标准资产细类": "指数权益",
+        "是否纯债": 0,
+        "是否短债": 0,
+        "是否指数增强": 0,
+        "是否商品黄金": 0,
+        "是否QDII": 0,
+        "分类来源": "天天基金_fundcode_search",
+        "最近更新时间": "2026-06-11T11:27:39+08:00"
+      },
+      "businessLookthrough": {
+        "assets": {
+          "固定收益": 0.07457699542529837,
+          "现金及货币工具": 0.0451700918430705,
+          "基金投资": 1.3624267806068635,
+          "其他资产": 0.03782613212476755
+        },
+        "assetChildren": {
+          "现金及货币工具": [
+            {
+              "name": "存款与结算备付金",
+              "value": 0.0451700918430705
+            }
+          ],
+          "固定收益": [
+            {
+              "name": "国家债券",
+              "value": 0.07457699542529837
+            }
+          ],
+          "基金投资": [
+            {
+              "name": "基金投资未细分",
+              "value": 1.3624267806068635
+            }
+          ],
+          "其他资产": [
+            {
+              "name": "其他资产未细分",
+              "value": 0.03782613212476755
+            }
+          ]
+        },
+        "styles": {},
+        "fundTypeMajor": "权益类",
+        "fundTypeMinor": "综合权益",
+        "stockComplete": true,
+        "bondComplete": true,
+        "stockStatus": "报告股票总额为零",
+        "stockGapReason": "",
+        "stockCoveragePercent": null,
+        "bondStatus": "债券品种汇总表金额核验",
+        "fullStockRows": 0,
+        "detailsSource": {
+          "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828786500_1.pdf",
+          "pdfSha256": "045cb3705a3a9ae1084561cf900374ac98e59b68543c8ab5eeb357345d1665d5",
+          "textSha256": "19ea1e8ebf86517d60f2bd81d4681494db9b7d2e8ac7d2a153fca3eee763f892",
+          "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\045cb3705a3a9ae1084561cf900374ac98e59b68543c8ab5eeb357345d1665d5.txt.gz",
+          "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828786500.pdf",
+          "parserFingerprint": "41f11e657223b75f5e562f8d53a073d5282066a3503dff459f1774b335becbdd",
+          "sourceCapturedAt": "2026-10-23T03:21:26+08:00"
+        },
+        "reportPeriod": "2026-06-30",
+        "foreignSectorEvidence": null,
+        "stockDetailGapContribution": 0.0,
+        "productDefinition": null,
+        "fundTypeBasis": "source_product_dictionary",
+        "supplementalTags": {
+          "基金代码": "013313",
+          "天天基金细分类": "指数型-股票",
+          "标准资产大类": "权益",
+          "标准资产细类": "指数权益",
+          "是否纯债": 0,
+          "是否短债": 0,
+          "是否指数增强": 0,
+          "是否商品黄金": 0,
+          "是否QDII": 0,
+          "分类来源": "天天基金_fundcode_search",
+          "最近更新时间": "2026-06-11T11:27:39+08:00"
+        }
+      },
+      "windFundClassification": {
+        "major": "股票型",
+        "minor": "被动指数型",
+        "level3Source": null,
+        "resolved": true,
+        "reason": "source_index_category_and_enhancement_flag",
+        "sourceLabel": "指数型-股票",
+        "source": "天天基金_fundcode_search",
+        "sourceUpdatedAt": "2026-06-11T11:27:39+08:00",
+        "standardVersion": "public_reference_csisc_202311",
+        "isWindDirectData": false
+      },
+      "bondVarietiesCsv": "013313_2026-06-30_bond_varieties.csv",
+      "baseWeight": 1.52,
+      "weightChange": 0.0,
+      "weightDate": "2026-10-22",
+      "weightBasis": "source_latest",
+      "allocationBasis": "latest_observed_current",
+      "allocationLabel": "最新库内披露仓位",
+      "latestObservedHoldingDate": "2026-10-22",
+      "referenceParentId": null,
+      "referenceParentName": null,
+      "sourceAssetVerification": {
+        "status": "核验记录已过期，需刷新",
+        "latestSourcePeriod": "2026-06-30",
+        "checkedAt": "2026-10-07T12:27:40+08:00",
+        "scope": "F10资产配置期次"
+      },
+      "bondRawCsv": "013313_2026-06-30_bond.csv"
+    },
+    {
+      "strategyId": "qieman__ZH164292",
+      "strategyName": "富国多元低波稳健理财",
+      "parentId": "qieman__ZH164292",
+      "isParent": true,
+      "holdingDate": "2026-10-22",
+      "holdingSnapshotId": "qieman-ZH164292-2026-10-22-3f1899a407b6",
+      "holdingConfidence": "official_stargate_exact_current_composition",
+      "fundCode": "014673",
+      "fundName": "富国中证港股通互联网ETF发起式联接A",
+      "weight": 1.28,
+      "fundClassMajor": "权益类",
+      "fundClassMinor": "指数型-股票",
+      "fundClassSource": "天天基金_fundcode_search",
+      "reportDate": "2026-06-30",
+      "reportSource": "东财F10资产配置",
+      "reportSnapshotId": "eastmoney_f10_all_market-asset_allocation-014673-0-eaefee1b2498e68f",
+      "reportUrl": "https://fundf10.eastmoney.com/zcpz_014673.html",
+      "assets": {
+        "股票": 0.0,
+        "债券": 6.0840407857391146,
+        "现金": 3.979257432197153,
+        "基金": 89.43291905105357,
+        "商品": 0.0,
+        "存托凭证": 0.0,
+        "其他": 0.5037827310101477
+      },
+      "disclosedSum": 100.0,
+      "unexplainedContribution": 0.0,
+      "interactionBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {},
+        "stockRows": 0
+      },
+      "rawNavAssets": {
+        "股票": null,
+        "债券": 6.71,
+        "现金": 4.39,
+        "基金": null,
+        "商品": null,
+        "存托凭证": null,
+        "其他": null
+      },
+      "rawNavBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "利率债/政策性金融债": 0.08588799999999999
+        },
+        "stockRows": 0
+      },
+      "rawNavUnexplainedContribution": 1.1379200000000003,
+      "assetBasis": "fund_total_assets",
+      "assetCompositionSource": {
+        "fundCode": "014673",
+        "reportDate": "2026-06-30",
+        "capturedAt": "2026-10-23T03:21:29+08:00",
+        "announcementResponseSha256": "40dbcc4673c9f9d9579889b20f7bcf5a1038149f74618e57b86cb93a04f1f6cf",
+        "rawAnnouncementPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\JJGG_014673_40dbcc4673c9f9d9579889b20f7bcf5a1038149f74618e57b86cb93a04f1f6cf.json",
+        "announcement": {
+          "FUNDCODE": "014673",
+          "TITLE": "富国中证港股通互联网交易型开放式指数证券投资基金发起式联接基金二0二六年中期报告",
+          "ShortTitle": "富国中证港股通互联网ETF发起式联接A",
+          "NEWCATEGORY": "3",
+          "PUBLISHDATE": "2026-08-31T00:00:00",
+          "PUBLISHDATEDesc": "2026-08-31",
+          "ATTACHTYPE": "0",
+          "ID": "AN202608311828787171"
+        },
+        "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828787171_1.pdf",
+        "announcementCheckedAsOf": "2026-10-23",
+        "basis": "fund_total_assets",
+        "totalAssets": 4904772335.18,
+        "amounts": {
+          "股票": 0.0,
+          "债券": 298408349.32,
+          "现金": 195173517.68,
+          "基金": 4386481072.16,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 24709396.02
+        },
+        "assets": {
+          "股票": 0.0,
+          "债券": 6.0840407857391146,
+          "现金": 3.979257432197153,
+          "基金": 89.43291905105357,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 0.5037827310101477
+        },
+        "portfolioRows": [
+          {
+            "rank": 1,
+            "label": "权益投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 2,
+            "label": "基金投资",
+            "amount": 4386481072.16,
+            "reportedPercent": 89.43
+          },
+          {
+            "rank": 3,
+            "label": "固定收益投资",
+            "amount": 298408349.32,
+            "reportedPercent": 6.08
+          },
+          {
+            "rank": 4,
+            "label": "贵金属投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 5,
+            "label": "金融衍生品投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 6,
+            "label": "买入返售金融资产",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 7,
+            "label": "银行存款和结算备付金合计",
+            "amount": 195173517.68,
+            "reportedPercent": 3.98
+          },
+          {
+            "rank": 8,
+            "label": "其他各项资产",
+            "amount": 24709396.02,
+            "reportedPercent": 0.5
+          },
+          {
+            "rank": 9,
+            "label": "合计",
+            "amount": 4904772335.18,
+            "reportedPercent": 100.0
+          }
+        ],
+        "balance": {
+          "totalAssets": 4904772335.18,
+          "netAssets": 4447766290.33,
+          "liabilities": 457006044.85,
+          "navToTotalAssets": 0.9068242084200165
+        },
+        "section": "7.1",
+        "status": "verified",
+        "pdfSha256": "cf96638e6633c6cd07e4b0c760db3922d3fb4a3295e40533d95ba08688cce9f6",
+        "pdfBytes": 1061467,
+        "textSha256": "0da822a58044fd1159f60876105a11d036dc09740192d96833bb972d29c462cd",
+        "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828787171.pdf",
+        "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\cf96638e6633c6cd07e4b0c760db3922d3fb4a3295e40533d95ba08688cce9f6.txt.gz",
+        "textExtractor": {
+          "contract": "page_get_text_default_join_newline_v1",
+          "binding": "1.28.2",
+          "engine": "1.28.2"
+        }
+      },
+      "reportRawTags": {
+        "基金代码": "014673",
+        "天天基金细分类": "指数型-股票",
+        "标准资产大类": "权益",
+        "标准资产细类": "指数权益",
+        "是否纯债": 0,
+        "是否短债": 0,
+        "是否指数增强": 0,
+        "是否商品黄金": 0,
+        "是否QDII": 0,
+        "分类来源": "天天基金_fundcode_search",
+        "最近更新时间": "2026-06-11T11:27:39+08:00"
+      },
+      "businessLookthrough": {
+        "assets": {
+          "固定收益": 0.07787572205746067,
+          "现金及货币工具": 0.05093449513212356,
+          "基金投资": 1.1447413638534858,
+          "其他资产": 0.00644841895692989
+        },
+        "assetChildren": {
+          "现金及货币工具": [
+            {
+              "name": "存款与结算备付金",
+              "value": 0.05093449513212356
+            }
+          ],
+          "固定收益": [
+            {
+              "name": "国家债券",
+              "value": 0.07787572205746067
+            }
+          ],
+          "基金投资": [
+            {
+              "name": "基金投资未细分",
+              "value": 1.1447413638534858
+            }
+          ],
+          "其他资产": [
+            {
+              "name": "其他资产未细分",
+              "value": 0.00644841895692989
+            }
+          ]
+        },
+        "styles": {},
+        "fundTypeMajor": "权益类",
+        "fundTypeMinor": "综合权益",
+        "stockComplete": true,
+        "bondComplete": true,
+        "stockStatus": "报告股票总额为零",
+        "stockGapReason": "",
+        "stockCoveragePercent": null,
+        "bondStatus": "债券品种汇总表金额核验",
+        "fullStockRows": 0,
+        "detailsSource": {
+          "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828787171_1.pdf",
+          "pdfSha256": "cf96638e6633c6cd07e4b0c760db3922d3fb4a3295e40533d95ba08688cce9f6",
+          "textSha256": "0da822a58044fd1159f60876105a11d036dc09740192d96833bb972d29c462cd",
+          "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\cf96638e6633c6cd07e4b0c760db3922d3fb4a3295e40533d95ba08688cce9f6.txt.gz",
+          "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828787171.pdf",
+          "parserFingerprint": "41f11e657223b75f5e562f8d53a073d5282066a3503dff459f1774b335becbdd",
+          "sourceCapturedAt": "2026-10-23T03:21:29+08:00"
+        },
+        "reportPeriod": "2026-06-30",
+        "foreignSectorEvidence": null,
+        "stockDetailGapContribution": 0.0,
+        "productDefinition": null,
+        "fundTypeBasis": "source_product_dictionary",
+        "supplementalTags": {
+          "基金代码": "014673",
+          "天天基金细分类": "指数型-股票",
+          "标准资产大类": "权益",
+          "标准资产细类": "指数权益",
+          "是否纯债": 0,
+          "是否短债": 0,
+          "是否指数增强": 0,
+          "是否商品黄金": 0,
+          "是否QDII": 0,
+          "分类来源": "天天基金_fundcode_search",
+          "最近更新时间": "2026-06-11T11:27:39+08:00"
+        }
+      },
+      "windFundClassification": {
+        "major": "股票型",
+        "minor": "被动指数型",
+        "level3Source": null,
+        "resolved": true,
+        "reason": "source_index_category_and_enhancement_flag",
+        "sourceLabel": "指数型-股票",
+        "source": "天天基金_fundcode_search",
+        "sourceUpdatedAt": "2026-06-11T11:27:39+08:00",
+        "standardVersion": "public_reference_csisc_202311",
+        "isWindDirectData": false
+      },
+      "bondVarietiesCsv": "014673_2026-06-30_bond_varieties.csv",
+      "baseWeight": 1.28,
+      "weightChange": 0.0,
+      "weightDate": "2026-10-22",
+      "weightBasis": "source_latest",
+      "allocationBasis": "latest_observed_current",
+      "allocationLabel": "最新库内披露仓位",
+      "latestObservedHoldingDate": "2026-10-22",
+      "referenceParentId": null,
+      "referenceParentName": null,
+      "sourceAssetVerification": {
+        "status": "核验记录已过期，需刷新",
+        "latestSourcePeriod": "2026-06-30",
+        "checkedAt": "2026-10-07T12:27:58+08:00",
+        "scope": "F10资产配置期次"
+      },
+      "bondRawCsv": "014673_2026-06-30_bond.csv"
+    },
+    {
+      "strategyId": "qieman__ZH164292",
+      "strategyName": "富国多元低波稳健理财",
+      "parentId": "qieman__ZH164292",
+      "isParent": true,
+      "holdingDate": "2026-10-22",
+      "holdingSnapshotId": "qieman-ZH164292-2026-10-22-3f1899a407b6",
+      "holdingConfidence": "official_stargate_exact_current_composition",
+      "fundCode": "000638",
+      "fundName": "富国富钱包货币A",
+      "weight": 1.01,
+      "fundClassMajor": "现金类",
+      "fundClassMinor": "货币型-普通货币",
+      "fundClassSource": "天天基金_fundcode_search",
+      "reportDate": "2026-06-30",
+      "reportSource": "东财F10资产配置",
+      "reportSnapshotId": "eastmoney_f10_all_market-asset_allocation-000638-0-623117a17f63fdfe",
+      "reportUrl": "https://fundf10.eastmoney.com/zcpz_000638.html",
+      "assets": {
+        "股票": 0.0,
+        "债券": 46.70446901754088,
+        "现金": 53.2623420350866,
+        "基金": 0.0,
+        "商品": 0.0,
+        "存托凭证": 0.0,
+        "其他": 0.033188947372528574
+      },
+      "disclosedSum": 100.0,
+      "unexplainedContribution": 0.0,
+      "interactionBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "金融债": 0.17832417191601263,
+          "利率债/政策性金融债": 0.0456578797659356
+        },
+        "stockRows": 0
+      },
+      "rawNavAssets": {
+        "股票": null,
+        "债券": 49.28,
+        "现金": 39.01,
+        "基金": null,
+        "商品": null,
+        "存托凭证": null,
+        "其他": null
+      },
+      "rawNavBreakdown": {
+        "stockMajor": {},
+        "stockMinor": [],
+        "bondTypes": {
+          "金融债": 0.188163,
+          "利率债/政策性金融债": 0.048177
+        },
+        "stockRows": 0
+      },
+      "rawNavUnexplainedContribution": 0.11827100000000008,
+      "assetBasis": "fund_total_assets",
+      "assetCompositionSource": {
+        "fundCode": "000638",
+        "reportDate": "2026-06-30",
+        "capturedAt": "2026-10-23T03:20:27+08:00",
+        "announcementResponseSha256": "dfe00851086d4e5d1b0711ca47a66dfa5f28af022ddbde1033e3e59ab0ea64b2",
+        "rawAnnouncementPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\JJGG_000638_dfe00851086d4e5d1b0711ca47a66dfa5f28af022ddbde1033e3e59ab0ea64b2.json",
+        "announcement": {
+          "FUNDCODE": "000638",
+          "TITLE": "富国富钱包货币市场基金二0二六年中期报告",
+          "ShortTitle": "富国富钱包货币A",
+          "NEWCATEGORY": "3",
+          "PUBLISHDATE": "2026-08-31T00:00:00",
+          "PUBLISHDATEDesc": "2026-08-31",
+          "ATTACHTYPE": "0",
+          "ID": "AN202608311828782527"
+        },
+        "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828782527_1.pdf",
+        "announcementCheckedAsOf": "2026-10-23",
+        "basis": "fund_total_assets",
+        "totalAssets": 263368908115.33,
+        "amounts": {
+          "股票": 0.0,
+          "债券": 123005050092.56,
+          "现金": 140276448654.46,
+          "基金": 0.0,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 87409368.31
+        },
+        "assets": {
+          "股票": 0.0,
+          "债券": 46.70446901754088,
+          "现金": 53.2623420350866,
+          "基金": 0.0,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 0.033188947372528574
+        },
+        "portfolioRows": [
+          {
+            "rank": 1,
+            "label": "固定收益投资",
+            "amount": 123005050092.56,
+            "reportedPercent": 46.7
+          },
+          {
+            "rank": 2,
+            "label": "买入返售金融资产",
+            "amount": 42915640597.79,
+            "reportedPercent": 16.29
+          },
+          {
+            "rank": 3,
+            "label": "银行存款和结算备付金合计",
+            "amount": 97360808056.67,
+            "reportedPercent": 36.97
+          },
+          {
+            "rank": 4,
+            "label": "其他各项资产",
+            "amount": 87409368.31,
+            "reportedPercent": 0.03
+          },
+          {
+            "rank": 5,
+            "label": "合计",
+            "amount": 263368908115.33,
+            "reportedPercent": 100.0
+          }
+        ],
+        "balance": {
+          "totalAssets": 263368908115.33,
+          "netAssets": 249597649102.59,
+          "liabilities": 13771259012.74,
+          "navToTotalAssets": 0.9477111436149117
+        },
+        "section": "7.1",
+        "status": "verified",
+        "pdfSha256": "a9659bd1b2692bd374c09e107153585d4dfe5e15f81cb826aad98bab9a8291b3",
+        "pdfBytes": 1052945,
+        "textSha256": "04e805a70df7deb2292e72edce3ee2784d3ead8b027815d7a51931e55a2731d9",
+        "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828782527.pdf",
+        "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\a9659bd1b2692bd374c09e107153585d4dfe5e15f81cb826aad98bab9a8291b3.txt.gz",
+        "textExtractor": {
+          "contract": "page_get_text_default_join_newline_v1",
+          "binding": "1.28.2",
+          "engine": "1.28.2"
+        }
+      },
+      "reportRawTags": {
+        "基金代码": "000638",
+        "天天基金细分类": "货币型-普通货币",
+        "标准资产大类": "现金",
+        "标准资产细类": "货币基金",
+        "是否纯债": 0,
+        "是否短债": 0,
+        "是否指数增强": 0,
+        "是否商品黄金": 0,
+        "是否QDII": 0,
+        "分类来源": "天天基金_fundcode_search",
+        "最近更新时间": "2026-06-11T11:27:39+08:00"
+      },
+      "businessLookthrough": {
+        "assets": {
+          "固定收益": 0.47171513707716284,
+          "现金及货币工具": 0.5379496545543746,
+          "其他资产": 0.00033520836846253856
+        },
+        "assetChildren": {
+          "现金及货币工具": [
+            {
+              "name": "买入返售金融资产",
+              "value": 0.16457826139745807
+            },
+            {
+              "name": "存款与结算备付金",
+              "value": 0.37337139315691653
+            }
+          ],
+          "固定收益": [
+            {
+              "name": "金融债券",
+              "value": 0.08198696772919961
+            },
+            {
+              "name": "企业短期融资券",
+              "value": 0.004584980538501584
+            },
+            {
+              "name": "中期票据",
+              "value": 0.000861095182431291
+            },
+            {
+              "name": "同业存单",
+              "value": 0.38428209362703036
+            }
+          ],
+          "其他资产": [
+            {
+              "name": "其他资产未细分",
+              "value": 0.00033520836846253856
+            }
+          ]
+        },
+        "styles": {},
+        "fundTypeMajor": "货币类",
+        "fundTypeMinor": "货币",
+        "stockComplete": true,
+        "bondComplete": true,
+        "stockStatus": "报告股票总额为零",
+        "stockGapReason": "",
+        "stockCoveragePercent": null,
+        "bondStatus": "债券品种汇总表金额核验",
+        "fullStockRows": 0,
+        "detailsSource": {
+          "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828782527_1.pdf",
+          "pdfSha256": "a9659bd1b2692bd374c09e107153585d4dfe5e15f81cb826aad98bab9a8291b3",
+          "textSha256": "04e805a70df7deb2292e72edce3ee2784d3ead8b027815d7a51931e55a2731d9",
+          "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\a9659bd1b2692bd374c09e107153585d4dfe5e15f81cb826aad98bab9a8291b3.txt.gz",
+          "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828782527.pdf",
+          "parserFingerprint": "41f11e657223b75f5e562f8d53a073d5282066a3503dff459f1774b335becbdd",
+          "sourceCapturedAt": "2026-10-23T03:20:27+08:00"
+        },
+        "reportPeriod": "2026-06-30",
+        "foreignSectorEvidence": null,
+        "stockDetailGapContribution": 0.0,
+        "productDefinition": null,
+        "fundTypeBasis": "source_product_dictionary",
+        "supplementalTags": {
+          "基金代码": "000638",
+          "天天基金细分类": "货币型-普通货币",
+          "标准资产大类": "现金",
+          "标准资产细类": "货币基金",
+          "是否纯债": 0,
+          "是否短债": 0,
+          "是否指数增强": 0,
+          "是否商品黄金": 0,
+          "是否QDII": 0,
+          "分类来源": "天天基金_fundcode_search",
+          "最近更新时间": "2026-06-11T11:27:39+08:00"
+        }
+      },
+      "windFundClassification": {
+        "major": "货币市场型",
+        "minor": "货币市场型",
+        "level3Source": null,
+        "resolved": true,
+        "reason": "explicit_source_type_alignment",
+        "sourceLabel": "货币型-普通货币",
+        "source": "天天基金_fundcode_search",
+        "sourceUpdatedAt": "2026-06-11T11:27:39+08:00",
+        "standardVersion": "public_reference_csisc_202311",
+        "isWindDirectData": false
+      },
+      "bondVarietiesCsv": "000638_2026-06-30_bond_varieties.csv",
+      "baseWeight": 1.01,
+      "weightChange": 0.0,
+      "weightDate": "2026-10-22",
+      "weightBasis": "source_latest",
+      "allocationBasis": "latest_observed_current",
+      "allocationLabel": "最新库内披露仓位",
+      "latestObservedHoldingDate": "2026-10-22",
+      "referenceParentId": null,
+      "referenceParentName": null,
+      "sourceAssetVerification": {
+        "status": "核验记录已过期，需刷新",
+        "latestSourcePeriod": "2026-06-30",
+        "checkedAt": "2026-10-07T12:22:15+08:00",
+        "scope": "F10资产配置期次"
+      },
+      "bondRawCsv": "000638_2026-06-30_bond.csv"
+    },
+    {
+      "strategyId": "qieman__ZH164292",
+      "strategyName": "富国多元低波稳健理财",
+      "parentId": "qieman__ZH164292",
+      "isParent": true,
+      "holdingDate": "2026-10-22",
+      "holdingSnapshotId": "qieman-ZH164292-2026-10-22-3f1899a407b6",
+      "holdingConfidence": "official_stargate_exact_current_composition",
+      "fundCode": "022055",
+      "fundName": "富国中证消费50ETF联接E",
+      "weight": 0.49,
+      "fundClassMajor": "权益类",
+      "fundClassMinor": "指数型-股票",
+      "fundClassSource": "天天基金_fundcode_search",
+      "reportDate": "2026-06-30",
+      "reportSource": "东财F10资产配置",
+      "reportSnapshotId": "eastmoney_f10_all_market-asset_allocation-022055-0-684aa16bccaf8233",
+      "reportUrl": "https://fundf10.eastmoney.com/zcpz_022055.html",
+      "assets": {
+        "股票": 0.4467812031075725,
+        "债券": 5.583633326690305,
+        "现金": 0.6467900377168704,
+        "基金": 93.05558056936509,
+        "商品": 0.0,
+        "存托凭证": 0.0,
+        "其他": 0.2672148631201588
+      },
+      "disclosedSum": 100.0,
+      "unexplainedContribution": 0.0,
+      "interactionBreakdown": {
+        "stockMajor": {
+          "纺织服饰": 9.345897063608645e-05,
+          "社会服务": 4.6729485318043226e-05,
+          "食品饮料": 0.001401884559541297,
+          "农林牧渔": 0.0,
+          "家用电器": 0.00028037691190825934,
+          "商贸零售": 0.00014018845595412967,
+          "基础化工": 4.6729485318043226e-05,
+          "轻工制造": 9.345897063608645e-05,
+          "美容护理": 4.6729485318043226e-05
+        },
+        "stockMinor": [
+          {
+            "major": "纺织服饰",
+            "minor": "服装家纺",
+            "value": 9.345897063608645e-05
+          },
+          {
+            "major": "社会服务",
+            "minor": "酒店餐饮",
+            "value": 4.6729485318043226e-05
+          },
+          {
+            "major": "食品饮料",
+            "minor": "调味发酵品Ⅱ",
+            "value": 0.0001869179412721729
+          },
+          {
+            "major": "食品饮料",
+            "minor": "白酒Ⅱ",
+            "value": 0.0007009422797706485
+          },
+          {
+            "major": "农林牧渔",
+            "minor": "种植业",
+            "value": 0.0
+          },
+          {
+            "major": "家用电器",
+            "minor": "白色家电",
+            "value": 0.0001869179412721729
+          },
+          {
+            "major": "商贸零售",
+            "minor": "一般零售",
+            "value": 0.0
+          },
+          {
+            "major": "基础化工",
+            "minor": "化学制品",
+            "value": 4.6729485318043226e-05
+          },
+          {
+            "major": "食品饮料",
+            "minor": "饮料乳品",
+            "value": 0.0005140243384984755
+          },
+          {
+            "major": "商贸零售",
+            "minor": "旅游零售Ⅱ",
+            "value": 0.00014018845595412967
+          },
+          {
+            "major": "轻工制造",
+            "minor": "家居用品",
+            "value": 9.345897063608645e-05
+          },
+          {
+            "major": "家用电器",
+            "minor": "小家电",
+            "value": 9.345897063608645e-05
+          },
+          {
+            "major": "美容护理",
+            "minor": "化妆品",
+            "value": 4.6729485318043226e-05
+          }
+        ],
+        "bondTypes": {},
+        "stockRows": 23
+      },
+      "rawNavAssets": {
+        "股票": 0.47,
+        "债券": 5.85,
+        "现金": 0.68,
+        "基金": null,
+        "商品": null,
+        "存托凭证": null,
+        "其他": null
+      },
+      "rawNavBreakdown": {
+        "stockMajor": {
+          "纺织服饰": 9.8e-05,
+          "社会服务": 4.9e-05,
+          "食品饮料": 0.00147,
+          "农林牧渔": 0.0,
+          "家用电器": 0.000294,
+          "商贸零售": 0.000147,
+          "基础化工": 4.9e-05,
+          "轻工制造": 9.8e-05,
+          "美容护理": 4.9e-05
+        },
+        "stockMinor": [
+          {
+            "major": "纺织服饰",
+            "minor": "服装家纺",
+            "value": 9.8e-05
+          },
+          {
+            "major": "社会服务",
+            "minor": "酒店餐饮",
+            "value": 4.9e-05
+          },
+          {
+            "major": "食品饮料",
+            "minor": "调味发酵品Ⅱ",
+            "value": 0.000196
+          },
+          {
+            "major": "食品饮料",
+            "minor": "白酒Ⅱ",
+            "value": 0.000735
+          },
+          {
+            "major": "农林牧渔",
+            "minor": "种植业",
+            "value": 0.0
+          },
+          {
+            "major": "家用电器",
+            "minor": "白色家电",
+            "value": 0.000196
+          },
+          {
+            "major": "商贸零售",
+            "minor": "一般零售",
+            "value": 0.0
+          },
+          {
+            "major": "基础化工",
+            "minor": "化学制品",
+            "value": 4.9e-05
+          },
+          {
+            "major": "食品饮料",
+            "minor": "饮料乳品",
+            "value": 0.000539
+          },
+          {
+            "major": "商贸零售",
+            "minor": "旅游零售Ⅱ",
+            "value": 0.000147
+          },
+          {
+            "major": "轻工制造",
+            "minor": "家居用品",
+            "value": 9.8e-05
+          },
+          {
+            "major": "家用电器",
+            "minor": "小家电",
+            "value": 9.8e-05
+          },
+          {
+            "major": "美容护理",
+            "minor": "化妆品",
+            "value": 4.9e-05
+          }
+        ],
+        "bondTypes": {
+          "利率债/政策性金融债": 0.028713999999999996
+        },
+        "stockRows": 23
+      },
+      "rawNavUnexplainedContribution": 0.4557,
+      "assetBasis": "fund_total_assets",
+      "assetCompositionSource": {
+        "fundCode": "022055",
+        "reportDate": "2026-06-30",
+        "capturedAt": "2026-10-23T03:21:50+08:00",
+        "announcementResponseSha256": "ecaed7c9ed2ec72ebf1f2f74954ab5546dc5ced35599a49094a7282e99006868",
+        "rawAnnouncementPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\JJGG_022055_ecaed7c9ed2ec72ebf1f2f74954ab5546dc5ced35599a49094a7282e99006868.json",
+        "announcement": {
+          "FUNDCODE": "022055",
+          "TITLE": "富国中证消费50交易型开放式指数证券投资基金联接基金二0二六年中期报告",
+          "ShortTitle": "富国中证消费50ETF联接E",
+          "NEWCATEGORY": "3",
+          "PUBLISHDATE": "2026-08-31T00:00:00",
+          "PUBLISHDATEDesc": "2026-08-31",
+          "ATTACHTYPE": "0",
+          "ID": "AN202608311828787830"
+        },
+        "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828787830_1.pdf",
+        "announcementCheckedAsOf": "2026-10-23",
+        "basis": "fund_total_assets",
+        "totalAssets": 1080433743.95,
+        "amounts": {
+          "股票": 4827174.88,
+          "债券": 60327458.6,
+          "现金": 6988137.82,
+          "基金": 1005403893.1,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 2887079.55
+        },
+        "assets": {
+          "股票": 0.4467812031075725,
+          "债券": 5.583633326690305,
+          "现金": 0.6467900377168704,
+          "基金": 93.05558056936509,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 0.2672148631201588
+        },
+        "portfolioRows": [
+          {
+            "rank": 1,
+            "label": "权益投资",
+            "amount": 4827174.88,
+            "reportedPercent": 0.45
+          },
+          {
+            "rank": 2,
+            "label": "基金投资",
+            "amount": 1005403893.1,
+            "reportedPercent": 93.06
+          },
+          {
+            "rank": 3,
+            "label": "固定收益投资",
+            "amount": 60327458.6,
+            "reportedPercent": 5.58
+          },
+          {
+            "rank": 4,
+            "label": "贵金属投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 5,
+            "label": "金融衍生品投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 6,
+            "label": "买入返售金融资产",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 7,
+            "label": "银行存款和结算备付金合计",
+            "amount": 6988137.82,
+            "reportedPercent": 0.65
+          },
+          {
+            "rank": 8,
+            "label": "其他各项资产",
+            "amount": 2887079.55,
+            "reportedPercent": 0.27
+          },
+          {
+            "rank": 9,
+            "label": "合计",
+            "amount": 1080433743.95,
+            "reportedPercent": 100.0
+          }
+        ],
+        "balance": {
+          "totalAssets": 1080433743.95,
+          "netAssets": 1030369648.47,
+          "liabilities": 50064095.48,
+          "navToTotalAssets": 0.9536629656743516
+        },
+        "section": "7.1",
+        "status": "verified",
+        "pdfSha256": "733075d865f44c29fc02397922ae9134fb1953125eb0fd8e05fe58d003d48861",
+        "pdfBytes": 1169800,
+        "textSha256": "bde79b5c9a876bf045744b1825f5c89b87fb53998d188d4d0ee6ec328dd243c6",
+        "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828787830.pdf",
+        "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\733075d865f44c29fc02397922ae9134fb1953125eb0fd8e05fe58d003d48861.txt.gz",
+        "textExtractor": {
+          "contract": "page_get_text_default_join_newline_v1",
+          "binding": "1.28.2",
+          "engine": "1.28.2"
+        }
+      },
+      "reportRawTags": {
+        "基金代码": "022055",
+        "天天基金细分类": "指数型-股票",
+        "标准资产大类": "权益",
+        "标准资产细类": "指数权益",
+        "是否纯债": 0,
+        "是否短债": 0,
+        "是否指数增强": 0,
+        "是否商品黄金": 0,
+        "是否QDII": 0,
+        "分类来源": "天天基金_fundcode_search",
+        "最近更新时间": "2026-09-24T13:18:04+08:00"
+      },
+      "businessLookthrough": {
+        "assets": {
+          "股票": 0.0021892278952271057,
+          "固定收益": 0.027359803300782495,
+          "现金及货币工具": 0.003169271184812665,
+          "基金投资": 0.45597234478988896,
+          "其他资产": 0.0013093528292887784
+        },
+        "assetChildren": {
+          "现金及货币工具": [
+            {
+              "name": "存款与结算备付金",
+              "value": 0.003169271184812665
+            }
+          ],
+          "股票": [
+            {
+              "name": "消费",
+              "value": 0.0021508939851359776
+            },
+            {
+              "name": "周期",
+              "value": 3.83339100911279e-05
+            }
+          ],
+          "固定收益": [
+            {
+              "name": "国家债券",
+              "value": 0.027359803300782495
+            }
+          ],
+          "基金投资": [
+            {
+              "name": "基金投资未细分",
+              "value": 0.45597234478988896
+            }
+          ],
+          "其他资产": [
+            {
+              "name": "其他资产未细分",
+              "value": 0.0013093528292887784
+            }
+          ]
+        },
+        "styles": {
+          "消费": [
+            {
+              "name": "食品饮料",
+              "value": 0.0013975561745041885
+            },
+            {
+              "name": "家用电器",
+              "value": 0.0003097552273556978
+            },
+            {
+              "name": "商贸零售",
+              "value": 0.000158927561233173
+            },
+            {
+              "name": "纺织服饰",
+              "value": 8.218939078610402e-05
+            },
+            {
+              "name": "轻工制造（除造纸Ⅱ）",
+              "value": 9.529395076424482e-05
+            },
+            {
+              "name": "美容护理",
+              "value": 4.076251805963414e-05
+            },
+            {
+              "name": "社会服务",
+              "value": 4.4286380602172604e-05
+            },
+            {
+              "name": "农林牧渔",
+              "value": 2.212278183076272e-05
+            }
+          ],
+          "周期": [
+            {
+              "name": "基础化工",
+              "value": 3.83339100911279e-05
+            }
+          ]
+        },
+        "fundTypeMajor": "权益类",
+        "fundTypeMinor": "综合权益",
+        "stockComplete": true,
+        "bondComplete": true,
+        "stockStatus": "完整股票表金额提取",
+        "stockGapReason": "",
+        "stockCoveragePercent": 100.0,
+        "bondStatus": "债券品种汇总表金额核验",
+        "fullStockRows": 23,
+        "detailsSource": {
+          "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828787830_1.pdf",
+          "pdfSha256": "733075d865f44c29fc02397922ae9134fb1953125eb0fd8e05fe58d003d48861",
+          "textSha256": "bde79b5c9a876bf045744b1825f5c89b87fb53998d188d4d0ee6ec328dd243c6",
+          "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\733075d865f44c29fc02397922ae9134fb1953125eb0fd8e05fe58d003d48861.txt.gz",
+          "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828787830.pdf",
+          "parserFingerprint": "41f11e657223b75f5e562f8d53a073d5282066a3503dff459f1774b335becbdd",
+          "sourceCapturedAt": "2026-10-23T03:21:50+08:00"
+        },
+        "reportPeriod": "2026-06-30",
+        "foreignSectorEvidence": null,
+        "stockDetailGapContribution": 0.0,
+        "productDefinition": null,
+        "fundTypeBasis": "source_product_dictionary",
+        "supplementalTags": {
+          "基金代码": "022055",
+          "天天基金细分类": "指数型-股票",
+          "标准资产大类": "权益",
+          "标准资产细类": "指数权益",
+          "是否纯债": 0,
+          "是否短债": 0,
+          "是否指数增强": 0,
+          "是否商品黄金": 0,
+          "是否QDII": 0,
+          "分类来源": "天天基金_fundcode_search",
+          "最近更新时间": "2026-09-24T13:18:04+08:00"
+        }
+      },
+      "windFundClassification": {
+        "major": "股票型",
+        "minor": "被动指数型",
+        "level3Source": null,
+        "resolved": true,
+        "reason": "source_index_category_and_enhancement_flag",
+        "sourceLabel": "指数型-股票",
+        "source": "天天基金_fundcode_search",
+        "sourceUpdatedAt": "2026-09-24T13:18:04+08:00",
+        "standardVersion": "public_reference_csisc_202311",
+        "isWindDirectData": false
+      },
+      "fullStockCsv": "022055_2026-06-30_complete_stock.csv",
+      "bondVarietiesCsv": "022055_2026-06-30_bond_varieties.csv",
+      "baseWeight": 0.49,
+      "weightChange": 0.0,
+      "weightDate": "2026-10-22",
+      "weightBasis": "source_latest",
+      "allocationBasis": "latest_observed_current",
+      "allocationLabel": "最新库内披露仓位",
+      "latestObservedHoldingDate": "2026-10-22",
+      "referenceParentId": null,
+      "referenceParentName": null,
+      "sourceAssetVerification": {
+        "status": "核验记录已过期，需刷新",
+        "latestSourcePeriod": "2026-06-30",
+        "checkedAt": "2026-10-07T12:52:08+08:00",
+        "scope": "F10资产配置期次"
+      },
+      "stockRawCsv": "022055_2026-06-30_stock.csv",
+      "bondRawCsv": "022055_2026-06-30_bond.csv"
+    },
+    {
+      "strategyId": "qieman__ZH164292",
+      "strategyName": "富国多元低波稳健理财",
+      "parentId": "qieman__ZH164292",
+      "isParent": true,
+      "holdingDate": "2026-10-22",
+      "holdingSnapshotId": "qieman-ZH164292-2026-10-22-3f1899a407b6",
+      "holdingConfidence": "official_stargate_exact_current_composition",
+      "fundCode": "022463",
+      "fundName": "富国中证A500ETF发起式联接A",
+      "weight": 0.43,
+      "fundClassMajor": "权益类",
+      "fundClassMinor": "指数型-股票",
+      "fundClassSource": "天天基金_fundcode_search",
+      "reportDate": "2026-06-30",
+      "reportSource": "东财F10资产配置",
+      "reportSnapshotId": "eastmoney_f10_all_market-asset_allocation-022463-0-525a7ebbeebe3e5d",
+      "reportUrl": "https://fundf10.eastmoney.com/zcpz_022463.html",
+      "assets": {
+        "股票": 0.3529527387204243,
+        "债券": 5.1188222035783495,
+        "现金": 0.6170225555946182,
+        "基金": 93.37791530867051,
+        "商品": 0.0,
+        "存托凭证": 0.0,
+        "其他": 0.5332871934360872
+      },
+      "disclosedSum": 100.0,
+      "unexplainedContribution": 0.0,
+      "interactionBreakdown": {
+        "stockMajor": {
+          "银行": 0.0001245763277541658,
+          "普钢": 0.0,
+          "石油石化": 0.0,
+          "非银金融": 8.305088516944387e-05,
+          "机械设备": 0.0,
+          "通信": 4.1525442584721936e-05,
+          "汽车": 0.0,
+          "电力设备": 0.0,
+          "基础化工": 0.0,
+          "有色金属": 4.1525442584721936e-05,
+          "国防军工": 0.0,
+          "建筑材料": 0.0,
+          "电子": 0.00029067809809305353,
+          "医药生物": 8.305088516944387e-05,
+          "食品饮料": 8.305088516944387e-05,
+          "工程咨询服务Ⅱ": 0.0,
+          "综合Ⅱ": 0.0,
+          "家用电器": 0.0,
+          "公用事业": 4.1525442584721936e-05,
+          "油气开采Ⅱ": 0.0,
+          "交通运输": 0.0,
+          "煤炭": 0.0,
+          "基础建设": 0.0,
+          "房屋建设Ⅱ": 0.0,
+          "商贸零售": 0.0,
+          "计算机": 0.0
+        },
+        "stockMinor": [
+          {
+            "major": "银行",
+            "minor": "银行Ⅱ",
+            "value": 0.0001245763277541658
+          },
+          {
+            "major": "普钢",
+            "minor": "普钢",
+            "value": 0.0
+          },
+          {
+            "major": "石油石化",
+            "minor": "炼化及贸易",
+            "value": 0.0
+          },
+          {
+            "major": "非银金融",
+            "minor": "证券Ⅱ",
+            "value": 4.1525442584721936e-05
+          },
+          {
+            "major": "机械设备",
+            "minor": "工程机械",
+            "value": 0.0
+          },
+          {
+            "major": "通信",
+            "minor": "通信服务",
+            "value": 0.0
+          },
+          {
+            "major": "汽车",
+            "minor": "商用车",
+            "value": 0.0
+          },
+          {
+            "major": "电力设备",
+            "minor": "电网设备",
+            "value": 0.0
+          },
+          {
+            "major": "基础化工",
+            "minor": "农化制品",
+            "value": 0.0
+          },
+          {
+            "major": "汽车",
+            "minor": "乘用车",
+            "value": 0.0
+          },
+          {
+            "major": "有色金属",
+            "minor": "小金属",
+            "value": 0.0
+          },
+          {
+            "major": "国防军工",
+            "minor": "航天装备Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "国防军工",
+            "minor": "航海装备Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "基础化工",
+            "minor": "化学制品",
+            "value": 0.0
+          },
+          {
+            "major": "建筑材料",
+            "minor": "玻璃玻纤",
+            "value": 0.0
+          },
+          {
+            "major": "电子",
+            "minor": "元件",
+            "value": 4.1525442584721936e-05
+          },
+          {
+            "major": "医药生物",
+            "minor": "化学制药",
+            "value": 4.1525442584721936e-05
+          },
+          {
+            "major": "电子",
+            "minor": "半导体",
+            "value": 0.00024915265550833163
+          },
+          {
+            "major": "电力设备",
+            "minor": "其他电源设备Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "通信",
+            "minor": "通信设备",
+            "value": 4.1525442584721936e-05
+          },
+          {
+            "major": "有色金属",
+            "minor": "贵金属",
+            "value": 0.0
+          },
+          {
+            "major": "有色金属",
+            "minor": "工业金属",
+            "value": 4.1525442584721936e-05
+          },
+          {
+            "major": "食品饮料",
+            "minor": "白酒Ⅱ",
+            "value": 8.305088516944387e-05
+          },
+          {
+            "major": "建筑材料",
+            "minor": "水泥",
+            "value": 0.0
+          },
+          {
+            "major": "汽车",
+            "minor": "汽车零部件",
+            "value": 0.0
+          },
+          {
+            "major": "工程咨询服务Ⅱ",
+            "minor": "工程咨询服务Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "综合Ⅱ",
+            "minor": "综合Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "家用电器",
+            "minor": "白色家电",
+            "value": 0.0
+          },
+          {
+            "major": "国防军工",
+            "minor": "航空装备Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "公用事业",
+            "minor": "电力",
+            "value": 4.1525442584721936e-05
+          },
+          {
+            "major": "食品饮料",
+            "minor": "饮料乳品",
+            "value": 0.0
+          },
+          {
+            "major": "油气开采Ⅱ",
+            "minor": "油气开采Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "基础化工",
+            "minor": "化学原料",
+            "value": 0.0
+          },
+          {
+            "major": "交通运输",
+            "minor": "铁路公路",
+            "value": 0.0
+          },
+          {
+            "major": "电力设备",
+            "minor": "光伏设备",
+            "value": 0.0
+          },
+          {
+            "major": "煤炭",
+            "minor": "煤炭开采",
+            "value": 0.0
+          },
+          {
+            "major": "非银金融",
+            "minor": "保险Ⅱ",
+            "value": 4.1525442584721936e-05
+          },
+          {
+            "major": "基础建设",
+            "minor": "基础建设",
+            "value": 0.0
+          },
+          {
+            "major": "房屋建设Ⅱ",
+            "minor": "房屋建设Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "机械设备",
+            "minor": "轨交设备Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "交通运输",
+            "minor": "航运港口",
+            "value": 0.0
+          },
+          {
+            "major": "商贸零售",
+            "minor": "旅游零售Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "计算机",
+            "minor": "计算机设备",
+            "value": 0.0
+          },
+          {
+            "major": "医药生物",
+            "minor": "生物制品",
+            "value": 0.0
+          },
+          {
+            "major": "医药生物",
+            "minor": "医疗服务",
+            "value": 4.1525442584721936e-05
+          },
+          {
+            "major": "食品饮料",
+            "minor": "调味发酵品Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "有色金属",
+            "minor": "能源金属",
+            "value": 0.0
+          },
+          {
+            "major": "基础化工",
+            "minor": "塑料",
+            "value": 0.0
+          }
+        ],
+        "bondTypes": {
+          "利率债/政策性金融债": 0.022008484569902623
+        },
+        "stockRows": 100
+      },
+      "rawNavAssets": {
+        "股票": 0.37,
+        "债券": 5.3,
+        "现金": 0.64,
+        "基金": null,
+        "商品": null,
+        "存托凭证": null,
+        "其他": null
+      },
+      "rawNavBreakdown": {
+        "stockMajor": {
+          "银行": 0.000129,
+          "普钢": 0.0,
+          "石油石化": 0.0,
+          "非银金融": 8.6e-05,
+          "机械设备": 0.0,
+          "通信": 4.3e-05,
+          "汽车": 0.0,
+          "电力设备": 0.0,
+          "基础化工": 0.0,
+          "有色金属": 4.3e-05,
+          "国防军工": 0.0,
+          "建筑材料": 0.0,
+          "电子": 0.000301,
+          "医药生物": 8.6e-05,
+          "食品饮料": 8.6e-05,
+          "工程咨询服务Ⅱ": 0.0,
+          "综合Ⅱ": 0.0,
+          "家用电器": 0.0,
+          "公用事业": 4.3e-05,
+          "油气开采Ⅱ": 0.0,
+          "交通运输": 0.0,
+          "煤炭": 0.0,
+          "基础建设": 0.0,
+          "房屋建设Ⅱ": 0.0,
+          "商贸零售": 0.0,
+          "计算机": 0.0
+        },
+        "stockMinor": [
+          {
+            "major": "银行",
+            "minor": "银行Ⅱ",
+            "value": 0.000129
+          },
+          {
+            "major": "普钢",
+            "minor": "普钢",
+            "value": 0.0
+          },
+          {
+            "major": "石油石化",
+            "minor": "炼化及贸易",
+            "value": 0.0
+          },
+          {
+            "major": "非银金融",
+            "minor": "证券Ⅱ",
+            "value": 4.3e-05
+          },
+          {
+            "major": "机械设备",
+            "minor": "工程机械",
+            "value": 0.0
+          },
+          {
+            "major": "通信",
+            "minor": "通信服务",
+            "value": 0.0
+          },
+          {
+            "major": "汽车",
+            "minor": "商用车",
+            "value": 0.0
+          },
+          {
+            "major": "电力设备",
+            "minor": "电网设备",
+            "value": 0.0
+          },
+          {
+            "major": "基础化工",
+            "minor": "农化制品",
+            "value": 0.0
+          },
+          {
+            "major": "汽车",
+            "minor": "乘用车",
+            "value": 0.0
+          },
+          {
+            "major": "有色金属",
+            "minor": "小金属",
+            "value": 0.0
+          },
+          {
+            "major": "国防军工",
+            "minor": "航天装备Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "国防军工",
+            "minor": "航海装备Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "基础化工",
+            "minor": "化学制品",
+            "value": 0.0
+          },
+          {
+            "major": "建筑材料",
+            "minor": "玻璃玻纤",
+            "value": 0.0
+          },
+          {
+            "major": "电子",
+            "minor": "元件",
+            "value": 4.3e-05
+          },
+          {
+            "major": "医药生物",
+            "minor": "化学制药",
+            "value": 4.3e-05
+          },
+          {
+            "major": "电子",
+            "minor": "半导体",
+            "value": 0.00025800000000000004
+          },
+          {
+            "major": "电力设备",
+            "minor": "其他电源设备Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "通信",
+            "minor": "通信设备",
+            "value": 4.3e-05
+          },
+          {
+            "major": "有色金属",
+            "minor": "贵金属",
+            "value": 0.0
+          },
+          {
+            "major": "有色金属",
+            "minor": "工业金属",
+            "value": 4.3e-05
+          },
+          {
+            "major": "食品饮料",
+            "minor": "白酒Ⅱ",
+            "value": 8.6e-05
+          },
+          {
+            "major": "建筑材料",
+            "minor": "水泥",
+            "value": 0.0
+          },
+          {
+            "major": "汽车",
+            "minor": "汽车零部件",
+            "value": 0.0
+          },
+          {
+            "major": "工程咨询服务Ⅱ",
+            "minor": "工程咨询服务Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "综合Ⅱ",
+            "minor": "综合Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "家用电器",
+            "minor": "白色家电",
+            "value": 0.0
+          },
+          {
+            "major": "国防军工",
+            "minor": "航空装备Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "公用事业",
+            "minor": "电力",
+            "value": 4.3e-05
+          },
+          {
+            "major": "食品饮料",
+            "minor": "饮料乳品",
+            "value": 0.0
+          },
+          {
+            "major": "油气开采Ⅱ",
+            "minor": "油气开采Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "基础化工",
+            "minor": "化学原料",
+            "value": 0.0
+          },
+          {
+            "major": "交通运输",
+            "minor": "铁路公路",
+            "value": 0.0
+          },
+          {
+            "major": "电力设备",
+            "minor": "光伏设备",
+            "value": 0.0
+          },
+          {
+            "major": "煤炭",
+            "minor": "煤炭开采",
+            "value": 0.0
+          },
+          {
+            "major": "非银金融",
+            "minor": "保险Ⅱ",
+            "value": 4.3e-05
+          },
+          {
+            "major": "基础建设",
+            "minor": "基础建设",
+            "value": 0.0
+          },
+          {
+            "major": "房屋建设Ⅱ",
+            "minor": "房屋建设Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "机械设备",
+            "minor": "轨交设备Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "交通运输",
+            "minor": "航运港口",
+            "value": 0.0
+          },
+          {
+            "major": "商贸零售",
+            "minor": "旅游零售Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "计算机",
+            "minor": "计算机设备",
+            "value": 0.0
+          },
+          {
+            "major": "医药生物",
+            "minor": "生物制品",
+            "value": 0.0
+          },
+          {
+            "major": "医药生物",
+            "minor": "医疗服务",
+            "value": 4.3e-05
+          },
+          {
+            "major": "食品饮料",
+            "minor": "调味发酵品Ⅱ",
+            "value": 0.0
+          },
+          {
+            "major": "有色金属",
+            "minor": "能源金属",
+            "value": 0.0
+          },
+          {
+            "major": "基础化工",
+            "minor": "塑料",
+            "value": 0.0
+          }
+        ],
+        "bondTypes": {
+          "利率债/政策性金融债": 0.022789999999999998
+        },
+        "stockRows": 100
+      },
+      "rawNavUnexplainedContribution": 0.402867,
+      "assetBasis": "fund_total_assets",
+      "assetCompositionSource": {
+        "fundCode": "022463",
+        "reportDate": "2026-06-30",
+        "capturedAt": "2026-10-23T03:21:52+08:00",
+        "announcementResponseSha256": "4626f2ce49413fe97064b139dff0e7680bea012070788010be0e3803929710c1",
+        "rawAnnouncementPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\JJGG_022463_4626f2ce49413fe97064b139dff0e7680bea012070788010be0e3803929710c1.json",
+        "announcement": {
+          "FUNDCODE": "022463",
+          "TITLE": "富国中证A500交易型开放式指数证券投资基金发起式联接基金二0二六年中期报告",
+          "ShortTitle": "富国中证A500ETF发起式联接A",
+          "NEWCATEGORY": "3",
+          "PUBLISHDATE": "2026-08-31T00:00:00",
+          "PUBLISHDATEDesc": "2026-08-31",
+          "ATTACHTYPE": "0",
+          "ID": "AN202608311828787890"
+        },
+        "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828787890_1.pdf",
+        "announcementCheckedAsOf": "2026-10-23",
+        "basis": "fund_total_assets",
+        "totalAssets": 2287949380.78,
+        "amounts": {
+          "股票": 8075380.0,
+          "债券": 117116060.91,
+          "现金": 14117163.74,
+          "基金": 2136439435.09,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 12201341.04
+        },
+        "assets": {
+          "股票": 0.3529527387204243,
+          "债券": 5.1188222035783495,
+          "现金": 0.6170225555946182,
+          "基金": 93.37791530867051,
+          "商品": 0.0,
+          "存托凭证": 0.0,
+          "其他": 0.5332871934360872
+        },
+        "portfolioRows": [
+          {
+            "rank": 1,
+            "label": "权益投资",
+            "amount": 8075380.0,
+            "reportedPercent": 0.35
+          },
+          {
+            "rank": 2,
+            "label": "基金投资",
+            "amount": 2136439435.09,
+            "reportedPercent": 93.38
+          },
+          {
+            "rank": 3,
+            "label": "固定收益投资",
+            "amount": 117116060.91,
+            "reportedPercent": 5.12
+          },
+          {
+            "rank": 4,
+            "label": "贵金属投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 5,
+            "label": "金融衍生品投资",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 6,
+            "label": "买入返售金融资产",
+            "amount": 0.0,
+            "reportedPercent": 0.0
+          },
+          {
+            "rank": 7,
+            "label": "银行存款和结算备付金合计",
+            "amount": 14117163.74,
+            "reportedPercent": 0.62
+          },
+          {
+            "rank": 8,
+            "label": "其他各项资产",
+            "amount": 12201341.04,
+            "reportedPercent": 0.53
+          },
+          {
+            "rank": 9,
+            "label": "合计",
+            "amount": 2287949380.78,
+            "reportedPercent": 100.0
+          }
+        ],
+        "balance": {
+          "totalAssets": 2287949380.78,
+          "netAssets": 2209490945.31,
+          "liabilities": 78458435.47,
+          "navToTotalAssets": 0.9657079670865566
+        },
+        "section": "7.1",
+        "status": "verified",
+        "pdfSha256": "9382c58fd9f9df02dde5100428753f3c3bd512d7e08fa6711d34eb3ab9f591a6",
+        "pdfBytes": 1326082,
+        "textSha256": "638c96fc4d809e3f7a5617ab73d3e1c3015d124d7da32aa3f733dac60821d752",
+        "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828787890.pdf",
+        "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\9382c58fd9f9df02dde5100428753f3c3bd512d7e08fa6711d34eb3ab9f591a6.txt.gz",
+        "textExtractor": {
+          "contract": "page_get_text_default_join_newline_v1",
+          "binding": "1.28.2",
+          "engine": "1.28.2"
+        }
+      },
+      "reportRawTags": {
+        "基金代码": "022463",
+        "天天基金细分类": "指数型-股票",
+        "标准资产大类": "权益",
+        "标准资产细类": "指数权益",
+        "是否纯债": 0,
+        "是否短债": 0,
+        "是否指数增强": 0,
+        "是否商品黄金": 0,
+        "是否QDII": 0,
+        "分类来源": "天天基金_fundcode_search",
+        "最近更新时间": "2026-06-11T11:27:39+08:00"
+      },
+      "businessLookthrough": {
+        "assets": {
+          "股票": 0.0015176967764978246,
+          "固定收益": 0.022010935475386902,
+          "现金及货币工具": 0.0026531969890568586,
+          "基金投资": 0.4015250358272832,
+          "其他资产": 0.0022931349317751753
+        },
+        "assetChildren": {
+          "现金及货币工具": [
+            {
+              "name": "存款与结算备付金",
+              "value": 0.0026531969890568586
+            }
+          ],
+          "股票": [
+            {
+              "name": "消费",
+              "value": 0.00013580482269851278
+            },
+            {
+              "name": "科技（TMT）",
+              "value": 0.00042541397470436044
+            },
+            {
+              "name": "金融地产",
+              "value": 0.00025441903780299243
+            },
+            {
+              "name": "周期",
+              "value": 0.00044376605904360633
+            },
+            {
+              "name": "医药医疗",
+              "value": 7.433000110431753e-05
+            },
+            {
+              "name": "先进制造",
+              "value": 0.00018396288114403518
+            }
+          ],
+          "固定收益": [
+            {
+              "name": "国家债券",
+              "value": 0.022010935475386902
+            }
+          ],
+          "基金投资": [
+            {
+              "name": "基金投资未细分",
+              "value": 0.4015250358272832
+            }
+          ],
+          "其他资产": [
+            {
+              "name": "其他资产未细分",
+              "value": 0.0022931349317751753
+            }
+          ]
+        },
+        "styles": {
+          "消费": [
+            {
+              "name": "食品饮料",
+              "value": 0.00010851650918752281
+            },
+            {
+              "name": "家用电器",
+              "value": 1.0295420081352312e-05
+            },
+            {
+              "name": "商贸零售",
+              "value": 8.709947941770565e-06
+            },
+            {
+              "name": "纺织服饰",
+              "value": 2.8777559745466704e-06
+            },
+            {
+              "name": "轻工制造（除造纸Ⅱ）",
+              "value": 3.2318372347377575e-06
+            },
+            {
+              "name": "社会服务",
+              "value": 2.1733522785826605e-06
+            }
+          ],
+          "科技（TMT）": [
+            {
+              "name": "电子",
+              "value": 0.0003375702480518582
+            },
+            {
+              "name": "通信",
+              "value": 6.319861847236544e-05
+            },
+            {
+              "name": "计算机",
+              "value": 2.4645108180136753e-05
+            }
+          ],
+          "金融地产": [
+            {
+              "name": "非银金融",
+              "value": 9.378417276296924e-05
+            },
+            {
+              "name": "银行",
+              "value": 0.0001486750375063077
+            },
+            {
+              "name": "房地产",
+              "value": 1.1959827533715512e-05
+            }
+          ],
+          "周期": [
+            {
+              "name": "有色金属",
+              "value": 0.000126120587467554
+            },
+            {
+              "name": "公用事业",
+              "value": 6.191761111065502e-05
+            },
+            {
+              "name": "建筑材料",
+              "value": 2.0259311849022524e-05
+            },
+            {
+              "name": "交通运输",
+              "value": 6.452322819732659e-05
+            },
+            {
+              "name": "煤炭",
+              "value": 2.2777724209192675e-05
+            },
+            {
+              "name": "石油石化",
+              "value": 3.0183360077860194e-05
+            },
+            {
+              "name": "工程机械Ⅱ",
+              "value": 1.8478380839696227e-05
+            },
+            {
+              "name": "基础化工",
+              "value": 5.0502813117573346e-05
+            },
+            {
+              "name": "建筑装饰",
+              "value": 3.779573128952675e-05
+            },
+            {
+              "name": "钢铁",
+              "value": 1.1207310885198998e-05
+            }
+          ],
+          "医药医疗": [
+            {
+              "name": "医药生物",
+              "value": 7.433000110431753e-05
+            }
+          ],
+          "先进制造": [
+            {
+              "name": "国防军工",
+              "value": 4.6930426390549895e-05
+            },
+            {
+              "name": "电力设备",
+              "value": 7.689502288727292e-05
+            },
+            {
+              "name": "汽车",
+              "value": 4.3693326801626704e-05
+            },
+            {
+              "name": "机械设备（除工程机械Ⅱ）",
+              "value": 9.012157424990984e-06
+            },
+            {
+              "name": "综合",
+              "value": 5.048852958478432e-06
+            },
+            {
+              "name": "环保",
+              "value": 2.3830946811162343e-06
+            }
+          ]
+        },
+        "fundTypeMajor": "权益类",
+        "fundTypeMinor": "综合权益",
+        "stockComplete": true,
+        "bondComplete": true,
+        "stockStatus": "完整股票表金额提取",
+        "stockGapReason": "",
+        "stockCoveragePercent": 100.0,
+        "bondStatus": "债券品种汇总表金额核验",
+        "fullStockRows": 209,
+        "detailsSource": {
+          "sourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202608311828787890_1.pdf",
+          "pdfSha256": "9382c58fd9f9df02dde5100428753f3c3bd512d7e08fa6711d34eb3ab9f591a6",
+          "textSha256": "638c96fc4d809e3f7a5617ab73d3e1c3015d124d7da32aa3f733dac60821d752",
+          "rawTextPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\derived_text\\732d952a943d77a7\\9382c58fd9f9df02dde5100428753f3c3bd512d7e08fa6711d34eb3ab9f591a6.txt.gz",
+          "rawPdfPath": "E:\\天眼系统\\采集数据\\raw\\official_fund_asset_reports\\AN202608311828787890.pdf",
+          "parserFingerprint": "41f11e657223b75f5e562f8d53a073d5282066a3503dff459f1774b335becbdd",
+          "sourceCapturedAt": "2026-10-23T03:21:52+08:00"
+        },
+        "reportPeriod": "2026-06-30",
+        "foreignSectorEvidence": null,
+        "stockDetailGapContribution": 0.0,
+        "productDefinition": null,
+        "fundTypeBasis": "source_product_dictionary",
+        "supplementalTags": {
+          "基金代码": "022463",
+          "天天基金细分类": "指数型-股票",
+          "标准资产大类": "权益",
+          "标准资产细类": "指数权益",
+          "是否纯债": 0,
+          "是否短债": 0,
+          "是否指数增强": 0,
+          "是否商品黄金": 0,
+          "是否QDII": 0,
+          "分类来源": "天天基金_fundcode_search",
+          "最近更新时间": "2026-06-11T11:27:39+08:00"
+        }
+      },
+      "windFundClassification": {
+        "major": "股票型",
+        "minor": "被动指数型",
+        "level3Source": null,
+        "resolved": true,
+        "reason": "source_index_category_and_enhancement_flag",
+        "sourceLabel": "指数型-股票",
+        "source": "天天基金_fundcode_search",
+        "sourceUpdatedAt": "2026-06-11T11:27:39+08:00",
+        "standardVersion": "public_reference_csisc_202311",
+        "isWindDirectData": false
+      },
+      "fullStockCsv": "022463_2026-06-30_complete_stock.csv",
+      "bondVarietiesCsv": "022463_2026-06-30_bond_varieties.csv",
+      "baseWeight": 0.43,
+      "weightChange": 0.0,
+      "weightDate": "2026-10-22",
+      "weightBasis": "source_latest",
+      "allocationBasis": "latest_observed_current",
+      "allocationLabel": "最新库内披露仓位",
+      "latestObservedHoldingDate": "2026-10-22",
+      "referenceParentId": null,
+      "referenceParentName": null,
+      "sourceAssetVerification": {
+        "status": "核验记录已过期，需刷新",
+        "latestSourcePeriod": "2026-06-30",
+        "checkedAt": "2026-10-07T12:29:31+08:00",
+        "scope": "F10资产配置期次"
+      },
+      "stockRawCsv": "022463_2026-06-30_stock.csv",
+      "bondRawCsv": "022463_2026-06-30_bond.csv"
+    }
+  ],
+  "canCalculate": true,
+  "blockedReasons": [],
+  "assetCompositionContractVersion": 1,
+  "assetBasis": "strategy_weighted_fund_total_assets",
+  "rawNavExposure": {
+    "metrics": {
+      "股票": 0.004674,
+      "债券": 84.298049,
+      "现金": 1.299548,
+      "基金": null,
+      "商品": null,
+      "存托凭证": null,
+      "其他": null
+    },
+    "unexplained": 22.030896000000002,
+    "grossExcess": 7.633166999999996,
+    "stockIndustryMajor": {
+      "计算机": 0.0,
+      "电子": 0.000301,
+      "通信": 0.000355,
+      "国防军工": 0.0,
+      "基础化工": 4.9e-05,
+      "机械设备": 0.0,
+      "医药生物": 8.6e-05,
+      "电力设备": 0.0,
+      "个护用品": 0.0,
+      "医疗美容": 0.0,
+      "纺织服饰": 9.8e-05,
+      "社会服务": 4.9e-05,
+      "食品饮料": 0.0015559999999999999,
+      "农林牧渔": 0.0,
+      "家用电器": 0.000294,
+      "商贸零售": 0.000147,
+      "轻工制造": 9.8e-05,
+      "美容护理": 4.9e-05,
+      "银行": 0.000129,
+      "普钢": 0.0,
+      "石油石化": 0.0,
+      "非银金融": 8.6e-05,
+      "汽车": 0.0,
+      "有色金属": 4.3e-05,
+      "建筑材料": 0.0,
+      "工程咨询服务Ⅱ": 0.0,
+      "综合Ⅱ": 0.0,
+      "公用事业": 4.3e-05,
+      "油气开采Ⅱ": 0.0,
+      "交通运输": 0.0,
+      "煤炭": 0.0,
+      "基础建设": 0.0,
+      "房屋建设Ⅱ": 0.0
+    },
+    "stockIndustryMinor": [
+      {
+        "major": "计算机",
+        "minor": "软件开发",
+        "value": 0.0
+      },
+      {
+        "major": "电子",
+        "minor": "半导体",
+        "value": 0.00025800000000000004
+      },
+      {
+        "major": "通信",
+        "minor": "通信设备",
+        "value": 0.000355
+      },
+      {
+        "major": "国防军工",
+        "minor": "军工电子Ⅱ",
+        "value": 0.0
+      },
+      {
+        "major": "基础化工",
+        "minor": "塑料",
+        "value": 0.0
+      },
+      {
+        "major": "计算机",
+        "minor": "IT服务Ⅱ",
+        "value": 0.0
+      },
+      {
+        "major": "机械设备",
+        "minor": "通用设备",
+        "value": 0.0
+      },
+      {
+        "major": "医药生物",
+        "minor": "医疗器械",
+        "value": 0.0
+      },
+      {
+        "major": "电力设备",
+        "minor": "光伏设备",
+        "value": 0.0
+      },
+      {
+        "major": "电子",
+        "minor": "消费电子",
+        "value": 0.0
+      },
+      {
+        "major": "个护用品",
+        "minor": "个护用品",
+        "value": 0.0
+      },
+      {
+        "major": "医疗美容",
+        "minor": "医疗美容",
+        "value": 0.0
+      },
+      {
+        "major": "纺织服饰",
+        "minor": "纺织制造",
+        "value": 0.0
+      },
+      {
+        "major": "纺织服饰",
+        "minor": "服装家纺",
+        "value": 9.8e-05
+      },
+      {
+        "major": "社会服务",
+        "minor": "酒店餐饮",
+        "value": 4.9e-05
+      },
+      {
+        "major": "食品饮料",
+        "minor": "调味发酵品Ⅱ",
+        "value": 0.000196
+      },
+      {
+        "major": "食品饮料",
+        "minor": "白酒Ⅱ",
+        "value": 0.000821
+      },
+      {
+        "major": "农林牧渔",
+        "minor": "种植业",
+        "value": 0.0
+      },
+      {
+        "major": "家用电器",
+        "minor": "白色家电",
+        "value": 0.000196
+      },
+      {
+        "major": "商贸零售",
+        "minor": "一般零售",
+        "value": 0.0
+      },
+      {
+        "major": "基础化工",
+        "minor": "化学制品",
+        "value": 4.9e-05
+      },
+      {
+        "major": "食品饮料",
+        "minor": "饮料乳品",
+        "value": 0.000539
+      },
+      {
+        "major": "商贸零售",
+        "minor": "旅游零售Ⅱ",
+        "value": 0.000147
+      },
+      {
+        "major": "轻工制造",
+        "minor": "家居用品",
+        "value": 9.8e-05
+      },
+      {
+        "major": "家用电器",
+        "minor": "小家电",
+        "value": 9.8e-05
+      },
+      {
+        "major": "美容护理",
+        "minor": "化妆品",
+        "value": 4.9e-05
+      },
+      {
+        "major": "银行",
+        "minor": "银行Ⅱ",
+        "value": 0.000129
+      },
+      {
+        "major": "普钢",
+        "minor": "普钢",
+        "value": 0.0
+      },
+      {
+        "major": "石油石化",
+        "minor": "炼化及贸易",
+        "value": 0.0
+      },
+      {
+        "major": "非银金融",
+        "minor": "证券Ⅱ",
+        "value": 4.3e-05
+      },
+      {
+        "major": "机械设备",
+        "minor": "工程机械",
+        "value": 0.0
+      },
+      {
+        "major": "通信",
+        "minor": "通信服务",
+        "value": 0.0
+      },
+      {
+        "major": "汽车",
+        "minor": "商用车",
+        "value": 0.0
+      },
+      {
+        "major": "电力设备",
+        "minor": "电网设备",
+        "value": 0.0
+      },
+      {
+        "major": "基础化工",
+        "minor": "农化制品",
+        "value": 0.0
+      },
+      {
+        "major": "汽车",
+        "minor": "乘用车",
+        "value": 0.0
+      },
+      {
+        "major": "有色金属",
+        "minor": "小金属",
+        "value": 0.0
+      },
+      {
+        "major": "国防军工",
+        "minor": "航天装备Ⅱ",
+        "value": 0.0
+      },
+      {
+        "major": "国防军工",
+        "minor": "航海装备Ⅱ",
+        "value": 0.0
+      },
+      {
+        "major": "建筑材料",
+        "minor": "玻璃玻纤",
+        "value": 0.0
+      },
+      {
+        "major": "电子",
+        "minor": "元件",
+        "value": 4.3e-05
+      },
+      {
+        "major": "医药生物",
+        "minor": "化学制药",
+        "value": 4.3e-05
+      },
+      {
+        "major": "电力设备",
+        "minor": "其他电源设备Ⅱ",
+        "value": 0.0
+      },
+      {
+        "major": "有色金属",
+        "minor": "贵金属",
+        "value": 0.0
+      },
+      {
+        "major": "有色金属",
+        "minor": "工业金属",
+        "value": 4.3e-05
+      },
+      {
+        "major": "建筑材料",
+        "minor": "水泥",
+        "value": 0.0
+      },
+      {
+        "major": "汽车",
+        "minor": "汽车零部件",
+        "value": 0.0
+      },
+      {
+        "major": "工程咨询服务Ⅱ",
+        "minor": "工程咨询服务Ⅱ",
+        "value": 0.0
+      },
+      {
+        "major": "综合Ⅱ",
+        "minor": "综合Ⅱ",
+        "value": 0.0
+      },
+      {
+        "major": "国防军工",
+        "minor": "航空装备Ⅱ",
+        "value": 0.0
+      },
+      {
+        "major": "公用事业",
+        "minor": "电力",
+        "value": 4.3e-05
+      },
+      {
+        "major": "油气开采Ⅱ",
+        "minor": "油气开采Ⅱ",
+        "value": 0.0
+      },
+      {
+        "major": "基础化工",
+        "minor": "化学原料",
+        "value": 0.0
+      },
+      {
+        "major": "交通运输",
+        "minor": "铁路公路",
+        "value": 0.0
+      },
+      {
+        "major": "煤炭",
+        "minor": "煤炭开采",
+        "value": 0.0
+      },
+      {
+        "major": "非银金融",
+        "minor": "保险Ⅱ",
+        "value": 4.3e-05
+      },
+      {
+        "major": "基础建设",
+        "minor": "基础建设",
+        "value": 0.0
+      },
+      {
+        "major": "房屋建设Ⅱ",
+        "minor": "房屋建设Ⅱ",
+        "value": 0.0
+      },
+      {
+        "major": "机械设备",
+        "minor": "轨交设备Ⅱ",
+        "value": 0.0
+      },
+      {
+        "major": "交通运输",
+        "minor": "航运港口",
+        "value": 0.0
+      },
+      {
+        "major": "计算机",
+        "minor": "计算机设备",
+        "value": 0.0
+      },
+      {
+        "major": "医药生物",
+        "minor": "生物制品",
+        "value": 0.0
+      },
+      {
+        "major": "医药生物",
+        "minor": "医疗服务",
+        "value": 4.3e-05
+      },
+      {
+        "major": "有色金属",
+        "minor": "能源金属",
+        "value": 0.0
+      }
+    ],
+    "stockSampleContribution": 0.003383000000000001,
+    "bondTypeMajor": {
+      "利率债/政策性金融债": 47.18986900000001,
+      "金融债": 0.188163
+    },
+    "bondSampleContribution": 47.37803200000002
+  },
+  "compositionCoverageWeight": 100.00000000000001,
+  "businessLookthrough": {
+    "version": 2,
+    "assetBasis": "fund_total_assets_with_explicit_index_proxy",
+    "equityDenominator": 0.004502331193071968,
+    "assetGroups": [
+      {
+        "name": "固定收益",
+        "value": 87.66709219338046,
+        "children": [
+          {
+            "name": "国家债券",
+            "value": 2.8828824835957376
+          },
+          {
+            "name": "金融债券",
+            "value": 71.99964006831826
+          },
+          {
+            "name": "政策性金融债（指数估算）",
+            "value": 12.3948414721185
+          },
+          {
+            "name": "企业短期融资券",
+            "value": 0.004584980538501584
+          },
+          {
+            "name": "中期票据",
+            "value": 0.000861095182431291
+          },
+          {
+            "name": "同业存单",
+            "value": 0.38428209362703036
+          }
+        ]
+      },
+      {
+        "name": "现金及货币工具",
+        "value": 1.3449361499742245,
+        "children": [
+          {
+            "name": "存款与结算备付金",
+            "value": 1.1803578885767665
+          },
+          {
+            "name": "买入返售金融资产",
+            "value": 0.16457826139745807
+          }
+        ]
+      },
+      {
+        "name": "其他资产",
+        "value": 1.554533506196641,
+        "children": [
+          {
+            "name": "其他资产未细分",
+            "value": 1.554533506196641
+          }
+        ]
+      },
+      {
+        "name": "基金投资",
+        "value": 9.42893581925559,
+        "children": [
+          {
+            "name": "基金投资未细分",
+            "value": 9.428935819255589
+          }
+        ]
+      },
+      {
+        "name": "股票",
+        "value": 0.004502331193071968,
+        "children": [
+          {
+            "name": "科技（TMT）",
+            "value": 0.0011033445369424888
+          },
+          {
+            "name": "先进制造",
+            "value": 0.0002698114480025247
+          },
+          {
+            "name": "消费",
+            "value": 0.0023008415105549296
+          },
+          {
+            "name": "医药医疗",
+            "value": 8.6072327897319e-05
+          },
+          {
+            "name": "周期",
+            "value": 0.0004878423318717139
+          },
+          {
+            "name": "金融地产",
+            "value": 0.00025441903780299243
+          }
+        ]
+      }
+    ],
+    "typeGroups": [
+      {
+        "name": "固收类",
+        "value": 88.67,
+        "children": [
+          {
+            "name": "其他固收",
+            "value": 88.67
+          }
+        ]
+      },
+      {
+        "name": "商品及黄金类",
+        "value": 2.81,
+        "children": [
+          {
+            "name": "黄金ETF及联接",
+            "value": 2.81
+          }
+        ]
+      },
+      {
+        "name": "权益类",
+        "value": 7.51,
+        "children": [
+          {
+            "name": "综合权益",
+            "value": 7.51
+          }
+        ]
+      },
+      {
+        "name": "货币类",
+        "value": 1.01,
+        "children": [
+          {
+            "name": "货币",
+            "value": 1.01
+          }
+        ]
+      }
+    ],
+    "styleGroups": [
+      {
+        "name": "科技（TMT）",
+        "value": 0.0011033445369424885,
+        "children": [
+          {
+            "name": "通信",
+            "value": 0.0004620903579587376
+          },
+          {
+            "name": "电子",
+            "value": 0.00056602456330187
+          },
+          {
+            "name": "计算机",
+            "value": 7.522961568188093e-05
+          }
+        ]
+      },
+      {
+        "name": "先进制造",
+        "value": 0.0002698114480025247,
+        "children": [
+          {
+            "name": "机械设备（除工程机械Ⅱ）",
+            "value": 4.00023767158109e-05
+          },
+          {
+            "name": "电力设备",
+            "value": 0.00012016131109804891
+          },
+          {
+            "name": "国防军工",
+            "value": 5.852248574744349e-05
+          },
+          {
+            "name": "汽车",
+            "value": 4.3693326801626704e-05
+          },
+          {
+            "name": "综合",
+            "value": 5.048852958478432e-06
+          },
+          {
+            "name": "环保",
+            "value": 2.3830946811162343e-06
+          }
+        ]
+      },
+      {
+        "name": "消费",
+        "value": 0.0023008415105549296,
+        "children": [
+          {
+            "name": "美容护理",
+            "value": 5.2002327127989134e-05
+          },
+          {
+            "name": "纺织服饰",
+            "value": 8.797004041273474e-05
+          },
+          {
+            "name": "食品饮料",
+            "value": 0.0015060726836917113
+          },
+          {
+            "name": "家用电器",
+            "value": 0.0003200506474370501
+          },
+          {
+            "name": "商贸零售",
+            "value": 0.00016763750917494358
+          },
+          {
+            "name": "轻工制造（除造纸Ⅱ）",
+            "value": 9.852578799898258e-05
+          },
+          {
+            "name": "社会服务",
+            "value": 4.6459732880755266e-05
+          },
+          {
+            "name": "农林牧渔",
+            "value": 2.212278183076272e-05
+          }
+        ]
+      },
+      {
+        "name": "医药医疗",
+        "value": 8.6072327897319e-05,
+        "children": [
+          {
+            "name": "医药生物",
+            "value": 8.6072327897319e-05
+          }
+        ]
+      },
+      {
+        "name": "周期",
+        "value": 0.0004878423318717139,
+        "children": [
+          {
+            "name": "基础化工",
+            "value": 9.457908594568094e-05
+          },
+          {
+            "name": "有色金属",
+            "value": 0.000126120587467554
+          },
+          {
+            "name": "公用事业",
+            "value": 6.191761111065502e-05
+          },
+          {
+            "name": "建筑材料",
+            "value": 2.0259311849022524e-05
+          },
+          {
+            "name": "交通运输",
+            "value": 6.452322819732659e-05
+          },
+          {
+            "name": "煤炭",
+            "value": 2.2777724209192675e-05
+          },
+          {
+            "name": "石油石化",
+            "value": 3.0183360077860194e-05
+          },
+          {
+            "name": "工程机械Ⅱ",
+            "value": 1.8478380839696227e-05
+          },
+          {
+            "name": "建筑装饰",
+            "value": 3.779573128952675e-05
+          },
+          {
+            "name": "钢铁",
+            "value": 1.1207310885198998e-05
+          }
+        ]
+      },
+      {
+        "name": "金融地产",
+        "value": 0.00025441903780299243,
+        "children": [
+          {
+            "name": "非银金融",
+            "value": 9.378417276296924e-05
+          },
+          {
+            "name": "银行",
+            "value": 0.0001486750375063077
+          },
+          {
+            "name": "房地产",
+            "value": 1.1959827533715512e-05
+          }
+        ]
+      }
+    ],
+    "fullStockRows": 259,
+    "distinctSecurities": 249,
+    "completeDetailsWeight": 100.0,
+    "unpenetratedEquity": 1e-43,
+    "styleUnpenetratedEquity": 0.0,
+    "unclassifiedEquity": 0.0,
+    "verifiedIndustryEquity": 0.004502331193071968,
+    "approximateIndustryEquity": 0.0,
+    "productDefinitionWeight": 2.81,
+    "reportPeriods": {
+      "2026-06-30": 100.0
+    },
+    "industryBasis": "基金原报告直接股票 + 目标ETF按指数成分权重估算；行业映射为本次快照，非历史行业回溯",
+    "reportSelection": "selected verified asset report as of analysis date; complete stock and bond tables from identical original report; unavailable complete reports explicit",
+    "windTypeGroups": [
+      {
+        "name": "债券型",
+        "value": 88.67,
+        "children": [
+          {
+            "name": "被动指数债券型",
+            "value": 88.67
+          }
+        ]
+      },
+      {
+        "name": "另类投资",
+        "value": 2.81,
+        "children": [
+          {
+            "name": "商品型基金",
+            "value": 2.81
+          }
+        ]
+      },
+      {
+        "name": "QDII",
+        "value": 2.23,
+        "children": [
+          {
+            "name": "QDII股票型",
+            "value": 2.23
+          }
+        ]
+      },
+      {
+        "name": "股票型",
+        "value": 5.28,
+        "children": [
+          {
+            "name": "被动指数型",
+            "value": 5.28
+          }
+        ]
+      },
+      {
+        "name": "货币市场型",
+        "value": 1.01,
+        "children": [
+          {
+            "name": "货币市场型",
+            "value": 1.01
+          }
+        ]
+      }
+    ],
+    "fundTypeStandard": {
+      "name": "Wind基金分类标准",
+      "version": "public_reference_csisc_202311",
+      "sourceTitle": "国内基金分类方法及分类标准体系可行性研究，表34—37",
+      "sourceUrl": "https://www.csisc.cn/zbscbzw/c100241/202311/7f39dd287cb94de0a47cd2c06733f73a/files/4b4b0303af4341bbaf82aa49a5447438.pdf",
+      "sourceSha256": "0e819576180b9149e41a34ed8d5ab0532aa57a193129f0a78c04055772c8e090",
+      "pages": [
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "basis": "source_label_alignment_with_verified_product_definition",
+      "isWindDirectData": false,
+      "currentWindMembershipVerified": false
+    },
+    "windUnresolvedWeight": 0.0
+  },
+  "channelId": "qieman",
+  "channelName": "且慢/盈米基金",
+  "advisor": "盈米基金",
+  "governanceStatus": null,
+  "sourceStatus": "stargate_keyword_discovered",
+  "sharedModel": false,
+  "parentStrategyId": null,
+  "fileStem": "index_estimates/f95c1a9005cf0356846454b5/model",
+  "generatedAt": "2026-10-23T03:23:56+08:00",
+  "inputHoldings": [
+    {
+      "基金代码": "002659",
+      "基金名称": "兴业中债1-3年政金债A",
+      "基金权重_百分比": 20.29,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "008125",
+      "基金名称": "创金合信中债1-3年国开债A",
+      "基金权重_百分比": 7.21,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "007165",
+      "基金名称": "华夏中债1-3年政金债指数A",
+      "基金权重_百分比": 10.21,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "019524",
+      "基金名称": "华泰柏瑞纳斯达克100ETF发起式联接(QDII)A",
+      "基金权重_百分比": 2.23,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "006961",
+      "基金名称": "南方7-10年国开债A",
+      "基金权重_百分比": 15.36,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "009505",
+      "基金名称": "富国上海金ETF联接C",
+      "基金权重_百分比": 2.81,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "006409",
+      "基金名称": "富国中债-1-3年国开行债券指数A",
+      "基金权重_百分比": 20.27,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "018266",
+      "基金名称": "富国中债7-10年政策性金融债ETF联接A",
+      "基金权重_百分比": 15.33,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "022463",
+      "基金名称": "富国中证A500ETF发起式联接A",
+      "基金权重_百分比": 0.43,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "022055",
+      "基金名称": "富国中证消费50ETF联接E",
+      "基金权重_百分比": 0.49,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "014673",
+      "基金名称": "富国中证港股通互联网ETF发起式联接A",
+      "基金权重_百分比": 1.28,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "013313",
+      "基金名称": "富国中证科创创业50ETF联接A",
+      "基金权重_百分比": 1.52,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "161022",
+      "基金名称": "富国创业板ETF联接(LOF)A",
+      "基金权重_百分比": 1.56,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "000638",
+      "基金名称": "富国富钱包货币A",
+      "基金权重_百分比": 1.01,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    }
+  ],
+  "allocationBasis": "latest_observed_current",
+  "allocationLabel": "最新库内披露仓位",
+  "latestObservedHoldingDate": "2026-10-22",
+  "currentInputBlockedReasons": [],
+  "allocationInputHoldings": [
+    {
+      "基金代码": "002659",
+      "基金名称": "兴业中债1-3年政金债A",
+      "基金权重_百分比": 20.29,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "008125",
+      "基金名称": "创金合信中债1-3年国开债A",
+      "基金权重_百分比": 7.21,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "007165",
+      "基金名称": "华夏中债1-3年政金债指数A",
+      "基金权重_百分比": 10.21,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "019524",
+      "基金名称": "华泰柏瑞纳斯达克100ETF发起式联接(QDII)A",
+      "基金权重_百分比": 2.23,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "006961",
+      "基金名称": "南方7-10年国开债A",
+      "基金权重_百分比": 15.36,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "009505",
+      "基金名称": "富国上海金ETF联接C",
+      "基金权重_百分比": 2.81,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "006409",
+      "基金名称": "富国中债-1-3年国开行债券指数A",
+      "基金权重_百分比": 20.27,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "018266",
+      "基金名称": "富国中债7-10年政策性金融债ETF联接A",
+      "基金权重_百分比": 15.33,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "022463",
+      "基金名称": "富国中证A500ETF发起式联接A",
+      "基金权重_百分比": 0.43,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "022055",
+      "基金名称": "富国中证消费50ETF联接E",
+      "基金权重_百分比": 0.49,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "014673",
+      "基金名称": "富国中证港股通互联网ETF发起式联接A",
+      "基金权重_百分比": 1.28,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "013313",
+      "基金名称": "富国中证科创创业50ETF联接A",
+      "基金权重_百分比": 1.52,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "161022",
+      "基金名称": "富国创业板ETF联接(LOF)A",
+      "基金权重_百分比": 1.56,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    },
+    {
+      "基金代码": "000638",
+      "基金名称": "富国富钱包货币A",
+      "基金权重_百分比": 1.01,
+      "持仓日期": "2026-10-22",
+      "披露日期": "2026-10-22",
+      "是否精确权重": 1,
+      "置信度": "official_stargate_exact_current_composition",
+      "原始快照ID": "qieman-ZH164292-2026-10-22-3f1899a407b6"
+    }
+  ],
+  "allocationSourceProof": null,
+  "parentReference": null,
+  "latestKnownRebalanceDate": "2026-09-18",
+  "allocationRecoveryRejectedEvents": [],
+  "weightProjection": {
+    "baseDate": "2026-10-22",
+    "requestedAsOf": "2026-10-23",
+    "weightDate": "2026-10-22",
+    "basis": "source_latest",
+    "label": "源端最新仓位占比",
+    "available": true,
+    "status": "source_observed",
+    "reasons": [
+      "源端占比直接使用；净值滚动未执行：缺少基准日之后净值：019524"
+    ],
+    "funds": [],
+    "assumptions": "直接使用源端配置占比，未进行净值滚动；不是客户账户实时仓位",
+    "parentReference": false
+  },
+  "weightBasis": "source_latest",
+  "weightLabel": "源端最新仓位占比",
+  "weightDate": "2026-10-22",
+  "latestWeightsAvailable": true,
+  "indexProxy": {
+    "version": 1,
+    "basis": "index_proxy_estimate",
+    "asOf": "2026-10-22",
+    "baseModel": "E:\\天眼系统\\运行状态\\temp\\minimal_report_source\\20261022T230250+0800__report_build__attempt_01\\basic_data\\assets\\strategy-lookthrough\\f95c1a9005cf0356846454b5.json",
+    "baseSha256": "a8413dfd545664022bf38f62a201aa156727590a2b6ceda715e83d656aeb9160",
+    "mappingFile": "E:\\天眼系统\\运行状态\\temp\\minimal_report_source\\20261022T230250+0800__report_build__attempt_01\\basic_data\\assets\\strategy-lookthrough\\index_estimates\\f95c1a9005cf0356846454b5\\mappings.json",
+    "sourceDir": "E:\\天眼系统\\运行状态\\outputs\\gffunds_single_strategy\\GFJJ003101_20261020\\index_proxy",
+    "database": "E:\\天眼系统\\数据库\\analysis_zh_current.sqlite",
+    "databaseBinding": {
+      "size": 26856468480,
+      "mtimeNs": 1792695629711015300
+    },
+    "industryHistory": "E:\\天眼系统\\运行状态\\temp\\minimal_report_source\\20261022T230250+0800__report_build__attempt_01\\basic_data\\assets\\strategy-lookthrough\\industry_source_evidence.json",
+    "industryHistorySha256": "6926c448665882bf15d6cca68d24f8e05eca0c603064ae105ac56d15dc8d60c6",
+    "indices": [],
+    "mappings": [
+      {
+        "target": "511520",
+        "index": "中债-7-10年政策性金融债指数",
+        "asset": "固定收益",
+        "label": "政策性金融债（指数估算）",
+        "amount": 4986617777.04,
+        "reportNameToken": "富国中债7-10年政策性金融债",
+        "fundCode": "018266",
+        "weight": 15.33,
+        "totalAssets": 6167473032.55,
+        "contribution": 12.3948414721185,
+        "reportDate": "2026-06-30",
+        "sourcePdfSha256": "481d94b9eadb2f1203d7335e61fb7f5e3ef721ac4d064054b7dea4ff69084257",
+        "reportTextSha256": "b12ca668a055f6dbff8b2b0f62cd9950323277fc8b2ce92745b3aa04df08d22e"
+      }
+    ],
+    "constituentRows": 0,
+    "industryGaps": [],
+    "roundingResidual": 0.0,
+    "originalMetrics": {
+      "股票": 0.004502331193071967,
+      "债券": 75.27225072126198,
+      "现金": 1.3449361499742245,
+      "基金": 21.82377729137409,
+      "商品": 0.0,
+      "存托凭证": 0.0,
+      "其他": 1.554533506196641
+    },
+    "fundInvestmentReplaced": 12.3948414721185,
+    "equityAdded": 0.0,
+    "bondAdded": 12.3948414721185,
+    "goldAdded": 0.0,
+    "classifiedEquityAdded": 0.0,
+    "remainingFundInvestment": 9.428935819255589,
+    "sectorSource": {
+      "url": "https://api.nasdaq.com/api/screener/stocks?tableonly=true&limit=10000&download=true",
+      "status": 200,
+      "sha256": "f5efc19e4505157b6de4380f55ace672748ed1441cbf5f8bfec0cbcd9abf0aa9",
+      "capturedAt": "2026-10-20T16:59:03.136215+08:00"
+    },
+    "noDatabaseWrite": true,
+    "leveragedFundPolicy": "TQQQ retained separately; no 1x or 3x amount substituted into capital-allocation pie"
+  },
+  "reportedFileStem": "f95c1a9005cf0356846454b5"
+}
