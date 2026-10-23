@@ -562,7 +562,7 @@ body[data-page="private-fund-gffunds"],body[data-page="private-fund-gffunds-mana
 </style>
 
 <!-- tianyan-web-assistant -->
-  <style data-inline-src="tianyan-assistant.css">.ty-assistant-overlay[hidden],.ty-assistant-panel [hidden]{display:none!important}
+  <style data-inline-src="tianyan-assistant.css" data-assistant-template-build="assistant-templates-20261023T213303">.ty-assistant-overlay[hidden],.ty-assistant-panel [hidden]{display:none!important}
 .ty-assistant-open{overflow:hidden}
 .ty-assistant-overlay{position:fixed;inset:0;z-index:1500;display:flex;align-items:center;justify-content:center;background:rgba(14,27,47,.35);padding:28px;font-family:"Microsoft YaHei",system-ui,sans-serif;color:#192b44}
 .ty-assistant-panel{width:min(740px,100%);height:min(780px,90dvh);display:flex;flex-direction:column;background:#fff;border:1px solid #dbe2ea;border-radius:14px;box-shadow:0 20px 80px rgba(17,32,54,.18);overflow:hidden}
@@ -662,12 +662,13 @@ body[data-page="private-fund-gffunds"],body[data-page="private-fund-gffunds-mana
  .ty-result-table td span{overflow-wrap:anywhere}
  .ty-result-table td.ty-result-action{display:flex;justify-content:flex-end}
  .ty-result-table td.ty-result-action::before{display:none}
- .ty-result-chart svg{min-height:160px}
+ .ty-result-chart{overflow-x:auto}
+ .ty-result-chart svg{min-height:160px;max-height:none}
  .ty-result-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
  .ty-result-facts{grid-template-columns:110px minmax(0,1fr)}
 }
 </style>
-  <script data-inline-src="./assets/tianyan-assistant-config.js?v=20261023T021313208415_github_publish_6948&assistant_templates=assistant-templates-20261023T212910">
+  <script data-inline-src="./assets/tianyan-assistant-config.js?v=20261023T021313208415_github_publish_6948&assistant_templates=assistant-templates-20261023T213303">
 window.TianyanAssistantConfig = {"apiBase": "https://gfinvest.site/ai-api", "title": "天眼 AI 助手"};
 
 </script>
@@ -1441,7 +1442,7 @@ window.PrivateFundManagerZoneEnabled = false;
       label: "正在加载广发专区"
     }),0)),{once:true});
   </script>
-<script>for(const url of ["./assets/tianyan-assistant.js?v=20261023T021313208415_github_publish_6948&assistant_templates=assistant-templates-20261023T212910"]){const s=document.createElement("script");s.src=url;s.async=true;document.body.appendChild(s);}</script><script>window.PrivateFundReportApp=()=>{
+<script>for(const url of ["./assets/tianyan-assistant.js?v=20261023T021313208415_github_publish_6948&assistant_templates=assistant-templates-20261023T213303"]){const s=document.createElement("script");s.src=url;s.async=true;document.body.appendChild(s);}</script><script>window.PrivateFundReportApp=()=>{
 (() => {
   "use strict";
 

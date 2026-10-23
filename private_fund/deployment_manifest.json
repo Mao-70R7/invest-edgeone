@@ -145,8 +145,8 @@
     },
     {
       "path": "awards.html",
-      "size": 147704,
-      "sha256": "bd5d15f91924c0ccb61bcf521dae00070229a011943c7619f20f21ddf75422d0"
+      "size": 147928,
+      "sha256": "f8d4ce69929a8f433d95aed873503aaca2020f6ba18d47482d1f5a8ae4183425"
     },
     {
       "path": "cmb-review.json",
@@ -64665,23 +64665,23 @@
     },
     {
       "path": "detail.html",
-      "size": 163103,
-      "sha256": "0ba24f0e228794582211ec2d49284f54f78315fb12919d05c3b95b208291288d"
+      "size": 163327,
+      "sha256": "f5035e2829dbaac83dbe2c03be8ebb4bf6c2cbfbccb15b6d890796c5a1de61c2"
     },
     {
       "path": "gffunds-manager.html",
-      "size": 117358,
-      "sha256": "32e6c82beb2d7d0db52366577d9d80cf5c68e13467b6111ec823ad9413cf0ca7"
+      "size": 117582,
+      "sha256": "b9fec6c5274a2e8c74d0db647f6784043a6f47c4ac3b64699130320b681b8710"
     },
     {
       "path": "gffunds.html",
-      "size": 117308,
-      "sha256": "8f0ca95ec255dab9e7b6e145279c754199ec42afb5c9b2ba594ecb668bd6de79"
+      "size": 117532,
+      "sha256": "6e82e7ec07da51fbdd516943bc6c2bfde9d4a2b5f8dd533ef2c58c36b6da4e82"
     },
     {
       "path": "index.html",
-      "size": 173119,
-      "sha256": "a51edded5e7acc981b5a52b1dc67563a135e88900e42f0da32dcee40b555e9eb"
+      "size": 173343,
+      "sha256": "0289e3c33cd72649279f42f348bcbdd1b4562633ba2b64e36d7fde14f1430ad5"
     },
     {
       "path": "manifest.js",
@@ -64706,12 +64706,12 @@
     {
       "path": "products.html",
       "size": 5993,
-      "sha256": "00e170f01074e55dde905a11cb9c3672c890591f1d6f25a6a660b62ed3577d5f"
+      "sha256": "2030edc5bb41582b99073b2ad8069f60d2c40be7c19ee27d8effd9d853e5f982"
     },
     {
       "path": "version.json",
       "size": 287,
-      "sha256": "b85dcc4e188e38426706fe3777c04c657869f57b279f9515e50522388b0a51f5"
+      "sha256": "6e60f00c5eabe8102ebec4da12760a5eca40f729c79bcc874c20f3d42d5b11b7"
     },
     {
       "path": "招商产品App核对清单.md",
@@ -64719,9 +64719,9 @@
       "sha256": "bfe62a8b07aa3870918128c3cd949d89e5880e33b6ae058ace42bb4911beab92"
     }
   ],
-  "assistantRecoveryBuildId": "assistant-templates-20261023T212910",
-  "assistantRecoveryPublishedAt": "2026-10-23T21:29:10.820480+08:00",
+  "assistantRecoveryBuildId": "assistant-templates-20261023T213303",
+  "assistantRecoveryPublishedAt": "2026-10-23T21:33:03.672056+08:00",
   "fileCount": 12941,
-  "totalBytes": 248169746,
-  "assistantTemplateBuild": "assistant-templates-20261023T212910"
+  "totalBytes": 248170866,
+  "assistantTemplateBuild": "assistant-templates-20261023T213303"
 }
