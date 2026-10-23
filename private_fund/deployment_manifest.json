@@ -146,7 +146,7 @@
     {
       "path": "awards.html",
       "size": 147704,
-      "sha256": "21346a56c99e321f0c58dd67c2ec53b299b570b6dfa5ea68dc75eabc7aa17c42"
+      "sha256": "bd5d15f91924c0ccb61bcf521dae00070229a011943c7619f20f21ddf75422d0"
     },
     {
       "path": "cmb-review.json",
@@ -64666,22 +64666,22 @@
     {
       "path": "detail.html",
       "size": 163103,
-      "sha256": "b847d2ac7881eb951f90760c0d8a7aafeea802b0fe0ab7413ce16495e850d420"
+      "sha256": "0ba24f0e228794582211ec2d49284f54f78315fb12919d05c3b95b208291288d"
     },
     {
       "path": "gffunds-manager.html",
       "size": 117358,
-      "sha256": "c4feb13e9405c3f97355384a7cf1a183229f9a6a75456adf4082c1993bdfa8e8"
+      "sha256": "32e6c82beb2d7d0db52366577d9d80cf5c68e13467b6111ec823ad9413cf0ca7"
     },
     {
       "path": "gffunds.html",
       "size": 117308,
-      "sha256": "11a4094ff40c6cc6d3e2d28610dea304da020c74d36475987551301d8ae7f047"
+      "sha256": "8f0ca95ec255dab9e7b6e145279c754199ec42afb5c9b2ba594ecb668bd6de79"
     },
     {
       "path": "index.html",
       "size": 173119,
-      "sha256": "f34f3a15fc304a8bb842ecdbf2ac6e2739ac9f506722ab33c74b2b566225af14"
+      "sha256": "a51edded5e7acc981b5a52b1dc67563a135e88900e42f0da32dcee40b555e9eb"
     },
     {
       "path": "manifest.js",
@@ -64706,12 +64706,12 @@
     {
       "path": "products.html",
       "size": 5993,
-      "sha256": "912a9d45ac7bbd972a63acb998e2c7fdb0500572aeb93d8bc80c9a5c95a38ee6"
+      "sha256": "00e170f01074e55dde905a11cb9c3672c890591f1d6f25a6a660b62ed3577d5f"
     },
     {
       "path": "version.json",
       "size": 287,
-      "sha256": "7e865244c356d9a10f0d622b80e3ff2309dfca2ccc82e8f2f8e2dc4f9b66a992"
+      "sha256": "b85dcc4e188e38426706fe3777c04c657869f57b279f9515e50522388b0a51f5"
     },
     {
       "path": "招商产品App核对清单.md",
@@ -64719,9 +64719,9 @@
       "sha256": "bfe62a8b07aa3870918128c3cd949d89e5880e33b6ae058ace42bb4911beab92"
     }
   ],
-  "assistantRecoveryBuildId": "assistant-templates-20261023T205243",
-  "assistantRecoveryPublishedAt": "2026-10-23T20:52:43.581230+08:00",
+  "assistantRecoveryBuildId": "assistant-templates-20261023T212910",
+  "assistantRecoveryPublishedAt": "2026-10-23T21:29:10.820480+08:00",
   "fileCount": 12941,
   "totalBytes": 248169746,
-  "assistantTemplateBuild": "assistant-templates-20261023T205243"
+  "assistantTemplateBuild": "assistant-templates-20261023T212910"
 }
