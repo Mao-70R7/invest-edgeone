@@ -1,1 +1,8 @@
-{"version":1,"buildId":"minimal-984b79c5ceaf","generatedAt":"2026-10-23T04:02:55+08:00","entry":"basic_data/institutions.html"}
+{
+  "version": 1,
+  "buildId": "minimal-984b79c5ceaf",
+  "generatedAt": "2026-10-23T04:02:55+08:00",
+  "entry": "basic_data/institutions.html",
+  "assistantTemplateBuild": "assistant-templates-20261023T205243",
+  "assistantTemplatePublishedAt": "2026-10-23T20:52:43.581230+08:00"
+}

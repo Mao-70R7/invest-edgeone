@@ -100,7 +100,8 @@
     if (points.some(p => !Array.isArray(p) || typeof p[1] !== "number" || !Number.isFinite(p[1]))) return null;
     const fig = el("figure", "ty-result-chart"); fig.append(el("figcaption", "", chart.title + " · " + chart.unit));
     const ns = "http://www.w3.org/2000/svg", svg = document.createElementNS(ns, "svg");
-    const width = 640, height = chart.kind === "bar" ? Math.max(170, points.length * 36 + 30) : 220;
+    const compactBars = chart.kind === "bar" && window.matchMedia("(max-width:640px)").matches;
+    const width = compactBars ? 360 : 640, height = chart.kind === "bar" ? Math.max(170, points.length * 36 + 30) : 220;
     svg.setAttribute("viewBox", "0 0 " + width + " " + height); svg.setAttribute("role", "img"); svg.setAttribute("aria-label", chart.title);
     const node = (tag, attributes, content) => {
       const n = document.createElementNS(ns, tag); for (const key in attributes) n.setAttribute(key, attributes[key]);
@@ -118,13 +119,18 @@
       const last = values[values.length - 1];
       node("text", { x: 635, y: 20, fill: last > 0 ? "#B72F32" : last < 0 ? "#17744B" : "#66717E", "font-size": 14, "text-anchor": "end" }, last.toFixed(2) + "%");
     } else {
-      const extent = Math.max(...points.map(p => Math.abs(p[1])), 1), zero = 360;
+      const hasNegative = points.some(p => p[1] < 0);
+      const extent = Math.max(...points.map(p => Math.abs(p[1])), 1), zero = compactBars ? (hasNegative ? 245 : 195) : (hasNegative ? 360 : 280);
       node("line", { x1: zero, x2: zero, y1: 12, y2: height - 12, stroke: "#DCE2E7" });
       points.forEach((p, i) => {
-        const y = i * 36 + 30, w = Math.abs(p[1]) / extent * 180;
-        node("text", { x: 8, y: y + 4, fill: "#17324D", "font-size": 13 }, p[0]);
-        node("rect", { x: p[1] >= 0 ? zero : zero - w, y: y - 11, width: Math.max(.5, w), height: 18, fill: "#758CA0" });
-        node("text", { x: 628, y: y + 4, fill: "#17324D", "font-size": 12, "text-anchor": "end" }, (p[1] > 0 ? "+" : "") + p[1].toFixed(2));
+        const y = i * 36 + 30, w = Math.abs(p[1]) / extent * (compactBars ? (hasNegative ? 55 : 100) : (hasNegative ? 180 : 270));
+        const labelLimit = compactBars ? 13 : 19;
+        const name = node("text", { x: 8, y: y + 4, fill: "#17324D", "font-size": compactBars ? 12 : 13 }, p[0].length > labelLimit ? p[0].slice(0, labelLimit - 1) + "…" : p[0]);
+        const tip = document.createElementNS(ns, "title"); tip.textContent = p[0]; name.append(tip);
+        const color = p[1] === 0 ? "#758CA0" : chart.semantics === "drawdown" ? "#17744B" : chart.semantics === "return" ? (p[1] > 0 ? "#B72F32" : "#17744B") : "#758CA0";
+        node("rect", { x: p[1] >= 0 ? zero : zero - w, y: y - 11, width: Math.max(.5, w), height: 18, fill: color });
+        const value = chart.format === "integer" ? p[1].toLocaleString("zh-CN", {maximumFractionDigits:0}) : p[1].toFixed(2);
+        node("text", { x: width - 12, y: y + 4, fill: color, "font-size": 12, "text-anchor": "end" }, (chart.semantics === "return" && p[1] > 0 ? "+" : "") + value + (chart.unit === "%" ? "%" : ""));
       });
     }
     fig.append(svg); return fig;
@@ -159,6 +165,7 @@
         });
         if (metricCount) block.append(metrics); if (facts.children.length) block.append(facts);
         const detail = resultLink("查看产品详情", row.detail_url); if (detail) block.append(detail);
+        const related = resultLink(row.related_label || "关联产品", row.related_url); if (related) block.append(related);
       } else {
         const wrap = el("div", "ty-result-table-wrap"), table = el("table", "ty-result-table"), head = el("thead"), hr = el("tr"), tbody = el("tbody");
         let order = section.rows.slice(), sortIndex = -1, descending = true;
@@ -172,8 +179,8 @@
               const span = el("span", "ty-result-" + (["positive", "negative", "neutral"].includes(item.tone) ? item.tone : "neutral"), item.display);
               td.append(span); tr.append(td);
             });
-            if (section.rows.some(r => r.detail_url)) {
-              const td = el("td", "ty-result-action"); td.dataset.label = "详情"; const a = resultLink("查看详情", row.detail_url); if (a) td.append(a); tr.append(td);
+            if (section.rows.some(r => r.detail_url || r.related_url)) {
+              const td = el("td", "ty-result-action"); td.dataset.label = "查看"; const a = resultLink(row.detail_url ? "查看详情" : row.related_label || "关联产品", row.detail_url || row.related_url); if (a) td.append(a); tr.append(td);
             }
             tbody.append(tr);
           }
@@ -191,14 +198,14 @@
           };
           th.append(button); hr.append(th);
         });
-        if (section.rows.some(r => r.detail_url)) hr.append(el("th", "", "详情"));
+        if (section.rows.some(r => r.detail_url || r.related_url)) hr.append(el("th", "", "查看"));
         head.append(hr); table.append(head, tbody); wrap.append(table); block.append(wrap); draw();
       }
       const list = resultLink("查看全部结果", section.list_url); if (list) block.append(list);
       card.append(block);
     }
     const chart = plotResult(data.chart);
-    if (chart) { const first = card.querySelector(".ty-result-section"); card.insertBefore(chart, first ? first.nextSibling : null); }
+    if (chart) { const first = card.querySelector(".ty-result-section"); card.insertBefore(chart, first || null); }
     const details = el("details", "ty-result-methods"); details.append(el("summary", "", "数据说明与完整文字答复"));
     for (const note of data.notes || []) details.append(el("p", "", note));
     const fallback = el("div", "ty-result-fallback"); businessText(fallback, task.answer); details.append(fallback); card.append(details);

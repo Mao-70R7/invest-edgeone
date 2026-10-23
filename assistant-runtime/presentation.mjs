@@ -28,7 +28,9 @@ export function publicPresentation(value,answer) {
              !['neutral','positive','negative'].includes(c.tone))throw Error();
           return {value:c.value,display:str(c.display,3000),tone:c.tone};
         });
-        return {cells,detail_url:url(r.detail_url)};
+        const related=url(r.related_url);
+        if(related && !['持有策略','关联产品'].includes(r.related_label))throw Error();
+        return {cells,detail_url:url(r.detail_url),...(related?{related_url:related,related_label:str(r.related_label,20)}:{})};
       });
       return {title:str(s.title,100),columns,rows,total:s.total,list_url:url(s.list_url),scope:str(s.scope||'',1200)};
     });
@@ -36,11 +38,14 @@ export function publicPresentation(value,answer) {
     if(value.chart){
       const c=value.chart;
       if(!['line','bar'].includes(c.kind) || !Array.isArray(c.points) || c.points.length>400)throw Error();
-      chart={kind:c.kind,title:str(c.title,100),unit:str(c.unit,20),points:c.points.map(p=>{
+      if(c.format && !['integer','decimal'].includes(c.format))throw Error();
+      if(c.semantics && !['neutral','return','drawdown'].includes(c.semantics))throw Error();
+      chart={kind:c.kind,title:str(c.title,100),unit:str(c.unit,20),format:c.format||'decimal',semantics:c.semantics||'neutral',points:c.points.map(p=>{
         if(!Array.isArray(p) || p.length!==2 || typeof p[1]!=='number' || !Number.isFinite(p[1]))throw Error();
         return [str(p[0],100),p[1]];
       })};
     }
-    return {version:1,template:value.template,title:str(value.title,100),summary:str(value.summary||'',800),answer_sha256:value.answer_sha256,sections,notes,followups,chart};
+    const variant=['holdings_aggregation','coverage','comparison'].includes(value.variant)?value.variant:value.template;
+    return {version:1,template:value.template,variant,title:str(value.title,100),summary:str(value.summary||'',800),answer_sha256:value.answer_sha256,sections,notes,followups,chart};
   }catch{return null;}
 }

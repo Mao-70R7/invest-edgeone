@@ -77,7 +77,7 @@
     "preservedPublishBytes": 0
   },
   "fileCount": 4362,
-  "totalBytes": 413016565,
+  "totalBytes": 413018567,
   "files": [
     {
       "path": ".gitattributes",
@@ -105,6 +105,16 @@
       "sha256": "9eeb110538f7b4c5e1e5af9b0598d8de165579bc604b7eae34c6a242e9e24d38"
     },
     {
+      "path": "README.md",
+      "size": 2005,
+      "sha256": "1685bc0b587982b890779138e82420995792ab2b9431983cbdcbb17f48b57502"
+    },
+    {
+      "path": "README_部署说明.md",
+      "size": 2005,
+      "sha256": "1685bc0b587982b890779138e82420995792ab2b9431983cbdcbb17f48b57502"
+    },
+    {
       "path": "assistant-runtime/auth-config.mjs",
       "size": 190,
       "sha256": "1b1086c5a8ebd7edb6ce10e000c925fc2aa5f00b006c6b71ef37650fbc06cd6d"
@@ -116,8 +126,8 @@
     },
     {
       "path": "assistant-runtime/presentation.mjs",
-      "size": 2811,
-      "sha256": "91e5a0dc9972ceab3bd7739066952a94c7c2ba8487a82b3d7a830971ebb72818"
+      "size": 3386,
+      "sha256": "075a9295ad295c84b0fd67ef3d6f07fa8df9b780264958b3d0dd1c0992bd5ee3"
     },
     {
       "path": "assistant-runtime/relay.mjs",
@@ -253,6 +263,11 @@
       "path": "basic_data/assets/strategy-detail.js",
       "size": 112012,
       "sha256": "3ef28d30ac21c973701bc2042f4ff1aeb2dfe41a103a3e8e8ed8146b5906d68c"
+    },
+    {
+      "path": "basic_data/assets/strategy-lookthrough/Wind标准基金分类映射明细.csv",
+      "size": 9829523,
+      "sha256": "770b9af7c076caece723bf62e14f56d8b3a8ec904e8bb8b019675fc2574b0df7"
     },
     {
       "path": "basic_data/assets/strategy-lookthrough/build_evidence.json",
@@ -5780,11 +5795,6 @@
       "sha256": "e0acb02d0d0d2cbf104302b4c41f1457b690b31d53df5822905d8fafc86c35d3"
     },
     {
-      "path": "basic_data/assets/strategy-lookthrough/Wind标准基金分类映射明细.csv",
-      "size": 9829523,
-      "sha256": "770b9af7c076caece723bf62e14f56d8b3a8ec904e8bb8b019675fc2574b0df7"
-    },
-    {
       "path": "basic_data/assets/strategy-lookthrough/基金报告时效明细.csv",
       "size": 8625552,
       "sha256": "defef5a9928aeb25fa1204dccbf35496545c2b6deb3588fd0aa66cdb41334857"
@@ -5796,13 +5806,13 @@
     },
     {
       "path": "basic_data/assets/tianyan-assistant.css",
-      "size": 10764,
-      "sha256": "64acb2f896a6f96aa5e7f72374064c397fd7dfe1ce2147d0ac96d23378a9d06b"
+      "size": 10920,
+      "sha256": "8f57e6231ef8f6c67ed58d46acfbf9451cf98a6a2effcb877c01a706b25273e1"
     },
     {
       "path": "basic_data/assets/tianyan-assistant.js",
-      "size": 26980,
-      "sha256": "9c6d8c8dd87e55bde0e172d1ec8fffd7ce1163cffa37b9b38017fe0e67f0a906"
+      "size": 28096,
+      "sha256": "ac25c27b7985debafb15bd8e983deec90c3c13d05ee2222572fbfa846b9ebffd"
     },
     {
       "path": "basic_data/assets/tianyan-navigation.css",
@@ -5810,14 +5820,14 @@
       "sha256": "0870f1c8ced6a7b7a810407a78a416d749d09e5bd311f84de31c9dd67e5b63d5"
     },
     {
-      "path": "basic_data/assets/vendor/html-to-image.js",
-      "size": 20562,
-      "sha256": "a90b42909d80964269ef6d5f3d1e4a5a7e2a4c263a5d2a76a9e7151901343262"
-    },
-    {
       "path": "basic_data/assets/vendor/html-to-image.LICENSE",
       "size": 1066,
       "sha256": "9fe73723f7a9e91057f73aafc9b6a3c3b2174db2b3ddc0a3a6a8ddf2bad68e37"
+    },
+    {
+      "path": "basic_data/assets/vendor/html-to-image.js",
+      "size": 20562,
+      "sha256": "a90b42909d80964269ef6d5f3d1e4a5a7e2a4c263a5d2a76a9e7151901343262"
     },
     {
       "path": "basic_data/assets/vendor/html-to-image.source.json",
@@ -11040,14 +11050,14 @@
       "sha256": "133547780ad293d355f4727de8cd3befa96cbfb0eabdd1b26160cd0526046853"
     },
     {
-      "path": "basic_data/data/details/64/fullgoal__mantianxing.js.gz",
-      "size": 4870,
-      "sha256": "0ec5441f32f6edc91556a5914571619bb1f251f50fc015a86f51db50012f6601"
-    },
-    {
       "path": "basic_data/data/details/64/fullgoal__ZYZXZH001.js.gz",
       "size": 14608,
       "sha256": "82b0b412b16ec3f13011acb235096982a2cde60fa34b5938edb82f76ce2f2e0a"
+    },
+    {
+      "path": "basic_data/data/details/64/fullgoal__mantianxing.js.gz",
+      "size": 4870,
+      "sha256": "0ec5441f32f6edc91556a5914571619bb1f251f50fc015a86f51db50012f6601"
     },
     {
       "path": "basic_data/data/details/64/gfbank_cgb__ui-name-1b815a69a228100b.js.gz",
@@ -21840,16 +21850,6 @@
       "sha256": "2e048e1de033c5a7f571f461b850894c988363a07c171649f3eb54ddd0a74e0a"
     },
     {
-      "path": "README.md",
-      "size": 2005,
-      "sha256": "1685bc0b587982b890779138e82420995792ab2b9431983cbdcbb17f48b57502"
-    },
-    {
-      "path": "README_部署说明.md",
-      "size": 2005,
-      "sha256": "1685bc0b587982b890779138e82420995792ab2b9431983cbdcbb17f48b57502"
-    },
-    {
       "path": "scripts/serve_basic_data_site.py",
       "size": 8340,
       "sha256": "566d56934194f0c7d35f1d1419e6934287a538cb171e98bfdc0344850859bfb0"
@@ -21876,8 +21876,8 @@
     },
     {
       "path": "version.json",
-      "size": 127,
-      "sha256": "ac8890a47a5bd9c2d891e1e10d19b60de9dc207f4f73d906185da0c7f7efbee2"
+      "size": 282,
+      "sha256": "b014db2801d26bce594db3266ea8038586f65fe8a82bead893f78ff549598505"
     },
     {
       "path": "停止最小发布集.cmd",
@@ -21890,5 +21890,8 @@
       "sha256": "fde8860405e951900cdc0080196dc927fb16da60ffe7464e5d2c068490a4fac5"
     }
   ],
-  "performanceContractVersion": 1
+  "performanceContractVersion": 1,
+  "assistantRecoveryBuildId": "assistant-templates-20261023T205243",
+  "assistantRecoveryPublishedAt": "2026-10-23T20:52:43.581230+08:00",
+  "assistantTemplateBuild": "assistant-templates-20261023T205243"
 }

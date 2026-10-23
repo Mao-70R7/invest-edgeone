@@ -98,7 +98,8 @@
  .ty-result-table td span{overflow-wrap:anywhere}
  .ty-result-table td.ty-result-action{display:flex;justify-content:flex-end}
  .ty-result-table td.ty-result-action::before{display:none}
- .ty-result-chart svg{min-height:160px}
+ .ty-result-chart{overflow-x:auto}
+ .ty-result-chart svg{min-height:160px;max-height:none}
  .ty-result-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
  .ty-result-facts{grid-template-columns:110px minmax(0,1fr)}
 }
