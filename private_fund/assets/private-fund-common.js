@@ -8,6 +8,8 @@
     ruiyuan_highend: { label: "睿远专户", color: "#929aa2", pale: "#F1F3F5", shape: "circle" },
     xueqiu: { label: "雪球私募", color: "#6559a0", pale: "#F1F3F5", shape: "circle" },
     cmb_private_investment: { label: "招商银行私享投资", color: "#929aa2", pale: "#F1F3F5", shape: "circle" },
+    zocaifu_highend: { label: "中欧财富高端理财", color: "#224E72", pale: "#EDF3F8", shape: "circle" },
+    ciccwm_public: { label: "中金财富公示名录", color: "#68788A", pale: "#F1F3F5", shape: "square" },
   };
 
   function esc(value) {
@@ -41,6 +43,9 @@
   }
 
   function missingReason(row, code) {
+    if (row.source === 'zocaifu_highend' && row.latestNavDate && !Number(row.analysisPointCount || 0)) {
+      return {code:'calculation_unavailable',label:'原始净值已保留；口径待核',message:'已取得来源净值，复权与收益计算口径尚未核验；原始记录见产品详情，不生成统一排名。'};
+    }
     return row.metricMissing?.[code] || {code:'calculation_unavailable',label:'计算条件不足',message:'当前快照未提供该指标或其缺失原因；不以0替代。'};
   }
 

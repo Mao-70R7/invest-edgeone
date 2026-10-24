@@ -1,14 +1,14 @@
 {
   "status": "ready",
-  "generatedAt": "2026-10-23T02:51:48+08:00",
+  "generatedAt": "2026-10-24T13:55:45+08:00",
   "checks": {
     "pageCount": 6,
-    "detailFileCount": 10431,
-    "catalogRowCount": 10431,
+    "detailFileCount": 10507,
+    "catalogRowCount": 10507,
     "cmbPublication": "cmb_display_20260911_v1",
     "cmbQuality": {
       "version": "cmb_display_20260911_v1",
-      "generatedAt": "2026-10-23T02:16:04+08:00",
+      "generatedAt": "2026-10-24T13:22:08+08:00",
       "products": 2903,
       "issueCount": 3,
       "issueShare": 0.0010334137099552187,
@@ -26,7 +26,7 @@
       "defaultProductScope": "all",
       "paletteStorage": "browser_local",
       "companyMatching": "exact_disclosed_name",
-      "helperSha256": "542e040f37823b79bf46f7d6e3a3c812acd032a13987ea64b440deb8e06543b5"
+      "helperSha256": "8991c97dfe2fc088d6dbf4a2a752d92b01de1713c8c6b8d80785eb9ccebe65d2"
     },
     "gffundsZone": {
       "status": "passed",
@@ -95,10 +95,10 @@
     "authenticatedPerformanceAnalyticsIncluded": true,
     "restrictedAnalyticsDetailCount": 5672,
     "restrictedRawDataIncluded": false,
-    "rawDetailBytes": 1104255308,
-    "compressedDetailBytes": 158114509,
-    "compressionRatio": 0.143187,
-    "maxCompressedDetailBytes": 90017,
+    "rawDetailBytes": 1114514171,
+    "compressedDetailBytes": 159662854,
+    "compressionRatio": 0.143258,
+    "maxCompressedDetailBytes": 90087,
     "maxCompressedDetailFile": "2b/geshang__P185594__7a3cbb046f.js.gz",
     "oversizedFileCount": 0
   }

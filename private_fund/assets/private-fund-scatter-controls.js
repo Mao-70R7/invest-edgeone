@@ -57,7 +57,7 @@
     return rows.filter(row => (!state.source || row.source === state.source)
       && (!companies.size || companies.has(company(row)) || (row.companyAliases||[]).some(n=>companies.has(n)))
       && (!strategies.size || strategies.has(strategy(row)))
-      && (!query || (()=>{if(!searchCache.has(row))searchCache.set(row,normalize([row.name,row.fullName,row.id,row.registrationNumber,row.company,
+      && (!query || (()=>{if(!searchCache.has(row))searchCache.set(row,normalize([row.name,row.fullName,row.id,row.officialProductCode,row.registrationNumber,row.company,
         ...(row.companyAliases||[]),...(row.managers||[]),row.strategy1,row.strategy2,row.strategy3].join(' ')));return searchCache.get(row).includes(query);})()));
   }
   function readFilters(params, rows) {

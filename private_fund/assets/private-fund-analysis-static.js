@@ -206,6 +206,11 @@
       recentOpenDates:d.terms?.recent_open_dates || d.terms?.recent_open_dates_json});
     const displayCore=window.PrivateFundBusinessText.coreElements(core,row.source);
     displayCore.detailNotice=d.termsAvailability?.message || '';
+    if(d.sourceEvidence?.message)displayCore.detailNotice=d.sourceEvidence.message+' '+displayCore.detailNotice;
+    if(row.source==='zocaifu_highend')for(const field of ['managementFee','custodianFee','salesServiceFee']) {
+      if(/^\d+(\.\d+)?$/.test(String(displayCore[field]||'')))displayCore[field]+='（来源原值，单位待核）';
+    }
+    if(d.sourceEvidence?.internalDirectoryKey)displayCore.sourceProductId=d.sourceEvidence.officialProductCode || '源站未提供；内部目录键见详情';
     if(d.termsAvailability?.collectedAt)displayCore.detailNotice+=` 详情采集：${d.termsAvailability.collectedAt}`;
     if(row.source==='simuwang' && d.terms) {
       if(displayCore.paymentTime)displayCore.paymentTime=`申购缴款截止：${displayCore.paymentTime}；赎回到账时间未披露`;
@@ -384,7 +389,18 @@
         const reason=row.metricMissing?.[reasonCodes[code]];
         metricSources[code]={label:reason?.label||'历史、采样或分母条件不足',message:reason?.message};
       }
+      const rawNavOnly=row.source==='zocaifu_highend' && (d.nav||[]).length>0 && !(d.analysisCurve||[]).length;
+      if(rawNavOnly)for(const code of Object.keys(definitions))if(!finite(displayMetrics[code])) {
+        metricSources[code]={label:'原始净值已采集；统一收益口径待核',message:'来源单位净值和累计净值已保留。复权与收益计算口径尚未核验，暂不生成统一收益或排名；可在来源区域查看全部记录。'};
+      }
       return {detailStatus,key:row.key,sourceId:row.source,sourceLabel:row.sourceLabel,productId:row.id,name:row.name,
+        rawNavOnly,
+        displayProductCode:row.internalDirectoryKey ? (row.officialProductCode || '源站未提供代码') : row.id,
+        sourceEvidence:d.sourceEvidence||null, sourceDocuments:d.sourceEvidence?(d.documents||[]):[],
+        periodicReports:d.periodicReports||[],
+        sourceBonus:d.sourceEvidence?(d.terms?.anonymous_bonus||[]):[],
+        sourceNav:row.source==='zocaifu_highend'?(d.nav||[]).map(n=>({date:n.nav_date,unit:n.unit_nav_raw,total:n.accumulated_nav_raw})):[],
+        sourcePerformance:row.source==='zocaifu_highend'?(d.performance||[]).map(p=>({code:p.metric_code,value:p.value_raw,date:p.as_of_date})):[],
         companyName:row.company,managerNames:d.managers?.length ? d.managers.map(m=>m.relation?.source_manager_name || m.profile?.source_manager_name).filter(Boolean) : (row.managers||[]),inceptionDate:row.inceptionDate,style:row.style,
         awards:(row.awards||[]).map(a=>({id:a.id,brand:a.brand,year:a.year,evaluationYear:a.evaluationYear,periodYears:a.periodYears,series:a.series,category:a.category,status:a.status,url:a.url,recipient:a.recipient})),
         reasons:row.key===key?['目标产品']:row.key===custom?.key?['自选对比',...(context.independent?['按自身大类独立评分']:[])]:reasons.get(row.key)||[],

@@ -34,7 +34,7 @@
     @media(max-width:680px){.gf-attr-root{margin-top:16px}.gf-attr-scope{display:block;padding:13px}.gf-attr-scope b{display:block;margin-bottom:5px;white-space:normal}.gf-attr-section .head{align-items:flex-start;flex-direction:column;padding:11px 13px}.gf-attr-section .headNote{text-align:left}.gf-attr-body{padding:10px}.gf-attr-chart{height:235px}.gf-attr-pager{justify-content:space-between}.gf-attr-pager button{min-height:44px}}
     .radarBody.is-empty{grid-template-columns:minmax(0,1fr);align-items:start}.radarBody.is-empty .scoreLegend{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.scoreLegend>div{min-width:0}.axisScore{font-size:13px}@media(max-width:680px){.radarBody.is-empty .scoreLegend{grid-template-columns:1fr}}
   </style>
-  <script data-inline-src="./assets/private-fund-business-text.js?v=20261023T021313208415_github_publish_6948">
+  <script data-inline-src="./assets/private-fund-business-text.js?v=20261024T131920398877_github_publish_27672">
 /* Presentation only: source structures stay untouched in the exported detail. */
 (() => {
   const REVIEW='来源提供了结构化条款，具体内容待核对原文';
@@ -175,7 +175,7 @@
 })();
 
 </script>
-  <script data-inline-src="./assets/private-fund-experience.js?v=20261023T021313208415_github_publish_6948">
+  <script data-inline-src="./assets/private-fund-experience.js?v=20261024T131920398877_github_publish_27672">
 window.PrivateFundManagerZoneEnabled = false;
 /* Pure, source-preserving view models shared by the overview and history chart. */
 (() => {
@@ -401,7 +401,7 @@ window.PrivateFundManagerZoneEnabled = false;
 
 </script>
 <!-- tianyan-web-assistant -->
-  <style data-inline-src="tianyan-assistant.css" data-assistant-template-build="assistant-templates-20261023T213303">.ty-assistant-overlay[hidden],.ty-assistant-panel [hidden]{display:none!important}
+  <style data-inline-src="tianyan-assistant.css">.ty-assistant-overlay[hidden],.ty-assistant-panel [hidden]{display:none!important}
 .ty-assistant-open{overflow:hidden}
 .ty-assistant-overlay{position:fixed;inset:0;z-index:1500;display:flex;align-items:center;justify-content:center;background:rgba(14,27,47,.35);padding:28px;font-family:"Microsoft YaHei",system-ui,sans-serif;color:#192b44}
 .ty-assistant-panel{width:min(740px,100%);height:min(780px,90dvh);display:flex;flex-direction:column;background:#fff;border:1px solid #dbe2ea;border-radius:14px;box-shadow:0 20px 80px rgba(17,32,54,.18);overflow:hidden}
@@ -507,13 +507,15 @@ window.PrivateFundManagerZoneEnabled = false;
  .ty-result-facts{grid-template-columns:110px minmax(0,1fr)}
 }
 </style>
-  <script data-inline-src="./assets/tianyan-assistant-config.js?v=assistant-v2&assistant_templates=assistant-templates-20261023T213303">
+  <script data-inline-src="./assets/tianyan-assistant-config.js?v=assistant-v2">
 window.TianyanAssistantConfig = {"apiBase": "https://gfinvest.site/ai-api", "title": "天眼 AI 助手"};
 
 </script>
   <!-- Assistant loads asynchronously after the page body. -->
   <!-- /tianyan-web-assistant -->
-<script>window.__PRIVATE_FUND_ANALYSIS_SNAPSHOT_ENABLED__=true;</script><link rel="icon" href="data:,"><script data-inline-src="./assets/private-fund-analysis-static.js?v=20261023T021313208415_github_publish_6948">
+<link rel="stylesheet" href="./assets/private-fund-periodic-reports.css">
+  <script src="./assets/private-fund-periodic-reports.js"></script>
+<script>window.__PRIVATE_FUND_ANALYSIS_SNAPSHOT_ENABLED__=true;</script><link rel="icon" href="data:,"><script data-inline-src="./assets/private-fund-analysis-static.js?v=20261024T131920398877_github_publish_27672">
 /* Static adapter for the existing product-analysis renderer. No local API. */
 (() => {
   const version = new URL(document.currentScript?.dataset?.inlineSrc || document.currentScript?.src || location.href, location.href).searchParams.get('v') || '';
@@ -722,6 +724,11 @@ window.TianyanAssistantConfig = {"apiBase": "https://gfinvest.site/ai-api", "tit
       recentOpenDates:d.terms?.recent_open_dates || d.terms?.recent_open_dates_json});
     const displayCore=window.PrivateFundBusinessText.coreElements(core,row.source);
     displayCore.detailNotice=d.termsAvailability?.message || '';
+    if(d.sourceEvidence?.message)displayCore.detailNotice=d.sourceEvidence.message+' '+displayCore.detailNotice;
+    if(row.source==='zocaifu_highend')for(const field of ['managementFee','custodianFee','salesServiceFee']) {
+      if(/^\d+(\.\d+)?$/.test(String(displayCore[field]||'')))displayCore[field]+='（来源原值，单位待核）';
+    }
+    if(d.sourceEvidence?.internalDirectoryKey)displayCore.sourceProductId=d.sourceEvidence.officialProductCode || '源站未提供；内部目录键见详情';
     if(d.termsAvailability?.collectedAt)displayCore.detailNotice+=` 详情采集：${d.termsAvailability.collectedAt}`;
     if(row.source==='simuwang' && d.terms) {
       if(displayCore.paymentTime)displayCore.paymentTime=`申购缴款截止：${displayCore.paymentTime}；赎回到账时间未披露`;
@@ -900,7 +907,18 @@ window.TianyanAssistantConfig = {"apiBase": "https://gfinvest.site/ai-api", "tit
         const reason=row.metricMissing?.[reasonCodes[code]];
         metricSources[code]={label:reason?.label||'历史、采样或分母条件不足',message:reason?.message};
       }
+      const rawNavOnly=row.source==='zocaifu_highend' && (d.nav||[]).length>0 && !(d.analysisCurve||[]).length;
+      if(rawNavOnly)for(const code of Object.keys(definitions))if(!finite(displayMetrics[code])) {
+        metricSources[code]={label:'原始净值已采集；统一收益口径待核',message:'来源单位净值和累计净值已保留。复权与收益计算口径尚未核验，暂不生成统一收益或排名；可在来源区域查看全部记录。'};
+      }
       return {detailStatus,key:row.key,sourceId:row.source,sourceLabel:row.sourceLabel,productId:row.id,name:row.name,
+        rawNavOnly,
+        displayProductCode:row.internalDirectoryKey ? (row.officialProductCode || '源站未提供代码') : row.id,
+        sourceEvidence:d.sourceEvidence||null, sourceDocuments:d.sourceEvidence?(d.documents||[]):[],
+        periodicReports:d.periodicReports||[],
+        sourceBonus:d.sourceEvidence?(d.terms?.anonymous_bonus||[]):[],
+        sourceNav:row.source==='zocaifu_highend'?(d.nav||[]).map(n=>({date:n.nav_date,unit:n.unit_nav_raw,total:n.accumulated_nav_raw})):[],
+        sourcePerformance:row.source==='zocaifu_highend'?(d.performance||[]).map(p=>({code:p.metric_code,value:p.value_raw,date:p.as_of_date})):[],
         companyName:row.company,managerNames:d.managers?.length ? d.managers.map(m=>m.relation?.source_manager_name || m.profile?.source_manager_name).filter(Boolean) : (row.managers||[]),inceptionDate:row.inceptionDate,style:row.style,
         awards:(row.awards||[]).map(a=>({id:a.id,brand:a.brand,year:a.year,evaluationYear:a.evaluationYear,periodYears:a.periodYears,series:a.series,category:a.category,status:a.status,url:a.url,recipient:a.recipient})),
         reasons:row.key===key?['目标产品']:row.key===custom?.key?['自选对比',...(context.independent?['按自身大类独立评分']:[])]:reasons.get(row.key)||[],
@@ -971,7 +989,7 @@ window.TianyanAssistantConfig = {"apiBase": "https://gfinvest.site/ai-api", "tit
   window.PrivateFundAnalysisStatic = {request,build,rank,bucket,profile,volatilityEligible,referenceCandidates,scoringReason,axisObservations,cohort,referenceCohort,broadCohort,comparisonGroup,sixComplete,freshPerformance,todayShanghai,definitions};
 })();
 
-</script><script data-inline-src="./assets/private-fund-static-loader.js?v=20261023T021313208415_github_publish_6948&amp;nav=business_query_v4">
+</script><script data-inline-src="./assets/private-fund-static-loader.js?v=20261024T131920398877_github_publish_27672&amp;nav=business_query_v4">
 (() => {
   "use strict";
 
@@ -1264,19 +1282,44 @@ window.TianyanAssistantConfig = {"apiBase": "https://gfinvest.site/ai-api", "tit
         if(active)document.getElementById(active)?.focus({preventScroll:true});
       });
     }
+    function anonymousEvidence(t){
+      const e=t.sourceEvidence;if(!e)return '';
+      const docs=t.sourceDocuments||[],nav=(t.sourceNav||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
+      const metrics=t.sourcePerformance||[];
+      const names={return_last_1d:'日收益',return_last_1w:'近一周收益',return_last_1m:'近一月收益',return_last_3m:'近三月收益',return_last_6m:'近六月收益',return_last_1y:'近一年收益',return_last_2y:'近两年收益',return_last_3y:'近三年收益',return_last_5y:'近五年收益',return_ytd:'今年以来收益',return_current_month:'本月收益',return_since_inception:'成立以来收益',annualized_return_since_inception:'成立以来年化收益',volatility_1y:'近一年波动率',max_drawdown_1y:'近一年最大回撤',sharpe_ratio_1y:'近一年夏普比率',drawdown_recovery_days_1y:'近一年回撤修复天数'};
+      let navChart='';
+      const valid=nav.filter(n=>Number.isFinite(Number(n.unit))&&Number(n.unit)>0);
+      if(valid.length>1){
+        const low=Math.min(...valid.map(n=>Number(n.unit))),high=Math.max(...valid.map(n=>Number(n.unit))),span=high-low||1;
+        const start=Date.parse(valid[0].date),end=Date.parse(valid.at(-1).date),timeSpan=end-start||1;
+        const points=valid.map(n=>`${50+(Date.parse(n.date)-start)/timeSpan*790},${190-(Number(n.unit)-low)/span*145}`).join(' ');
+        navChart=`<svg viewBox="0 0 900 235" role="img" aria-label="来源单位净值原值走势" style="width:100%;height:auto;max-height:280px"><line x1="50" x2="840" y1="190" y2="190" stroke="#d7e0e7"/><polyline points="${points}" fill="none" stroke="#224E72" stroke-width="2"/><text x="50" y="25" fill="#16324f">单位净值原值 · ${esc(low)} 至 ${esc(high)}</text><text x="50" y="220" fill="#64748b">${esc(valid[0].date)}</text><text x="840" y="220" text-anchor="end" fill="#64748b">${esc(valid.at(-1).date)}</text></svg>`;
+      }
+      const fieldLabels={registration_number:'备案号',inception_date:'成立日期',maturity_date:'到期日期',custodian_name:'托管人',currency:'币种',strategy_l1:'投资策略',risk_level:'风险等级',scale:'产品规模',holdings:'完整持仓',documents:'报告文件'};
+      const absent=Object.entries(e.fieldStatus||{}).filter(([k,v])=>fieldLabels[k]&&/not_|missing|blank|unverified|expected|only_|empty|means_registration/.test(String(v))).map(([k])=>fieldLabels[k]);
+      const docBody=docs.length?`<details class="section" open><summary>披露文件（${docs.length} 条）</summary><div class="tableWrap" style="max-height:420px"><table><thead><tr><th>披露日期</th><th>文件名称</th><th>本次获取状态</th></tr></thead><tbody>${docs.slice().sort((a,b)=>String(b.document_date).localeCompare(String(a.document_date))).map(d=>`<tr><td>${esc(d.document_date)}</td><td>${/^https?:\/\//.test(d.document_url||'')?`<a href="${esc(d.document_url)}" target="_blank" rel="noopener noreferrer">${esc(d.document_type)}</a>`:esc(d.document_type)}</td><td>${d.document_download_status==='success'?'已下载并核验内容哈希':d.document_download_status==='login_required_skipped'?'访问受限，已跳过':'链接已记录；正文未确认'}</td></tr>`).join('')}</tbody></table></div></details>`:'<p class="headNote">本次匿名响应未提供可登记的报告文件。</p>';
+      const bonusBody=t.sourceBonus?.length?`<details class="section"><summary>分红与份额变更（${t.sourceBonus.length} 条）</summary><p class="headNote">以下为来源返回的原始值与类型代码，未换算金额或份额；仅为本次接口返回范围。</p><div class="tableWrap"><table><thead><tr><th>日期原值</th><th>分红值原值</th><th>累计值原值</th><th>变更类型代码</th><th>变更比率原值</th></tr></thead><tbody>${t.sourceBonus.map(b=>`<tr><td>${esc(b.zRhtXdt)}</td><td>${esc(b.zRhtAmt)}</td><td>${esc(b.zRhtCum)}</td><td>${esc(b.zDacTyp||'—')}</td><td>${esc(b.zDacRat)}</td></tr>`).join('')}</tbody></table></div></details>`:'';
+      const navBody=nav.length?`<details class="section"><summary>查看全部 ${nav.length} 条来源净值</summary><div class="tableWrap" style="max-height:380px"><table><thead><tr><th>日期</th><th>单位净值原值</th><th>累计净值原值</th></tr></thead><tbody>${nav.slice().reverse().map(n=>`<tr><td>${esc(n.date)}</td><td>${esc(n.unit)}</td><td>${n.total==null?'—':esc(n.total)}</td></tr>`).join('')}</tbody></table></div></details>`:'';
+      const metricBody=metrics.length?`<details class="section"><summary>来源收益与风险指标（${metrics.length} 项）</summary><p class="headNote">保留来源原值；尺度及具体统计区间未独立核验，不进入统一排名。日期关联同产品净值日。</p><div class="tableWrap"><table><thead><tr><th>指标</th><th>来源原值</th><th>关联日期</th></tr></thead><tbody>${metrics.map(m=>`<tr><td>${esc(names[m.code]||m.code.replace(/^(volatility|max_drawdown|drawdown_recovery_days|sharpe_ratio|benchmark_excess_return)_(1m|3m|6m|1y|3y|ytd|since_inception)$/,(_,type,period)=>({"1m":"近一月","3m":"近三月","6m":"近六月","1y":"近一年","3y":"近三年",ytd:"今年以来",since_inception:"成立以来"}[period])+({volatility:"波动率",max_drawdown:"最大回撤",drawdown_recovery_days:"回撤修复天数",sharpe_ratio:"夏普比率",benchmark_excess_return:"超基准收益原值"}[type])))}</td><td>${esc(m.value)}</td><td>${esc(m.date)}</td></tr>`).join('')}</tbody></table></div></details>`:'';
+      const quoteBody=e.publicRankQuotes?.length?`<details class="section" open><summary>公开榜单原值（${e.publicRankQuotes.length} 条）</summary><p class="headNote">来源日期仅有月日，年份未披露；收益显示尺度尚未核实。以下原值不进入带日期净值、收益曲线或统一排名。</p><div class="tableWrap"><table><thead><tr><th>来源区间</th><th>来源日期</th><th>净值原值</th><th>收益显示原值</th><th>来源</th></tr></thead><tbody>${e.publicRankQuotes.map(q=>`<tr><td>${esc(q.period_raw)}</td><td>${esc(q.nav_date_raw)} · 年份未披露</td><td>${esc(q.nav_raw)}</td><td>${esc(q.return_raw)}</td><td><a href="${esc(q.source_url)}" target="_blank" rel="noopener noreferrer">来源页面 ↗</a></td></tr>`).join('')}</tbody></table></div></details>`:'';
+      const priorDates=e.priorPublicFieldDates?.length?`<p class="headNote">部分字段沿用既有公开观测，原采集时间保留为 ${e.priorPublicFieldDates.map(esc).join('、')}；不视为本次重新核验。</p>`:'';
+      return `<section class="card section" id="anonymousSourceEvidence"><div class="head"><h2>来源、净值与披露文件</h2><div class="headNote">匿名采集 · ${esc(e.collectedAt)}</div></div><div style="padding:18px"><p>${esc(e.message)}</p>${absent.length?`<p class="headNote">本次匿名响应未提供或口径待核：${esc([...new Set(absent)].join('、'))}。缺失不补零。</p>`:''}${priorDates}${quoteBody}${navChart}${navBody}${metricBody}${bonusBody}${docBody}<details class="section"><summary>采集证据</summary><p style="overflow-wrap:anywhere">原始响应：${esc(e.rawEvidencePath)}</p><p>${/^https?:\/\//.test(e.sourceUrl||'')?`<a href="${esc(e.sourceUrl)}" target="_blank" rel="noopener noreferrer">官方来源地址 ↗</a>`:''}</p></details></div></section>`;
+    }
     function render(){const d=state.data,t=d.target,c=d.coreElements,quality=d.quality,custom=d.selectedComparison?d.products.find(p=>p.key===d.selectedComparison.key):null;
       document.title=t.name+' · 天眼私募';$('#app').innerHTML=`
       ${d.detailLoading?`<section class="card" role="status" style="padding:10px 14px;margin-bottom:12px">${d.detailLoading.pending?`指标与比较已就绪，走势和条款正在补载 · 剩余 ${d.detailLoading.pending} 只`:d.detailLoading.failed.length?'部分走势与条款暂未载入':'走势与条款加载完成'}${d.detailLoading.failed.length?`；${d.detailLoading.failed.length} 只详情暂未载入，已有指标保留 <button type="button" onclick="load()">重试未载入详情</button>`:''}</section>`:''}
-      <section class="card hero"><div class="heroTop"><div><h1>${esc(t.name)}</h1><div class="meta"><span>基金代码：${esc(t.productId)}</span><span>销售渠道：${esc(t.sourceLabel)}</span><span>管理人：${esc(t.companyName)}</span><span>基金经理：${esc((t.managerNames||[]).join('、')||'未披露')}</span><span class="tag">${esc(t.style.label)}</span></div></div><div class="fresh"><strong>业绩截止 ${show(c.latestPerformanceDate)}</strong>快照更新 ${esc(d.meta.databaseModifiedAt.slice(0,16).replace('T',' '))}<br>本地计算 ${d.meta.queryDurationMs} ms</div></div>${awardHistory(t)}
+      <section class="card hero"><div class="heroTop"><div><h1>${esc(t.name)}</h1><div class="meta"><span>来源代码：${esc(t.displayProductCode||t.productId)}</span><span>销售渠道：${esc(t.sourceLabel)}</span><span>管理人：${esc(t.companyName)}</span><span>基金经理：${esc((t.managerNames||[]).join('、')||'未披露')}</span><span class="tag">${esc(t.style.label)}</span></div></div><div class="fresh"><strong>${t.rawNavOnly?"统一收益口径待核":"业绩截止 "+show(c.latestPerformanceDate)}</strong>快照更新 ${esc(d.meta.databaseModifiedAt.slice(0,16).replace('T',' '))}<br>本地计算 ${d.meta.queryDurationMs} ms</div></div>${t.sourceEvidence?.message?`<p class="headNote" style="padding:8px 0">${esc(t.sourceEvidence.message)}</p>`:""}${awardHistory(t)}
       <div class="core">
         ${coreItem('成立时间',c.inceptionDate)}${coreItem('产品规模',window.PrivateFundBusinessText.productScale(c.productScale),'neutral',scaleSource(c))}${coreItem('起投金额',joinAmount(c.subscriptionThreshold,c.subscriptionThresholdUnit))}${coreItem('风险等级',c.riskLevel)}${coreItem('管理费',c.managementFee)}${coreItem('业绩报酬',c.performanceFee)}
         ${metricCoreItem('近1月','return1m')}${metricCoreItem('近3月','return3m')}${metricCoreItem('近6月','return6m')}${metricCoreItem('近1年','return1y')}${metricCoreItem('今年以来','returnYtd')}${metricCoreItem('完整可用期','returnSinceInception')}
         ${metricCoreItem('成立以来年化收益','annualReturn')}${metricCoreItem('近1年最大回撤','maxDrawdown')}${metricCoreItem('成立以来年化波动','annualVol')}${metricCoreItem('成立以来夏普','sharpe')}
       </div></section>
       ${t.representativeProduct?`<section class="card section" style="padding:14px"><b>同系列代表产品参考：</b><a href="./detail.html?id=${encodeURIComponent(t.representativeProduct.key)}">${esc(t.representativeProduct.name)} · 查看走势</a><p>App展示的此参考业绩属于代表产品，不属于当前募集份额。</p></section>`:''}
+      ${t.periodicReports?.length&&window.PrivateFundPeriodicReports?`<section class="card section" id="periodicReports"><div class="head"><h2>季报解析</h2><div class="headNote">按报告期 · 保留原值与缺失说明</div></div><div style="padding:18px">${window.PrivateFundPeriodicReports.renderDetail(t.periodicReports)}</div></section>`:''}
+      ${anonymousEvidence(t)}
       <div class="grid">
         <section class="card"><div class="head"><h2>${quality.historySinceInception?'成立以来业绩走势':'完整可用历史走势'}</h2><div class="controls"><span class="headNote" id="curveRange"></span><label>竞品曲线</label><select id="curvePeer"><option value="">不叠加竞品</option>${d.products.slice(1).map(p=>`<option value="${esc(p.key)}" ${p.key===state.selected?'selected':''}>${esc(p.name)}</option>`).join('')}</select></div></div><div class="chartBody"><div class="legend" id="chartLegend"></div><div class="chartWrap"><svg id="lineChart" viewBox="0 0 920 330" preserveAspectRatio="none" tabindex="0" aria-label="产品累计收益走势图，可移动鼠标查看日期和收益率"></svg><div class="chartTooltip" id="chartTooltip" role="status" aria-live="polite"></div><div class="chartEmpty" id="chartEmpty"></div></div><div class="chartFoot"><span id="chartBasis">目标完整历史优先展示</span><span>鼠标滑动或触控图表查看日期与累计收益</span></div></div></section>
-        <section class="card"><div class="head"><h2>${esc(d.peerGroup.label||"大类产品组")}</h2><div class="controls"><select id="peerMode" aria-label="比较大类">${d.peerGroup.modes.map(m=>`<option value="${m.code}" ${m.code===d.peerGroup.mode?'selected':''} ${m.available?'':'disabled'}>${esc(m.label)}${m.available?` · ${esc(m.targetBucket)}`:' · 数据不足'}</option>`).join('')}</select></div></div><div class="peerBody"><div class="peerTitle"><span class="peerCount">${d.peerGroup.count}</span> 只产品</div><div class="peerDefinition">当前口径：${esc(d.peerGroup.bucket)}<br>已加载对比／参考产品：${Math.max(0,d.products.length-1)}只（跨类对比不改变本组样本）</div><div class="ruleBox"><b>分类逻辑</b>${esc(d.peerGroup.definition)}</div><div class="ruleBox"><b>日期对齐</b>${esc(d.peerGroup.alignmentRule)}</div><div class="miniStats"><div class="mini"><span>目标净值点</span><strong>${quality.targetCurvePointCount}</strong></div><div class="mini"><span>入选标杆/自选</span><strong>${d.products.length-1}只</strong></div></div></div></section>
+        <section class="card"><div class="head"><h2>${esc(d.peerGroup.label||"大类产品组")}</h2><div class="controls"><select id="peerMode" aria-label="比较大类">${d.peerGroup.modes.map(m=>`<option value="${m.code}" ${m.code===d.peerGroup.mode?'selected':''} ${m.available?'':'disabled'}>${esc(m.label)}${m.available?` · ${esc(m.targetBucket)}`:' · 数据不足'}</option>`).join('')}</select></div></div><div class="peerBody"><div class="peerTitle"><span class="peerCount">${d.peerGroup.count}</span> 只产品</div><div class="peerDefinition">当前口径：${esc(d.peerGroup.bucket)}<br>已加载对比／参考产品：${Math.max(0,d.products.length-1)}只（跨类对比不改变本组样本）</div><div class="ruleBox"><b>分类逻辑</b>${esc(d.peerGroup.definition)}</div><div class="ruleBox"><b>日期对齐</b>${esc(d.peerGroup.alignmentRule)}</div><div class="miniStats"><div class="mini"><span>统一分析净值点</span><strong>${quality.targetCurvePointCount}</strong></div><div class="mini"><span>入选标杆/自选</span><strong>${d.products.length-1}只</strong></div></div></div></section>
       </div>
       <section class="card section"><div class="head compareHead"><div class="compareHeading"><h2>核心指标综合对比</h2><div class="headNote">按各自大类评分；跨类可对比，缺失不补0</div></div><div class="selfPicker"><input id="compareSearch" type="search" autocomplete="off" placeholder="输入产品名称或代码，例如：嘉运天诚世园6号" value="${custom?esc(custom.name):''}" aria-label="查询自选对比产品"><button class="addButton" id="compareSearchButton" type="button">查询并加入</button>${custom?'<button class="clearButton" id="clearCompareButton" type="button">移除自选</button>':''}<div class="searchResults" id="compareResults" hidden></div></div></div><div class="tableWrap"><table class="compare"><thead><tr><th class="sticky">产品</th><th class="reason">入选原因</th><th class="channel">渠道</th><th class="date">成立日期</th><th class="basic">基金公司</th><th class="manager">基金经理</th><th class="date">业绩日期</th>${Object.entries(d.metricDefinitions).map(([c,m])=>`<th class="metric">${esc(m.label)}</th>`).join('')}</tr></thead><tbody>${d.products.map(productRow).join('')}</tbody></table></div><div class="tableNote">六维统一近1年；成立以来指标保留展示、不参与六维排名。${d.peerGroup.scope==='broad_category'?'当前按权益、固收等大类比较，细分策略、市场、币种和基准不再拆组；排名仅代表大类位置。':''}${d.products.some(p=>p.key!==t.key&&Object.values(p.axisScores||{}).some(a=>a.score!=null))?'':'暂无可评分对比产品，已有参考指标仍展示；未评分不代表0分。'}${d.peerGroup.count>1&&d.peerGroup.count<10?'当前同类样本少于10只，百分位仅供小样本观察。':''}自选产品按自身大类评分，不改变目标组样本；跨类不作同池排名。点击产品行或切换矩阵下拉框查看对比。</div></section>
       <div class="lower"><section class="card"><div class="head"><h2>六维能力矩阵</h2><div class="controls"><label for="radarPeer">对比产品</label><select id="radarPeer" aria-label="六维矩阵对比产品"><option value="">不选对比产品</option>${d.products.slice(1).map(p=>`<option value="${esc(p.key)}" ${p.key===state.selected?'selected':''}>${esc(p.name)}</option>`).join('')||'<option value="">暂无可用参考</option>'}</select></div></div><div class="tableNote">统一近1年，每只产品按自身评分大类计算百分位。跨类仅比较能力轮廓，不作同池排名；缺失不补0。</div><div class="radarBody"><svg id="radar" viewBox="0 0 430 350"></svg><div class="scoreLegend" id="scoreLegend"></div></div></section><section class="card"><div class="head"><h2>六维评分表格对比</h2><div class="headNote">各自大类评分 · 保留原始指标及缺失说明</div></div><table class="axis-comparison" id="axisComparison" data-external-sort="true"><thead><tr><th scope="col">能力维度</th>${axisProductHeader(t)}${axisProductHeader(selectedScoringProduct())}</tr></thead><tbody>${d.axisDefinitions.map(axisRow).join('')}</tbody></table><div class="tableNote">分数表示产品在各自大类中的相对位置。大类、样本数不同，不能据分差直接判断跨类优劣；历史不足或样本不足时仍保留六个维度及已有指标。</div></section></div>
@@ -1285,11 +1328,12 @@ window.TianyanAssistantConfig = {"apiBase": "https://gfinvest.site/ai-api", "tit
       <section class="card section"><div class="head"><h2>投资逻辑</h2><div class="headNote">目标详情默认展示；缺失内容保留说明，不依赖标杆是否可用</div></div>${sideBySide('investment')}</section>
       <section class="card footer">数据来源：${esc(d.meta.databasePath)}。${esc(d.meta.dynamicContract)} 页面不构成收益承诺或投资建议。</section>`;
       bind();bindHistoryRange();drawPerformanceChart();drawRadar();
+      if(!state.reportHashScrolled&&location.hash.startsWith('#report-')){const report=document.getElementById(location.hash.slice(1));if(report){state.reportHashScrolled=true;requestAnimationFrame(()=>report.scrollIntoView({block:'start'}));}}
     }
     function bindHistoryRange(){const chart=$('#lineChart').closest('.card');const controls=document.createElement('div');controls.className='historyRanges';controls.setAttribute('aria-label','业绩走势区间');controls.innerHTML=window.PrivateFundExperience.ranges.map(([code,label])=>`<button type="button" data-range="${code}" aria-pressed="${code===state.historyRange}">${label}</button>`).join('');chart.querySelector('.head').after(controls);controls.querySelectorAll('button').forEach(b=>b.onclick=()=>{state.historyRange=b.dataset.range;controls.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));const u=new URL(location.href);if(state.historyRange==='since')u.searchParams.delete('history_range');else u.searchParams.set('history_range',state.historyRange);history.replaceState(null,'',u);drawPerformanceChart()})}
     function coreItem(k,v,cls='neutral',source=''){return`<div class="coreItem"><div class="coreLabel">${esc(k)}</div><div class="coreValue ${cls}" title="${esc(v)}">${esc(v)}</div><div class="coreSource" title="${esc(source)}">${esc(source)}</div></div>`}
     function scaleSource(c){return c.productScaleDate||''}
-    function metricCoreItem(k,c){const t=state.data.target,v=t.metrics?.[c],src=t.metricSources?.[c],display=v==null?'数据不足':metricText(c,v);return`<div class="coreItem"><div class="coreLabel">${esc(k)}</div><div class="coreValue ${tone(c,v)}" title="${esc(display)}">${esc(display)}</div><div class="coreSource" title="${esc(src?.message||src?.label||'数据不足')}">${esc(src?.label||'数据不足')}</div></div>`}
+    function metricCoreItem(k,c){const t=state.data.target,v=t.metrics?.[c],src=t.metricSources?.[c],display=v==null?(t.rawNavOnly?'口径待核':'待完整净值'):metricText(c,v);return`<div class="coreItem"><div class="coreLabel">${esc(k)}</div><div class="coreValue ${tone(c,v)}" title="${esc(display)}">${esc(display)}</div><div class="coreSource" title="${esc(src?.message||src?.label||'数据不足')}">${esc(src?.label||'数据不足')}</div></div>`}
     function joinAmount(v,u){if(v==null||v==='')return'未披露';const value=String(v),unit=String(u||'');if(['source_raw','source_native','unverified','source_unspecified','unknown'].includes(unit))return value;return unit&&value.includes(unit)?value:`${value}${unit}`}
     function kv(k,v){return`<div class="k">${esc(k)}</div><div>${show(v)}</div>`}
     function showCompareResults(html){const box=$('#compareResults');if(!box)return;box.innerHTML=html;box.hidden=false}
@@ -1392,10 +1436,10 @@ window.TianyanAssistantConfig = {"apiBase": "https://gfinvest.site/ai-api", "tit
       $('#chartLegend').innerHTML=series.map(s=>`<span class="${s.raw.length>1?'':'missing'}"><i style="background:${s.color}"></i>${esc(s.name)} · ${s.raw.length}点 · ${s.cadence}${s.smooth?' · 平滑连线':''}${s.raw.length>1?'':'（不足）'}</span>`).join('');
       const targetRaw=series[0].raw;
       svgEl.dataset.range=state.historyRange;svgEl.dataset.targetPoints=targetRaw.length;svgEl.dataset.windowStart=targetRaw[0]?.date||'';svgEl.dataset.windowEnd=targetRaw.at(-1)?.date||'';
-      $('#curveRange').textContent=targetRaw.length?`${targetRaw[0].date} 至 ${targetRaw.at(-1).date} · ${targetRaw.length}点 · ${series[0].cadence}`:'暂无历史序列';
+      $('#curveRange').textContent=targetRaw.length?`${targetRaw[0].date} 至 ${targetRaw.at(-1).date} · ${targetRaw.length}点 · ${series[0].cadence}`:target.rawNavOnly?'原始净值已采集；统一收益口径待核':'暂无历史序列';
       let valid=series.filter(s=>s.raw.length>1);
       empty.style.display='none';tip.style.display='none';
-      if(targetRaw.length<2){empty.style.display='flex';empty.textContent=target.detailStatus==='pending'?'目标走势正在加载，指标与六维比较已可查看':target.detailStatus==='failed'?'目标走势暂未载入，请点击上方重试；已有指标保留':'所选区间目标产品不足2个真实披露点，请切换更长区间';svgEl.innerHTML='';$('#chartBasis').textContent='不补零、不插造缺失净值';return}
+      if(targetRaw.length<2){empty.style.display='flex';empty.textContent=target.detailStatus==='pending'?'目标走势正在加载，指标与六维比较已可查看':target.detailStatus==='failed'?'目标走势暂未载入，请点击上方重试；已有指标保留':target.rawNavOnly?'原始净值走势和明细见上方；复权与收益口径核验后再纳入统一分析':'所选区间目标产品不足2个真实披露点，请切换更长区间';svgEl.innerHTML='';$('#chartBasis').textContent='不补零、不插造缺失净值';return}
       const targetStart=targetRaw.length?targetRaw[0].x:Math.min(...valid.flatMap(s=>s.raw.map(p=>p.x))),targetEnd=targetRaw.length?targetRaw.at(-1).x:Math.max(...valid.flatMap(s=>s.raw.map(p=>p.x)));
       const peerSeries=valid.find(s=>s.key==='peer'),commonStart=peerSeries?Math.max(targetStart,peerSeries.raw[0].x):targetStart;
       valid=valid.map(s=>{
@@ -1445,5 +1489,5 @@ window.TianyanAssistantConfig = {"apiBase": "https://gfinvest.site/ai-api", "tit
   const link = [...document.querySelectorAll('a.nav-link.back')].find(a => a.textContent === '产品列表');
   if (back && link) { const url = new URL(link.href); url.search = new URLSearchParams(back).toString(); link.href = url.href; }
 })();
-</script><script>for(const url of ["./assets/tianyan-assistant.js?v=assistant-v2&assistant_templates=assistant-templates-20261023T213303"]){const s=document.createElement("script");s.src=url;s.async=true;document.body.appendChild(s);}</script></body>
+</script><script>for(const url of ["./assets/tianyan-assistant.js?v=assistant-v2"]){const s=document.createElement("script");s.src=url;s.async=true;document.body.appendChild(s);}</script></body>
 </html>

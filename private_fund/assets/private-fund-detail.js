@@ -245,6 +245,16 @@
     const positions = (detail.positions || []).slice().sort((a, b) => String(b.position_date || "").localeCompare(String(a.position_date || "")) || Number(b.position_weight_raw || 0) - Number(a.position_weight_raw || 0));
     const positionRows = positions.slice(0, 50).map((item) => `<tr><td>${P.esc(P.formatDate(item.position_date))}</td><td>${P.esc(text(item.security_name))}<span class="cell-sub">${P.esc(text(item.security_id, ""))}</span></td><td>${P.esc(P.formatNumber(item.position_weight_raw, 2))}%</td></tr>`).join("") || '<tr><td colspan="3">暂无公开持仓</td></tr>';
     const isGffunds = catalogRow.source === "gffunds_highend";
+    const provenance = detail.sourceEvidence;
+    const publicQuotes = (provenance?.publicRankQuotes || []);
+    const publicQuoteBody = publicQuotes.length ? `<p class="analytics-note">公开榜单展示值；净值日期只披露月日，年份未披露，未纳入有日期的净值及统一收益计算。</p><div class="table-wrap"><table class="detail-table"><thead><tr><th>区间</th><th>展示净值</th><th>来源日期原值</th><th>收益原值</th></tr></thead><tbody>${publicQuotes.map(q=>`<tr><td>${P.esc(q.period_raw)}</td><td>${P.esc(q.nav_raw)}</td><td>${P.esc(q.nav_date_raw)} · 年份未披露</td><td>${P.esc(q.return_raw)}</td></tr>`).join('')}</tbody></table></div>` : "";
+    const provenanceBody = provenance ? `<p class="analytics-note">${P.esc(provenance.message)}</p>${definitions([
+      ["读取方式", provenance.accessMode], ["采集时间", P.formatDateTime(provenance.collectedAt)],
+      ["官方产品代码", provenance.internalDirectoryKey ? (provenance.officialProductCode || "源站未提供") : (provenance.officialProductCode || catalogRow.id)],
+      ["记录身份", provenance.internalDirectoryKey ? "按公示类别、名称和发行人生成的内部目录键" : "渠道产品代码"],
+      ["原始证据", provenance.rawEvidencePath]
+      , ["沿用公开资料的原采集日期", provenance.priorPublicFieldDates?.length ? provenance.priorPublicFieldDates.join('；') : '无']
+    ])}<p><a class="document-link" href="${P.esc(provenance.sourceUrl)}" target="_blank" rel="noopener noreferrer">官方来源地址 ↗</a></p>` : "";
     root.innerHTML = `
       <a class="back-link" href="${P.esc(backHref)}">← 返回产品列表</a>
       <section class="detail-hero ${isGffunds ? "is-gffunds" : ""}" style="--source:${P.esc(source.color)}">
@@ -259,17 +269,20 @@
       </section>
       <div class="detail-grid">
         <div class="detail-column">
+          ${provenance ? section("来源与缺失说明", provenanceBody) : ""}
+          ${detail.periodicReports?.length ? section("季报解析", window.PrivateFundPeriodicReports.renderDetail(detail.periodicReports), "periodic-report-section") : ""}
+          ${publicQuotes.length ? section("公开榜单原值", publicQuoteBody) : ""}
           ${section("衍生分析指标", `<div class="metric-cards">${derivedCards}</div><p class="analytics-note">统一公式二次加工；跨来源仅公式对齐，序列类型、费用与估值频率仍可能不同，不用于跨来源排名。</p><div class="table-wrap detail-table-wrap"><table class="detail-table"><thead><tr><th>指标</th><th>数值</th><th>观察窗口</th><th>输入点</th><th>质量状态</th></tr></thead><tbody>${derivedRows}</tbody></table></div>`)}
           ${section(analysis.pointCount >= 2 ? "完整业绩走势" : "净值走势", analysis.pointCount >= 2 ? analysisChart : navChart, "analysis-section")}
           ${(performance.length || restrictedPerformanceCount) ? section("来源业绩指标", `${performanceNotice}${performance.length ? `<div class="metric-cards">${sourceMetricCards}</div><div class="table-wrap detail-table-wrap"><table class="detail-table"><thead><tr><th>指标</th><th>来源原值</th><th>截止日</th></tr></thead><tbody>${performanceRows}</tbody></table></div>` : ""}`) : ""}
           ${documents.length ? section("公开报告", `<div class="table-wrap"><table class="detail-table"><thead><tr><th>日期</th><th>类型</th><th>文件</th></tr></thead><tbody>${documentRows}</tbody></table></div>`) : ""}
-          ${positions.length ? section("公开持仓", `<div class="table-wrap"><table class="detail-table"><thead><tr><th>报告日</th><th>持仓</th><th>占比</th></tr></thead><tbody>${positionRows}</tbody></table></div>`) : ""}
+          ${positions.length && !detail.periodicReports?.length ? section("公开持仓", `<div class="table-wrap"><table class="detail-table"><thead><tr><th>报告日</th><th>持仓</th><th>占比</th></tr></thead><tbody>${positionRows}</tbody></table></div>`) : ""}
           ${detail.scale?.length ? section("产品规模", scaleChart) : ""}
           ${section("产品条款", `${termsNotice}${termsBody}`)}
         </div>
         <aside class="detail-column">
           ${section("产品信息", definitions([
-            ["产品编码", product.source_product_id], ["备案号", product.registration_number],
+            ["产品编码", provenance?.internalDirectoryKey ? (provenance.officialProductCode || "源站未提供") : product.source_product_id], ["备案号", product.registration_number],
             ["产品类型", product.product_type], ["组织 / 合同形式", product.legal_form || product.contract_type],
             ["产品状态", catalogRow.productStatus], ["销售状态", product.sale_status],
             ["风险等级", catalogRow.riskLevel], ["币种", product.currency],

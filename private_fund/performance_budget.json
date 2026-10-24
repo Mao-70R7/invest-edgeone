@@ -1,27 +1,27 @@
 {
   "method": "lossless_record_encoding_and_route_specific_data",
   "productTransport": {
-    "products": 10431,
-    "bytes": 888851,
-    "filterBytes": 70108,
-    "extraBytes": 6513704
+    "products": 10507,
+    "bytes": 913928,
+    "filterBytes": 70727,
+    "extraBytes": 6584183
   },
   "analysisTransport": {
     "version": 2,
-    "products": 10431,
+    "products": 10507,
     "productBuckets": 2030,
-    "startDate": "2026-10-23",
-    "endDate": "2026-11-07"
+    "startDate": "2026-10-24",
+    "endDate": "2026-11-08"
   },
-  "baselineCatalogBytes": 276652105,
-  "baselineCatalogGzipBytes": 32056533,
-  "encodedCatalogBytes": 70850700,
+  "baselineCatalogBytes": 279286099,
+  "baselineCatalogGzipBytes": 32433198,
+  "encodedCatalogBytes": 71618619,
   "routeDataGzipBytes": {
-    "catalog": 10527030,
-    "products": 888851,
-    "overview": 341470,
-    "peers": 6150457,
-    "detail-index": 3117021,
-    "awards-zone": 482063
+    "catalog": 10676876,
+    "products": 913928,
+    "overview": 341387,
+    "peers": 6268189,
+    "detail-index": 3164709,
+    "awards-zone": 485314
   }
 }
