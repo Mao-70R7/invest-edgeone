@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-10-24T21:16:47+08:00",
-  "packagedAt": "2026-10-24T21:51:08+08:00",
-  "runId": "20261024T211411728247_github_publish_28956",
+  "generatedAt": "2026-10-24T21:58:00+08:00",
+  "packagedAt": "2026-10-24T22:25:58+08:00",
+  "runId": "20261024T215618645356_github_publish_28956",
   "pages": [
     "index.html",
     "products.html",
@@ -59,7 +59,7 @@
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-10-24T21:16:47+08:00",
+    "generatedAt": "2026-10-24T21:58:00+08:00",
     "products": 2903,
     "issueCount": 3,
     "issueShare": 0.0010334137099552187,
@@ -122,9 +122,9 @@
     "method": "lossless_record_encoding_and_route_specific_data",
     "productTransport": {
       "products": 10507,
-      "bytes": 914060,
-      "filterBytes": 70726,
-      "extraBytes": 6584318
+      "bytes": 914061,
+      "filterBytes": 70725,
+      "extraBytes": 6584170
     },
     "analysisTransport": {
       "version": 2,
@@ -133,16 +133,16 @@
       "startDate": "2026-10-24",
       "endDate": "2026-11-08"
     },
-    "baselineCatalogBytes": 279286311,
-    "baselineCatalogGzipBytes": 32433425,
-    "encodedCatalogBytes": 71620077,
+    "baselineCatalogBytes": 279286214,
+    "baselineCatalogGzipBytes": 32433272,
+    "encodedCatalogBytes": 71619594,
     "routeDataGzipBytes": {
-      "catalog": 10677876,
-      "products": 914060,
+      "catalog": 10677910,
+      "products": 914061,
       "overview": 341415,
-      "peers": 6268399,
-      "detail-index": 3164810,
-      "awards-zone": 485355
+      "peers": 6268889,
+      "detail-index": 3164876,
+      "awards-zone": 485360
     }
   },
   "scatterControls": {
