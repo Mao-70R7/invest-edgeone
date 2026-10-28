@@ -1,0 +1,27 @@
+{
+  "method": "lossless_record_encoding_and_route_specific_data",
+  "productTransport": {
+    "products": 22723,
+    "bytes": 1530676,
+    "filterBytes": 80582,
+    "extraBytes": 7508876
+  },
+  "analysisTransport": {
+    "version": 2,
+    "products": 22723,
+    "productBuckets": 2048,
+    "startDate": "2026-10-27",
+    "endDate": "2026-11-11"
+  },
+  "baselineCatalogBytes": 416497809,
+  "baselineCatalogGzipBytes": 37251162,
+  "encodedCatalogBytes": 109084336,
+  "routeDataGzipBytes": {
+    "catalog": 12484329,
+    "products": 1530676,
+    "overview": 668622,
+    "peers": 7564281,
+    "detail-index": 4020253,
+    "awards-zone": 673809
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "status": "ready",
+  "generatedAt": "2026-10-27T23:47:02+08:00",
+  "checks": {
+    "pageCount": 7,
+    "detailFileCount": 22723,
+    "detailTransportFileCount": 12050,
+    "anonymousDetailBundleCount": 256,
+    "anonymousBundledProductsVerified": 10929,
+    "catalogRowCount": 22723,
+    "sourceProductCounts": {
+      "ciccwm_public": 9295,
+      "cmb_private_investment": 2903,
+      "geshang": 314,
+      "gffunds_highend": 68,
+      "harvestwm_highend": 1091,
+      "howbuy": 1634,
+      "jsfund_highend": 347,
+      "ruiyuan_highend": 137,
+      "simuwang": 5644,
+      "xueqiu": 1210,
+      "zocaifu_highend": 80
+    },
+    "harvestwmPublication": "harvestwm_business_display_20261026_v1",
+    "harvestwmExpectedProducts": 1091,
+    "cmbPublication": "cmb_display_20260911_v1",
+    "cmbQuality": {
+      "version": "cmb_display_20260911_v1",
+      "generatedAt": "2026-10-27T23:07:37+08:00",
+      "products": 2903,
+      "issueCount": 3,
+      "issueShare": 0.0010334137099552187,
+      "maxIssueShare": 0.05,
+      "incomeCurveProducts": 14,
+      "expectedNoHistoryProducts": 0
+    },
+    "scatterControls": {
+      "status": "passed",
+      "version": 1,
+      "multiSelect": [
+        "company",
+        "strategy"
+      ],
+      "defaultProductScope": "all",
+      "paletteStorage": "browser_local",
+      "companyMatching": "exact_disclosed_name",
+      "helperSha256": "8991c97dfe2fc088d6dbf4a2a752d92b01de1713c8c6b8d80785eb9ccebe65d2"
+    },
+    "gffundsZone": {
+      "status": "passed",
+      "productCount": 68,
+      "managerCount": 21,
+      "publicReportProductCount": 52,
+      "partialHoldingProductCount": 51,
+      "sourceFreshness": {
+        "status": "passed",
+        "basis": "authenticated_history_cache_latest_date_vs_database_page",
+        "cacheProductCount": 123,
+        "checkedZoneProductCount": 67,
+        "staleProductCount": 0,
+        "latestCacheDate": "2026-10-22"
+      },
+      "restrictedRawDataIncluded": false
+    },
+    "detailExperience": "peer_benchmark_public_v3",
+    "navigation": {
+      "index.html": [
+        "数据总览",
+        "产品列表",
+        "季报数据",
+        "广发专区",
+        "获奖专区",
+        "天眼投顾 ↗"
+      ],
+      "products.html": [
+        "数据总览",
+        "产品列表",
+        "季报数据",
+        "广发专区",
+        "获奖专区",
+        "天眼投顾 ↗"
+      ],
+      "detail.html": [
+        "数据总览",
+        "产品列表",
+        "季报数据",
+        "广发专区",
+        "获奖专区",
+        "天眼投顾 ↗"
+      ],
+      "gffunds.html": [
+        "数据总览",
+        "产品列表",
+        "季报数据",
+        "广发专区",
+        "获奖专区",
+        "天眼投顾 ↗"
+      ],
+      "gffunds-manager.html": [
+        "数据总览",
+        "产品列表",
+        "季报数据",
+        "广发专区",
+        "获奖专区",
+        "天眼投顾 ↗"
+      ],
+      "awards.html": [
+        "数据总览",
+        "产品列表",
+        "季报数据",
+        "广发专区",
+        "获奖专区",
+        "天眼投顾 ↗"
+      ],
+      "reports.html": [
+        "数据总览",
+        "产品列表",
+        "季报数据",
+        "广发专区",
+        "获奖专区",
+        "天眼投顾 ↗"
+      ]
+    },
+    "sourceValidationStatus": "passed",
+    "sourceAuditStatus": "warn",
+    "accessScope": "public_catalog_plus_scoped_performance_analytics",
+    "authenticatedPerformanceAnalyticsIncluded": true,
+    "restrictedAnalyticsDetailCount": 6756,
+    "restrictedRawDataIncluded": false,
+    "rawDetailBytes": 1448695489,
+    "compressedDetailBytes": 185796324,
+    "compressionRatio": 0.128251,
+    "maxCompressedDetailBytes": 90139,
+    "maxCompressedDetailFile": "2b/geshang__P185594__7a3cbb046f.js.gz",
+    "oversizedFileCount": 0
+  }
+}

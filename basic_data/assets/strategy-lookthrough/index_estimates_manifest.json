@@ -1,0 +1,5303 @@
+{
+  "basis": "reported_plus_explicit_index_estimates",
+  "registrySha256": "2952db6da5a24cf9f1b73391839f6238a58a600a326768454884bee37906d855",
+  "views": [],
+  "gaps": [
+    {
+      "strategy": "financial_street__HXDBBBH",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXQQJX",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXQQJX",
+      "fundCode": "000043",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXQQJX",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXQQJX",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXWJXMB01",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXWJXMB04",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXWJXMB06",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXWJXMB07",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXWJXMB08",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXWJXMB09",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXWJXMB11",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXWJXMB12",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXWJXMB15",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXWJXMB16",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXWJXMB17",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__HXWJXMB18",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__JXWJXMB01",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__JXHLYX",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "financial_street__GFJR003262",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "fullgoal__MBYDYDBZXZH019",
+      "fundCode": "018266",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "fullgoal__WGFDZX001",
+      "fundCode": "018266",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "fullgoal__WGFDZXZH001",
+      "fundCode": "018266",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "fullgoal__QQZZXZH001",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "fullgoal__QQZZXZH001",
+      "fundCode": "000103",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "fullgoal__HLDBZXZH001",
+      "fundCode": "007466",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "fullgoal__HJZXZH001",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "fullgoal__HJZXZH001",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "fullgoal__HJZXZH001",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ000578",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ000578",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001400",
+      "fundCode": "000071",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ002302",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ002414",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ001222",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001501",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001236",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ001236",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001482",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ002221",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ002221",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ003101",
+      "fundCode": "018266",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ003101",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ003101",
+      "fundCode": "022424",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ003101",
+      "fundCode": "007466",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ003101",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ003101",
+      "fundCode": "007817",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__ZY00000015",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000017",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000018",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000019",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000020",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000021",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000022",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000023",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000024",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000025",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000026",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000027",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000028",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000029",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000030",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000031",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000032",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000033",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000034",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000035",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000036",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000037",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ000004",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__ZY00000064",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__ZY00000068",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__ZY00000073",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__ZY00000076",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__ZY00000080",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__ZY00000086",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__ZY00000089",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__ZY00000038",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000039",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000040",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000041",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000042",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000043",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000044",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000045",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000046",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000047",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000048",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000049",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000050",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000051",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000052",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000053",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000054",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000055",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000057",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000058",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000059",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000060",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000061",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000062",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000063",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000065",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000066",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000067",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000069",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000070",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000071",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000072",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000074",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000075",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000077",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000078",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000079",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000081",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000082",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000083",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000084",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000085",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000087",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000088",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000090",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000091",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000092",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000093",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000094",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000095",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000056",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ000900",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__ZY00000014",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ002101",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ001507",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001665",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001665",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ001664",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ001664",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001681",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ001681",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001681",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001681",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ002301",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ002301",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ002301",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001261",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001261",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001261",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001384",
+      "fundCode": "022502",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001384",
+      "fundCode": "022653",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001384",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001384",
+      "fundCode": "020412",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001394",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001394",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ001394",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001564",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001564",
+      "fundCode": "021778",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ001569",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ001502",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gffunds__GFJJ000002",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gffunds__GFJJ000007",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__regular:gffund:GFXFZZ",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gfsec_fima__regular:zofund:ZOSJL",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__regular:zofund:ZOHWGP",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__regular:zofund:ZOHWGP",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__regular:zofund:ZOHWGP",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__regular:nffund:SFDYZ",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__regular:nffund:SFGZPH",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__regular:gffund:GFAXHB",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10009",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10009",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10011",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10011",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:zofund:10012",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10013",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10013",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:zofund:10014",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10015",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:gffund:10018",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10019",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:zofund:10021",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:gffund:10020",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gfsec_fima__target:zofund:10022",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10023",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10023",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:gffund:10024",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10026",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10026",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:gffund:10027",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10028",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10028",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:gffund:10029",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10031",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10031",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:gffund:10032",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10034",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10034",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:gffund:10035",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10037",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__target:gffund:10038",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gfsec_fima__target:gffund:10041",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "gfsec_fima__target:hxfund:10043",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__regular:efund:EFBGGF",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__regular:efund:EFAIGF",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__regular:efund:EFSGGF",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "gfsec_fima__regular:gffund:GFGZPH",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__zozh003",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__GJ009",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__GJ009",
+      "fundCode": "000103",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__GJ003",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__GJ003",
+      "fundCode": "007466",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "howbuy__GJ018",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__GJ018",
+      "fundCode": "000103",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__xqtg001",
+      "fundCode": "000948",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__xqtg002",
+      "fundCode": "000948",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__snzh001",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__snzh002",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__jszh001",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__jszh001",
+      "fundCode": "001051",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__jytg002",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__jytg002",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__zszh007",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__yfdtg004",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__yfdtg005",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__jscczh002",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__hbzh027",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__hxtg001",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__hxtg001",
+      "fundCode": "016280",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__yhtg005",
+      "fundCode": "020411",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "howbuy__yhtg006",
+      "fundCode": "020411",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "huaxia_tougu__SF1020",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "huaxia_tougu__SF1015",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "huaxia_tougu__SF1017",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "huaxia_tougu__SF1060",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "huaxia_tougu__SF10LE",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "huaxia_tougu__SF10LG",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "huaxia_tougu__SF1018",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "huaxia_tougu__SF1014",
+      "fundCode": "002984",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147789",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147970",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147971",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147972",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147974",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147975",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147988",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147790",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147989",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147990",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147992",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147156",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147540",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147540",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147542",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147542",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147545",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147545",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147546",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147546",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147549",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147551",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147552",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147151",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147554",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147557",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147558",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147559",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147559",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147561",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147561",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147563",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147563",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147564",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147564",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147567",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147568",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147569",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147588",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147589",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147590",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147592",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147596",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147598",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147610",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147613",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147614",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147615",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147298",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147298",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147334",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147334",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147536",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147536",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147539",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147539",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147541",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147544",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147547",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147550",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147553",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147556",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147560",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147560",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147562",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147562",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147597",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147597",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147599",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147599",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147612",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147616",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147618",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147619",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147620",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147621",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147622",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147623",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147624",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH147625",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH044047",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000090",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000090",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000090",
+      "fundCode": "001133",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000090",
+      "fundCode": "001180",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000090",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000090",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000090",
+      "fundCode": "001064",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH174684",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH174684",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000169",
+      "fundCode": "000950",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH161816",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH035314",
+      "fundCode": "000948",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH154241",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH154241",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH120723",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH120717",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH120934",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH120716",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH120719",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH120722",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH120720",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH120725",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH171437",
+      "fundCode": "001061",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH058775",
+      "fundCode": "022424",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "qieman__ZH155420",
+      "fundCode": "001061",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH155420",
+      "fundCode": "022653",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH155420",
+      "fundCode": "008971",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH154032",
+      "fundCode": "000614",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH155612",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH160350",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH160573",
+      "fundCode": "022424",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "qieman__ZH160573",
+      "fundCode": "000071",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH176386",
+      "fundCode": "022424",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "qieman__ZH176386",
+      "fundCode": "000071",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH176386",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH109015",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH038182",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH157591",
+      "fundCode": "000051",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH157591",
+      "fundCode": "001052",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH136541",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH152825",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH169642",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156187",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH171521",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH171521",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH176381",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH158745",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH158745",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH177891",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH161437",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH176738",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH176738",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH058670",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH169639",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156181",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH171515",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH176373",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH158739",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH178102",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH044931",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH169641",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156182",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH171516",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH176374",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH158740",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH177886",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH161423",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH161416",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH045206",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156184",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH171518",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH171518",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH176376",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH158742",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH177888",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH161425",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH120462",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156185",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH171519",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH171519",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH176378",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH158743",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH158743",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH177889",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH161426",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH120911",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156183",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH171517",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH176375",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH158741",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH177887",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH161424",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH043937",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156186",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156186",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH171520",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH171520",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH171520",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH176380",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH158744",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH158744",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH177890",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH161427",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH166802",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH166802",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH166795",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH166796",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH165289",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH157343",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH005495",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH120109",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH178103",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH175132",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH045542",
+      "fundCode": "022653",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH164292",
+      "fundCode": "018266",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "qieman__ZH175120",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH040237",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "qieman__ZH159016",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH159017",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH159017",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH159018",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH036119",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH042723",
+      "fundCode": "000043",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH179363",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH181655",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000149",
+      "fundCode": "000950",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000149",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH151528",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH157933",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000153",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH056011",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH056000",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH154805",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH154805",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000164",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000164",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH013136",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH013136",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH124515",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH124517",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000193",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000193",
+      "fundCode": "016280",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH173899",
+      "fundCode": "005734",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH174411",
+      "fundCode": "005734",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH169894",
+      "fundCode": "001063",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH169894",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH169894",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000167",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000167",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH031163",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000222",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH167344",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH167344",
+      "fundCode": "001133",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH028967",
+      "fundCode": "002977",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH153288",
+      "fundCode": "002977",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH153291",
+      "fundCode": "002977",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH153292",
+      "fundCode": "002977",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH153293",
+      "fundCode": "002977",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH153294",
+      "fundCode": "002977",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH153295",
+      "fundCode": "002977",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH173056",
+      "fundCode": "022653",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH173056",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH173056",
+      "fundCode": "000103",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH173073",
+      "fundCode": "022653",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000021",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000021",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH152971",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH066053",
+      "fundCode": "022653",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000155",
+      "fundCode": "000071",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000155",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH165124",
+      "fundCode": "005733",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH130772",
+      "fundCode": "000948",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH159580",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH169643",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH137488",
+      "fundCode": "000008",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000100",
+      "fundCode": "001061",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000100",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH175723",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000120",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH144732",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH150261",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH149091",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH154683",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156488",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156651",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156652",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156660",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156653",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156654",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156655",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156656",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156657",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156658",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH156659",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH187297",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH187297",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH187297",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH187288",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH187289",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH169800",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH169801",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH183319",
+      "fundCode": "022653",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH187292",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH187292",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH187293",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH187293",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH187290",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH187290",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH187294",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH187294",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH187294",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH152697",
+      "fundCode": "020411",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH152820",
+      "fundCode": "020411",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH177135",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH177135",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH125035",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH120972",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH184679",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH120392",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH167446",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH167446",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH167446",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH167447",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH167447",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH167447",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH170915",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__J7",
+      "fundCode": "000008",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__J7",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH015676",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH015676",
+      "fundCode": "000008",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH119289",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH119289",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH166025",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000232",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000232",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000232",
+      "fundCode": "000043",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH166029",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH162967",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH174717",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000138",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000138",
+      "fundCode": "001061",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH177329",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH177334",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH177332",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH146720",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH035411",
+      "fundCode": "000948",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH175157",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH175157",
+      "fundCode": "001133",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000224",
+      "fundCode": "020412",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000224",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000224",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000224",
+      "fundCode": "000043",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000224",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH178302",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH175312",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH175326",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH175329",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH175325",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH175327",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH175328",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH000095",
+      "fundCode": "001052",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH000095",
+      "fundCode": "000614",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH000095",
+      "fundCode": "001051",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH000095",
+      "fundCode": "000071",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH000095",
+      "fundCode": "001064",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH000095",
+      "fundCode": "001180",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH000095",
+      "fundCode": "000051",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH000095",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__LONG_WIN",
+      "fundCode": "000071",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__LONG_WIN",
+      "fundCode": "001180",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__LONG_WIN",
+      "fundCode": "022424",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "qieman__LONG_WIN",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__LONG_WIN",
+      "fundCode": "000051",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__LONG_WIN",
+      "fundCode": "001052",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__LONG_WIN",
+      "fundCode": "001051",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__LONG_WIN",
+      "fundCode": "000248",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__LONG_WIN_S",
+      "fundCode": "001180",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__LONG_WIN_S",
+      "fundCode": "000071",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__LONG_WIN_S",
+      "fundCode": "022424",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "qieman__LONG_WIN_S",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__LONG_WIN_S",
+      "fundCode": "001051",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__LONG_WIN_S",
+      "fundCode": "000051",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__LONG_WIN_S",
+      "fundCode": "000248",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH177208",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH177203",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000208",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000208",
+      "fundCode": "007466",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "qieman__ZH120726",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH120726",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__ZH164310",
+      "fundCode": "000051",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000229",
+      "fundCode": "007882",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "qieman__SI000229",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "southern__4226",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "southern__7897",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "southern__7897",
+      "fundCode": "008971",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "southern__7871",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "southern__69",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "southern__73",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "southern__66",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "southern__261",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "southern__8609",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "southern__65",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "southern__77",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "southern__7323",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__YLHFDV5",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__YLHFDV5",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__W8NE6B0",
+      "fundCode": "002977",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__GKC0SMH",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__QGRMZD0",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__Q0XKTJF",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__U9FCE9W",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__GMAAZDU",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__8FXLDPK",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__8FXLDPK",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SYXMJD8",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZY4J1GA",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZY4J1GA",
+      "fundCode": "022502",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZY4J1GA",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__0UYVY3Z",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__5FQZ32Y",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__5FQZ32Y",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__X9PUC3Y",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__VUX9LWL",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__VUX9LWL",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__YL6YIG4",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__YL6YIG4",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__LSQS6O2",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__05KGBJQ",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__05KGBJQ",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__6UI8WUL",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__6UI8WUL",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__KMFKZGK",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__B6UNU1E",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__XQUM09A",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__XIKF7MH",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__BPLKTVE",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__PY181LI",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__BIZZDMM",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__YY75W8Z",
+      "fundCode": "000041",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__YY75W8Z",
+      "fundCode": "005733",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__PMOLYQ1",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__4CCAB0D",
+      "fundCode": "022424",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__NXMABHK",
+      "fundCode": "000248",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__S9DIBJH",
+      "fundCode": "000248",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__S9DIBJH",
+      "fundCode": "000950",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__7P08UFE",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__IRQKYJO",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__VPNHKDU",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__VPNHKDU",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__FPNNVA1",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__FPNNVA1",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__FPNNVA1",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__MZIF90G",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__MZIF90G",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__MZIF90G",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__UHXS9XD",
+      "fundCode": "020411",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__XPB10ZJ",
+      "fundCode": "020411",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__YZ9E10P",
+      "fundCode": "000043",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__YZ9E10P",
+      "fundCode": "007466",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__ZYS7M8J",
+      "fundCode": "000043",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__NMWUEUX",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__QEP4QP4",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__QEP4QP4",
+      "fundCode": "016280",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__UYX8HQC",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__9UJLNUA",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__GPARA2O",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__PJSIHVC",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__3EZFMT7",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__3EZFMT7",
+      "fundCode": "000248",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__4URFCUG",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__4URFCUG",
+      "fundCode": "000614",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__EXIG5UK",
+      "fundCode": "000043",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__EXIG5UK",
+      "fundCode": "007817",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__QCNMARK",
+      "fundCode": "005734",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__BQOIQWC",
+      "fundCode": "000948",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ONW1BWO",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ONW1BWO",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__OENN9UW",
+      "fundCode": "005734",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__CBJSOMR",
+      "fundCode": "000948",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__MZN5JAD",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__MZN5JAD",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__DMMHRWU",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__WWDFMNI",
+      "fundCode": "016280",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__BYK8SG2",
+      "fundCode": "020412",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__RIIUF7A",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__Q5PCSHJ",
+      "fundCode": "001061",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__Q5PCSHJ",
+      "fundCode": "022502",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SF1020",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__JJIQOQR",
+      "fundCode": "018266",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__JJIQOQR",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__JJIQOQR",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__130G7UY",
+      "fundCode": "018266",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__130G7UY",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__130G7UY",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__QYXAVEB",
+      "fundCode": "000051",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__QYXAVEB",
+      "fundCode": "001052",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SF1015",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SF1017",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SF1018",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__8TQQ2SA",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__8TQQ2SA",
+      "fundCode": "000614",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__MEA8GN0",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__8FDZ9ZR",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__YRYNQVQ",
+      "fundCode": "000376",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__XMMUGXC",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__FT9Q97V",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__FT9Q97V",
+      "fundCode": "007466",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__V4EMGXQ",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__RPIRIAF",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__VF3Y7R5",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__AMHL10P",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__PDLHJER",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__0RITRSE",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__1F0OBRW",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__HFAATAG",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZSRSX2I",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__GCUDULC",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__JH3QU0T",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__YEWBDDR",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__TRTX6QU",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__PNDHISE",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__WG8YTQU",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__XII04WJ",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__OD6JMX3",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZGFLR91",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ARPIXW4",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__4PYO86B",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__HVOY9NU",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__6DDGUAZ",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__TRPPXDI",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__OOHJCI0",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__O5YDO1C",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__UCGO0WB",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__JTEPK8E",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__X3G9J3L",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__AJKFK06",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__C6FAILB",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__3GDYXUI",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__6SRWJDN",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__1EXSG0P",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__10U9IPJ",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__MRWGY6N",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__1ADGYE7",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__AIJXWP5",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__DEL9XBW",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__5GGOSCB",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZL3HUKR",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__7VS1PHH",
+      "fundCode": "000248",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__NTTJHCT",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__QXL1U5W",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZFRPOGL",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__GGHVLYL",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__9KUSDD2",
+      "fundCode": "070039",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__GBMCNVY",
+      "fundCode": "070039",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__AILVXKB",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__AILVXKB",
+      "fundCode": "001051",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__5ZEBTMB",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__5ZEBTMB",
+      "fundCode": "001051",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__9F01XG1",
+      "fundCode": "007882",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZBWOVPR",
+      "fundCode": "000103",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZBWOVPR",
+      "fundCode": "022653",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__JW6THOY",
+      "fundCode": "020412",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__IJHZCKB",
+      "fundCode": "020412",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__Q0ZLTYI",
+      "fundCode": "020412",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__UXXBKEZ",
+      "fundCode": "020412",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__2GXNMMI",
+      "fundCode": "020412",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__KIB3KWQ",
+      "fundCode": "020412",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__PLHJPPN",
+      "fundCode": "020412",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__0ZRNTQZ",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__LLKGLTI",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ES9HSK8",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__A3KWSCA",
+      "fundCode": "020412",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__6GN48J5",
+      "fundCode": "020412",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__DV05MJS",
+      "fundCode": "020412",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__NWLCBFK",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__NWLCBFK",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZWQLWLB",
+      "fundCode": "000948",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZWQLWLB",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__UZ5TJ0P",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SDNDMEG",
+      "fundCode": "000950",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__A76IS0D",
+      "fundCode": "000043",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__IJ4S8CC",
+      "fundCode": "016280",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__TNSNZWM",
+      "fundCode": "020412",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__KCUPQIY",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__9FOYOUL",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__TIISSUK",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__TL20OXV",
+      "fundCode": "018266",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__C2HW45S",
+      "fundCode": "018266",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__6MMD0AI",
+      "fundCode": "018266",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__DIT9E15",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__DIT9E15",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__DIT9E15",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__7EHVOEI",
+      "fundCode": "007466",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__7WGOB5I",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__PJBXR7V",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__BBUCVSF",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__IJO91I8",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZL0GPL0",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__OFNMVBE",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SDTLY3H",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZUUTKTY",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__3TDWVRT",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__GJP8I6Q",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__20PNOR9",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__GGZBYOS",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__WIGD758",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__8AXARTC",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__2TYT3BL",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__KTSVVHR",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__CL3SMDU",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__WSQJEDL",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ATSAB4C",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__75CCENW",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__5XJT2CJ",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__40NN5EN",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__UTT25QJ",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__UCNBOKN",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__IZEXKHE",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__0DGC7CW",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__WYJ14NT",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__CD2POH0",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__LA2QCJX",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__BSJBYFE",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__VEDEATO",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__FWABXOS",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZDRK77O",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__9EWXWM1",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__CIPYE30",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__1EKDU0J",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__V7RODJC",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__TKRHZ6I",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__AELFPAC",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__RWG07ND",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__F6F7UZR",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__IDRBZTP",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__EXGGLNV",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__PSSOL1E",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__GD0XPLR",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__OKYWR3F",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__FPMRE6G",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__CE1CSYM",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__4LB2XCK",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__EQ2GPJN",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__HQZRIIB",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__HQZRIIB",
+      "fundCode": "000103",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__XLBBK9I",
+      "fundCode": "007466",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__FV7ASQT",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__D3LKFKG",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__BJ0LEVA",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__AGIY2KI",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__EH7YJ3R",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__IEZMKOT",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__S90DUKJ",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__KFI0WG0",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__GL6MVNU",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__CAAHUQU",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__KN1DOPZ",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__8WK4QMY",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__OH5MRRV",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__NI5GIQY",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__11V916K",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__VOXGR2C",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__6CJE2QL",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__MHOTFWC",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__NA0BVJR",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZJILB7A",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__WDIPIUW",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SGJLJMT",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__0K0L6E1",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__IPI9WUP",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__FMMWCUF",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__DKVUTMJ",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__DDFM2SH",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__590UR0R",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__IXQHINU",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__0X0TZDS",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__VSG0IKB",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__CCNQ10W",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__WSG6QO1",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__IF5A1JH",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__IF5A1JH",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__IF5A1JH",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__Z1D7TIS",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__VFFLXPR",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__NJTPUQZ",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__NJTPUQZ",
+      "fundCode": "000043",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__N6BWWYZ",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__BTAQW7H",
+      "fundCode": "018266",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__BTAQW7H",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__X1YG1QQ",
+      "fundCode": "008987",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__MRK40XS",
+      "fundCode": "012857",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ABGPHLV",
+      "fundCode": "000950",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__WSHZVLD",
+      "fundCode": "070039",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__LVPR9FS",
+      "fundCode": "070039",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__LW1DLUY",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__LW1DLUY",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SA47IVX",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SA47IVX",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__K63ZUNF",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__240JP2J",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZYHUF6L",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__WA0AMZF",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__STXIR4L",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__KU0NLEI",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__HC3RT7F",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__TDL0HHI",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__S2NLY6R",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__TMQXEDB",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SCDUJUY",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SCDUJUY",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SCDUJUY",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__HUGZNNT",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__HUGZNNT",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__HUGZNNT",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SOJLAE9",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SOJLAE9",
+      "fundCode": "008971",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SOJLAE9",
+      "fundCode": "000103",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__KZ2UUG9",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__AFFE0NN",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__TPXZRYC",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__TWVJJNJ",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ARTNKDP",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__MT62KOJ",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__BWCYE2L",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__YABTCTW",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__YABTCTW",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__TJEHNIM",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__LADYCSH",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__0U91IVW",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__P5ZW105",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__5OR1KP1",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__VSXHWOB",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__GCKA3QB",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__1FGLC9L",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__M2MB780",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__M2MB780",
+      "fundCode": "000043",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__LGI1ZOB",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__JMSRV7B",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__JMSRV7B",
+      "fundCode": "000043",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__HESWQG8",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__TXT82K3",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__TXT82K3",
+      "fundCode": "016280",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__Y8LMDWU",
+      "fundCode": "008971",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__JXWYUAF",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__8TWSRVW",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__UJZVSUO",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__UYMHJYY",
+      "fundCode": "002984",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__PZYDNQF",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__JHRSLPX",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__JHRSLPX",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__MHNKQEV",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__MHNKQEV",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__KGLO6KJ",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__KGLO6KJ",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__KGLO6KJ",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__2VBD0WY",
+      "fundCode": "007817",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__G7RDSWZ",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__0N3T4JI",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SOSYT0H",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__A2HICVR",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__BRRD1D1",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__043KGLW",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__01VPJAL",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__GRJYSHD",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__YSRDZRK",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__RNQWHCZ",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__GUKZK4L",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__OTZLGJ3",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SRW0GMX",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__FD0O1WC",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__DQVNAOK",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__GKAYXRN",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__UVOF010",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ENPOINA",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__VPMHSD3",
+      "fundCode": "002963",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__VPMHSD3",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__VPMHSD3",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__SVB9EZD",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__IT1SMVP",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__IT1SMVP",
+      "fundCode": "008971",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__UZJS1U3",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__UFPW1GJ",
+      "fundCode": "007466",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__UFPW1GJ",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__XIOJ8QJ",
+      "fundCode": "007466",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__XIOJ8QJ",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__DE8JLRD",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__4JFXPN3",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__LM3FTRP",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__JNLCAYT",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__GJWP9WU",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__4UYQMFR",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZUYS1HU",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__FO2PW4C",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__INJMZUS",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__MY1U1JE",
+      "fundCode": "000043",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__KJ00W2Q",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__L2RLC6M",
+      "fundCode": "018266",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__L2RLC6M",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__L2RLC6M",
+      "fundCode": "006381",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__D2QELI7",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__MS6ZS82",
+      "fundCode": "004253",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__MS6ZS82",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__MS6ZS82",
+      "fundCode": "008971",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__TCFQM3R",
+      "fundCode": "022424",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__M5UAZFC",
+      "fundCode": "006382",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__M5UAZFC",
+      "fundCode": "005658",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ERR4QWX",
+      "fundCode": "007466",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__FLMYWQE",
+      "fundCode": "000043",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__Q00GY26",
+      "fundCode": "007466",
+      "reason": "mapping_report_version_not_applicable"
+    },
+    {
+      "strategy": "ttfund__FTPYRQA",
+      "fundCode": "000218",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZBBI02E",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZBBI02E",
+      "fundCode": "015016",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__QNAIOKY",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__S95PUCJ",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__S95PUCJ",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__X3AQBAE",
+      "fundCode": "000071",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZZP9SG5",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZZP9SG5",
+      "fundCode": "008971",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__HJGKKT0",
+      "fundCode": "000071",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__F6C4IMP",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__F6C4IMP",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__UYCZPCD",
+      "fundCode": "000290",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__UYCZPCD",
+      "fundCode": "000307",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__6NMCEIQ",
+      "fundCode": "020411",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__ZKJJOUX",
+      "fundCode": "020411",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__D7523P9",
+      "fundCode": "020411",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__RD4QA7I",
+      "fundCode": "020411",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__B014F3M",
+      "fundCode": "000948",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__DMBCZET",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__06HU6E1",
+      "fundCode": "020411",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__06HU6E1",
+      "fundCode": "000614",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "ttfund__JTCFJON",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "zocaifu__8100000086",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "zocaifu__8100000799",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "zocaifu__8100000608",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "zocaifu__8100000160",
+      "fundCode": "000217",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "zocaifu__8100000024",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "zocaifu__8100000024",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "zocaifu__8100000819",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "zocaifu__8100000735",
+      "fundCode": "000834",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "zocaifu__8100000735",
+      "fundCode": "000216",
+      "reason": "target_index_mapping_unverified"
+    },
+    {
+      "strategy": "zocaifu__8100000735",
+      "fundCode": "000369",
+      "reason": "target_index_mapping_unverified"
+    }
+  ],
+  "missingPolicy": "retain reported fund investment; never zero or rescale"
+}

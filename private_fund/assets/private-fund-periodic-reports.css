@@ -1,0 +1,20 @@
+/* Shared CN institutional palette; counts/allocations have no favorable direction. */
+.periodic-report,.report-allocation{border-top:1px solid #DCE2E7;margin:14px 0;color:#202C38}
+.periodic-report>summary,.report-allocation>summary{cursor:pointer;padding:15px 0;color:#17324D;line-height:1.5}
+.periodic-report>summary>span{display:block;font-size:12px;font-weight:400;color:#66717E;margin:4px 0 0 18px}
+.periodic-report-body{min-width:0;padding-bottom:15px}.periodic-report h3{color:#17324D;font-size:17px;margin:28px 0 10px}
+.report-scope,.report-status,.report-missing{font-size:12px;color:#66717E;line-height:1.8;overflow-wrap:anywhere}
+.report-status{border-left:3px solid #17324D;padding-left:12px}.report-scope a,.report-data-table a{color:#224E72;text-decoration:underline;text-underline-offset:3px}
+.report-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding:18px 0;border-block:1px solid #DCE2E7}
+.report-facts>div{display:flex;flex-direction:column;gap:7px;font-size:12px}.report-facts strong{font-size:22px;color:#17324D;font-variant-numeric:tabular-nums}
+.report-table-scroll{overflow:auto;max-width:100%;margin:10px 0}.report-data-table{width:100%;border-collapse:collapse;font-size:12px;line-height:1.6}
+.report-data-table th{color:#17324D;font-weight:600;text-align:left;border-bottom:1px solid #9AA9B6;padding:10px 9px;white-space:nowrap}
+.report-data-table td{vertical-align:top;padding:10px 9px;border-bottom:1px solid #E6EBEF;min-width:85px;font-variant-numeric:tabular-nums}
+.report-data-table td:first-child{min-width:150px}.report-data-table small{display:block;color:#66717E;font-size:11px;margin-top:3px}.report-narrative{border-left:2px solid #DCE2E7;padding:0 0 0 16px;margin:20px 0}
+.report-narrative h4{font-size:14px;color:#17324D}.report-narrative p{font-size:13px;line-height:1.9;white-space:pre-line;overflow-wrap:anywhere}.report-narrative small{font-size:11px;color:#66717E}
+body[data-page="private-fund-periodic-reports"]{background:#fff}body[data-page="private-fund-periodic-reports"] .page-shell{max-width:1184px;padding:36px 32px 64px;color:#202C38}
+.report-heading h1{color:#17324D;font-size:34px;margin:6px 0 12px}.report-heading p{color:#66717E;font-size:14px}.report-index-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:28px 0;border-top:2px solid #17324D;border-bottom:1px solid #DCE2E7;padding:22px 0}
+.report-index-kpis>div{padding:0 24px;border-left:1px solid #DCE2E7}.report-index-kpis>div:first-child{padding-left:0;border:0}.report-index-kpis span{font-size:13px;color:#66717E}.report-index-kpis strong{display:block;color:#17324D;font-size:34px;font-variant-numeric:tabular-nums}
+.report-coverage{padding-bottom:20px;border-bottom:1px solid #DCE2E7}.report-coverage h2{font-size:20px;color:#17324D}.report-coverage-row{display:grid;grid-template-columns:80px minmax(100px,1fr) 100px;gap:16px;align-items:center;margin:14px 0;font-size:13px}.report-coverage-row i{background:#F2F4F6;height:8px}.report-coverage-row b{display:block;height:8px;background:#224E72}.report-coverage-row strong{text-align:right;color:#17324D}
+.report-filters{display:flex;gap:20px;align-items:end;margin:25px 0}.report-filters label{display:flex;flex-direction:column;gap:8px;font-size:12px;color:#66717E}.report-filters input,.report-filters select{padding:9px 12px;border:1px solid #CBD3DA;border-radius:0;background:#fff;color:#17324D;min-width:150px}
+@media(max-width:650px){body[data-page="private-fund-periodic-reports"] .page-shell{padding:24px 16px}.report-heading h1{font-size:28px}.report-index-kpis{grid-template-columns:1fr 1fr;gap:18px}.report-index-kpis>div{padding:0;border:0}.report-index-kpis strong{font-size:29px}.report-filters{display:grid;grid-template-columns:1fr 1fr;gap:12px}.report-filters label:first-child{grid-column:1/-1}.report-filters input,.report-filters select{min-width:0;width:100%}.report-coverage-row{grid-template-columns:65px minmax(60px,1fr) 85px;gap:9px}.report-facts{grid-template-columns:1fr}.report-facts strong{font-size:20px}.report-narrative{padding-left:10px}}
