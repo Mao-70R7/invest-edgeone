@@ -1,0 +1,97 @@
+{
+  "release_id": "wealth_shelf_20261029",
+  "as_of": "2026-10-28",
+  "snapshot_at": "2026-10-29T06:30:20.182450+08:00",
+  "prepared_at": "2026-10-29T07:19:38.377552+08:00",
+  "summary": [
+    {
+      "source": "harvestwm_highend",
+      "channel": "嘉实财富",
+      "products": 1088,
+      "scales": 451,
+      "scale_yi": 890.072271,
+      "NAV": 1021,
+      "recent_NAV": 846,
+      "performance": {
+        "ytd": 539,
+        "1w": 705,
+        "1m": 704,
+        "3m": 667,
+        "6m": 592,
+        "1y": 508,
+        "2y": 342,
+        "3y": 255
+      }
+    },
+    {
+      "source": "ciccwm_app",
+      "channel": "中金财富",
+      "products": 1060,
+      "scales": 395,
+      "scale_yi": 322.5948558335,
+      "NAV": 406,
+      "recent_NAV": 400,
+      "performance": {
+        "ytd": 299,
+        "1w": 362,
+        "1m": 365,
+        "3m": 357,
+        "6m": 321,
+        "1y": 289,
+        "2y": 245,
+        "3y": 239
+      }
+    },
+    {
+      "source": "howbuy",
+      "channel": "好买财富",
+      "products": 2835,
+      "scales": 2365,
+      "scale_yi": 2608.912949,
+      "NAV": 2835,
+      "recent_NAV": 2835,
+      "performance": {
+        "ytd": 2704,
+        "1w": 0,
+        "1m": 0,
+        "3m": 0,
+        "6m": 2727,
+        "1y": 2681,
+        "2y": 2609,
+        "3y": 2352
+      }
+    },
+    {
+      "source": "zocaifu_highend",
+      "channel": "中欧财富",
+      "products": 80,
+      "scales": 38,
+      "scale_yi": 23.8679515368,
+      "NAV": 77,
+      "recent_NAV": 77,
+      "performance": {
+        "ytd": 42,
+        "1w": 61,
+        "1m": 59,
+        "3m": 57,
+        "6m": 52,
+        "1y": 35,
+        "2y": 20,
+        "3y": 13
+      }
+    }
+  ],
+  "notes": [
+    "各来源独立，不做跨来源拼接或外部同类排名",
+    "规模为各单品最近已核验披露，非渠道保有量",
+    "合计首行；缺失不补零"
+  ],
+  "files": {
+    "four_channel_data.json.gz": "9eae0f7aa6dc38a0d45692a41da810c243412182f9b8aadf2acd823be996629d",
+    "four_channel_products.csv": "44e72c8a1164c7a0687318c5ce0d1e584c11ac7186d375e8d8125e92e6b1dece",
+    "four_channel_report.html": "b4031165b0cd06988376a9922e93705e5e9a67c70243539b6c6dd6b50405e9de",
+    "index.html": "d21ec3e3a0d0d1166a28df9fde3e15def5c86a50acb38050c6c7378f411d2317",
+    "shelf_scale_data.json": "d72a1cd19a78acf00d3c149b7de3aa0e86ad18038302addaf743f3ab82774db1",
+    "shelf_scale_report.html": "d3673570a646ffdc95ffa0eccad20b1863f85deacb6ea365ea5b49d75f1fb1d0"
+  }
+}
