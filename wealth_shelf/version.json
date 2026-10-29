@@ -1,8 +1,8 @@
 {
-  "release_id": "wealth_shelf_enrichment_20261029_v2",
+  "release_id": "wealth_shelf_share_scope_20261029_v2",
   "as_of": "2026-10-28",
-  "snapshot_at": "2026-10-29T12:50:38.563129+08:00",
-  "prepared_at": "2026-10-29T13:11:07.542319+08:00",
+  "snapshot_at": "2026-10-29T15:04:04.579377+08:00",
+  "prepared_at": "2026-10-29T15:04:09.632445+08:00",
   "summary": [
     {
       "source": "harvestwm_highend",
@@ -54,8 +54,8 @@
       "source": "howbuy",
       "channel": "好买财富",
       "products": 2835,
-      "scales": 2365,
-      "scale_yi": 2608.912949,
+      "scales": 2384,
+      "scale_yi": 2617.743007,
       "NAV": 2835,
       "recent_NAV": 2835,
       "manager_names_products": 2834,
@@ -103,11 +103,11 @@
     "合计首行；缺失不补零"
   ],
   "files": {
-    "four_channel_data.json.gz": "3401bb2f28106826779299356fefb741d2e590a4ff2f1e7c2baf06074ce8a10f",
-    "four_channel_products.csv": "3806c16b7bce2ddaa878d1eb71a1386e223c9a6d4683e877bbcc72749c5b1700",
-    "four_channel_report.html": "bf42f0c84efb495ae159566649bbf8515d3a9e71a33c6b52ea4263f4027cdd6b",
+    "four_channel_data.json.gz": "8d80adcdd01332ed9ce148fb94913544c36c4b1d03aef01213632d822a17df5c",
+    "four_channel_products.csv": "55b6e85d242fcd158cf72eca811a22b38c8c7fa10033dd3a1e37a58b3d01abe4",
+    "four_channel_report.html": "21cea51190a8c4a6bf3bb23928f43be3d11f872b0e851ef83b327f9e39a88530",
     "index.html": "d21ec3e3a0d0d1166a28df9fde3e15def5c86a50acb38050c6c7378f411d2317",
-    "shelf_scale_data.json": "b3a5f4f52cbe7e110bf2183c7c042391f5df1c9f4df068d12717eec43c262c9a",
-    "shelf_scale_report.html": "46d614408ea8aa685de2ae0cfd51eb063f03c06c1dabd5e23341c6f5626825df"
+    "shelf_scale_data.json": "1e6b1c2c0920ac1f5436a3653e9ed1ff4e9a28dfe01dc6d4cf6e1ff33547b02e",
+    "shelf_scale_report.html": "49dfc2d3c1a7f9aacca772f7be63797178d18cf69cb24a4b19767a7c10157c92"
   }
 }
