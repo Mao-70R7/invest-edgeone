@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-10-27T23:07:37+08:00",
-  "packagedAt": "2026-10-27T23:46:30+08:00",
-  "runId": "20261027T224133134445_github_publish_19916",
+  "generatedAt": "2026-10-29T21:21:38+08:00",
+  "packagedAt": "2026-10-29T21:58:51+08:00",
+  "runId": "20261029T211159478031_github_publish_20872",
   "pages": [
     "index.html",
     "products.html",
@@ -29,21 +29,21 @@
   },
   "gffundsResearchPublished": false,
   "counts": {
-    "catalogProducts": 22723,
-    "detailFiles": 22723,
-    "defaultScatterPlottable": 9916,
-    "defaultScatterEvidenceRail": 12807,
+    "catalogProducts": 23970,
+    "detailFiles": 23970,
+    "defaultScatterPlottable": 9975,
+    "defaultScatterEvidenceRail": 13995,
     "sourceProducts": {
       "ciccwm_public": 9295,
-      "cmb_private_investment": 2903,
+      "cmb_private_investment": 2904,
       "geshang": 314,
       "gffunds_highend": 68,
-      "harvestwm_highend": 1091,
-      "howbuy": 1634,
+      "harvestwm_highend": 1092,
+      "howbuy": 2839,
       "jsfund_highend": 347,
       "ruiyuan_highend": 137,
       "simuwang": 5644,
-      "xueqiu": 1210,
+      "xueqiu": 1250,
       "zocaifu_highend": 80
     },
     "metricDefinitions": 35,
@@ -54,26 +54,26 @@
   },
   "sourceCounts": {
     "ciccwm_public": 9295,
-    "cmb_private_investment": 2903,
+    "cmb_private_investment": 2904,
     "geshang": 314,
     "gffunds_highend": 68,
-    "harvestwm_highend": 1091,
-    "howbuy": 1634,
+    "harvestwm_highend": 1092,
+    "howbuy": 2839,
     "jsfund_highend": 347,
     "ruiyuan_highend": 137,
     "simuwang": 5644,
-    "xueqiu": 1210,
+    "xueqiu": 1250,
     "zocaifu_highend": 80
   },
   "harvestwmPublication": "harvestwm_business_display_20261026_v1",
-  "harvestwmExpectedProducts": 1091,
+  "harvestwmExpectedProducts": 1092,
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-10-27T23:07:37+08:00",
-    "products": 2903,
+    "generatedAt": "2026-10-29T21:21:38+08:00",
+    "products": 2904,
     "issueCount": 3,
-    "issueShare": 0.0010334137099552187,
+    "issueShare": 0.0010330578512396695,
     "maxIssueShare": 0.05,
     "incomeCurveProducts": 14,
     "expectedNoHistoryProducts": 0
@@ -92,16 +92,16 @@
     "warning": "同图仅表示公式与尺度统一；格上复权净值、排排网复权收益与广发/嘉实/睿远/招商来源累计净值的费用、分红处理和估值频率未完全统一。累计净值不等同于分红再投资收益；排名仅作分类内研究参考。"
   },
   "allProductMarksContract": {
-    "totalEligible": 22723,
+    "totalEligible": 23970,
     "plottableRule": "selected_x_and_y_are_strict_numeric",
     "missingRule": "every_non_plottable_product_is_rendered_in_evidence_rail"
   },
-  "detailFileCount": 22723,
-  "detailTransportFileCount": 12050,
+  "detailFileCount": 23970,
+  "detailTransportFileCount": 12092,
   "anonymousDetailBundles": {
     "version": 1,
     "files": 256,
-    "products": 10929
+    "products": 12134
   },
   "compression": "deterministic_gzip_browser_decompression",
   "navigation": [
@@ -139,28 +139,28 @@
   "performance": {
     "method": "lossless_record_encoding_and_route_specific_data",
     "productTransport": {
-      "products": 22723,
-      "bytes": 1530676,
-      "filterBytes": 80582,
-      "extraBytes": 7508876
+      "products": 23970,
+      "bytes": 1643447,
+      "filterBytes": 82730,
+      "extraBytes": 7542504
     },
     "analysisTransport": {
       "version": 2,
-      "products": 22723,
+      "products": 23970,
       "productBuckets": 2048,
-      "startDate": "2026-10-27",
-      "endDate": "2026-11-11"
+      "startDate": "2026-10-29",
+      "endDate": "2026-11-13"
     },
-    "baselineCatalogBytes": 416497809,
-    "baselineCatalogGzipBytes": 37251162,
-    "encodedCatalogBytes": 109084336,
+    "baselineCatalogBytes": 428676560,
+    "baselineCatalogGzipBytes": 37842134,
+    "encodedCatalogBytes": 112642285,
     "routeDataGzipBytes": {
-      "catalog": 12484329,
-      "products": 1530676,
-      "overview": 668622,
-      "peers": 7564281,
-      "detail-index": 4020253,
-      "awards-zone": 673809
+      "catalog": 12771167,
+      "products": 1643447,
+      "overview": 744567,
+      "peers": 7643082,
+      "detail-index": 4125313,
+      "awards-zone": 689244
     }
   },
   "scatterControls": {
