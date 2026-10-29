@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-10-29T22:19:04+08:00",
-  "packagedAt": "2026-10-29T23:12:13+08:00",
-  "runId": "20261029T220707487283_github_publish_20872",
+  "generatedAt": "2026-10-30T04:43:53+08:00",
+  "packagedAt": "2026-10-30T05:32:52+08:00",
+  "runId": "20261030T043226063689_github_publish_20872",
   "pages": [
     "index.html",
     "products.html",
@@ -31,8 +31,8 @@
   "counts": {
     "catalogProducts": 23971,
     "detailFiles": 23971,
-    "defaultScatterPlottable": 9977,
-    "defaultScatterEvidenceRail": 13994,
+    "defaultScatterPlottable": 9980,
+    "defaultScatterEvidenceRail": 13991,
     "sourceProducts": {
       "ciccwm_public": 9295,
       "cmb_private_investment": 2904,
@@ -70,7 +70,7 @@
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-10-29T22:19:04+08:00",
+    "generatedAt": "2026-10-30T04:43:53+08:00",
     "products": 2904,
     "issueCount": 3,
     "issueShare": 0.0010330578512396695,
@@ -140,27 +140,27 @@
     "method": "lossless_record_encoding_and_route_specific_data",
     "productTransport": {
       "products": 23971,
-      "bytes": 1643572,
-      "filterBytes": 82735,
-      "extraBytes": 7540387
+      "bytes": 1646755,
+      "filterBytes": 82730,
+      "extraBytes": 7556203
     },
     "analysisTransport": {
       "version": 2,
       "products": 23971,
       "productBuckets": 2048,
-      "startDate": "2026-10-29",
-      "endDate": "2026-11-13"
+      "startDate": "2026-10-30",
+      "endDate": "2026-11-14"
     },
-    "baselineCatalogBytes": 428694793,
-    "baselineCatalogGzipBytes": 37842013,
-    "encodedCatalogBytes": 112643402,
+    "baselineCatalogBytes": 428700526,
+    "baselineCatalogGzipBytes": 37866658,
+    "encodedCatalogBytes": 112699617,
     "routeDataGzipBytes": {
-      "catalog": 12772176,
-      "products": 1643572,
-      "overview": 745115,
-      "peers": 7639681,
-      "detail-index": 4125978,
-      "awards-zone": 689569
+      "catalog": 12805224,
+      "products": 1646755,
+      "overview": 746255,
+      "peers": 7671351,
+      "detail-index": 4131369,
+      "awards-zone": 690033
     }
   },
   "scatterControls": {
