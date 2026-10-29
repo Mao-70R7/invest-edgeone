@@ -1,8 +1,8 @@
 {
-  "release_id": "wealth_shelf_20261029",
+  "release_id": "wealth_shelf_enrichment_20261029_v2",
   "as_of": "2026-10-28",
-  "snapshot_at": "2026-10-29T06:30:20.182450+08:00",
-  "prepared_at": "2026-10-29T07:19:38.377552+08:00",
+  "snapshot_at": "2026-10-29T12:50:38.563129+08:00",
+  "prepared_at": "2026-10-29T13:11:07.542319+08:00",
   "summary": [
     {
       "source": "harvestwm_highend",
@@ -12,6 +12,10 @@
       "scale_yi": 890.072271,
       "NAV": 1021,
       "recent_NAV": 846,
+      "manager_names_products": 923,
+      "finer_strategy_products": 0,
+      "stale_scale_products": 19,
+      "severely_stale_scale_products": 16,
       "performance": {
         "ytd": 539,
         "1w": 705,
@@ -31,6 +35,10 @@
       "scale_yi": 322.5948558335,
       "NAV": 406,
       "recent_NAV": 400,
+      "manager_names_products": 350,
+      "finer_strategy_products": 0,
+      "stale_scale_products": 6,
+      "severely_stale_scale_products": 6,
       "performance": {
         "ytd": 299,
         "1w": 362,
@@ -50,6 +58,10 @@
       "scale_yi": 2608.912949,
       "NAV": 2835,
       "recent_NAV": 2835,
+      "manager_names_products": 2834,
+      "finer_strategy_products": 1605,
+      "stale_scale_products": 4,
+      "severely_stale_scale_products": 0,
       "performance": {
         "ytd": 2704,
         "1w": 0,
@@ -66,9 +78,13 @@
       "channel": "中欧财富",
       "products": 80,
       "scales": 38,
-      "scale_yi": 23.8679515368,
+      "scale_yi": 23.0932146724,
       "NAV": 77,
       "recent_NAV": 77,
+      "manager_names_products": 80,
+      "finer_strategy_products": 0,
+      "stale_scale_products": 25,
+      "severely_stale_scale_products": 10,
       "performance": {
         "ytd": 42,
         "1w": 61,
@@ -87,11 +103,11 @@
     "合计首行；缺失不补零"
   ],
   "files": {
-    "four_channel_data.json.gz": "9eae0f7aa6dc38a0d45692a41da810c243412182f9b8aadf2acd823be996629d",
-    "four_channel_products.csv": "44e72c8a1164c7a0687318c5ce0d1e584c11ac7186d375e8d8125e92e6b1dece",
-    "four_channel_report.html": "b4031165b0cd06988376a9922e93705e5e9a67c70243539b6c6dd6b50405e9de",
+    "four_channel_data.json.gz": "3401bb2f28106826779299356fefb741d2e590a4ff2f1e7c2baf06074ce8a10f",
+    "four_channel_products.csv": "3806c16b7bce2ddaa878d1eb71a1386e223c9a6d4683e877bbcc72749c5b1700",
+    "four_channel_report.html": "bf42f0c84efb495ae159566649bbf8515d3a9e71a33c6b52ea4263f4027cdd6b",
     "index.html": "d21ec3e3a0d0d1166a28df9fde3e15def5c86a50acb38050c6c7378f411d2317",
-    "shelf_scale_data.json": "d72a1cd19a78acf00d3c149b7de3aa0e86ad18038302addaf743f3ab82774db1",
-    "shelf_scale_report.html": "d3673570a646ffdc95ffa0eccad20b1863f85deacb6ea365ea5b49d75f1fb1d0"
+    "shelf_scale_data.json": "b3a5f4f52cbe7e110bf2183c7c042391f5df1c9f4df068d12717eec43c262c9a",
+    "shelf_scale_report.html": "46d614408ea8aa685de2ae0cfd51eb063f03c06c1dabd5e23341c6f5626825df"
   }
 }
