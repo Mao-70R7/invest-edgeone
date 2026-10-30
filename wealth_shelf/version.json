@@ -1,30 +1,30 @@
 {
-  "release_id": "wealth_shelf_share_scope_20261029_v2",
+  "release_id": "wealth_shelf_quality_20261030",
   "as_of": "2026-10-28",
-  "snapshot_at": "2026-10-29T15:04:04.579377+08:00",
-  "prepared_at": "2026-10-29T15:04:09.632445+08:00",
+  "snapshot_at": "2026-10-30T12:19:53.638424+08:00",
+  "prepared_at": "2026-10-30T12:31:57.702468+08:00",
   "summary": [
     {
       "source": "harvestwm_highend",
       "channel": "嘉实财富",
       "products": 1088,
-      "scales": 451,
-      "scale_yi": 890.072271,
-      "NAV": 1021,
-      "recent_NAV": 846,
+      "scales": 450,
+      "scale_yi": 881.609837,
+      "NAV": 1036,
+      "recent_NAV": 847,
       "manager_names_products": 923,
       "finer_strategy_products": 0,
       "stale_scale_products": 19,
       "severely_stale_scale_products": 16,
       "performance": {
-        "ytd": 539,
-        "1w": 705,
-        "1m": 704,
-        "3m": 667,
-        "6m": 592,
-        "1y": 508,
-        "2y": 342,
-        "3y": 255
+        "ytd": 558,
+        "1w": 718,
+        "1m": 724,
+        "3m": 686,
+        "6m": 610,
+        "1y": 527,
+        "2y": 357,
+        "3y": 270
       }
     },
     {
@@ -33,21 +33,21 @@
       "products": 1060,
       "scales": 395,
       "scale_yi": 322.5948558335,
-      "NAV": 406,
-      "recent_NAV": 400,
+      "NAV": 1044,
+      "recent_NAV": 974,
       "manager_names_products": 350,
       "finer_strategy_products": 0,
       "stale_scale_products": 6,
       "severely_stale_scale_products": 6,
       "performance": {
-        "ytd": 299,
-        "1w": 362,
-        "1m": 365,
-        "3m": 357,
-        "6m": 321,
-        "1y": 289,
-        "2y": 245,
-        "3y": 239
+        "ytd": 710,
+        "1w": 911,
+        "1m": 909,
+        "3m": 845,
+        "6m": 762,
+        "1y": 657,
+        "2y": 550,
+        "3y": 487
       }
     },
     {
@@ -86,12 +86,12 @@
       "stale_scale_products": 25,
       "severely_stale_scale_products": 10,
       "performance": {
-        "ytd": 42,
+        "ytd": 43,
         "1w": 61,
-        "1m": 59,
-        "3m": 57,
-        "6m": 52,
-        "1y": 35,
+        "1m": 60,
+        "3m": 58,
+        "6m": 54,
+        "1y": 36,
         "2y": 20,
         "3y": 13
       }
@@ -103,11 +103,11 @@
     "合计首行；缺失不补零"
   ],
   "files": {
-    "four_channel_data.json.gz": "8d80adcdd01332ed9ce148fb94913544c36c4b1d03aef01213632d822a17df5c",
-    "four_channel_products.csv": "55b6e85d242fcd158cf72eca811a22b38c8c7fa10033dd3a1e37a58b3d01abe4",
-    "four_channel_report.html": "21cea51190a8c4a6bf3bb23928f43be3d11f872b0e851ef83b327f9e39a88530",
+    "four_channel_data.json.gz": "429c4b557043e3e37dfa9858029aa0af32eb999307f80e360ee53b5f430903fa",
+    "four_channel_products.csv": "c9ee23fe54c246ab38ea2f728bafb6a14d843525638c32c19f8f459e89fd4c71",
+    "four_channel_report.html": "e56991a9985f03dbeef79349d5291c9188b609fb3044434bdb104d75cd265e96",
     "index.html": "d21ec3e3a0d0d1166a28df9fde3e15def5c86a50acb38050c6c7378f411d2317",
-    "shelf_scale_data.json": "1e6b1c2c0920ac1f5436a3653e9ed1ff4e9a28dfe01dc6d4cf6e1ff33547b02e",
-    "shelf_scale_report.html": "49dfc2d3c1a7f9aacca772f7be63797178d18cf69cb24a4b19767a7c10157c92"
+    "shelf_scale_data.json": "8828709209540e1695e3bb9a9376c36817bea8426fa0cfb3ce055d0a1dcd110e",
+    "shelf_scale_report.html": "8345c59577cd066ad47b8d19d5d5a5c5c368a2ee998637f693ba7f3e8a77074c"
   }
 }
