@@ -10,6 +10,7 @@
     xueqiu: { label: "雪球私募", color: "#6559a0", pale: "#F1F3F5", shape: "circle" },
     cmb_private_investment: { label: "招商银行私享投资", color: "#929aa2", pale: "#F1F3F5", shape: "circle" },
     zocaifu_highend: { label: "中欧财富高端理财", color: "#224E72", pale: "#EDF3F8", shape: "circle" },
+    ciccwm_app: { label: "中金财富", color: "#7C4F9D", pale: "#F4EFF8", shape: "circle" },
     ciccwm_public: { label: "中金财富公示名录", color: "#68788A", pale: "#F1F3F5", shape: "square" },
   };
 

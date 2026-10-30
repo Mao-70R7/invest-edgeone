@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-10-30T14:11:37+08:00",
-  "packagedAt": "2026-10-30T14:52:28+08:00",
-  "runId": "20261030T135523070_github_publish_17848",
+  "generatedAt": "2026-10-30T21:15:35+08:00",
+  "packagedAt": "2026-10-30T21:54:50+08:00",
+  "runId": "20261030T210447660_github_publish_18300",
   "pages": [
     "index.html",
     "products.html",
@@ -29,11 +29,12 @@
   },
   "gffundsResearchPublished": false,
   "counts": {
-    "catalogProducts": 23971,
-    "detailFiles": 23971,
-    "defaultScatterPlottable": 9965,
-    "defaultScatterEvidenceRail": 14006,
+    "catalogProducts": 25031,
+    "detailFiles": 25031,
+    "defaultScatterPlottable": 10677,
+    "defaultScatterEvidenceRail": 14354,
     "sourceProducts": {
+      "ciccwm_app": 1060,
       "ciccwm_public": 9295,
       "cmb_private_investment": 2904,
       "geshang": 314,
@@ -53,6 +54,7 @@
     "gffundsZoneStaleProducts": 0
   },
   "sourceCounts": {
+    "ciccwm_app": 1060,
     "ciccwm_public": 9295,
     "cmb_private_investment": 2904,
     "geshang": 314,
@@ -70,7 +72,7 @@
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-10-30T14:11:37+08:00",
+    "generatedAt": "2026-10-30T21:15:35+08:00",
     "products": 2904,
     "issueCount": 3,
     "issueShare": 0.0010330578512396695,
@@ -92,12 +94,12 @@
     "warning": "同图仅表示公式与尺度统一；格上复权净值、排排网复权收益与广发/嘉实/睿远/招商来源累计净值的费用、分红处理和估值频率未完全统一。累计净值不等同于分红再投资收益；排名仅作分类内研究参考。"
   },
   "allProductMarksContract": {
-    "totalEligible": 23971,
+    "totalEligible": 25031,
     "plottableRule": "selected_x_and_y_are_strict_numeric",
     "missingRule": "every_non_plottable_product_is_rendered_in_evidence_rail"
   },
-  "detailFileCount": 23971,
-  "detailTransportFileCount": 12093,
+  "detailFileCount": 25031,
+  "detailTransportFileCount": 13153,
   "anonymousDetailBundles": {
     "version": 1,
     "files": 256,
@@ -107,7 +109,6 @@
   "navigation": [
     "数据总览",
     "产品列表",
-    "季报数据",
     "广发专区",
     "获奖专区"
   ],
@@ -139,28 +140,28 @@
   "performance": {
     "method": "lossless_record_encoding_and_route_specific_data",
     "productTransport": {
-      "products": 23971,
-      "bytes": 1647269,
-      "filterBytes": 82707,
-      "extraBytes": 7548313
+      "products": 25031,
+      "bytes": 1713512,
+      "filterBytes": 82794,
+      "extraBytes": 7812722
     },
     "analysisTransport": {
       "version": 2,
-      "products": 23971,
+      "products": 25031,
       "productBuckets": 2048,
       "startDate": "2026-10-30",
       "endDate": "2026-11-14"
     },
-    "baselineCatalogBytes": 428467025,
-    "baselineCatalogGzipBytes": 37845097,
-    "encodedCatalogBytes": 112612395,
+    "baselineCatalogBytes": 442348911,
+    "baselineCatalogGzipBytes": 38499911,
+    "encodedCatalogBytes": 114964715,
     "routeDataGzipBytes": {
-      "catalog": 12801063,
-      "products": 1647269,
-      "overview": 747693,
-      "peers": 7664225,
-      "detail-index": 4129909,
-      "awards-zone": 690337
+      "catalog": 13192584,
+      "products": 1713512,
+      "overview": 783197,
+      "peers": 8042566,
+      "detail-index": 4322291,
+      "awards-zone": 708590
     }
   },
   "scatterControls": {

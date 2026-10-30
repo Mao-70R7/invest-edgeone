@@ -77,7 +77,7 @@
     return {scope,assumed,label:identity?`${identity}大类对比`:'资料参考（大类待确认）',
       identity:identity||'分类证据不足',classified,pool:classified.filter(sixComplete)};
   }
-  const sixComplete = row => row.dataQualityStatus!=='needs_review' && row.comparison?.scoringPeriod==='1y' && volatilityEligible(row) && axes.every(a=>a.inputs.every(c=>finite(scoringMetrics(row)[c])));
+  const sixComplete = row => row.externalPeerRankEligible!==false && row.dataQualityStatus!=='needs_review' && row.comparison?.scoringPeriod==='1y' && volatilityEligible(row) && axes.every(a=>a.inputs.every(c=>finite(scoringMetrics(row)[c])));
 
   async function dataScript(url, prefix, onDownload=()=>{}, timeoutMs=12000) {
     if(version) url += `${url.includes('?')?'&':'?'}v=${encodeURIComponent(version)}`;
