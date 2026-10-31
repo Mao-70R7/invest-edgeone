@@ -3,8 +3,8 @@
   "productTransport": {
     "products": 25072,
     "bytes": 1791693,
-    "filterBytes": 83002,
-    "extraBytes": 7996224
+    "filterBytes": 83006,
+    "extraBytes": 7996701
   },
   "analysisTransport": {
     "version": 2,
@@ -13,15 +13,15 @@
     "startDate": "2026-10-31",
     "endDate": "2026-11-15"
   },
-  "baselineCatalogBytes": 446590286,
-  "baselineCatalogGzipBytes": 38941271,
-  "encodedCatalogBytes": 116761391,
+  "baselineCatalogBytes": 446590449,
+  "baselineCatalogGzipBytes": 38941816,
+  "encodedCatalogBytes": 116763404,
   "routeDataGzipBytes": {
-    "catalog": 13506804,
+    "catalog": 13507203,
     "products": 1791693,
-    "overview": 850585,
-    "peers": 8288693,
-    "detail-index": 4454501,
-    "awards-zone": 713784
+    "overview": 850570,
+    "peers": 8289211,
+    "detail-index": 4454530,
+    "awards-zone": 713786
   }
 }

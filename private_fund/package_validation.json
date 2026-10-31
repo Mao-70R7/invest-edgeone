@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "generatedAt": "2026-10-31T09:36:36+08:00",
+  "generatedAt": "2026-10-31T10:45:50+08:00",
   "checks": {
     "pageCount": 7,
     "detailFileCount": 25072,
@@ -27,7 +27,7 @@
     "cmbPublication": "cmb_display_20260911_v1",
     "cmbQuality": {
       "version": "cmb_display_20260911_v1",
-      "generatedAt": "2026-10-31T09:02:46+08:00",
+      "generatedAt": "2026-10-31T09:58:21+08:00",
       "products": 2904,
       "issueCount": 3,
       "issueShare": 0.0010330578512396695,
@@ -121,9 +121,9 @@
     "authenticatedPerformanceAnalyticsIncluded": true,
     "restrictedAnalyticsDetailCount": 7693,
     "restrictedRawDataIncluded": false,
-    "rawDetailBytes": 1607746069,
-    "compressedDetailBytes": 203185126,
-    "compressionRatio": 0.126379,
+    "rawDetailBytes": 1607751186,
+    "compressedDetailBytes": 203193841,
+    "compressionRatio": 0.126384,
     "maxCompressedDetailBytes": 90267,
     "maxCompressedDetailFile": "2b/geshang__P185594__7a3cbb046f.js.gz",
     "oversizedFileCount": 0

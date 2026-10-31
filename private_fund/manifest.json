@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-10-31T09:02:46+08:00",
-  "packagedAt": "2026-10-31T09:36:13+08:00",
-  "runId": "20261031T085157990_github_publish_27720",
+  "generatedAt": "2026-10-31T09:58:21+08:00",
+  "packagedAt": "2026-10-31T10:45:17+08:00",
+  "runId": "20261031T094717873147_github_publish_25656",
   "pages": [
     "index.html",
     "products.html",
@@ -72,7 +72,7 @@
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-10-31T09:02:46+08:00",
+    "generatedAt": "2026-10-31T09:58:21+08:00",
     "products": 2904,
     "issueCount": 3,
     "issueShare": 0.0010330578512396695,
@@ -142,8 +142,8 @@
     "productTransport": {
       "products": 25072,
       "bytes": 1791693,
-      "filterBytes": 83002,
-      "extraBytes": 7996224
+      "filterBytes": 83006,
+      "extraBytes": 7996701
     },
     "analysisTransport": {
       "version": 2,
@@ -152,16 +152,16 @@
       "startDate": "2026-10-31",
       "endDate": "2026-11-15"
     },
-    "baselineCatalogBytes": 446590286,
-    "baselineCatalogGzipBytes": 38941271,
-    "encodedCatalogBytes": 116761391,
+    "baselineCatalogBytes": 446590449,
+    "baselineCatalogGzipBytes": 38941816,
+    "encodedCatalogBytes": 116763404,
     "routeDataGzipBytes": {
-      "catalog": 13506804,
+      "catalog": 13507203,
       "products": 1791693,
-      "overview": 850585,
-      "peers": 8288693,
-      "detail-index": 4454501,
-      "awards-zone": 713784
+      "overview": 850570,
+      "peers": 8289211,
+      "detail-index": 4454530,
+      "awards-zone": 713786
     }
   },
   "scatterControls": {
