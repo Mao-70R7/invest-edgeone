@@ -385,13 +385,19 @@
       const scores = Object.fromEntries(axes.map(a=>{const vals=a.inputs.map(c=>ranks[c]?.percentile).filter(finite),complete=vals.length===a.inputs.length;return[a.code,{score:complete?Math.round(vals.reduce((s,v)=>s+v,0)/vals.length*10)/10:null,usedInputs:vals.length,totalInputs:a.inputs.length,reason:complete?null:notice,observations:axisObservations(row,a)}];}));
       const metricSources = Object.fromEntries(Object.keys(definitions).map(c=>[c,{label:c==='returnSinceInception'?'完整可用历史计算':c.startsWith('return')?'历史区间端点计算':c==='annualReturn'?'成立以来几何年化 · 实际天数':c==='maxDrawdown'||c==='recovery'?'近1年全部有效观测点计算':'成立以来历史计算 · 完整月度口径'}]));
       const displayMetrics = scoringMetrics(row);
+      const reviewedNavDisplay = row.source==='zocaifu_highend' && row.publicationScope==='source_business_display_20261031_v2' && (d.analysisCurve||[]).length>=2;
       for(const c of Object.keys(definitions).filter(c=>c.endsWith('1y')))metricSources[c]={label:'近1年历史计算 · 与六维观察期一致'};
       for (const [key,code] of Object.entries({return1m:'return_1m',return3m:'return_3m',return6m:'return_6m',returnYtd:'return_ytd',return1y:'return_1y',returnSinceInception:'return_since'})) {
         const metric=row.metrics?.[code];
-        if (!finite(displayMetrics[key]) && metric?.origin==='source' && metric.scaleStatus==='verified') {
+        if (!finite(displayMetrics[key]) && metric?.scaleStatus==='verified' && (metric.origin==='source' || (reviewedNavDisplay && metric.origin==='calculated'))) {
           displayMetrics[key]=metric.value/100;
-          metricSources[key]={label:`来源披露（尺度已核验；${metric.asOf||'日期未披露'}），不参与历史计算排名`};
+          metricSources[key]={label:metric.origin==='source'?`来源披露（尺度已核验；${metric.asOf||'日期未披露'}），不参与历史计算排名`:`已核验净值区间计算 · ${metric.windowStart||'—'} 至 ${metric.windowEnd||metric.asOf||'—'}`};
         }
+      }
+      const reviewedDrawdown=row.metrics?.drawdown_1y;
+      if(reviewedNavDisplay && !finite(displayMetrics.maxDrawdown) && reviewedDrawdown?.origin==='calculated' && reviewedDrawdown.scaleStatus==='verified' && finite(reviewedDrawdown.value)) {
+        displayMetrics.maxDrawdown=-Math.abs(reviewedDrawdown.value/100);
+        metricSources.maxDrawdown={label:`已核验净值区间计算 · ${reviewedDrawdown.windowStart||'—'} 至 ${reviewedDrawdown.windowEnd||reviewedDrawdown.asOf||'—'}`};
       }
       const reasonCodes={return1m:'return_1m',return3m:'return_3m',return6m:'return_6m',returnYtd:'return_ytd',return1y:'return_1y',returnSinceInception:'return_since',annualReturn:'annual_return_since',annualVol:'volatility_since',maxDrawdown:'drawdown_1y',sharpe:'sharpe_since',sortino:'sortino_since',calmar:'calmar_since',monthlyWin:'monthly_win_since'};
       for(const code of Object.keys(definitions)) if(!finite(displayMetrics[code])) {
