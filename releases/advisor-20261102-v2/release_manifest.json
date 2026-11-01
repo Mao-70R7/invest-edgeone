@@ -1,0 +1,45 @@
+{
+  "contract": "advisor_multi_verified_page_v1",
+  "buildId": "20261102_multi_verified_v2",
+  "previewOnly": false,
+  "createdAt": "2026-11-02T02:16:16.985740+08:00",
+  "files": [
+    {
+      "path": "app.css",
+      "sha256": "7cb9ed2410946ca39e95c3e45ead43ff6115f60a858ec6142655af02ae2ca4e9",
+      "bytes": 3551
+    },
+    {
+      "path": "app.js",
+      "sha256": "be9af6cb5205873d39947482346e365e0abfc4bff09a24f20767529ffffb1b68",
+      "bytes": 9628
+    },
+    {
+      "path": "data.js",
+      "sha256": "f47e5be42ae1a10267e2c52ecccd4e62115b6594ac46e353c749e703c1dade88",
+      "bytes": 476395
+    },
+    {
+      "path": "index.html",
+      "sha256": "780638fee79a928a197d84a465c5702c5c7af2bffc1f67c87c58d7e7a2310328",
+      "bytes": 6658
+    },
+    {
+      "path": "report.css",
+      "sha256": "cdb883162d1e961959d92bebf5457da7e7fa3142c4f17f6a25cf877343ca4825",
+      "bytes": 4352
+    }
+  ],
+  "counts": {
+    "strategies": 760,
+    "observations": 6643,
+    "comparable": 736,
+    "latest": 738,
+    "events": 2,
+    "fundRows": 54
+  },
+  "sourceFinancialDataSha256": "c54af2fe9ffd472fb70ba9145b5d0e82761d6e1a512178b6a8685b9b65f98b97",
+  "relativeDirectory": "releases/advisor-20261102-v2",
+  "globalFinancialAcceptanceClaimed": false,
+  "riskEligible": false
+}
