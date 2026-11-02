@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-11-02T20:20:40+08:00",
-  "packagedAt": "2026-11-02T21:04:02+08:00",
-  "runId": "20261102T200705673272_github_publish_23416",
+  "generatedAt": "2026-11-02T21:53:16+08:00",
+  "packagedAt": "2026-11-02T22:59:29+08:00",
+  "runId": "20261102T213301649052_github_publish_23416",
   "pages": [
     "index.html",
     "products.html",
@@ -31,8 +31,8 @@
   "counts": {
     "catalogProducts": 25073,
     "detailFiles": 25073,
-    "defaultScatterPlottable": 10759,
-    "defaultScatterEvidenceRail": 14314,
+    "defaultScatterPlottable": 10766,
+    "defaultScatterEvidenceRail": 14307,
     "sourceProducts": {
       "ciccwm_app": 1060,
       "ciccwm_public": 9295,
@@ -72,7 +72,7 @@
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-11-02T20:20:40+08:00",
+    "generatedAt": "2026-11-02T21:53:16+08:00",
     "products": 2904,
     "issueCount": 3,
     "issueShare": 0.0010330578512396695,
@@ -141,9 +141,9 @@
     "method": "lossless_record_encoding_and_route_specific_data",
     "productTransport": {
       "products": 25073,
-      "bytes": 1799481,
-      "filterBytes": 83017,
-      "extraBytes": 7998144
+      "bytes": 1799945,
+      "filterBytes": 82983,
+      "extraBytes": 8002339
     },
     "analysisTransport": {
       "version": 2,
@@ -152,16 +152,16 @@
       "startDate": "2026-11-02",
       "endDate": "2026-11-17"
     },
-    "baselineCatalogBytes": 431865593,
-    "baselineCatalogGzipBytes": 38882855,
-    "encodedCatalogBytes": 113536490,
+    "baselineCatalogBytes": 431882793,
+    "baselineCatalogGzipBytes": 38900574,
+    "encodedCatalogBytes": 113551150,
     "routeDataGzipBytes": {
-      "catalog": 13495843,
-      "products": 1799481,
-      "overview": 868031,
-      "peers": 8267143,
-      "detail-index": 4455077,
-      "awards-zone": 714167
+      "catalog": 13504334,
+      "products": 1799945,
+      "overview": 868052,
+      "peers": 8275654,
+      "detail-index": 4456425,
+      "awards-zone": 714226
     }
   },
   "scatterControls": {
