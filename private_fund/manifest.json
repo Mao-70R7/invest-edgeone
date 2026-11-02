@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-10-31T19:28:05+08:00",
-  "packagedAt": "2026-10-31T20:25:05+08:00",
-  "runId": "20261031T191427745037_github_publish_22996",
+  "generatedAt": "2026-11-02T20:20:40+08:00",
+  "packagedAt": "2026-11-02T21:04:02+08:00",
+  "runId": "20261102T200705673272_github_publish_23416",
   "pages": [
     "index.html",
     "products.html",
@@ -31,8 +31,8 @@
   "counts": {
     "catalogProducts": 25073,
     "detailFiles": 25073,
-    "defaultScatterPlottable": 10756,
-    "defaultScatterEvidenceRail": 14317,
+    "defaultScatterPlottable": 10759,
+    "defaultScatterEvidenceRail": 14314,
     "sourceProducts": {
       "ciccwm_app": 1060,
       "ciccwm_public": 9295,
@@ -72,7 +72,7 @@
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-10-31T19:28:05+08:00",
+    "generatedAt": "2026-11-02T20:20:40+08:00",
     "products": 2904,
     "issueCount": 3,
     "issueShare": 0.0010330578512396695,
@@ -141,27 +141,27 @@
     "method": "lossless_record_encoding_and_route_specific_data",
     "productTransport": {
       "products": 25073,
-      "bytes": 1802066,
-      "filterBytes": 83021,
-      "extraBytes": 7998399
+      "bytes": 1799481,
+      "filterBytes": 83017,
+      "extraBytes": 7998144
     },
     "analysisTransport": {
       "version": 2,
       "products": 25073,
       "productBuckets": 2048,
-      "startDate": "2026-10-31",
-      "endDate": "2026-11-15"
+      "startDate": "2026-11-02",
+      "endDate": "2026-11-17"
     },
-    "baselineCatalogBytes": 431814170,
-    "baselineCatalogGzipBytes": 38875857,
-    "encodedCatalogBytes": 113508381,
+    "baselineCatalogBytes": 431865593,
+    "baselineCatalogGzipBytes": 38882855,
+    "encodedCatalogBytes": 113536490,
     "routeDataGzipBytes": {
-      "catalog": 13507465,
-      "products": 1802066,
-      "overview": 868189,
-      "peers": 8283574,
-      "detail-index": 4457345,
-      "awards-zone": 713792
+      "catalog": 13495843,
+      "products": 1799481,
+      "overview": 868031,
+      "peers": 8267143,
+      "detail-index": 4455077,
+      "awards-zone": 714167
     }
   },
   "scatterControls": {

@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "generatedAt": "2026-10-31T20:25:50+08:00",
+  "generatedAt": "2026-11-02T21:04:34+08:00",
   "checks": {
     "pageCount": 7,
     "detailFileCount": 25073,
@@ -27,7 +27,7 @@
     "cmbPublication": "cmb_display_20260911_v1",
     "cmbQuality": {
       "version": "cmb_display_20260911_v1",
-      "generatedAt": "2026-10-31T19:28:05+08:00",
+      "generatedAt": "2026-11-02T20:20:40+08:00",
       "products": 2904,
       "issueCount": 3,
       "issueShare": 0.0010330578512396695,
@@ -119,12 +119,12 @@
     "sourceAuditStatus": "warn",
     "accessScope": "public_catalog_plus_scoped_performance_analytics",
     "authenticatedPerformanceAnalyticsIncluded": true,
-    "restrictedAnalyticsDetailCount": 7693,
+    "restrictedAnalyticsDetailCount": 7694,
     "restrictedRawDataIncluded": false,
-    "rawDetailBytes": 2303048377,
-    "compressedDetailBytes": 257299223,
-    "compressionRatio": 0.111721,
-    "maxCompressedDetailBytes": 521315,
+    "rawDetailBytes": 2304236055,
+    "compressedDetailBytes": 257440083,
+    "compressionRatio": 0.111725,
+    "maxCompressedDetailBytes": 521359,
     "maxCompressedDetailFile": "anonymous/bc.js.gz",
     "oversizedFileCount": 0
   }
