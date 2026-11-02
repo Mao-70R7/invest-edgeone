@@ -1,0 +1,46 @@
+{
+  "contract": "advisor_verified_page_v1",
+  "buildId": "20261101_verified_first",
+  "previewOnly": false,
+  "createdAt": "2026-11-01T23:21:25.680768+08:00",
+  "files": [
+    {
+      "path": "app.css",
+      "sha256": "13f4c1886ae8521da8728a22a5a6ddb79609bb66d74863547e7f1d51c74156b3",
+      "bytes": 3065
+    },
+    {
+      "path": "app.js",
+      "sha256": "9640cc6bff069b2cb703dc9bd8c69cff7975758d3c4a41baaf24553ce9f092e5",
+      "bytes": 7885
+    },
+    {
+      "path": "data.js",
+      "sha256": "ba04700ca99a046d2dca814071016bf5f6d99530c4dbf7e8bf735fa68dd8e121",
+      "bytes": 3567283
+    },
+    {
+      "path": "index.html",
+      "sha256": "3b6b26fda47be5dfe5cf8043aceff8080786b8dee3214510817d32ec3c5cc70b",
+      "bytes": 6082
+    },
+    {
+      "path": "report.css",
+      "sha256": "cdb883162d1e961959d92bebf5457da7e7fa3142c4f17f6a25cf877343ca4825",
+      "bytes": 4352
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "strategies": 151,
+    "observations": 94958,
+    "events": 2,
+    "rebalanceFundDetails": 54,
+    "riskExcluded": true,
+    "economicExposureExcluded": true
+  },
+  "relativeDirectory": "releases/advisor-20261101",
+  "sourceFinancialDataSha256": "74f643cc2b2edce76b6d153265363fbff7150d510d1f6ef66035efcc064af70b",
+  "scope": "gffunds_verified_performance_151_and_two_exact_new_rebalances",
+  "globalFinancialAcceptanceClaimed": false
+}

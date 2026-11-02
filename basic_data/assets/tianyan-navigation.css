@@ -1,0 +1,25 @@
+
+/* Cross-site navigation: matches the private-fund site's advisor entry. */
+.topbar .nav .nav-link.private-fund-link {
+  align-self:center; flex:0 0 auto; min-height:0 !important;
+  margin-left:18px; padding:8px 18px !important;
+  border:1px solid #A51E26 !important; border-radius:6px !important;
+  background:#A51E26 !important; color:#fff !important;
+  font-size:15px; font-weight:750 !important; line-height:1.5;
+  box-shadow:0 2px 4px rgba(165,30,38,.10) !important; gap:5px;
+}
+.topbar .nav .nav-link.private-fund-link:hover {
+  background:#8E1921 !important; border-color:#8E1921 !important;
+}
+.topbar .nav .nav-link.private-fund-link:focus-visible {
+  outline:3px solid #D6A1A5; outline-offset:3px;
+}
+.topbar .nav .nav-link.private-fund-link::after { display:none; }
+@media (max-width:620px) {
+  .topbar .nav { flex-wrap:wrap; overflow:visible; }
+  .topbar .nav .nav-link { min-height:40px !important; padding:0 10px !important; }
+  .topbar .nav .nav-link.private-fund-link {
+    min-height:0 !important; margin:4px 0 4px 10px;
+    padding:7px 14px !important; font-size:13px;
+  }
+}
