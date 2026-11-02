@@ -1,13 +1,13 @@
 {
   "status": "ready",
-  "generatedAt": "2026-11-02T23:00:28+08:00",
+  "generatedAt": "2026-11-03T00:57:22+08:00",
   "checks": {
     "pageCount": 7,
-    "detailFileCount": 25073,
-    "detailTransportFileCount": 13194,
+    "detailFileCount": 25114,
+    "detailTransportFileCount": 13235,
     "anonymousDetailBundleCount": 256,
     "anonymousBundledProductsVerified": 12135,
-    "catalogRowCount": 25073,
+    "catalogRowCount": 25114,
     "sourceProductCounts": {
       "ciccwm_app": 1060,
       "ciccwm_public": 9295,
@@ -19,7 +19,7 @@
       "jsfund_highend": 347,
       "ruiyuan_highend": 137,
       "simuwang": 5644,
-      "xueqiu": 1291,
+      "xueqiu": 1332,
       "zocaifu_highend": 80
     },
     "harvestwmPublication": "harvestwm_business_display_20261026_v1",
@@ -27,7 +27,7 @@
     "cmbPublication": "cmb_display_20260911_v1",
     "cmbQuality": {
       "version": "cmb_display_20260911_v1",
-      "generatedAt": "2026-11-02T21:53:16+08:00",
+      "generatedAt": "2026-11-02T23:50:10+08:00",
       "products": 2904,
       "issueCount": 3,
       "issueShare": 0.0010330578512396695,
@@ -119,12 +119,12 @@
     "sourceAuditStatus": "warn",
     "accessScope": "public_catalog_plus_scoped_performance_analytics",
     "authenticatedPerformanceAnalyticsIncluded": true,
-    "restrictedAnalyticsDetailCount": 7694,
+    "restrictedAnalyticsDetailCount": 7695,
     "restrictedRawDataIncluded": false,
-    "rawDetailBytes": 2304515000,
-    "compressedDetailBytes": 257467334,
-    "compressionRatio": 0.111723,
-    "maxCompressedDetailBytes": 521367,
+    "rawDetailBytes": 2303599139,
+    "compressedDetailBytes": 256849713,
+    "compressionRatio": 0.111499,
+    "maxCompressedDetailBytes": 521366,
     "maxCompressedDetailFile": "anonymous/bc.js.gz",
     "oversizedFileCount": 0
   }
