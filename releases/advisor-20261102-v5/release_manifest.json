@@ -1,0 +1,47 @@
+{
+  "contract": "advisor_fivesource_verified_page_v1",
+  "buildId": "20261102_fivesource_verified_v5",
+  "previewOnly": false,
+  "createdAt": "2026-11-02T07:43:25.944282+08:00",
+  "relativeDirectory": "releases/advisor-20261102-v5",
+  "counts": {
+    "strategies": 837,
+    "observations": 7332,
+    "comparable": 807,
+    "cutoffEndpoints": 809,
+    "sourceLatestAtCutoff": 808,
+    "sourceLatestBeyondWindow": 1,
+    "events": 2,
+    "fundRows": 54
+  },
+  "files": [
+    {
+      "path": "app.css",
+      "sha256": "7cb9ed2410946ca39e95c3e45ead43ff6115f60a858ec6142655af02ae2ca4e9",
+      "bytes": 3551
+    },
+    {
+      "path": "app.js",
+      "sha256": "3fdd1bd304835017280f67ee31f3a4229f464968539a7bc4f04ff5d0351d0650",
+      "bytes": 9876
+    },
+    {
+      "path": "data.js",
+      "sha256": "4f682547492a73291f80b98ce553b897dd3f8577a74cf4617851b7770a4d6502",
+      "bytes": 580930
+    },
+    {
+      "path": "index.html",
+      "sha256": "e5ad771df5212d7cd26174d2862ba0728921f117f8a5bac69ecb0e14bf1507de",
+      "bytes": 8404
+    },
+    {
+      "path": "report.css",
+      "sha256": "cdb883162d1e961959d92bebf5457da7e7fa3142c4f17f6a25cf877343ca4825",
+      "bytes": 4352
+    }
+  ],
+  "sourceFinancialDataSha256": "e847b8807ba5f5eaf1f30cb44c764faba6b328f3206dbbfc885d0371dd1f49f5",
+  "globalFinancialAcceptanceClaimed": false,
+  "riskEligible": false
+}
