@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-11-02T23:50:10+08:00",
-  "packagedAt": "2026-11-03T00:56:29+08:00",
-  "runId": "20261102T233258518136_github_publish_23416",
+  "generatedAt": "2026-11-03T10:24:43+08:00",
+  "packagedAt": "2026-11-03T11:36:33+08:00",
+  "runId": "20261103T100834064272_github_publish_3868",
   "pages": [
     "index.html",
     "products.html",
@@ -29,14 +29,14 @@
   },
   "gffundsResearchPublished": false,
   "counts": {
-    "catalogProducts": 25114,
-    "detailFiles": 25114,
-    "defaultScatterPlottable": 10809,
+    "catalogProducts": 25148,
+    "detailFiles": 25148,
+    "defaultScatterPlottable": 10843,
     "defaultScatterEvidenceRail": 14305,
     "sourceProducts": {
       "ciccwm_app": 1060,
       "ciccwm_public": 9295,
-      "cmb_private_investment": 2904,
+      "cmb_private_investment": 2905,
       "geshang": 314,
       "gffunds_highend": 68,
       "harvestwm_highend": 1093,
@@ -44,7 +44,7 @@
       "jsfund_highend": 347,
       "ruiyuan_highend": 137,
       "simuwang": 5644,
-      "xueqiu": 1332,
+      "xueqiu": 1365,
       "zocaifu_highend": 80
     },
     "metricDefinitions": 35,
@@ -56,7 +56,7 @@
   "sourceCounts": {
     "ciccwm_app": 1060,
     "ciccwm_public": 9295,
-    "cmb_private_investment": 2904,
+    "cmb_private_investment": 2905,
     "geshang": 314,
     "gffunds_highend": 68,
     "harvestwm_highend": 1093,
@@ -64,7 +64,7 @@
     "jsfund_highend": 347,
     "ruiyuan_highend": 137,
     "simuwang": 5644,
-    "xueqiu": 1332,
+    "xueqiu": 1365,
     "zocaifu_highend": 80
   },
   "harvestwmPublication": "harvestwm_business_display_20261026_v1",
@@ -72,10 +72,10 @@
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-11-02T23:50:10+08:00",
-    "products": 2904,
+    "generatedAt": "2026-11-03T10:24:43+08:00",
+    "products": 2905,
     "issueCount": 3,
-    "issueShare": 0.0010330578512396695,
+    "issueShare": 0.0010327022375215145,
     "maxIssueShare": 0.05,
     "incomeCurveProducts": 14,
     "expectedNoHistoryProducts": 0
@@ -94,12 +94,12 @@
     "warning": "同图仅表示公式与尺度统一；格上复权净值、排排网复权收益与广发/嘉实/睿远/招商来源累计净值的费用、分红处理和估值频率未完全统一。累计净值不等同于分红再投资收益；排名仅作分类内研究参考。"
   },
   "allProductMarksContract": {
-    "totalEligible": 25114,
+    "totalEligible": 25148,
     "plottableRule": "selected_x_and_y_are_strict_numeric",
     "missingRule": "every_non_plottable_product_is_rendered_in_evidence_rail"
   },
-  "detailFileCount": 25114,
-  "detailTransportFileCount": 13235,
+  "detailFileCount": 25148,
+  "detailTransportFileCount": 13269,
   "anonymousDetailBundles": {
     "version": 1,
     "files": 256,
@@ -140,28 +140,28 @@
   "performance": {
     "method": "lossless_record_encoding_and_route_specific_data",
     "productTransport": {
-      "products": 25114,
-      "bytes": 1809326,
-      "filterBytes": 83122,
-      "extraBytes": 7892182
+      "products": 25148,
+      "bytes": 1809499,
+      "filterBytes": 83200,
+      "extraBytes": 7977023
     },
     "analysisTransport": {
       "version": 2,
-      "products": 25114,
+      "products": 25148,
       "productBuckets": 2048,
       "startDate": "2026-11-03",
       "endDate": "2026-11-18"
     },
-    "baselineCatalogBytes": 425998301,
-    "baselineCatalogGzipBytes": 36742573,
-    "encodedCatalogBytes": 111653601,
+    "baselineCatalogBytes": 429596454,
+    "baselineCatalogGzipBytes": 38093942,
+    "encodedCatalogBytes": 112790527,
     "routeDataGzipBytes": {
-      "catalog": 13188895,
-      "products": 1809326,
-      "overview": 870056,
-      "peers": 8316364,
-      "detail-index": 4470334,
-      "awards-zone": 718244
+      "catalog": 13378829,
+      "products": 1809499,
+      "overview": 871637,
+      "peers": 8327559,
+      "detail-index": 4477413,
+      "awards-zone": 719330
     }
   },
   "scatterControls": {
