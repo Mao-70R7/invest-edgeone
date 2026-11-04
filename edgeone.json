@@ -1,0 +1,16 @@
+{
+  "installCommand": "echo Private static site",
+  "buildCommand": "node scripts/prepare_private_static.cjs",
+  "outputDirectory": "_private_static",
+  "headers": [
+    {
+      "source": "/private_fund/data/*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public,max-age=60"
+        }
+      ]
+    }
+  ]
+}
