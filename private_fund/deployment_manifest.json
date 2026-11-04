@@ -7,7 +7,7 @@
     "productCount": 25152,
     "detailFileCount": 25152,
     "fileCountExcludingManifest": 7580,
-    "totalBytesExcludingManifest": 372374891,
+    "totalBytesExcludingManifest": 372374765,
     "rawDetailBytes": 2312231774,
     "compressedDetailBytes": 251010997,
     "maxCompressedDetailBytes": 521380
@@ -145,8 +145,8 @@
     },
     {
       "path": "assets/tianyan-assistant-config.js",
-      "size": 106,
-      "sha256": "d4eee3c64e7a022753a9cdbf68b88a9dd339b4b698166162fd5ef41bca228c7d"
+      "size": 85,
+      "sha256": "3cb3fea94eb72b0e38ace61f978b0c15616f5662da5dbbb1c277d163f716f83b"
     },
     {
       "path": "assets/tianyan-assistant.css",
@@ -160,8 +160,8 @@
     },
     {
       "path": "awards.html",
-      "size": 147647,
-      "sha256": "6f638eb0302210f13852bd716a3b2ecfe476940e4254d661c990572fcd9e5706"
+      "size": 147626,
+      "sha256": "22e785d8df3c1f619a2e9093c0497ac3c45f69f27256ddec569f03d1c669b300"
     },
     {
       "path": "cmb-review.json",
@@ -37855,23 +37855,23 @@
     },
     {
       "path": "detail.html",
-      "size": 179351,
-      "sha256": "1ef6528f4d9d3085eb1e49ccb501361568641a4ee456525f72167e514446c1d4"
+      "size": 179330,
+      "sha256": "9de43371dd12b8feb0b59fa6e58f5b1746c597c2e1d6562b4b362888c3069b9d"
     },
     {
       "path": "gffunds-manager.html",
-      "size": 118372,
-      "sha256": "1748d303cb1adfd1f9be58c545ba97853aeb49a9b37cd1311ed0f8dbc2cce41a"
+      "size": 118351,
+      "sha256": "18eb99de9cd2ce786dcc2d809fb793b43d2f70d55f3255727b30871faf7bcd0e"
     },
     {
       "path": "gffunds.html",
-      "size": 118322,
-      "sha256": "91df83dfb950e95021accbb05d463e5630197fdedfe9a5c705d191f3ced8f234"
+      "size": 118301,
+      "sha256": "430a2131c7e5be312565adbeae5d1992e45ee8b722534fec804379c5f6ab579e"
     },
     {
       "path": "index.html",
-      "size": 176117,
-      "sha256": "1128ad7e130701ed9445dee34b17ea232ef25bed94205c4315886adc24be0689"
+      "size": 176096,
+      "sha256": "2af9fa723143afd88e0a26ea74c282dd4ec19ef1e3257929ab09ecbc2aa2a820"
     },
     {
       "path": "manifest.js",
