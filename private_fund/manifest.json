@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-11-04T21:30:23+08:00",
-  "packagedAt": "2026-11-04T22:36:16+08:00",
-  "runId": "20261104T212400818490_github_publish_25484",
+  "generatedAt": "2026-11-05T01:26:58+08:00",
+  "packagedAt": "2026-11-05T02:35:17+08:00",
+  "runId": "20261105T011855842882_github_publish_25484",
   "pages": [
     "index.html",
     "products.html",
@@ -72,7 +72,7 @@
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-11-04T21:30:23+08:00",
+    "generatedAt": "2026-11-05T01:26:58+08:00",
     "products": 2905,
     "issueCount": 3,
     "issueShare": 0.0010327022375215145,
@@ -108,17 +108,17 @@
     "keepIndividualAtBytes": 32768,
     "bundleFiles": 3581,
     "bundledProducts": 12053,
-    "maxActualGzipBytes": 65093,
+    "maxActualGzipBytes": 65095,
     "maxActualDecodedBytes": 786143,
     "originalDetailFiles": 13313,
     "detailTransportFiles": 4841,
     "filesSaved": 8472,
     "originalColdP50Bytes": 14711,
     "originalColdP95Bytes": 26895,
-    "bundledColdP50Bytes": 50261,
-    "bundledColdP95Bytes": 61823,
+    "bundledColdP50Bytes": 50257,
+    "bundledColdP95Bytes": 61833,
     "extraColdP95Bytes": 46862,
-    "maxExtraColdBytes": 59559
+    "maxExtraColdBytes": 59570
   },
   "anonymousDetailBundles": {
     "version": 1,
@@ -167,40 +167,40 @@
       "keepIndividualAtBytes": 32768,
       "bundleFiles": 3581,
       "bundledProducts": 12053,
-      "maxActualGzipBytes": 65093,
+      "maxActualGzipBytes": 65095,
       "maxActualDecodedBytes": 786143,
       "originalDetailFiles": 13313,
       "detailTransportFiles": 4841,
       "filesSaved": 8472,
       "originalColdP50Bytes": 14711,
       "originalColdP95Bytes": 26895,
-      "bundledColdP50Bytes": 50261,
-      "bundledColdP95Bytes": 61823,
+      "bundledColdP50Bytes": 50257,
+      "bundledColdP95Bytes": 61833,
       "extraColdP95Bytes": 46862,
-      "maxExtraColdBytes": 59559
+      "maxExtraColdBytes": 59570
     },
     "productTransport": {
       "products": 25192,
-      "bytes": 1809505,
-      "filterBytes": 83345,
-      "extraBytes": 8063417
+      "bytes": 1809488,
+      "filterBytes": 83343,
+      "extraBytes": 8063190
     },
     "analysisTransport": {
       "version": 2,
       "products": 25192,
       "productBuckets": 2048,
-      "startDate": "2026-11-04",
-      "endDate": "2026-11-19"
+      "startDate": "2026-11-05",
+      "endDate": "2026-11-20"
     },
     "baselineCatalogBytes": 434481556,
-    "baselineCatalogGzipBytes": 39522915,
+    "baselineCatalogGzipBytes": 39522237,
     "encodedCatalogBytes": 114046893,
     "routeDataGzipBytes": {
-      "catalog": 13502749,
-      "products": 1809505,
-      "overview": 872661,
-      "peers": 8314668,
-      "detail-index": 4477920,
+      "catalog": 13502525,
+      "products": 1809488,
+      "overview": 872668,
+      "peers": 8314787,
+      "detail-index": 4477895,
       "awards-zone": 720561
     }
   },
