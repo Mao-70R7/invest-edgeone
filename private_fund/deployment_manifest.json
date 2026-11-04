@@ -7,7 +7,7 @@
     "productCount": 25152,
     "detailFileCount": 25152,
     "fileCountExcludingManifest": 7580,
-    "totalBytesExcludingManifest": 372374765,
+    "totalBytesExcludingManifest": 372375334,
     "rawDetailBytes": 2312231774,
     "compressedDetailBytes": 251010997,
     "maxCompressedDetailBytes": 521380
@@ -155,8 +155,8 @@
     },
     {
       "path": "assets/tianyan-assistant.js",
-      "size": 28096,
-      "sha256": "ac25c27b7985debafb15bd8e983deec90c3c13d05ee2222572fbfa846b9ebffd"
+      "size": 28665,
+      "sha256": "884d26de54aac70097a03b253aad404166ddcaef06db9b9efe195a1d848efb9b"
     },
     {
       "path": "awards.html",

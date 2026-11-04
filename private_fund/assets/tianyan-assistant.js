@@ -87,11 +87,16 @@
       throw error;
     } finally { clearTimeout(timeout); }
   }
-  function safeResultURL(value) {
-    try { const u = new URL(value); return u.protocol === "https:" && u.hostname === "gfinvest.site" && !u.username && !u.password && (!u.port || u.port === "443"); } catch (_) { return false; }
+  function resultURL(value) {
+    try {
+      const u = new URL(value);
+      if (u.protocol !== "https:" || !["gfinvest.site", "private.gfinvest.site"].includes(u.hostname) || u.username || u.password || u.port && u.port !== "443") return null;
+      if (location.origin === "https://private.gfinvest.site" && u.hostname === "gfinvest.site" && /^\/(private_fund|wealth_shelf)(?:\/|$)/.test(u.pathname)) u.hostname = "private.gfinvest.site";
+      return u.href;
+    } catch (_) { return null; }
   }
   function resultLink(label, url) {
-    if (!safeResultURL(url)) return null;
+    url = resultURL(url); if (!url) return null;
     const a = el("a", "ty-result-link", label); a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer"; return a;
   }
   function plotResult(chart) {
@@ -227,9 +232,8 @@
       node.append(document.createTextNode(text.slice(last, match.index)));
       if (match[3]) node.append(el("strong", "", match[3]));
       else {
-        let safe = false;
-        try { const url = new URL(match[2]); safe = url.protocol === "https:" && url.hostname === "gfinvest.site"; } catch (_) {}
-        if (safe) { const link = el("a", "", match[1]); link.href = match[2]; link.target = "_blank"; link.rel = "noopener noreferrer"; node.append(link); }
+        const safe = resultURL(match[2]);
+        if (safe) { const link = el("a", "", match[1]); link.href = safe; link.target = "_blank"; link.rel = "noopener noreferrer"; node.append(link); }
         else node.append(document.createTextNode(match[1]));
       }
       last = regex.lastIndex;
