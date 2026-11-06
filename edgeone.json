@@ -1,6 +1,6 @@
 {
   "installCommand": "echo Private static site",
-  "buildCommand": "node scripts/prepare_private_static.cjs",
+  "buildCommand": "node scripts/prepare_private_static.cjs --edgeone-ci",
   "outputDirectory": "_private_static",
   "headers": [
     {
