@@ -10,22 +10,21 @@ fs.mkdirSync(out);
 for(const n of names){if(n.startsWith('edge-functions/'))continue;const dst=path.join(out,n);fs.mkdirSync(path.dirname(dst),{recursive:true});fs.linkSync(n,dst);}
 // The static output is now self-contained. Reclaim only pack files in EdgeOne's
 // disposable checkout, and only when the builder lacks space for final output.
-if(process.argv.includes('--edgeone-ci')&&process.platform==='linux'&&process.env.HOME==='/tmp/home'){
+const checkout=fs.realpathSync('.');
+if(process.argv.includes('--edgeone-ci')&&process.platform==='linux'&&/^\/dev\/shm\/repo\/tianyan-private-dp[a-z0-9]+$/.test(checkout)){
   const free=()=>{const s=fs.statfsSync('.');return s.bavail*s.bsize;};
   const before=free();
-  if(before<1024**3){
-    const pack=path.join(fs.realpathSync('.'),'.git','objects','pack');
-    if(fs.existsSync(pack)&&fs.realpathSync(pack)===pack){
-      let reclaimed=0;
-      for(const entry of fs.readdirSync(pack,{withFileTypes:true})){
-        if(!entry.isFile()||!/^pack-[0-9a-f]{40}\.(pack|idx|rev|bitmap|mtimes)$/.test(entry.name))continue;
-        const file=path.join(pack,entry.name),stat=fs.lstatSync(file);
-        if(!stat.isFile()||stat.nlink!==1)continue;
-        fs.unlinkSync(file);
-        reclaimed+=stat.size;
-      }
-      console.log(JSON.stringify({event:'edgeone_checkout_space',beforeBytes:before,afterBytes:free(),releasedBytes:reclaimed}));
+  const pack=path.join(checkout,'.git','objects','pack');
+  let reclaimed=0;
+  if(before<1024**3&&fs.existsSync(pack)&&fs.realpathSync(pack)===pack){
+    for(const entry of fs.readdirSync(pack,{withFileTypes:true})){
+      if(!entry.isFile()||!/^pack-[0-9a-f]{40}\.(pack|idx|rev|bitmap|mtimes)$/.test(entry.name))continue;
+      const file=path.join(pack,entry.name),stat=fs.lstatSync(file);
+      if(!stat.isFile()||stat.nlink!==1)continue;
+      fs.unlinkSync(file);
+      reclaimed+=stat.size;
     }
   }
+  console.log(JSON.stringify({event:'edgeone_checkout_space',beforeBytes:before,afterBytes:free(),releasedBytes:reclaimed}));
 }
 console.log(JSON.stringify({status:'ready',files:names.length,outputDirectory:out,scope:'private_only'}));
