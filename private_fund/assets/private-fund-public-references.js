@@ -12,6 +12,9 @@
     ])}<p class="headNote analytics-note">公示目录包含历史产品；在售状态、完整合同条款、成立及到期日期尚未核实。</p></section>`:'';
     for (const r of refs) {
       const nav=r.nav||[], metrics=r.performance||[], b=r.basic_fields||{};
+      const P=window.PrivateFundBusinessText;
+      const scales=(r.scales||[]).map(s=>({source:s,wan:P.scaleInWan(s.scale_value_raw,s.scale_unit,s.scale_status ?? "")}))
+        .filter(s=>s.wan!==null);
       const dateConflict=nav.length && b.inception_date && nav[0].nav_date < b.inception_date;
       const url=/^https?:\/\//.test(r.source_url||'')?`<a href="${esc(r.source_url)}" target="_blank" rel="noopener noreferrer">公开来源 ↗</a>`:'';
       const key=r.source_id+':'+r.source_product_id;
@@ -23,6 +26,9 @@
         html+=`<p>已取得 ${nav.length} 个净值日期：${esc(nav[0].nav_date)} 至 ${esc(nav.at(-1).nav_date)}。保留原值；尺度待核，不据此计算统一收益。</p><details><summary>查看全部来源净值（${nav.length} 条）</summary>${table(['净值日期','单位净值原值','累计净值原值','来源单位','采集时间'],nav.slice().reverse().map(n=>[n.nav_date,n.unit_nav_raw,n.accumulated_nav_raw,n.nav_unit,n.collected_at]))}</details>`;
       }
       if(metrics.length) html+=`<details style="margin-top:12px"><summary>来源业绩原值（${metrics.length} 项，口径待核）</summary><p>以下仅保留来源数值，未推定百分比单位；统计口径未核验。</p>${table(['指标','原值','关联日期','采集时间'],metrics.map(m=>[m.label,m.value_raw,m.as_of_date,m.collected_at]))}</details>`;
+      if(scales.length) html+=table(['来源规模','规模日期','份额口径'],scales.map(({source,wan})=>[
+        P.formatScaleWan(wan),source.scale_date,r.share_class || (source.scale_scope === 'parent_fund_all_share_classes' ? '基金合计' : '来源未单列份额'),
+      ]));
       html+='</section>';
     }
     return html;

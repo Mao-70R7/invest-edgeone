@@ -1,4 +1,4 @@
-(async () => {
+window.PrivateFundProductReady = (async () => {
   const P = window.PrivateFund || {};
   const C = window.PrivateFundScatterControls;
   const A = window.PrivateFundAwards;
@@ -13,12 +13,12 @@
   const rows = pack.rows;
   const F = window.PrivateFundFilters;
   const previewGroups=new Map([...root.querySelectorAll('[data-preview-fields] .rank-filter-row')].map(el=>[el.querySelector('h3').textContent,el.outerHTML.replace(/data-preview-(field|condition|custom|min|max)/g,'data-$1')]));
-  const initialParams=P.params(),initialAdvanced=F.read(initialParams);
+  const initialParams=P.params(),initialAdvanced=F.readProductList(initialParams);
   const needsExtra=Object.keys(initialAdvanced).some(id=>['指标筛选','超额指标'].includes(F.fields.find(f=>f.id===id)?.group))||
     ['x','y'].some((axis,i)=>initialParams.get(axis)&&initialParams.get(axis)!==pack.meta[i?'defaultYMetric':'defaultXMetric']);
   if(needsExtra){try{window.PrivateFundStaticLoader.setProgress(88,'正在加载所选条件的指标','产品列表');await window.PrivateFundStaticLoader.ensureProductData(pack);}catch(error){window.PrivateFundStaticLoader.showError(error);return;}}
   const filterAsOf = pack.meta.generatedAt.slice(0,10);
-  let advanced = F.read(P.params());
+  let advanced = initialAdvanced;
   const deferredDefaultBenchmark = Boolean(pack.meta.defaultBenchmarkSnapshot!=='sh000300' && pack.meta.marketExcessFiles?.sh000300 && F.getBenchmark()==='sh000300');
   let defaultBenchmarkState = deferredDefaultBenchmark ? 'loading' : 'ready';
   if (!deferredDefaultBenchmark) {
@@ -56,9 +56,9 @@
 
   function applyParams() {
     const params = P.params();
-    advanced = F.read(params);
+    advanced = F.readProductList(params);
     A.read(params,state);
-    F.fields.filter(f=>advanced[f.id]).forEach(f=>{activeFields[f.group]=f.id;});
+    F.fields.filter(f=>advanced[f.id]&&f.id!=='navFreshness').forEach(f=>{activeFields[f.group]=f.id;});
     state.query = P.clean(params.get("q"));
     state.source = P.clean(params.get("source"));
     Object.assign(state, C.readFilters(params, rows));
@@ -68,7 +68,7 @@
     state.focus = params.get('view') !== 'all';
     state.cardOpen = params.get('card') !== 'folded';
     state.page = Math.max(1, Number(params.get("page")) || 1);
-    state.sort = ['name','source','company','strategy','inception','latest','x','y','ready'].includes(params.get('sort')) ? params.get('sort') : 'x';
+    state.sort = ['name','source','company','strategy','filing','inception','latest','x','y','ready'].includes(params.get('sort')) ? params.get('sort') : 'x';
     state.direction = params.get('direction') === 'asc' ? 'asc' : 'desc';
   }
   applyParams();
@@ -86,7 +86,7 @@
   }
 
   function filterRows() {
-    const matches=F.compile(advanced,filterAsOf),getters={name:r=>r.name,source:r=>r.sourceLabel,company:r=>[r.company,...(r.managers||[])].join('、'),strategy:r=>r.strategy1,inception:r=>r.inceptionDate||r.filterFacts?.firstDate,latest:r=>F.latestDisclosureDate(r),x:r=>metricValue(r,state.xMetric),y:r=>metricValue(r,state.yMetric),ready:r=>Number(isPlottable(r))};
+    const matches=F.compile(advanced,filterAsOf),getters={name:r=>r.name,source:r=>r.sourceLabel,company:r=>[r.company,...(r.managers||[])].join('、'),strategy:r=>r.strategy1,filing:r=>r.filingClassification?.major,inception:r=>r.inceptionDate||r.filterFacts?.firstDate,latest:r=>F.latestDisclosureDate(r),x:r=>metricValue(r,state.xMetric),y:r=>metricValue(r,state.yMetric),ready:r=>Number(isPlottable(r))};
     return window.PrivateFundTables.sorted(C.filter(businessQuery.apply(rows), state).filter(r=>matches(r)&&A.matches(r,state)),getters[state.sort],state.direction);
   }
 
@@ -128,9 +128,9 @@
       <div class="filter-panel">
         <div id="rankFilters" class="rank-filters"></div>
         <div class="filter-grid">
-          <label class="field"><span>产品 / 管理人 / 经理 / 备案号</span><input id="productSearch" type="search" autocomplete="off" placeholder="输入产品、机构或经理" value="${P.esc(state.query)}"></label>
+          <label class="field"><span>产品 / 管理人 / 经理 / 备案</span><input id="productSearch" type="search" autocomplete="off" placeholder="输入产品、机构、经理或备案分类" value="${P.esc(state.query)}"></label>
           <label class="field"><span>数据来源</span><select id="sourceFilter">${option("", "全部来源", state.source)}${sourceOrder.map((id) => option(id, P.sourceColors[id]?.label || id, state.source)).join("")}</select></label>
-          <label class="field"><span>净值更新时效</span><select id="navFreshnessFilter" aria-label="净值更新时效" title="按北京时间今天与最新净值/业绩披露日期比较，不按采集时间判断">${option('', '全部更新时间', advanced.navFreshness)}${F.options(F.fields.find(f=>f.id==='navFreshness'),rows,filterAsOf).map(o=>option(o.value,o.label,advanced.navFreshness)).join('')}</select></label>
+          <label class="field"><span>业绩更新时效</span><select id="navFreshnessFilter" aria-label="业绩更新时效" title="近30天含北京时间今天及之前29天，按最新净值或业绩披露日期判断">${F.freshnessChoices.map(o=>option(o.value,o.label,advanced.navFreshness)).join('')}</select></label>
           <div class="field" id="companyFilter"></div>
           <div class="field" id="strategyFilter"></div>
           <button id="resetFilters" class="secondary-button" type="button">重置</button>
@@ -139,14 +139,14 @@
       <div id="summaryStrip" class="summary-strip"></div>
       <div class="table-wrap">
         <table class="product-table" data-external-sort="true">
-          <thead><tr><th>产品</th><th>来源</th><th>管理人 / 经理</th><th>策略</th><th>成立日</th><th>最新业绩 / 序列</th><th id="xTableHead"></th><th id="yTableHead"></th><th>坐标状态</th></tr></thead>
+          <thead><tr><th>产品</th><th>来源</th><th>管理人 / 经理</th><th>策略</th><th>中基协分类</th><th>成立日</th><th>最新业绩 / 序列</th><th id="xTableHead"></th><th id="yTableHead"></th><th>坐标状态</th></tr></thead>
           <tbody id="productTableBody"></tbody>
         </table>
       </div>
       <div id="pager" class="pager"></div>
     </section>
     <section id="scatterPanel" class="panel" aria-labelledby="scatterTitle">
-      <div class="panel-head"><h2 id="scatterTitle">全部产品业绩点阵</h2><span id="scatterCount" class="panel-count"></span></div>
+      <div class="panel-head"><h2 id="scatterTitle">产品业绩点阵</h2><span id="scatterCount" class="panel-count"></span></div>
       <div class="scatter-toolbar">
         <label class="field"><span>X 轴 · 区间收益</span><select id="xMetric">${xMetrics.map((metric) => option(metric.code, `${metric.label} · ${metric.coverageTotal}只`, state.xMetric)).join("")}</select></label>
         <label class="field"><span>Y 轴 · 风险指标</span><select id="yMetric">${yMetrics.map((metric) => option(metric.code, `${metric.label} · ${metric.coverageTotal}只`, state.yMetric)).join("")}</select></label>
@@ -345,25 +345,27 @@
     const pageRows = filtered.slice(start, start + state.pageSize);
     elements.xHead.textContent = metricLabel(state.xMetric);
     elements.yHead.textContent = metricLabel(state.yMetric);
-    const keys=['name','source','company','strategy','inception','latest','x','y','ready'];
-    const labels=['产品','来源','管理人 / 经理','策略','成立日','最新业绩 / 序列',metricLabel(state.xMetric),metricLabel(state.yMetric),'坐标状态'];
+    const keys=['name','source','company','strategy','filing','inception','latest','x','y','ready'];
+    const labels=['产品','来源','管理人 / 经理','策略','中基协分类','成立日','最新业绩 / 序列',metricLabel(state.xMetric),metricLabel(state.yMetric),'坐标状态'];
     elements.body.closest('table').querySelectorAll('thead th').forEach((th,i)=>window.PrivateFundTables.header(th,labels[i],state.sort===keys[i],state.direction,()=>{state.direction=state.sort===keys[i]&&state.direction==='desc'?'asc':'desc';state.sort=keys[i];state.page=1;render();}));
     const backQuery = window.location.search.replace(/^\?/, "");
     elements.body.innerHTML = pageRows.map((row) => {
       const ready = isPlottable(row);
       const company = P.clean(row.company) || "未披露管理人";
       const managers = (row.managers || []).join("、");
+      const filing=row.filingClassification;
       return `<tr data-key="${P.esc(row.key)}" tabindex="0" aria-selected="${row.key === state.selected}" class="${row.key === state.selected ? "is-selected " : ""}${row.source === "gffunds_highend" ? "is-gffunds" : ""}">
         <td><a class="product-link" href="${P.esc(P.detailHref(row.key, backQuery))}">${P.esc(row.name || row.id)}</a><span class="cell-sub">${P.esc(row.internalDirectoryKey ? (row.officialProductCode || "源站未提供代码 · 内部目录记录") : row.id)}${row.registrationNumber ? ` · ${P.esc(row.registrationNumber)}` : ""}</span>${A.badges(row)}</td>
         <td>${P.sourceBadge(row.source)}</td>
         <td>${P.esc(company)}${managers ? `<span class="cell-sub">经理：${P.esc(managers)}</span>` : ""}</td>
         <td>${P.esc(row.strategy1 || "未分类")}<span class="cell-sub">${P.esc(row.strategy2 || row.strategy3 || "")}</span></td>
+        <td>${filing?.major?P.esc(filing.major):'<span class="cell-sub">待核验</span>'}${filing?.minor?`<span class="cell-sub">${P.esc(filing.minor)}</span>`:''}${filing?.code?`<span class="cell-sub">备案号 ${P.esc(filing.code)}</span>`:''}</td>
         <td>${P.esc(P.formatDate(row.inceptionDate||row.filterFacts?.firstDate))}${!row.inceptionDate&&row.filterFacts?.firstDate?'<span class="cell-sub">净值起点</span>':''}</td>
         <td>${P.esc(P.formatDate(F.latestDisclosureDate(row)))}<span class="cell-sub">${row.source==='zocaifu_highend'&&row.latestNavDate&&!Number(row.analysisPointCount||0)?'原始净值已保留':`${Number(row.analysisPointCount || 0).toLocaleString("zh-CN")}点`}${row.derivedMetricCount ? ` · ${Number(row.derivedMetricCount).toLocaleString("zh-CN")}项衍生指标` : ""}</span></td>
-        <td>${renderMetricCell(row, state.xMetric)}</td><td>${renderMetricCell(row, state.yMetric)}</td>
+        <td data-metric="${P.esc(state.xMetric)}">${renderMetricCell(row, state.xMetric)}</td><td data-metric="${P.esc(state.yMetric)}">${renderMetricCell(row, state.yMetric)}</td>
         <td><span class="data-state ${ready ? "is-ready" : ""}">${ready ? "可绘制" : "所选指标暂缺"}</span></td>
       </tr>`;
-    }).join("") || '<tr><td colspan="9">没有符合条件的产品。</td></tr>';
+    }).join("") || '<tr><td colspan="10">没有符合条件的产品。</td></tr>';
     elements.pager.innerHTML = `<span>第 ${state.page.toLocaleString("zh-CN")} / ${pages.toLocaleString("zh-CN")} 页 · 每页 ${state.pageSize} 条</span><div class="pager-actions"><button type="button" data-page="prev" ${state.page <= 1 ? "disabled" : ""}>上一页</button><button type="button" data-page="next" ${state.page >= pages ? "disabled" : ""}>下一页</button></div>`;
   }
 
@@ -500,7 +502,7 @@
       box.style.setProperty('right','auto','important');box.style.setProperty('bottom','auto','important');
     });
   });
-  for(const [selector,label,note] of [['#productSearch','产品搜索','按产品名、管理人、基金经理或备案号匹配，输入任一关键词即可。'],['#sourceFilter','数据来源','按产品信息提供渠道筛选。同一产品在不同渠道展示时分别保留。']]){const el=document.querySelector(selector);el.parentElement.querySelector('span').insertAdjacentHTML('beforeend',help(label,note));}
+  for(const [selector,label,note] of [['#productSearch','产品搜索','按产品名、管理人、基金经理、备案号或中基协分类匹配，输入任一关键词即可。'],['#sourceFilter','数据来源','按产品信息提供渠道筛选。同一产品在不同渠道展示时分别保留。']]){const el=document.querySelector(selector);el.parentElement.querySelector('span').insertAdjacentHTML('beforeend',help(label,note));}
   document.querySelector('#companyFilter>span').insertAdjacentHTML('beforeend',help('管理人','按管理机构选择，可同时选择多家；与其他筛选条件同时生效。'));
   const basicGrid=document.querySelector('.filter-panel .filter-grid');
   const basicSection=document.createElement('div');basicSection.className='rank-filter-row basic-filter-row';
@@ -512,7 +514,7 @@
     const base=C.filter(rows,state).filter(r=>A.matches(r,state)),cache=new Map();
     const candidates=f=>{const key=advanced[f.id]||f.id==='strategy'&&advanced.subStrategy?f.id:'*';if(!cache.has(key)){const other={...advanced};delete other[f.id];if(f.id==='strategy')delete other.subStrategy;cache.set(key,Object.keys(other).length?base.filter(F.compile(other,filterAsOf)):base);}return cache.get(key);};
     const countCache=new Map();
-    const snapshotCounts=!businessQuery.active&&!state.query&&!state.source&&!state.companies.length&&!state.strategies.length&&!state.award&&!state.awardYear&&!state.awardStatus&&!Object.keys(advanced).length&&F.getBenchmark()==='sh000300'?window.__PRIVATE_FUND_PRODUCT_FILTERS__:null;
+    const snapshotCounts=!businessQuery.active&&!state.query&&!state.source&&!state.companies.length&&!state.strategies.length&&!state.award&&!state.awardYear&&!state.awardStatus&&Object.keys(advanced).length===1&&advanced.navFreshness==='all'&&F.getBenchmark()==='sh000300'?window.__PRIVATE_FUND_PRODUCT_FILTERS__:null;
     const count=(f,v)=>{const preset=!f.dynamic&&snapshotCounts?.fields.find(item=>item.id===f.id)?.options.find(o=>o.value===v);if(preset)return preset.count;const key=f.id+'\u0000'+v;if(!countCache.has(key))countCache.set(key,candidates(f).filter(F.compile({[f.id]:v},filterAsOf)).length);return countCache.get(key);};
     const tabCount=f=>count(f,advanced[f.id]||(f.feature?'符合':'__present'));
     const button=(f,v,label)=>'<button type="button" data-condition="'+f.id+'" data-value="'+P.esc(v)+'" aria-pressed="'+((advanced[f.id]||'')===v)+'">'+P.esc(label)+'<small>（'+amount(count(f,v))+'）</small></button>';
@@ -527,7 +529,7 @@
       const selectedIndex=(pack.meta.marketBenchmarks||[]).find(b=>b.id===F.getBenchmark());
       return '<div class="rank-filter-row"><h3>'+group+'</h3><div class="rank-filter-content">'+indexBar+'<div class="rank-field-tabs">'+tabs.map(t=>'<span class="filter-tab"><button type="button" data-field="'+t.id+'" aria-pressed="'+(t.family?t.family===f.family:t.id===f.id)+'">'+P.esc(t.familyLabel||t.label)+'<small>（'+amount(tabCount(t))+'）</small></button>'+help(t.familyLabel||t.label,t.note)+'</span>').join('')+'</div>'+
         (f.family?'<div class="rank-periods" aria-label="'+f.familyLabel+'时间区间">'+fs.filter(x=>x.family===f.family).map(t=>'<button type="button" data-field="'+t.id+'" aria-pressed="'+(f.id===t.id)+'">'+F.periods[t.period]+'<small>（'+amount(tabCount(t))+'）</small></button>').join('')+'</div>':'')+
-        '<div class="rank-options">'+button(f,'','不限')+button(f,'__present','有数据')+status+opts.map(o=>'<span class="filter-tab">'+button(f,o.value,o.label)+(['strategy','subStrategy'].includes(f.id)?help(o.label,F.typeNote(f,o.value)):'')+'</span>').join('')+'</div>'+
+        '<div class="rank-options">'+(f.id==='navFreshness'?'':button(f,'','不限')+button(f,'__present','有数据')+status)+opts.map(o=>'<span class="filter-tab">'+button(f,o.value,o.label)+(['strategy','subStrategy'].includes(f.id)?help(o.label,F.typeNote(f,o.value)):'')+'</span>').join('')+'</div>'+
         (f.bands?'<div class="rank-custom"><span>自定义（'+f.unit+'）</span><input type="number" step="any" data-min="'+f.id+'" aria-label="'+f.label+'下限" placeholder="下限 ≥"><span>至</span><input type="number" step="any" data-max="'+f.id+'" aria-label="'+f.label+'上限" placeholder="上限 <"><button type="button" data-custom="'+f.id+'">应用</button></div>':'')+
         '<p class="rank-help">'+P.esc(f.label)+' · 当前条件 '+amount(tabCount(f))+(selectedIndex&&group==='超额指标'?' · '+P.esc(selectedIndex.name)+'可用收盘历史 '+selectedIndex.firstDate+' 至 '+selectedIndex.lastDate:'')+(f.feature?' · 全部条件同时满足才入选':'')+'</p></div></div>';
     }).join('')+'<div class="rank-selected" aria-live="polite">'+(F.fields.filter(f=>advanced[f.id]).map(f=>'<button type="button" data-condition="'+f.id+'" data-value="">'+P.esc(f.label)+'：'+P.esc(F.options(f,rows,filterAsOf).find(o=>o.value===advanced[f.id])?.label||({'__present':'有数据','__missing':'全部缺失','__age':'成立不足','__data':'数据缺失','__unconfirmed':'条件不足'})[advanced[f.id]]||advanced[f.id])+' ×</button>').join('')||'尚未选择附加条件')+'</div><p class="rank-help">数量保留其他已选条件，显示切换本项后的匹配产品数；占比以全部 '+rows.length.toLocaleString()+' 条渠道产品为分母。指标未设阈值时计可计算产品，特色标签计符合产品。同一基金跨渠道分别计数。'+help('统计与缺失标准','区间下限含、上限不含；100%月胜率和零回撤含端点。成立不足指成立时间不能覆盖区间；数据缺失指所需历史缺口；条件待确认指币种、同类范围等依据不足或比率无法计算。各产品以最新可共同计算的业绩日为截止日。')+'</p>';
@@ -544,7 +546,18 @@
   let completeLoading;
   async function prepareComplete(){
     if(pack.meta.completeProductData!==false)return;
-    if(!completeLoading)completeLoading=window.PrivateFundStaticLoader.ensureProductData(pack).then(()=>{render({announce:true});}).catch(error=>{P.announce('高级指标加载失败，基础查询仍可用，点击加载指标重试');console.error(error);throw error;}).finally(()=>{completeLoading=null;});
+    if(!completeLoading){
+      const status=document.createElement('p');
+      status.className='rank-help';
+      status.setAttribute('role','status');
+      status.innerHTML='<span>正在请求高级指标</span> <progress max="100" aria-label="高级指标加载进度"></progress>';
+      document.getElementById('rankFilters').before(status);
+      const bar=status.querySelector('progress');
+      completeLoading=window.PrivateFundStaticLoader.ensureProductData(pack,(value,message)=>{
+        status.querySelector('span').textContent=message;
+        if(value!==null)bar.value=value;
+      }).then(()=>{render({announce:true});}).catch(error=>{P.announce('高级指标加载失败，基础查询仍可用，点击加载指标重试');console.error(error);throw error;}).finally(()=>{status.remove();completeLoading=null;});
+    }
     return completeLoading;
   }
   document.getElementById('rankFilters').addEventListener('click',async event=>{
@@ -561,13 +574,13 @@
     const tab=event.target.closest('[data-field]');
     if(tab){const f=F.fields.find(f=>f.id===tab.dataset.field);activeFields[f.group]=f.id;renderAdvanced();document.querySelector(`[data-field="${f.id}"]`)?.focus();return;}
     const b=event.target.closest('[data-condition]');
-    if(b){if(b.dataset.value)advanced[b.dataset.condition]=b.dataset.value;else delete advanced[b.dataset.condition];if(b.dataset.condition==='strategy')delete advanced.subStrategy;state.page=1;render({announce:true});return;}
+    if(b){const {condition,value}=b.dataset;if(condition==='navFreshness')advanced[condition]=value||'all';else if(value)advanced[condition]=value;else delete advanced[condition];if(condition==='strategy')delete advanced.subStrategy;state.page=1;render({announce:true});return;}
     const custom=event.target.closest('[data-custom]');if(custom){const id=custom.dataset.custom;const a=F.number(document.querySelector(`[data-min="${id}"]`).value),b=F.number(document.querySelector(`[data-max="${id}"]`).value);if(a!==null&&b!==null&&a>=b){P.announce('下限必须小于上限');return;}if(a===null&&b===null)delete advanced[id];else advanced[id]=JSON.stringify([a,b]);state.page=1;render({announce:true});}
   });
   document.getElementById('rankFilters').addEventListener('change',event=>{const id=event.target.dataset.conditionSelect;if(id){if(event.target.value)advanced[id]=event.target.value;else delete advanced[id];state.page=1;render({announce:true});}});
 
   function render({ announce = false, deferFilters = false } = {}) {
-    elements.freshness.value=advanced.navFreshness||'';
+    elements.freshness.value=advanced.navFreshness;
     syncAwards();
     currentFiltered = filterRows();
     businessQuery.describe(currentFiltered.length,Object.entries(advanced).map(([id,value])=>{
@@ -600,13 +613,13 @@
     searchTimer = window.setTimeout(() => updateFilter("query", elements.search.value), 160);
   });
   elements.source.addEventListener("change", () => updateFilter("source", elements.source.value));
-  elements.freshness.addEventListener('change',()=>{if(elements.freshness.value)advanced.navFreshness=elements.freshness.value;else delete advanced.navFreshness;state.page=1;if(state.selected&&!filterRows().some(r=>r.key===state.selected))state.selected='';render({announce:true});});
+  elements.freshness.addEventListener('change',()=>{advanced.navFreshness=elements.freshness.value;state.page=1;if(state.selected&&!filterRows().some(r=>r.key===state.selected))state.selected='';render({announce:true});});
   for(const [element,key] of [[elements.xMetric,'xMetric'],[elements.yMetric,'yMetric']])element.addEventListener('change',async()=>{const value=element.value;try{await prepareComplete();updateFilter(key,value);}catch{element.value=state[key];}});
   document.getElementById('focusView').addEventListener('click',()=>{state.focus=true;renderScatter(currentFiltered);syncUrl();});
   document.getElementById('allView').addEventListener('click',()=>{state.focus=false;renderScatter(currentFiltered);syncUrl();});
   elements.reset.addEventListener("click", () => {
     businessQuery.clear();
-    advanced = {};
+    advanced = {navFreshness:F.defaultNavFreshness};
     benchmarkSelection++;F.setBenchmark('sh000300');
     Object.assign(state, { award:"",awardYear:"",awardStatus:"",colorBy:"company",query: "", source: "", companies: [], strategies: [], xMetric: pack.meta.defaultXMetric, yMetric: pack.meta.defaultYMetric, selected: "", page: 1,focus:true,cardOpen:true });
     elements.search.value = ""; elements.source.value = ""; elements.xMetric.value = state.xMetric; elements.yMetric.value = state.yMetric;
@@ -693,7 +706,7 @@
   resizeObserver = new ResizeObserver(() => scheduleScatter(currentFiltered));
   resizeObserver.observe(elements.canvas.parentElement);
   if(typeof IntersectionObserver==='function'){new IntersectionObserver(entries=>{scatterVisible=entries[0].isIntersecting;if(scatterVisible)scheduleScatter(currentFiltered);},{rootMargin:'160px'}).observe(elements.canvas);}
-  elements.body.addEventListener('pointerover',async event=>{const cell=event.target.closest('.metric-raw'),node=cell?.closest('tr[data-key]');if(!node)return;const row=rows.find(r=>r.key===node.dataset.key);try{await window.PrivateFundStaticLoader.ensureMetricDetails(pack,row);const code=cell.closest('td').cellIndex===6?state.xMetric:state.yMetric,m=row.metrics[code];if(cell.isConnected&&m)cell.title=[m.windowStart,m.windowEnd,m.formula].filter(Boolean).join(' · ');}catch(error){console.error(error);}});
+  elements.body.addEventListener('pointerover',async event=>{const cell=event.target.closest('.metric-raw'),node=cell?.closest('tr[data-key]');if(!node)return;const row=rows.find(r=>r.key===node.dataset.key);try{await window.PrivateFundStaticLoader.ensureMetricDetails(pack,row);const m=row.metrics[cell.closest('td').dataset.metric];if(cell.isConnected&&m)cell.title=[m.windowStart,m.windowEnd,m.formula].filter(Boolean).join(' · ');}catch(error){console.error(error);}});
   window.addEventListener("popstate", async () => {
     const seq=++benchmarkSelection;
     if(pack.meta.completeProductData===false){try{await prepareComplete();}catch{return;}}
@@ -718,6 +731,5 @@
   window.requestAnimationFrame(()=>window.setTimeout(()=>{
     renderAdvanced();
     if(deferredDefaultBenchmark)loadDefaultBenchmark();
-    if(pack.meta.completeProductData===false)prepareComplete().catch(()=>{});
   },0));
 })();

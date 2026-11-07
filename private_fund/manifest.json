@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-11-07T02:51:13+08:00",
-  "packagedAt": "2026-11-07T03:35:54+08:00",
-  "runId": "20261107T024837201063_github_publish_23480",
+  "generatedAt": "2026-11-08T00:00:47+08:00",
+  "packagedAt": "2026-11-08T00:51:44+08:00",
+  "runId": "20261107T233629110720_github_publish_33096",
   "pages": [
     "index.html",
     "products.html",
@@ -72,7 +72,7 @@
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-11-07T02:51:13+08:00",
+    "generatedAt": "2026-11-08T00:00:47+08:00",
     "products": 2905,
     "issueCount": 3,
     "issueShare": 0.0010327022375215145,
@@ -99,26 +99,26 @@
     "missingRule": "every_non_plottable_product_is_rendered_in_evidence_rail"
   },
   "detailFileCount": 25238,
-  "detailTransportFileCount": 4857,
+  "detailTransportFileCount": 4874,
   "detailBundling": {
     "version": 1,
     "maxProducts": 4,
     "maxGzipBytes": 65536,
     "maxDecodedBytes": 786432,
     "keepIndividualAtBytes": 32768,
-    "bundleFiles": 3592,
-    "bundledProducts": 12094,
-    "maxActualGzipBytes": 65096,
-    "maxActualDecodedBytes": 786143,
+    "bundleFiles": 3610,
+    "bundledProducts": 12095,
+    "maxActualGzipBytes": 64256,
+    "maxActualDecodedBytes": 786255,
     "originalDetailFiles": 13359,
-    "detailTransportFiles": 4857,
-    "filesSaved": 8502,
-    "originalColdP50Bytes": 14715,
-    "originalColdP95Bytes": 26889,
-    "bundledColdP50Bytes": 50299,
-    "bundledColdP95Bytes": 61836,
-    "extraColdP95Bytes": 46867,
-    "maxExtraColdBytes": 60036
+    "detailTransportFiles": 4874,
+    "filesSaved": 8485,
+    "originalColdP50Bytes": 14867,
+    "originalColdP95Bytes": 27000,
+    "bundledColdP50Bytes": 50478,
+    "bundledColdP95Bytes": 61961,
+    "extraColdP95Bytes": 46925,
+    "maxExtraColdBytes": 58464
   },
   "anonymousDetailBundles": {
     "version": 1,
@@ -165,56 +165,56 @@
       "maxGzipBytes": 65536,
       "maxDecodedBytes": 786432,
       "keepIndividualAtBytes": 32768,
-      "bundleFiles": 3592,
-      "bundledProducts": 12094,
-      "maxActualGzipBytes": 65096,
-      "maxActualDecodedBytes": 786143,
+      "bundleFiles": 3610,
+      "bundledProducts": 12095,
+      "maxActualGzipBytes": 64256,
+      "maxActualDecodedBytes": 786255,
       "originalDetailFiles": 13359,
-      "detailTransportFiles": 4857,
-      "filesSaved": 8502,
-      "originalColdP50Bytes": 14715,
-      "originalColdP95Bytes": 26889,
-      "bundledColdP50Bytes": 50299,
-      "bundledColdP95Bytes": 61836,
-      "extraColdP95Bytes": 46867,
-      "maxExtraColdBytes": 60036
+      "detailTransportFiles": 4874,
+      "filesSaved": 8485,
+      "originalColdP50Bytes": 14867,
+      "originalColdP95Bytes": 27000,
+      "bundledColdP50Bytes": 50478,
+      "bundledColdP95Bytes": 61961,
+      "extraColdP95Bytes": 46925,
+      "maxExtraColdBytes": 58464
     },
     "productTransport": {
       "products": 25238,
-      "bytes": 1817576,
-      "filterBytes": 83375,
-      "extraBytes": 8105396
+      "bytes": 2187119,
+      "filterBytes": 83445,
+      "extraBytes": 8141049
     },
     "analysisTransport": {
       "version": 2,
       "products": 25238,
       "productBuckets": 2048,
-      "startDate": "2026-11-07",
-      "endDate": "2026-11-22"
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-23"
     },
-    "baselineCatalogBytes": 435716193,
-    "baselineCatalogGzipBytes": 39687323,
-    "encodedCatalogBytes": 114497986,
+    "baselineCatalogBytes": 440829176,
+    "baselineCatalogGzipBytes": 40924703,
+    "encodedCatalogBytes": 116559101,
     "routeDataGzipBytes": {
-      "catalog": 13573634,
-      "products": 1817576,
-      "overview": 875674,
-      "peers": 8366189,
-      "detail-index": 4503695,
-      "awards-zone": 723950
+      "catalog": 14125679,
+      "products": 2187119,
+      "overview": 879116,
+      "peers": 8455741,
+      "detail-index": 4525437,
+      "awards-zone": 725265
     }
   },
   "scatterControls": {
     "status": "passed",
-    "version": 1,
+    "version": 2,
     "multiSelect": [
       "company",
       "strategy"
     ],
-    "defaultProductScope": "all",
+    "defaultProductScope": "recent_performance_30d",
     "paletteStorage": "browser_local",
     "companyMatching": "exact_disclosed_name",
-    "helperSha256": "8991c97dfe2fc088d6dbf4a2a752d92b01de1713c8c6b8d80785eb9ccebe65d2"
+    "helperSha256": "6103e785971ea8a51a87b0d161a38bde04829f9842625a53a6166b613880efe1"
   },
   "detailExperience": "peer_benchmark_public_v3"
 }

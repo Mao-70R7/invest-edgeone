@@ -2,6 +2,7 @@
   'use strict';
   const esc=window.PrivateFund?.esc||((value)=>String(value??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])));
   const num=(v,d=2)=>v===null||v===undefined||v===''?'—':Number(v).toLocaleString('zh-CN',{maximumFractionDigits:d});
+  const scale=value=>window.PrivateFundBusinessText.formatScaleWan(window.PrivateFundBusinessText.scaleInWan(value.value_raw??value.value,value.unit));
   const missing={available:'已提取',not_disclosed_in_report:'报告未披露',not_disclosed_in_custodian_report:'托管报告未披露',no_itemized_holdings_with_explicit_category_absences:'未列示持仓，部分资产明确未持有',parent_fund_total_available_channel_share_not_disclosed:'已提取基金合计；渠道份额规模未披露'};
   const levels={direct:'直接投资',lookthrough:'穿透配置',industry:'行业配置',bond_type:'债券分类'};
   const baseLabels={total_assets:'总资产',net_assets:'净资产'};
@@ -14,9 +15,9 @@
     const statuses=Object.entries(r.field_status||{}).map(([key,status])=>`${{holdings:'持仓',scale:'规模',asset_allocation:'配置',operation_analysis:'运作分析'}[key]}：${missing[status]||status}`);
     let body=`<p class="report-scope">报告期 ${esc(r.period_start)} 至 ${esc(r.period_end)} · 披露日期 ${esc(r.document_date)} · ${link(r)}</p><p class="report-status">${statuses.map(esc).join('；')}</p>`;
     if(r.source_reporting_ranges?.some(x=>x.start!==r.period_start))body+=`<p class="report-scope">报告另列统计期间：${[...new Set(r.source_reporting_ranges.map(x=>x.start+' 至 '+x.end))].map(esc).join('；')}。</p>`;
-    body+=`<div class="report-facts"><div><span>${a?.scope==='parent_fund_all_share_classes'?'基金合计期末净资产':'期末净资产'}</span><strong>${a?num(a.value)+' '+esc(a.unit):'—'}</strong>${a?link(r,a.source_page):''}</div><div><span>已披露持仓</span><strong>${holdings.length} 条</strong><small>部分披露，不代表完整持仓</small></div></div>`;
+    body+=`<div class="report-facts"><div><span>${a?.scope==='parent_fund_all_share_classes'?'基金合计期末净资产':'期末净资产'}</span><strong>${a?esc(scale(a)):'—'}</strong>${a?link(r,a.source_page):''}</div><div><span>已披露持仓</span><strong>${holdings.length} 条</strong><small>部分披露，不代表完整持仓</small></div></div>`;
     for(const note of [...(r.scope_notes||[]),...(r.source_consistency_notes||[])])body+=`<p class="report-scope">${esc(note)}</p>`;
-    if(r.share_class_net_assets?.length)body+=`<p class="report-scope">分级规模单独保留：${r.share_class_net_assets.map(x=>esc(x.share_class)+' 类 '+esc(x.value_raw)+' '+esc(x.unit)).join('；')}。上方为产品合计。</p>`;
+    if(r.share_class_net_assets?.length)body+=`<p class="report-scope">分级规模单独保留：${r.share_class_net_assets.map(x=>esc(x.share_class)+' 类 '+esc(scale(x))).join('；')}。上方为产品合计。</p>`;
     body+='<h3>期末持仓</h3><p class="report-scope">只列期末持仓或期末投资余额。比例按报告原值展示；合约权利方与义务方分别保留，未披露比例不推算。</p>';
     body+=holdings.length?table(['标的 / 代码','数量 / 单位','市值 / 单位','占比 / 分母','来源'],holdings.map(h=>[
       `${esc(h.security_name_status==='source_not_disclosed'?'名称未披露':h.security_name)}<small>${esc(h.security_id||'代码未披露')}${h.position_side?' · '+esc(h.position_side):''}</small>`,

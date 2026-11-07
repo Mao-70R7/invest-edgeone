@@ -4,6 +4,28 @@
   const unique=xs=>[...new Set(xs.filter(x=>x!==null&&x!==undefined&&x!==''))].join('；');
   const text=v=>v===null||v===undefined?'':String(v).trim();
   const structured=v=>v&&typeof v==='object';
+  const scaleUnits=new Map([
+    ['元',0.0001],['人民币元',0.0001],['CNY',0.0001],['万',1],['万元',1],['人民币万元',1],
+    ['亿',10000],['亿元',10000],['人民币亿元',10000],
+  ]);
+  const scaleStatuses=new Set(['verified','source_unit_verified','source_unit_explicit','source_native_numeric']);
+  function scaleInWan(raw,unit,status) {
+    if(status!==undefined&&!scaleStatuses.has(status))return null;
+    const factor=scaleUnits.get(text(unit).normalize('NFKC'));
+    const match=text(raw).normalize('NFKC').match(/^((?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?)\s*(人民币(?:亿元|万元|元)|亿元|万元|亿|万|元|CNY)?$/);
+    if(!match||factor===undefined||(match[2]&&scaleUnits.get(match[2])!==factor))return null;
+    const amount=Number(match[1].replaceAll(',',''))*factor;
+    return Number.isFinite(amount)?amount:null;
+  }
+  function formatScaleWan(amount) {
+    return Number.isFinite(amount)?amount.toLocaleString('zh-CN',{maximumFractionDigits:0})+'万':'—';
+  }
+  function latestVerifiedScale(rows) {
+    return [...(rows||[])].filter(row=>/^\d{4}-\d{2}-\d{2}$/.test(row.scale_date))
+      .sort((a,b)=>b.scale_date.localeCompare(a.scale_date))
+      .map(row=>({date:row.scale_date,wan:scaleInWan(row.scale_value_raw,row.scale_unit,row.scale_status??'')}))
+      .find(row=>row.wan!==null) || null;
+  }
   function withoutUnitNote(value) {
     return text(value).replace(/[（(]?\s*(?:(?:费率)?单位(?:尚未|未|待)(?:核实|核验|确认|明确|披露)|单位不明|(?:尚未|未|待)(?:核实|核验|确认)(?:的)?单位|source_raw_currency_unit|source_unspecified|source_native|source_raw|unverified|unknown)\s*[）)]?/g,'').trim();
   }
@@ -136,5 +158,5 @@
     for(const [key,value] of Object.entries(out))if(typeof value==='string')out[key]=withoutUnitNote(value);
     return out;
   }
-  window.PrivateFundBusinessText={readable,coreElements,redemptionTier,openRule,recentDates,productScale};
+  window.PrivateFundBusinessText={readable,coreElements,redemptionTier,openRule,recentDates,productScale,scaleInWan,formatScaleWan,latestVerifiedScale};
 })();

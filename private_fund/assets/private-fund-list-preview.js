@@ -3,8 +3,8 @@
   function mount(pack){
     const root=document.getElementById('mainContent'),previous=root.querySelector('.product-shell-filters');if(!previous)return;
     const host=previous.cloneNode(false);previous.replaceWith(host);
-    const params=new URLSearchParams(location.search),selected=F.read(params),active={};
-    for(const group of F.groups)active[group]=pack.fields.find(f=>f.group===group&&selected[f.id])?.id||pack.fields.find(f=>f.group===group)?.id;
+    const params=new URLSearchParams(location.search),selected=F.readProductList(params),active={};
+    for(const group of F.groups)active[group]=pack.fields.find(f=>f.group===group&&f.id!=='navFreshness'&&selected[f.id])?.id||pack.fields.find(f=>f.group===group)?.id;
     const count=n=>Number(n).toLocaleString('zh-CN'),amount=n=>count(n)+'只 · '+(pack.total?n/pack.total*100:0).toFixed(1)+'%';
     const heading=root.querySelector('.asof-block');heading.querySelector('strong').textContent=count(pack.total);
     heading.querySelector('span').textContent=Object.entries(pack.meta.sourceCounts||{}).map(([id,n])=>(P.sourceColors[id]?.label||id)+' '+count(n)).join(' · ');
@@ -12,8 +12,9 @@
     const sources=Object.entries(pack.meta.sourceCounts||{});
     const options=(items,value)=>items.map(([id,label])=>`<option value="${P.esc(id)}"${id===value?' selected':''}>${P.esc(label)}</option>`).join('');
     host.innerHTML=`<details class="filter-disclosure" open><summary>筛选产品 <span>可先选择条件</span></summary><div class="filter-panel"><div class="rank-filter-row basic-filter-row"><h3>基础筛选</h3><div class="rank-filter-content"><div class="filter-grid product-preview-grid">
-      <label class="field"><span>产品 / 管理人 / 经理 / 备案号</span><input type="search" data-preview-query value="${P.esc(params.get('q')||'')}" placeholder="输入产品、机构或经理"></label>
+      <label class="field"><span>产品 / 管理人 / 经理 / 备案</span><input type="search" data-preview-query value="${P.esc(params.get('q')||'')}" placeholder="输入产品、机构、经理或备案分类"></label>
       <label class="field"><span>数据来源</span><select data-preview-param="source">${options([['','全部来源（'+amount(pack.total)+'）'],...sources.map(([id,n])=>[id,(P.sourceColors[id]?.label||id)+'（'+amount(n)+'）'])],params.get('source')||'')}</select></label>
+      <label class="field"><span>业绩更新时效</span><select data-preview-param="f_navFreshness">${options(F.freshnessChoices.map(o=>[o.value,o.label]),selected.navFreshness)}</select></label>
       <div class="field" data-preview-multi="company"></div><div class="field" data-preview-multi="strategy"></div>
       <button type="button" class="secondary-button" data-preview-reset>重置</button>
       </div></div></div><div class="rank-filters" data-preview-fields></div><p class="rank-help" data-preview-note>数量为本版全部产品覆盖；产品数据加载后更新当前条件的匹配数量。</p></div></details>
@@ -21,7 +22,7 @@
     const save=(key,value)=>{const u=new URL(location.href);value?u.searchParams.set(key,value):u.searchParams.delete(key);u.searchParams.delete('page');history.replaceState(null,'',u);};
     const fieldsHost=host.querySelector('[data-preview-fields]');
     function renderFields(){fieldsHost.innerHTML=F.groups.map(group=>{
-      const fs=pack.fields.filter(f=>f.group===group),f=fs.find(f=>f.id===active[group])||fs[0];
+      const fs=pack.fields.filter(f=>f.group===group&&f.id!=='navFreshness'),f=fs.find(f=>f.id===active[group])||fs[0];
       const tabs=fs.filter((v,i)=>!v.family||fs.findIndex(x=>x.family===v.family)===i).map(t=>t.family?(fs.find(x=>x.family===t.family&&x.period===f.period)||t):t);
       return `<div class="rank-filter-row"><h3>${P.esc(group)}</h3><div class="rank-filter-content">${group==='超额指标'?'<p class="rank-help">预览数量以沪深300为研究对照；所选其他指数的数量在指标数据到达后更新。</p>':''}<div class="rank-field-tabs">${tabs.map(t=>`<button type="button" data-preview-field="${t.id}" aria-pressed="${t.family?t.family===f.family:t.id===f.id}">${P.esc(t.familyLabel||t.label)}<small>（${amount(t.options.find(o=>o.value===(t.feature?'符合':'__present'))?.count||0)}）</small></button>`).join('')}</div>${f.family?`<div class="rank-periods">${fs.filter(t=>t.family===f.family).map(t=>`<button type="button" data-preview-field="${t.id}" aria-pressed="${t.id===f.id}">${P.esc(F.periods[t.period])}</button>`).join('')}</div>`:''}<div class="rank-options">${f.options.map(o=>`<button type="button" data-preview-condition="${f.id}" data-value="${P.esc(o.value)}" aria-pressed="${(selected[f.id]||'')===o.value}">${P.esc(o.label)}<small>（${amount(o.count)}）</small></button>`).join('')}</div>${f.bands?`<div class="rank-custom"><span>自定义（${P.esc(f.unit)}）</span><input type="number" step="any" data-preview-min="${f.id}" aria-label="${P.esc(f.label)}下限" placeholder="下限 ≥"><span>至</span><input type="number" step="any" data-preview-max="${f.id}" aria-label="${P.esc(f.label)}上限" placeholder="上限 <"><button type="button" data-preview-custom="${f.id}">应用</button></div>`:''}</div></div>`;
     }).join('');}

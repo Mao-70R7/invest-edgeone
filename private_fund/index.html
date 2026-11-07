@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>数据总览｜天眼私募</title>
-  <link rel="icon" href="data:,"><link rel="preload" as="fetch" crossorigin href="./data/overview.js.gz?v=20261107T024837201063_github_publish_23480">
+  <link rel="icon" href="data:,"><link rel="preload" as="fetch" crossorigin href="./data/overview.js.gz?v=20261107T233629110720_github_publish_33096">
   <style data-inline-src="private-fund.css">:root {
   --bg: #f3f5f3;
   --panel: #fff;
@@ -626,7 +626,41 @@ body[data-page="private-fund-overview"] .freshness-help{font-size:12px;color:var
 .freshness-breakdown{margin:14px 0;border-block:1px solid var(--rule)}
 .freshness-breakdown summary{cursor:pointer;padding:12px 0;font-size:13px;color:var(--navy)}
 .freshness-breakdown .table-wrap{overflow:auto}
+.freshness-table .interval-total{background:#f7f9fb;font-weight:650}
 body[data-page="private-fund-overview"] .freshness-note{padding:0;margin:12px 0 0;font-size:12px;color:var(--muted)}
+.channel-table-wrap{border-block:1px solid var(--rule)}
+.channel-coverage-table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+.channel-coverage-table th,.channel-coverage-table td{padding:11px clamp(6px,1vw,14px);border-bottom:1px solid #e8edf1;text-align:right;vertical-align:middle}
+.channel-coverage-table td{white-space:nowrap}
+.channel-coverage-table th:first-child{text-align:left}
+.channel-coverage-table thead{background:#f4f7fa;color:var(--navy);line-height:1.35}
+.channel-coverage-table thead .channel-table-groups th{padding-block:8px;background:#e9eff5;text-align:center;font-size:12px}
+.channel-table-groups th+th,.channel-coverage-table .group-start{border-left:1px solid var(--rule)}
+.channel-coverage-table tbody tr:nth-child(2n+3){background:#fafcfd}
+.channel-coverage-table tbody tr:first-child{background:#edf3f9;color:var(--navy);font-weight:650}
+.channel-coverage-table tbody tr:last-child>*{border-bottom:0}
+.channel-coverage-table tbody tr:hover{background:#f0f5f9}
+.channel-coverage-table a{color:var(--navy);text-decoration:underline;text-decoration-color:#a8bacb;text-underline-offset:3px}
+.channel-coverage-table small{color:var(--muted);font-size:11px;margin-left:4px}
+.channel-coverage-table .channel-amount strong{color:var(--navy);font-weight:700}
+.channel-scale-note{display:block}
+.mobile-metric-label{display:none}
+@media(max-width:840px){
+  .channel-table-wrap{border:0}
+  .channel-coverage-table,.channel-coverage-table tbody{display:block}
+  .channel-coverage-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .channel-coverage-table tbody tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:10px;border:1px solid var(--rule);border-radius:6px}
+  .channel-coverage-table tbody th{grid-column:1/-1;background:#f4f7fa;color:var(--navy);padding:9px 10px}
+  .channel-coverage-table tbody tr:first-child th{background:#e3edf6}
+  .channel-coverage-table tbody td{white-space:normal;min-width:0;padding:8px 9px;text-align:left;border:0}
+  .channel-coverage-table small{margin-left:0}
+  .mobile-metric-label{display:block;margin-bottom:2px;color:var(--muted);font-size:11px}
+}
+@media(max-width:760px){
+  body[data-page="private-fund-overview"] .topbar-inner>.nav{display:flex;flex-wrap:wrap;justify-content:flex-start;overflow:visible;gap:0 4px;padding-bottom:4px}
+  body[data-page="private-fund-overview"] .topbar-inner>.nav .nav-link{min-height:36px;padding:0 8px;font-size:12px}
+  body[data-page="private-fund-overview"] .topbar-inner>.nav .advisor-link{margin-left:0}
+}
 body[data-page="private-fund-overview"] .overview-grid{gap:36px}
 body[data-page="private-fund-overview"] .overview-bars{padding:0}
 body[data-page="private-fund-overview"] .overview-bar{grid-template-columns:22px minmax(115px,1fr) minmax(55px,1.1fr) 48px;gap:10px;padding:10px 0;border-bottom:1px solid #eef1f4;background:#fff}
@@ -809,7 +843,7 @@ body:is([data-page="private-fund-overview"],[data-page="private-fund-awards"]) .
  .ty-result-facts{grid-template-columns:110px minmax(0,1fr)}
 }
 </style>
-  <script data-inline-src="./assets/tianyan-assistant-config.js?v=20261107T024837201063_github_publish_23480">
+  <script data-inline-src="./assets/tianyan-assistant-config.js?v=20261107T233629110720_github_publish_33096">
 window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助手"};
 
 </script>
@@ -838,8 +872,8 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
       <span class="loading-track" aria-hidden="true"><i id="pageLoadBar"></i></span>
     </section>
   </main>
-  <script src="./manifest.js?v=20261107T024837201063_github_publish_23480"></script>
-  <script data-inline-src="./assets/private-fund-static-loader.js?v=20261107T024837201063_github_publish_23480&amp;nav=business_query_v4">
+  <script src="./manifest.js?v=20261107T233629110720_github_publish_33096"></script>
+  <script data-inline-src="./assets/private-fund-static-loader.js?v=20261107T233629110720_github_publish_33096&amp;nav=business_query_v4">
 (() => {
   "use strict";
 
@@ -848,17 +882,33 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
   const scriptUrl=inlineSource?new URL(inlineSource,location.href).href:(typeof document==='undefined'?null:document.currentScript?.src);
   let worker,workerId=0;
   const jobs=new Map();
+  function resetWorker(error){
+    worker?.terminate();
+    worker=null;
+    for(const job of jobs.values()){clearTimeout(job.timer);job.reject(error);}
+    jobs.clear();
+  }
   async function decodeBytes(bytes,sourceUrl='',expectedVariable=null){
     let result;
     // Small detail shards decode locally; an optional worker download must not
     // become another unbounded dependency before the first product can render.
-    if(typeof Worker==='function'&&scriptUrl&&bytes.byteLength>524288){
-      if(!worker){worker=new Worker(new URL('private-fund-data-worker.js'+new URL(scriptUrl).search,scriptUrl));
+    const useWorker=typeof Worker==='function'&&scriptUrl&&bytes.byteLength>524288;
+    if(useWorker&&!worker){
+      try{worker=new Worker(new URL('private-fund-data-worker.js'+new URL(scriptUrl).search,scriptUrl));}catch{}
+      if(worker){
         worker.onmessage=({data})=>{const job=jobs.get(data.id);if(!job)return;
           if(data.type==='header'){job.result=data;return;}if(data.type==='rows'){job.result.payload.rows.push(...data.rows);return;}
-          jobs.delete(data.id);data.error?job.reject(new Error(data.error)):job.resolve(data.type==='done'?job.result:data);};
-        worker.onerror=()=>{for(const job of jobs.values())job.reject(new Error('数据解析线程加载失败，请重试'));jobs.clear();worker.terminate();worker=null;};}
-      result=await new Promise((resolve,reject)=>{const id=++workerId;jobs.set(id,{resolve,reject});worker.postMessage({id,buffer:bytes.buffer},[bytes.buffer]);});
+          clearTimeout(job.timer);jobs.delete(data.id);data.error?job.reject(new Error(data.error)):job.resolve(data.type==='done'?job.result:data);};
+        worker.onerror=worker.onmessageerror=()=>resetWorker(new Error('数据解析线程加载失败，请重试'));
+      }
+    }
+    if(useWorker&&worker){
+      result=await new Promise((resolve,reject)=>{
+        const id=++workerId,timer=setTimeout(()=>resetWorker(new Error('数据解析超时，请重试')),60000);
+        jobs.set(id,{resolve,reject,timer});
+        try{worker.postMessage({id,buffer:bytes.buffer},[bytes.buffer]);}
+        catch(error){clearTimeout(timer);jobs.delete(id);reject(error);}
+      });
     }else{
       const blob=new Blob([bytes]);const text=(bytes[0]===31&&bytes[1]===139?await new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text():await blob.text()).trim();
       const m=text.match(/^window\.(__PRIVATE_FUND_[A-Z_]+__)=([\s\S]*);$/);
@@ -873,14 +923,24 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
     const bar = document.getElementById("pageLoadBar");
     const text = document.getElementById("pageLoadText");
     const heading = document.getElementById("pageLoadTitle");
-    if (bar) bar.style.width = `${value}%`;
+    const updateBar=(indicator)=>{
+      if(!indicator)return;
+      if(indicator.tagName==='PROGRESS'){indicator.value=value;return;}
+      indicator.style.width=`${value}%`;
+      const track=indicator.parentElement;
+      track.removeAttribute('aria-hidden');
+      track.setAttribute('role','progressbar');
+      track.setAttribute('aria-label','页面加载进度');
+      track.setAttribute('aria-valuenow',value);
+    };
+    updateBar(bar);
     if (text && message) text.textContent = `${message} · ${value}%`;
     if (heading && title) heading.textContent = title;
     document.querySelectorAll("[data-product-load-region]").forEach((region) => {
       const progress = region.querySelector("[data-product-load-bar]");
       const status = region.querySelector("[data-product-load-text]");
-      if (progress) progress.style.width = `${value}%`;
-      if (status && message) status.textContent = `${message} · 约 ${value}%`;
+      updateBar(progress);
+      if (status && message) status.textContent = `${message} · ${value}%`;
     });
   }
 
@@ -903,15 +963,14 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
   }
 
   async function fetchBytes(url, onProgress) {
-    const bounded = typeof document !== 'undefined' && ['private-fund-overview','private-fund-awards','private-fund-gffunds','private-fund-gffunds-manager'].includes(document.body?.dataset.page);
-    const controller = bounded ? new AbortController() : null;
+    const controller = new AbortController();
     let idleTimer, totalTimer;
-    const touch = () => { if(controller){clearTimeout(idleTimer);idleTimer=setTimeout(()=>controller.abort(),8000);} };
-    if(controller) totalTimer=setTimeout(()=>controller.abort(),90000);
+    const touch = () => {clearTimeout(idleTimer);idleTimer=setTimeout(()=>controller.abort(),15000);};
+    totalTimer=setTimeout(()=>controller.abort(),120000);
     touch();
     try {
     // Versioned URLs invalidate on every publication; allow same-version reuse.
-    const response = await fetch(url, { cache: "default", ...(controller ? {signal:controller.signal} : {}) });
+    const response = await fetch(url, { cache: "default", signal:controller.signal });
     touch();
     if (!response.ok) throw new Error(`数据包请求失败：${response.status} ${url}`);
     const total = Number(response.headers.get("content-length")) || 0;
@@ -951,25 +1010,27 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
     const start = Number(options.start ?? 8);
     const end = Number(options.end ?? 82);
     const label = options.label || "正在加载数据";
-    setProgress(start, "正在请求压缩数据", label);
+    const report=options.report || ((percent,message)=>setProgress(percent,message,label));
+    report(start, "正在请求数据");
     const bytes = await fetchBytes(url, (loaded, total) => {
       const ratio = total ? loaded / total : Math.min(.85, loaded / (1024 * 1024));
-      setProgress(start + (end - start) * clamp(ratio, 0, 1) * .72, "正在下载压缩数据", label);
+      report(start + (end - start) * clamp(ratio, 0, 1) * .72, "正在下载数据");
     });
-    setProgress(start + (end - start) * .78, "正在解压数据", label);
-    setProgress(start + (end - start) * .94, "正在后台解析数据", label);
-    const result=await decodeBytes(bytes,url);
+    report(start + (end - start) * .78, "正在解压和解析数据");
+    const result=await decodeBytes(bytes,url,options.variable);
     if(!result.name)throw new Error(`数据包格式无效：${url}`);
     window[result.name]=result.payload;
-    setProgress(end, "数据准备完成", label);
+    report(end, "数据准备完成");
   }
 
   function loadClassicScript(url) {
     return new Promise((resolve, reject) => {
       const script = document.createElement("script");
       script.src = url;
-      script.onload = resolve;
-      script.onerror = () => reject(new Error(`页面脚本加载失败：${url}`));
+      const fail=()=>{clearTimeout(timer);script.remove();reject(new Error(`页面脚本加载失败：${url}`));};
+      const timer=setTimeout(fail,20000);
+      script.onload = ()=>{clearTimeout(timer);resolve();};
+      script.onerror = fail;
       document.head.appendChild(script);
     });
   }
@@ -992,12 +1053,14 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
 
   const metricLoads=new WeakMap();
   const productLoads=new WeakMap();
-  async function ensureProductData(pack){
+  async function ensureProductData(pack,onProgress){
     if(pack.meta.completeProductData!==false)return;
     if(!productLoads.has(pack))productLoads.set(pack,(async()=>{
       const file=pack.meta.productExtraFile;if(file!=='./data/products-extra.js.gz')throw new Error('无效产品指标路径');
       const v=window.__PRIVATE_FUND_MANIFEST__?.assetVersion||window.__PRIVATE_FUND_MANIFEST__?.generatedAt||'';
-      const data=(await decodeBytes(await fetchBytes(file+'?v='+encodeURIComponent(v)),file)).payload;
+      const bytes=await fetchBytes(file+'?v='+encodeURIComponent(v),(loaded,total)=>onProgress?.(total?Math.min(85,loaded/total*85):null,'正在下载高级指标'));
+      onProgress?.(90,'正在解析高级指标');
+      const data=(await decodeBytes(bytes,file,'__PRIVATE_FUND_PRODUCT_EXTRA__')).payload;
       const byKey=new Map(data.rows.map(r=>[r.key,r]));
       if(byKey.size!==pack.rows.length||pack.rows.some(r=>!byKey.has(r.key)))throw new Error('产品指标覆盖不一致，请刷新页面');
       for(const row of pack.rows){const item=byKey.get(row.key);if(row.metricDetailsReady)item.metrics=row.metrics;Object.assign(row,item);}
@@ -1018,38 +1081,63 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
   }
 
   async function bootProducts(options){
+    if(openLocalService())return;
+    let phase=5,finished=false;
     try{
+      const report=(value,message)=>{if(!finished){phase=Math.max(phase,value);setProgress(phase,message,options.label);}};
       const version=new URL(options.catalogUrl,location.href).searchParams.get('v')||'';
-      const cohort=window.BusinessQuery?.loadCohort(version);
+      report(5,'正在准备产品列表');
       const preload=document.createElement('link');preload.rel='preload';preload.as='script';preload.href=options.appUrl;document.head.append(preload);
-      await Promise.all([loadGzipScript(options.filterUrl,{start:5,end:15,label:options.label}),loadClassicScript(options.previewUrl)]);
-      window.PrivateFundProductPreview.mount(window.__PRIVATE_FUND_PRODUCT_FILTERS__);
-      const exact=await cohort;
+      // The quick filter preview is optional. It must never gate the list.
+      Promise.all([loadGzipScript(options.filterUrl,{start:5,end:12,report:()=>{},variable:'__PRIVATE_FUND_PRODUCT_FILTERS__'}),
+        loadClassicScript(options.previewUrl)]).then(()=>{
+        if(!finished)window.PrivateFundProductPreview.mount(window.__PRIVATE_FUND_PRODUCT_FILTERS__);
+      }).catch(()=>{});
+      const exact=await window.BusinessQuery?.loadCohort(version);
       if(exact)window.__PRIVATE_FUND_CATALOG__=exact;
-      else await loadGzipScript(options.catalogUrl,{start:18,end:85,label:options.label});
+      else await loadGzipScript(options.catalogUrl,{start:8,end:88,report,variable:'__PRIVATE_FUND_CATALOG__'});
+      finished=true;
+      setProgress(92,'正在绘制产品列表',options.label);
       await loadClassicScript(options.appUrl);
-    }catch(error){showError(error);}
+      await window.PrivateFundProductReady;
+      if(document.body.dataset.ready!=='true'&&document.body.dataset.loadError!=='true')throw new Error('产品列表未完成绘制');
+    }catch(error){finished=true;showError(error);}
+  }
+
+  function openLocalService(){
+    if(location.protocol!=='file:')return false;
+    const root=document.getElementById('mainContent');
+    const file=location.pathname.split('/').at(-1);
+    const href=new URL('/private_fund/'+file+location.search+location.hash,'http://127.0.0.1:18765');
+    root.innerHTML='<section class="loading-panel"><strong>请通过本地页面服务打开</strong><p>运行项目中的「01_启动私募分析页面服务.bat」，然后打开下方页面。</p><a class="primary-link">打开本地页面</a></section>';
+    root.querySelector('a').href=href.href;
+    return true;
   }
 
   function showError(error){
     const root=document.getElementById('mainContent'),regions=root?.querySelectorAll('[data-product-load-region]');
     if(regions?.length){regions.forEach(region=>{region.classList.add('is-error');region.setAttribute('aria-busy','false');region.querySelector('[data-product-load-text]').textContent='产品数据加载失败，请检查网络后重试。';const retry=region.querySelector('[data-product-load-retry]');retry.hidden=false;retry.onclick=()=>location.reload();});document.body.dataset.loadError='true';}
     else if(root){root.innerHTML='<section class="empty-panel"><strong>页面加载失败</strong><p></p><button type="button">重新加载</button></section>';root.querySelector('p').textContent=String(error?.message||error);root.querySelector('button').onclick=()=>location.reload();}
+    document.body.dataset.loadError='true';
     console.error(error);
   }
 
   async function boot({ catalogUrl, dataUrls = [], appUrl, label }) {
+    if(openLocalService())return;
     try {
       setProgress(5, "正在初始化页面", label);
       const urls = [catalogUrl, ...dataUrls].filter(Boolean);
+      const progress=urls.map(()=>0);
       await Promise.all(urls.map(async (url,index) => {
-        const start = 8 + (76 * index / urls.length);
-        const end = 8 + (76 * (index + 1) / urls.length);
-        try { await loadGzipScript(url, { start, end, label }); }
+        const report=(value,message)=>{
+          progress[index]=Math.max(progress[index],value);
+          setProgress(8+progress.reduce((sum,n)=>sum+n,0)/urls.length*.76,message,label);
+        };
+        try { await loadGzipScript(url, {start:0,end:100,report}); }
         catch(error) {
           if(!['private-fund-overview','private-fund-awards','private-fund-gffunds','private-fund-gffunds-manager'].includes(document.body.dataset.page))throw error;
-          setProgress(start, '连接中断，正在重试一次', label);
-          await loadGzipScript(url, { start, end, label });
+          report(0,'连接中断，正在重试一次');
+          await loadGzipScript(url, {start:0,end:100,report});
         }
       }));
       setProgress(88, "正在构建页面", label);
@@ -1089,7 +1177,7 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
 })();
 
 </script>
-  <script data-inline-src="./assets/private-fund-common.js?v=20261107T024837201063_github_publish_23480">
+  <script data-inline-src="./assets/private-fund-common.js?v=20261107T233629110720_github_publish_33096">
 (() => {
   const sourceColors = {
     gffunds_highend: { label: "广发高端理财", color: "#B72F32", pale: "#FAEEEE", shape: "circle" },
@@ -1259,13 +1347,35 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
 })();
 
 </script>
-  <script data-inline-src="./assets/private-fund-business-text.js?v=20261107T024837201063_github_publish_23480">
+  <script data-inline-src="./assets/private-fund-business-text.js?v=20261107T233629110720_github_publish_33096">
 /* Presentation only: source structures stay untouched in the exported detail. */
 (() => {
   const REVIEW='来源提供了结构化条款，具体内容待核对原文';
   const unique=xs=>[...new Set(xs.filter(x=>x!==null&&x!==undefined&&x!==''))].join('；');
   const text=v=>v===null||v===undefined?'':String(v).trim();
   const structured=v=>v&&typeof v==='object';
+  const scaleUnits=new Map([
+    ['元',0.0001],['人民币元',0.0001],['CNY',0.0001],['万',1],['万元',1],['人民币万元',1],
+    ['亿',10000],['亿元',10000],['人民币亿元',10000],
+  ]);
+  const scaleStatuses=new Set(['verified','source_unit_verified','source_unit_explicit','source_native_numeric']);
+  function scaleInWan(raw,unit,status) {
+    if(status!==undefined&&!scaleStatuses.has(status))return null;
+    const factor=scaleUnits.get(text(unit).normalize('NFKC'));
+    const match=text(raw).normalize('NFKC').match(/^((?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?)\s*(人民币(?:亿元|万元|元)|亿元|万元|亿|万|元|CNY)?$/);
+    if(!match||factor===undefined||(match[2]&&scaleUnits.get(match[2])!==factor))return null;
+    const amount=Number(match[1].replaceAll(',',''))*factor;
+    return Number.isFinite(amount)?amount:null;
+  }
+  function formatScaleWan(amount) {
+    return Number.isFinite(amount)?amount.toLocaleString('zh-CN',{maximumFractionDigits:0})+'万':'—';
+  }
+  function latestVerifiedScale(rows) {
+    return [...(rows||[])].filter(row=>/^\d{4}-\d{2}-\d{2}$/.test(row.scale_date))
+      .sort((a,b)=>b.scale_date.localeCompare(a.scale_date))
+      .map(row=>({date:row.scale_date,wan:scaleInWan(row.scale_value_raw,row.scale_unit,row.scale_status??'')}))
+      .find(row=>row.wan!==null) || null;
+  }
   function withoutUnitNote(value) {
     return text(value).replace(/[（(]?\s*(?:(?:费率)?单位(?:尚未|未|待)(?:核实|核验|确认|明确|披露)|单位不明|(?:尚未|未|待)(?:核实|核验|确认)(?:的)?单位|source_raw_currency_unit|source_unspecified|source_native|source_raw|unverified|unknown)\s*[）)]?/g,'').trim();
   }
@@ -1398,11 +1508,11 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
     for(const [key,value] of Object.entries(out))if(typeof value==='string')out[key]=withoutUnitNote(value);
     return out;
   }
-  window.PrivateFundBusinessText={readable,coreElements,redemptionTier,openRule,recentDates,productScale};
+  window.PrivateFundBusinessText={readable,coreElements,redemptionTier,openRule,recentDates,productScale,scaleInWan,formatScaleWan,latestVerifiedScale};
 })();
 
 </script>
-  <script data-inline-src="./assets/private-fund-experience.js?v=20261107T024837201063_github_publish_23480">
+  <script data-inline-src="./assets/private-fund-experience.js?v=20261107T233629110720_github_publish_33096">
 window.PrivateFundManagerZoneEnabled = false;
 /* Pure, source-preserving view models shared by the overview and history chart. */
 (() => {
@@ -1584,7 +1694,7 @@ window.PrivateFundManagerZoneEnabled = false;
 })();
 
 </script>
-  <script data-inline-src="./assets/private-fund-filters.js?v=20261107T024837201063_github_publish_23480">
+  <script data-inline-src="./assets/private-fund-filters.js?v=20261107T233629110720_github_publish_33096">
 /* Shared filter dictionary. Coverage and matching use the same usable-value rule. */
 (() => {
   const number=v=>v===null||v===undefined||v===''||typeof v==='boolean'?null:(Number.isFinite(Number(v))?Number(v):null);
@@ -1594,14 +1704,26 @@ window.PrivateFundManagerZoneEnabled = false;
   let liveMinute=-1,liveDay='';
   function beijingToday(){const minute=Math.floor(Date.now()/60000);if(minute!==liveMinute){const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const p=Object.fromEntries(parts.map(v=>[v.type,v.value]));liveDay=`${p.year}-${p.month}-${p.day}`;liveMinute=minute;}return liveDay;}
   function disclosureDay(value){const day=String(value||'').slice(0,10);if(!/^\d{4}-\d{2}-\d{2}$/.test(day))return null;const n=Date.parse(day+'T00:00:00Z');return Number.isFinite(n)&&new Date(n).toISOString().slice(0,10)===day?day:null;}
-  const monthCutoffs=new Map();
-  const latestDisclosureDate=row=>[row.latestNavDate,row.analysisLatestDate].map(disclosureDay).filter(Boolean).sort().at(-1)||null;
+  const defaultNavFreshness='recent';
+  const freshnessChoices=[{value:'all',label:'全部更新时间'},{value:defaultNavFreshness,label:'近30天有业绩'},{value:'stale',label:'超过30天未更新'},{value:'__missing',label:'日期缺失或异常'}];
+  const recentCutoffs=new Map();
+  const disclosureCache=new WeakMap();
+  function latestDisclosureDate(row){
+    const saved=disclosureCache.get(row);
+    if(saved&&saved.nav===row.latestNavDate&&saved.analysis===row.analysisLatestDate)return saved.latest;
+    const latest=[row.latestNavDate,row.analysisLatestDate].map(disclosureDay).filter(Boolean).sort().at(-1)||null;
+    disclosureCache.set(row,{nav:row.latestNavDate,analysis:row.analysisLatestDate,latest});
+    return latest;
+  }
   function navUpdateStatus(row,asOf=beijingToday()){
-    const today=disclosureDay(asOf);if(!today)return 'unknown';
+    if(!recentCutoffs.has(asOf)){
+      const day=disclosureDay(asOf);
+      recentCutoffs.set(asOf,day?new Date(Date.parse(day+'T00:00:00Z')-29*86400000).toISOString().slice(0,10):null);
+    }
+    const cutoff=recentCutoffs.get(asOf);if(!cutoff)return 'unknown';
     const latest=latestDisclosureDate(row);
-    if(!latest||latest>today)return 'unknown';
-    if(!monthCutoffs.has(today)){const [y,m,d]=today.split('-').map(Number),last=new Date(Date.UTC(y,m-1,0)).getUTCDate();monthCutoffs.set(today,new Date(Date.UTC(y,m-2,Math.min(d,last))).toISOString().slice(0,10));}
-    return latest>=monthCutoffs.get(today)?'recent':'stale';
+    if(!latest||latest>asOf.slice(0,10))return 'unknown';
+    return latest>=cutoff?'recent':'stale';
   }
   const fields=[
     {id:'strategy',label:'投资策略',group:'投资策略',get:r=>text(profile(r).classification?.strategy1)||text(r.strategy1)},
@@ -1715,10 +1837,10 @@ window.PrivateFundManagerZoneEnabled = false;
     for(const f of fields){if(explanations[f.id])f.note=explanations[f.id];else if(f.feature)f.note='【组合加工】'+f.note+' 所列条件须同时满足。至少一项明确不满足，判为不符合；没有不符合但仍缺必要条件，判为条件不足。不是直接采集的推荐标签。成立日缺失时用首个净值日起算；年化收益、年化波动、夏普、索提诺、卡玛和月胜率优先采用完整可用历史，不保证覆盖真实成立日；各固定区间仍保留供显式筛选。同类名次使用本库共同月末窗口排名，并非排排网官方榜单；按细分策略、披露币种、业绩序列类型分组，端点允许相差7天，至少10个样本，备案号去重。经理从业年限使用已披露数值，多经理取最高值，未确认履历不推测。排名采用共同月末，其余风险指标截至各产品最新业绩日。';else if(f.group==='指标筛选')f.note='【'+(f.family==='peerRank'?'同类比较':'业绩加工')+'】'+f.note+' 【数据标准】优先按实际可用业绩计算；收益率无法计算时，仅采用日期、单位已明确的渠道披露值。排排网、格上、雪球采用复权业绩，其他渠道沿用已披露累计净值；不额外扣除或估算费用。最大回撤使用所选区间全部已披露业绩点；年化收益、年化波动、夏普、索提诺、卡玛和月胜率默认优先展示成立以来口径，同时保留近1年、近3年、近5年供显式筛选。风险类指标使用完整月度样本，固定区间及成立以来均需满足相应历史长度且月度覆盖不少于80%。缺失不按0处理。';}
   const subtypeRules={'主观多头':'主动研究和判断选股，以股票多头投资为主。','量化多头':'依据量化模型选股和构建股票多头组合。','股票多空':'同时使用股票多头和空头头寸，不要求维持市场中性。','股票市场中性':'以对冲市场整体方向敞口、获取相对收益为主要目标。','指数增强':'围绕明确指数构建组合，目标为在跟踪基础上获取超额收益。','纯债策略':'主要投资债券，不从标签额外推断可转债或股票敞口。','高收益债':'以较高票息、较高信用风险债券为主要投资方向。','转债策略':'以可转换债券投资为主要方法。','量化转债':'采用量化模型进行转债选择与交易。','债券增强':'以债券为基础并采用增强手段，增强资产范围以披露为准。','债券复合':'组合使用多种债券投资和交易方法。','量化CTA':'采用程序化或量化方法交易期货、衍生品。','主观CTA':'以主观判断进行期货、衍生品投资。','期权策略':'主要采用期权及其组合进行风险收益管理。','其他衍生品策略':'明确以衍生品为主要工具，但不属于已披露的CTA或期权子类。','宏观策略':'以宏观判断在多类资产间配置或交易。','复合策略':'同时采用多类资产或多种投资策略。','套利策略':'渠道明确披露为多资产套利，利用相关资产的相对价差。','FOF':'以投资其他基金为主要形式，未明确单资产或多资产。','单资产FOF':'所投资基金主要属于同一资产类别。','多资产FOF':'所投资基金覆盖多个资产类别。'};
   const typeNote=(f,value)=>'【划分依据】'+((f.id==='strategy'?({'股票策略':'主要股票投资或股票相关多空、对冲方法。','债券策略':'主要债券、转债或债券增强方法。','期货及衍生品策略':'主要期货、期权等衍生品投资方法。','多资产策略':'跨资产配置、宏观、复合或明确多资产套利。','组合基金':'以投资其他基金为主要形式。'})[value]:subtypeRules[value])||'仅明确主要投资范围，尚未披露足够细分方法。')+' 仅依据渠道明确披露的策略标签及上述同义归并，不按净值走势推断。';
-  fields.push({id:'navFreshness',label:'净值更新时效',group:'更多信息',dynamic:true,
+  fields.push({id:'navFreshness',label:'业绩更新时效',group:'更多信息',dynamic:true,
     get:r=>{const status=navUpdateStatus(r);return status==='unknown'?null:status;},
-    choices:[{value:'recent',label:'近1个月有更新'},{value:'stale',label:'超过1个月未更新'},{value:'__missing',label:'日期缺失或异常'}],
-    note:'按最新净值与业绩披露日期中较新者，相对北京时间今天判断；一个月按上月同日计算，月末取该月最后一天。采集时间不参与判断，缺失、无效或未来日期单独列出。'});
+    choices:freshnessChoices,
+    note:'取有效净值日和业绩披露日中的较新日期，按北京时间今天及之前29天判断。采集时间不参与判断，缺失、无效或未来日期单独列出。'});
   // Materialized values are generated by this same dictionary at publication.
   // A different cutoff/benchmark always falls back to the original source rules.
   for(const f of fields){const original=f.get;f.get=(r,asOf)=>{
@@ -1731,12 +1853,20 @@ window.PrivateFundManagerZoneEnabled = false;
   const coverage=(f,rows,asOf)=>{const count=rows.filter(r=>valid(f,r,asOf)).length;return {count,total:rows.length,pct:rows.length?count/rows.length*100:0};};
   const bandLabel=(a,b,u)=>a===null?`<${b}${u}`:b===null?`≥${a}${u}`:`${a}至${b}${u}`;
   function options(f,rows,asOf){return f.feature?[{value:'符合',label:'符合'},{value:'不符合',label:'不符合'}]:f.bands?f.bands.map(([a,b])=>({value:JSON.stringify([a,b]),label:bandLabel(a,b,f.unit||'')})):[...new Set(rows.map(r=>f.get(r,asOf)).filter(v=>v!==null))].sort((a,b)=>(f.id==='scale'?(parseFloat(a)-parseFloat(b)):0)||String(a).localeCompare(String(b),'zh-CN')).map(v=>({value:String(v),label:String(v)}));}
-  function compile(state,asOf){const conditions=Object.entries(state).filter(([id,s])=>fieldMap.has(id)&&s).map(([id,s])=>{const f=fieldMap.get(id);let band=null;if(f.bands&&!s.startsWith('__')){try{band=JSON.parse(s);}catch{band=false;}}return {f,s,band};});return row=>conditions.every(({f,s,band})=>{const v=f.get(row,asOf);if(s==='__missing')return v===null;if(s==='__present')return v!==null;if(s.startsWith('__'))return snapshotMissing(f,row,asOf)===s.slice(2);if(v===null)return false;if(f.bands){if(!band)return false;const [a,b]=band;return (a===null||v>=a)&&(b===null||v<b||(b===100&&v===100)||(f.family==='drawdown'&&b===0&&v===0));}return String(v)===s;});}
+  function compile(state,asOf){const conditions=Object.entries(state).filter(([id,s])=>fieldMap.has(id)&&s&&!(id==='navFreshness'&&s==='all')).map(([id,s])=>{const f=fieldMap.get(id);let band=null;if(f.bands&&!s.startsWith('__')){try{band=JSON.parse(s);}catch{band=false;}}return {f,s,band};});return row=>conditions.every(({f,s,band})=>{const v=f.get(row,asOf);if(s==='__missing')return v===null;if(s==='__present')return v!==null;if(s.startsWith('__'))return snapshotMissing(f,row,asOf)===s.slice(2);if(v===null)return false;if(f.bands){if(!band)return false;const [a,b]=band;return (a===null||v>=a)&&(b===null||v<b||(b===100&&v===100)||(f.family==='drawdown'&&b===0&&v===0));}return String(v)===s;});}
   function matches(row,state,asOf){return compile(state,asOf)(row);}
   const aliases={annual_since:'annual_return_since',drawdown_since:'max_drawdown_since'};
   function read(params){setBenchmark(params.get("benchmark"));const result={};for(const f of fields){const v=params.get('f_'+f.id);if(v&&v.length<200)result[f.id]=v;}for(const [oldId,newId] of Object.entries(aliases)){const v=params.get('f_'+oldId);if(v&&v.length<200&&result[newId]===undefined)result[newId]=v;}return result;}
+  function readProductList(params){
+    const result=read(params);
+    if(!freshnessChoices.some(option=>option.value===result.navFreshness)){
+      const explicitResult=['bf','result','product'].some(key=>params.has(key));
+      result.navFreshness=explicitResult?'all':defaultNavFreshness;
+    }
+    return result;
+  }
   function write(params,state){if(benchmark==='sh000300')params.delete('benchmark');else params.set('benchmark',benchmark);for(const f of fields){const alias=Object.entries(aliases).find(([,newId])=>newId===f.id)?.[0],v=state[f.id]||state[alias];if(v)params.set('f_'+f.id,v);else params.delete('f_'+f.id);}for(const oldId of Object.keys(aliases))params.delete('f_'+oldId);}
-  const api={fields,groups,periods,number,coverage,options:(f,rows,asOf)=>f.choices||options(f,rows,asOf),matches,compile,read,write,missing:snapshotMissing,rules,setBenchmark,getBenchmark:()=>benchmark,benchmarkIds,typeNote,navUpdateStatus,beijingToday,latestDisclosureDate};
+  const api={fields,groups,periods,number,coverage,options:(f,rows,asOf)=>f.choices||options(f,rows,asOf),matches,compile,read,readProductList,write,missing:snapshotMissing,rules,setBenchmark,getBenchmark:()=>benchmark,benchmarkIds,typeNote,navUpdateStatus,beijingToday,latestDisclosureDate,defaultNavFreshness,freshnessChoices};
   if(typeof module!=='undefined')module.exports=api;
   if(typeof window!=='undefined')window.PrivateFundFilters=api;
 })();
@@ -1745,13 +1875,13 @@ window.PrivateFundManagerZoneEnabled = false;
   <script>
     window.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>setTimeout(()=>window.PrivateFundStaticLoader.boot({
 
-      catalogUrl: "./data/overview.js.gz?v=20261107T024837201063_github_publish_23480",
+      catalogUrl: "./data/overview.js.gz?v=20261107T233629110720_github_publish_33096",
       dataUrls: [],
-      appUrl: "./assets/private-fund-overview.js?v=20261107T024837201063_github_publish_23480",
+      appUrl: "./assets/private-fund-overview.js?v=20261107T233629110720_github_publish_33096",
       label: "正在加载数据总览"
     }),0)),{once:true});
   </script>
-<script>for(const url of ["./assets/tianyan-assistant.js?v=20261107T024837201063_github_publish_23480"]){const s=document.createElement("script");s.src=url;s.async=true;document.body.appendChild(s);}</script><script>window.PrivateFundReportApp=()=>{
+<script>for(const url of ["./assets/tianyan-assistant.js?v=20261107T233629110720_github_publish_33096"]){const s=document.createElement("script");s.src=url;s.async=true;document.body.appendChild(s);}</script><script>window.PrivateFundReportApp=()=>{
 (() => {
   const P = window.PrivateFund || {};
   const pack = window.__PRIVATE_FUND_CATALOG__;
@@ -1808,12 +1938,75 @@ window.PrivateFundManagerZoneEnabled = false;
   }
 
   const X=window.PrivateFundExperience;
-  const freshness=X.freshness(pack.rows);
+  const snapshotDay=String(pack.meta.generatedAt || '').slice(0,10);
+  const freshness=X.freshness(pack.rows,X.stamp(snapshotDay)===null ? X.today() : snapshotDay);
   const inception=X.inceptionYears(pack.rows,freshness.asOf);
   const inceptionNote=`优先按披露成立日期统计，缺失时以首个净值日补充（不代表真实成立日），已识别 ${count(inception.valid)} 只；“其他年份”为 ${inception.currentYear-5} 年及以前。`+
     (inception.missing?`成立日及净值起点均缺失 ${count(inception.missing)} 只，未计入年份分组。`:'')+
     (inception.invalid||inception.future?`日期无效或晚于统计日 ${count(inception.invalid+inception.future)} 只，未计入。`:'');
-  const latestPerformance=pack.rows.map(X.latestDate).filter(d=>d && X.stamp(d)<=X.stamp(freshness.asOf)).sort().at(-1);
+  const referenceDay=X.stamp(freshness.asOf);
+  const sevenDayStart=referenceDay-6*86400000;
+  const emptyPerformance=()=>({latestDate:null,recent:0,recentSeven:0});
+  const performanceBySource=new Map();
+  for(const product of pack.rows){
+    const stats=performanceBySource.get(product.source) || emptyPerformance();
+    const latest=[product.latestNavDate,product.analysisLatestDate].filter(value=>{
+      const day=X.stamp(value);
+      return day!==null && day<=referenceDay;
+    }).map(value=>value.slice(0,10)).sort().at(-1);
+    if(latest){
+      if(!stats.latestDate || latest>stats.latestDate) stats.latestDate=latest;
+      if(latest>=freshness.dayStart) stats.recent++;
+      if(X.stamp(latest)>=sevenDayStart) stats.recentSeven++;
+    }
+    performanceBySource.set(product.source,stats);
+  }
+  const latestPerformance=[...performanceBySource.values()].map(stats=>stats.latestDate).filter(Boolean).sort().at(-1);
+
+  function channelPanel(){
+    const total={count:0,recent:0,recentSeven:0,latestDate:latestPerformance,scale:pack.channelScale ? {products:0,recentProducts:0,latestDate:null,unitUnconfirmed:0,amountProducts:0,totalYuan:null} : null};
+    const channels=[...overview.channels.filter(channel=>channel.id==='gffunds_highend'),
+      ...overview.channels.filter(channel=>channel.id!=='gffunds_highend')];
+    const rows=channels.map(channel=>{
+      const stats=performanceBySource.get(channel.id) || emptyPerformance();
+      const scale=pack.channelScale?.[channel.id];
+      total.count+=channel.count;
+      total.recent+=stats.recent;
+      total.recentSeven+=stats.recentSeven;
+      if(scale && total.scale){
+        total.scale.products+=scale.products;
+        total.scale.recentProducts+=scale.recentProducts;
+        total.scale.unitUnconfirmed+=scale.unitUnconfirmed;
+        total.scale.amountProducts+=scale.amountProducts||0;
+        if(scale.totalYuan!=null) total.scale.totalYuan=(total.scale.totalYuan||0)+Number(scale.totalYuan);
+        if(scale.latestDate && (!total.scale.latestDate || scale.latestDate>total.scale.latestDate)) total.scale.latestDate=scale.latestDate;
+      }
+      return {...channel,...stats,scale};
+    });
+    const amount=(value)=>value==null?'—':(Number(value)/100000000).toLocaleString('zh-CN',{minimumFractionDigits:2,maximumFractionDigits:2});
+    const cell=(label,value,style='')=>`<td role="cell" class="${style}"><span class="mobile-metric-label" aria-hidden="true">${label}</span><span>${value}</span></td>`;
+    const rowHtml=({id,label,count:products,recent,recentSeven,latestDate,scale})=>`<tr role="row" data-channel="${P.esc(id||'total')}">
+      <th scope="row" role="rowheader">${id?`<a href="${P.esc(listHref('source',id))}">${P.esc(label)}</a>`:'合计'}</th>
+      ${cell('产品数',count(products))}
+      ${cell('最新业绩日',P.esc(latestDate||'—'),'group-start')}
+      ${cell('近7日有业绩',`${count(recentSeven)} <small>${pct(recentSeven,products)}</small>`)}
+      ${cell('近30日有业绩',`${count(recent)} <small>${pct(recent,products)}</small>`)}
+      ${cell('披露规模产品',scale?`${count(scale.products)} <small>${pct(scale.products,products)}</small>${scale.unitUnconfirmed?`<small class="channel-scale-note">单位待核 ${count(scale.unitUnconfirmed)} 只</small>`:''}`:'—','group-start')}
+      ${cell('最新规模披露日',P.esc(scale?.latestDate||'—'))}
+      ${cell('近30日披露规模',scale?count(scale.recentProducts):'—')}
+      ${cell('披露规模（亿元）',`<strong>${amount(scale?.totalYuan)}</strong>${scale?.amountProducts?`<small class="channel-scale-note">${count(scale.amountProducts)} 只计入金额</small>`:''}`,'channel-amount')}</tr>`;
+    return `<section class="panel channel-coverage" aria-labelledby="channelCoverageTitle">
+      <div class="panel-head"><h2 id="channelCoverageTitle">各渠道数据新鲜度与规模</h2><span>统计截至 ${freshness.asOf}</span></div>
+      <div class="channel-table-wrap">
+        <table class="channel-coverage-table" role="table"><thead role="rowgroup">
+          <tr class="channel-table-groups" role="row"><th scope="colgroup" role="columnheader" colspan="2">产品覆盖</th><th scope="colgroup" role="columnheader" colspan="3">业绩新鲜度</th><th scope="colgroup" role="columnheader" colspan="4">规模披露</th></tr>
+          <tr role="row"><th scope="col" role="columnheader">渠道</th><th scope="col" role="columnheader">产品数</th><th class="group-start" scope="col" role="columnheader">最新业绩日</th><th scope="col" role="columnheader">近7日<br>有业绩</th><th scope="col" role="columnheader">近30日<br>有业绩</th><th class="group-start" scope="col" role="columnheader">披露规模产品<br><small>数量 / 占比</small></th><th scope="col" role="columnheader">最新规模<br>披露日</th><th scope="col" role="columnheader">近30日<br>披露规模</th><th scope="col" role="columnheader">披露规模<br>（亿元）</th></tr>
+        </thead><tbody role="rowgroup">${rowHtml(total)}${rows.map(rowHtml).join('')}</tbody></table>
+      </div>
+      <p class="freshness-note">按本页各渠道产品代码统计，占比以该行产品数为分母。近7日、近30日均含快照当日，业绩日取最新净值与可用业绩序列的较晚日期。披露规模产品数含单位或份额待核记录，金额仅汇总每只产品最近一条单位和归属可确认的规模。合计为各渠道披露额相加，跨渠道可能重复，且各产品披露日不同。</p>
+      ${pack.channelScale && rows.some(row=>row.scale?.amountProducts!==undefined)?'':'<p class="freshness-note">当前页面快照尚未生成可加总规模。</p>'}
+    </section>`;
+  }
   let selectedDay=Math.max(0,freshness.days.slice(0,30).findLastIndex(b=>b.total>0));
   const dayLabel=b=>b.date||`其他（${freshness.dayStart}之前 / 日期缺失或异常）`;
   const dayDescription=b=>`${dayLabel(b)}，共${count(b.total)}只；`+freshness.sources.map(s=>`${s.label}${count(b.counts[s.id])}只`).join('，');
@@ -1822,7 +2015,8 @@ window.PrivateFundManagerZoneEnabled = false;
   }
   function freshnessPanel() {
     const legend=freshness.sources.map(s=>`<span><i style="background:${s.color}"></i>${s.label} <b>${count(freshness.bySource[s.id])}</b></span>`).join('');
-    const table=`<table class="freshness-table"><caption>日期区间汇总 · 起止日均包含</caption><thead><tr><th>最新净值日期</th>${freshness.sources.map(s=>`<th><i style="background:${s.color}"></i>${s.label}</th>`).join('')}<th>合计</th></tr></thead><tbody>${freshness.intervals.filter(b=>b.startDate||b.total||b.id==='undated').map(b=>`<tr data-interval="${b.id}"><th>${b.startDate?`${b.startDate}<small>至 ${b.endDate}</small>`:b.label}</th>${freshness.sources.map(s=>`<td>${count(b.counts[s.id])}</td>`).join('')}<td><strong>${count(b.total)}</strong></td></tr>`).join('')}</tbody><tfoot><tr><th>合计</th>${freshness.sources.map(s=>`<td>${count(freshness.bySource[s.id])}</td>`).join('')}<td><strong>${count(freshness.total)}</strong></td></tr></tfoot></table>`;
+    const total=`<tr class="interval-total"><th scope="row">合计</th>${freshness.sources.map(s=>`<td>${count(freshness.bySource[s.id])}</td>`).join('')}<td><strong>${count(freshness.total)}</strong></td></tr>`;
+    const table=`<table class="freshness-table"><caption>日期区间汇总 · 起止日均包含</caption><thead><tr><th>最新业绩日期</th>${freshness.sources.map(s=>`<th><i style="background:${s.color}"></i>${s.label}</th>`).join('')}<th>合计</th></tr></thead><tbody>${total}${freshness.intervals.filter(b=>b.startDate||b.total||b.id==='undated').map(b=>`<tr data-interval="${b.id}"><th>${b.startDate?`${b.startDate}<small>至 ${b.endDate}</small>`:b.label}</th>${freshness.sources.map(s=>`<td>${count(b.counts[s.id])}</td>`).join('')}<td><strong>${count(b.total)}</strong></td></tr>`).join('')}</tbody></table>`;
     return `<section class="panel freshness-panel"><div class="panel-head"><h2>最新净值日期分布</h2><span>最近30天 + 其他 · ${count(freshness.total)}只</span></div><div class="freshness-legend">${legend}</div><div class="freshness-layout"><div class="freshness-plot"><svg id="freshnessChart" role="group" aria-labelledby="freshnessTitle freshnessDescription"></svg><div id="freshnessTooltip" class="freshness-tooltip" role="tooltip" hidden></div><p class="freshness-help">悬停或点击柱体查看数量，也可使用日期选择器。</p></div><aside class="freshness-inspector"><div class="freshness-date-control"><button type="button" id="freshnessPrevious" aria-label="查看上一日期">‹</button><select id="freshnessDay" aria-label="选择净值日期查看具体数量">${freshness.days.map((b,i)=>`<option value="${i}"${i===selectedDay?' selected':''}>${P.esc(b.date||'其他日期')}</option>`).join('')}</select><button type="button" id="freshnessNext" aria-label="查看下一日期">›</button></div><div id="freshnessReadout" class="freshness-counts" aria-live="polite"></div></aside></div><details class="freshness-breakdown"><summary>查看日期区间与各渠道明细</summary><div class="table-wrap">${table}</div></details><p class="freshness-note">截至北京时间 ${freshness.asOf}，按每只产品最新净值与可用业绩披露日期中较新者统计，不按采集时间统计。日柱覆盖 ${freshness.dayStart} 至 ${freshness.asOf}（含当天）；“其他”含更早日期、日期缺失${count(freshness.missing)}只${freshness.future?`、未来日期${count(freshness.future)}只`:''}。展开明细按日期区间汇总，缺失或异常日期单列。两种分组均互不重复、总数一致。仅计排排网、格上、广发基金，其他渠道${count(freshness.excluded)}只未计入；跨渠道记录不合并。</p></section>`;
   }
   function drawFreshness() {
@@ -1831,7 +2025,7 @@ window.PrivateFundManagerZoneEnabled = false;
     const max=Math.max(1,...freshness.days.map(b=>b.total)), magnitude=10**Math.floor(Math.log10(max)), step=Math.max(1,Math.ceil(max/4/magnitude*10)*magnitude/10), top=step*4;
     const plotH=H-T-B, slot=(W-L-R)/31, width=slot*.72, y=n=>H-B-n/top*plotH;
     const labelled=new Set(freshness.days.map((b,i)=>({total:b.total,i})).filter(b=>b.total).sort((a,b)=>b.total-a.total).slice(0,W<500?3:8).map(b=>b.i));
-    let svg=`<title id="freshnessTitle">最近30天最新净值日期分布，三渠道堆叠柱状图</title><desc id="freshnessDescription">${freshness.dayStart}至${freshness.asOf}，另设其他，共${freshness.total}只产品。排排网绿色、格上黄色、广发基金红色。悬停、点击或左右键查看具体数量，下方日期选择器提供同等操作。</desc>`;
+    let svg=`<title id="freshnessTitle">最近30天最新业绩日期分布</title><desc id="freshnessDescription">${freshness.dayStart}至${freshness.asOf}，另设其他，共${freshness.total}只产品。悬停、点击或左右键查看具体数量，下方日期选择器提供同等操作。</desc>`;
     for(let i=0;i<=4;i++){const v=step*i;svg+=`<line x1="${L}" y1="${y(v)}" x2="${W-R}" y2="${y(v)}" stroke="#e3e8ec" stroke-width=".75"/><text x="${L-7}" y="${y(v)+4}" text-anchor="end" font-size="11" fill="#74818b">${Math.round(v)}</text>`;}
     svg+=`<text x="${L}" y="14" font-size="11" fill="#74818b">产品数（只）</text>`;
     svg+=`<line x1="${L+slot*30}" x2="${L+slot*30}" y1="${T}" y2="${H-B}" stroke="#cbd4da" stroke-dasharray="3 3"/>`;
@@ -1894,7 +2088,8 @@ window.PrivateFundManagerZoneEnabled = false;
       <div><span>基金经理</span><strong>${count(overview.managerCount)}</strong></div>
     </section>
     <nav class="report-links" aria-label="数据探索"><a href="./products.html">查看全部产品 ↗</a><a href="./awards.html">查看获奖记录 ↗</a><span>${count(overview.strategyCount)} 类产品</span><a href="${listHref("source", "gffunds_highend")}">广发基金 ${count(gffundsRows.length)} 只 ↗</a></nav>
-    ${freshnessPanel()}
+    ${channelPanel()}
+    <details class="freshness-breakdown" id="freshnessTrend"><summary>展开业绩日期分布图</summary>${freshnessPanel()}</details>
     <div class="overview-grid">
       ${panel("渠道分布", barList(overview.channels, { type: "source", limit: 10, gffunds: true }))}
       ${panel("管理人分布", barList(overview.companies, { type: "query", limit: 12 }))}
@@ -1924,11 +2119,12 @@ window.PrivateFundManagerZoneEnabled = false;
   const coverageGroups=F.groups;
   coverageHost.innerHTML=`<div class="panel-head"><h2>指标与筛选字段覆盖率</h2><span>全部渠道 · 不含好买</span></div><p class="coverage-method">每条横条共用 0—100% 刻度，标注可用产品数 / 该渠道页面产品数。缺失、无法计算与口径未确认不计可用，数值 0 计入。排名采用本库共同月末同类样本，非排排网官方榜单；超额默认按沪深300共同历史计算，币种未知时属于未调整汇率的原币相对表现。成立以来采用完整可用净值期，不保证覆盖真实成立日。比例不表示数据已完全核实。</p>${coverageGroups.map(group=>`<details class="coverage-section"><summary>${group} · ${coverageFields.filter(f=>f.group===group).length}项</summary><div class="field-coverage-grid">${coverageFields.filter(f=>f.group===group).map(f=>`<article class="field-coverage"><h3>${P.esc(f.label)} <span>${F.coverage(f,pack.rows,asOf).pct.toFixed(1)}%</span></h3>${sourceRows.map(s=>{const c=F.coverage(f,s.rows,asOf);return `<div class="coverage-channel${s.id==='gffunds_highend'?' is-gffunds':''}"><span>${s.label}</span><i><b style="width:${c.pct}%;background:${s.color}"></b></i><strong>${c.total?c.pct.toFixed(1)+'%':'—'}<small>${c.count.toLocaleString()} / ${c.total.toLocaleString()}</small></strong></div>`;}).join('')}${f.note?`<p>${P.esc(f.note)}</p>`:''}</article>`).join('')}</div></details>`).join('')}`;
   root.appendChild(coverageHost);
-  const freshnessNote=document.querySelector('.freshness-note');
-  freshnessNote.textContent=freshnessNote.textContent.replace(/仅计排排网、格上、广发基金，其他渠道.*?只未计入；/,'包含页面全部渠道（剔除好买）；');
+  const chartNote=document.querySelector('.freshness-panel .freshness-note');
+  chartNote.textContent=chartNote.textContent.replace(/仅计排排网、格上、广发基金，其他渠道.*?只未计入；/,`图表覆盖 ${freshness.sources.filter(s=>freshness.bySource[s.id]).map(s=>s.label).join('、')}，其他渠道请见上表。`);
   document.querySelectorAll('.freshness-table tr').forEach(tr=>{const cells=tr.querySelectorAll('th,td');if(cells[3])cells[3].classList.add('is-gffunds');});
   drawFreshness();
   bindFreshness();
+  document.getElementById('freshnessTrend').addEventListener('toggle',drawFreshness);
   let resizeFrame;addEventListener('resize',()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(drawFreshness);});
   document.body.dataset.ready = "true";
 })();

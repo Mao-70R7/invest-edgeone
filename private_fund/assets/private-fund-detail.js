@@ -1,5 +1,6 @@
 (() => {
   const P = window.PrivateFund || {};
+  const B = window.PrivateFundBusinessText;
   const catalog = window.__PRIVATE_FUND_CATALOG__;
   const root = document.getElementById("mainContent");
   if (!root || !catalog) return;
@@ -42,12 +43,6 @@
 
   function section(title, body, extraClass = "") {
     return `<section class="detail-section ${extraClass}"><h2>${P.esc(title)}</h2><div class="section-body">${body}</div></section>`;
-  }
-
-  function strictNumeric(value) {
-    if (value === null || value === undefined || value === "") return null;
-    const match = String(value).trim().replace(/,/g, "").match(/^([+-]?(?:\d+(?:\.\d*)?|\.\d+))\s*%?$/);
-    return match ? Number(match[1]) : null;
   }
 
   function latestPerformance(rows) {
@@ -104,7 +99,7 @@
     return path;
   }
 
-  function lineChart(rows, { dateField, valueFields, label, color, percent = false, smoothSparse = false, note = "" }) {
+  function lineChart(rows, { dateField, valueFields, label, color, percent = false, smoothSparse = false, note = "", scale = false }) {
     const points = (rows || []).map((row) => {
       const dateText = P.clean(row[dateField]);
       if (!/^\d{4}-\d{2}-\d{2}/.test(dateText)) return null;
@@ -113,7 +108,6 @@
         value = P.number(row[field]);
         if (value !== null) break;
       }
-      if (value === null && valueFields.includes("scale_value_raw")) value = strictNumeric(row.scale_value_raw);
       const time = Date.parse(dateText.slice(0, 10));
       return Number.isFinite(time) && value !== null ? { time, value, date: dateText.slice(0, 10) } : null;
     }).filter(Boolean).sort((a, b) => a.time - b.time);
@@ -123,10 +117,10 @@
       else unique.push(point);
     });
     if (unique.length < 2) return `<div class="chart-empty">暂无${P.esc(label)}</div>`;
-    const width = 760, height = 260, left = 54, right = 15, top = 18, bottom = 34;
+    const width = 760, height = 260, left = scale ? 92 : 54, right = 15, top = 18, bottom = 34;
     let min = Math.min(...unique.map((point) => point.value));
     let max = Math.max(...unique.map((point) => point.value));
-    if (min === max) { min -= Math.max(1, Math.abs(min) * .05); max += Math.max(1, Math.abs(max) * .05); }
+    if (min === max) { min -= Math.max(1, Math.abs(min) * .05); max += Math.max(1, Math.abs(max) * .05); if (scale) min = Math.max(0, min); }
     const minTime = unique[0].time, maxTime = unique[unique.length - 1].time;
     const x = (time) => left + ((time - minTime) / (maxTime - minTime || 1)) * (width - left - right);
     const y = (value) => top + (1 - (value - min) / (max - min || 1)) * (height - top - bottom);
@@ -135,7 +129,7 @@
     const cadenceDays = gaps.length ? (gaps.length % 2 ? gaps[middle] : (gaps[middle - 1] + gaps[middle]) / 2) : null;
     const smooth = Boolean(smoothSparse && cadenceDays > 3 && unique.length > 2);
     const path = smooth ? monotoneCurvePath(unique, x, y) : linearCurvePath(unique, x, y);
-    const axisValue = (value) => percent ? `${P.formatNumber(value * 100, 1)}%` : P.formatNumber(value, 2);
+    const axisValue = (value) => scale ? B.formatScaleWan(value) : percent ? `${P.formatNumber(value * 100, 1)}%` : P.formatNumber(value, 2);
     const grid = Array.from({ length: 5 }, (_, index) => {
       const ratio = index / 4;
       const yy = top + ratio * (height - top - bottom);
@@ -237,8 +231,13 @@
       dateField: "nav_date", valueFields: ["adjusted_nav_numeric", "unit_nav_numeric", "accumulated_nav_numeric"],
       label: "净值走势", color: source.color,
     });
-    const scaleChart = lineChart(detail.scale, {
-      dateField: "scale_date", valueFields: ["scale_value_raw"], label: "规模走势", color: "#8B5B18", valueLabel: "规模",
+    const scales = (detail.scale || []).map(row => ({
+      ...row, amountWan: B.scaleInWan(row.scale_value_raw, row.scale_unit, row.scale_status ?? ""),
+    })).filter(row => row.amountWan !== null && /^\d{4}-\d{2}-\d{2}$/.test(row.scale_date))
+      .sort((a, b) => b.scale_date.localeCompare(a.scale_date));
+    const latestScale = scales[0];
+    const scaleChart = lineChart(scales, {
+      dateField: "scale_date", valueFields: ["amountWan"], label: "规模走势", color: "#8B5B18", scale: true,
     });
     const documents = (detail.documents || []).slice().sort((a, b) => String(b.document_date || "").localeCompare(String(a.document_date || "")));
     const documentRows = documents.slice(0, 30).map((item) => `<tr><td>${P.esc(P.formatDate(item.document_date))}</td><td>${P.esc(text(item.document_type, "公告"))}</td><td><a class="document-link" href="${P.esc(item.document_url)}" target="_blank" rel="noopener noreferrer">${P.esc(text(item.document_type, "查看"))}</a></td></tr>`).join("") || '<tr><td colspan="3">暂无公开报告</td></tr>';
@@ -246,6 +245,13 @@
     const positionRows = positions.slice(0, 50).map((item) => `<tr><td>${P.esc(P.formatDate(item.position_date))}</td><td>${P.esc(text(item.security_name))}<span class="cell-sub">${P.esc(text(item.security_id, ""))}</span></td><td>${P.esc(P.formatNumber(item.position_weight_raw, 2))}%</td></tr>`).join("") || '<tr><td colspan="3">暂无公开持仓</td></tr>';
     const isGffunds = catalogRow.source === "gffunds_highend";
     const provenance = detail.sourceEvidence;
+    const references = new Map();
+    for (const reference of [...(provenance?.publicProductReferences || []), ...(detail.crossChannelReferences || [])]) {
+      const key = reference.source_id + ':' + reference.source_product_id;
+      references.set(key, {...references.get(key), ...reference});
+    }
+    const filing = detail.filingClassification;
+    const filingLink = filing ? `<p><a class="document-link" href="${P.esc(filing.url)}" target="_blank" rel="noopener noreferrer">中基协备案公示 ↗</a></p>` : "";
     const publicQuotes = (provenance?.publicRankQuotes || []);
     const publicQuoteBody = publicQuotes.length ? `<p class="analytics-note">公开榜单展示值；净值日期只披露月日，年份未披露，未纳入有日期的净值及统一收益计算。</p><div class="table-wrap"><table class="detail-table"><thead><tr><th>区间</th><th>展示净值</th><th>来源日期原值</th><th>收益原值</th></tr></thead><tbody>${publicQuotes.map(q=>`<tr><td>${P.esc(q.period_raw)}</td><td>${P.esc(q.nav_raw)}</td><td>${P.esc(q.nav_date_raw)} · 年份未披露</td><td>${P.esc(q.return_raw)}</td></tr>`).join('')}</tbody></table></div>` : "";
     const provenanceBody = provenance ? `<p class="analytics-note">${P.esc(provenance.message)}</p>${definitions([
@@ -270,7 +276,8 @@
       <div class="detail-grid">
         <div class="detail-column">
           ${provenance ? section("来源与缺失说明", provenanceBody) : ""}
-          ${provenance?.directoryFacts ? section("公示资料与同产品参考", window.PrivateFundPublicReferences.render(provenance)) : ""}
+          ${provenance?.directoryFacts ? section("公示资料", window.PrivateFundPublicReferences.render({directoryFacts: provenance.directoryFacts})) : ""}
+          ${references.size ? section("其他渠道净值与规模", window.PrivateFundPublicReferences.render({publicProductReferences: [...references.values()]})) : ""}
           ${detail.periodicReports?.length ? section("季报解析", window.PrivateFundPeriodicReports.renderDetail(detail.periodicReports), "periodic-report-section") : ""}
           ${publicQuotes.length ? section("公开榜单原值", publicQuoteBody) : ""}
           ${section("衍生分析指标", `<div class="metric-cards">${derivedCards}</div><p class="analytics-note">统一公式二次加工；跨来源仅公式对齐，序列类型、费用与估值频率仍可能不同，不用于跨来源排名。</p><div class="table-wrap detail-table-wrap"><table class="detail-table"><thead><tr><th>指标</th><th>数值</th><th>观察窗口</th><th>输入点</th><th>质量状态</th></tr></thead><tbody>${derivedRows}</tbody></table></div>`)}
@@ -278,18 +285,26 @@
           ${(performance.length || restrictedPerformanceCount) ? section("来源业绩指标", `${performanceNotice}${performance.length ? `<div class="metric-cards">${sourceMetricCards}</div><div class="table-wrap detail-table-wrap"><table class="detail-table"><thead><tr><th>指标</th><th>来源原值</th><th>截止日</th></tr></thead><tbody>${performanceRows}</tbody></table></div>` : ""}`) : ""}
           ${documents.length ? section("公开报告", `<div class="table-wrap"><table class="detail-table"><thead><tr><th>日期</th><th>类型</th><th>文件</th></tr></thead><tbody>${documentRows}</tbody></table></div>`) : ""}
           ${positions.length && !detail.periodicReports?.length ? section("公开持仓", `<div class="table-wrap"><table class="detail-table"><thead><tr><th>报告日</th><th>持仓</th><th>占比</th></tr></thead><tbody>${positionRows}</tbody></table></div>`) : ""}
-          ${detail.scale?.length ? section("产品规模", scaleChart) : ""}
+          ${section("产品规模", latestScale ? `${definitions([
+            ["最新披露规模", B.formatScaleWan(latestScale.amountWan)], ["规模日期", P.formatDate(latestScale.scale_date)],
+          ])}${scales.length > 1 ? scaleChart : ""}` : '<p class="chart-empty">暂无可核验的规模披露</p>')}
           ${section("产品条款", `${termsNotice}${termsBody}`)}
         </div>
         <aside class="detail-column">
           ${section("产品信息", definitions([
-            ["产品编码", provenance?.internalDirectoryKey ? (provenance.officialProductCode || "源站未提供") : product.source_product_id], ["备案号", product.registration_number],
+            ["产品编码", provenance?.internalDirectoryKey ? (provenance.officialProductCode || "源站未提供") : product.source_product_id], ["备案号", filing?.code || product.registration_number],
             ["产品类型", product.product_type], ["组织 / 合同形式", product.legal_form || product.contract_type],
             ["产品状态", catalogRow.productStatus], ["销售状态", product.sale_status],
             ["风险等级", catalogRow.riskLevel], ["币种", product.currency],
             ["二级策略", product.strategy_l2], ["三级策略", product.strategy_l3],
             ["托管人", product.custodian_name], ["更新日期", P.formatDateTime(product.collected_at)],
-          ]))}
+          ]) + filingLink)}
+          ${filing ? section("备案信息", definitions([
+            ["协会公示产品名称", filing.officialName], ["协会公示管理人", filing.officialManager],
+            ["协会基金大类", filing.major], ["协会基金小类", filing.minor || (filing.minorStatus === "not_in_official_list" ? "协会列表未列示" : "协会公示未披露")],
+            ["协会备案日期", filing.registeredAt], ["协会公示成立日期", filing.officialEstablishmentDate],
+            ["协会公示运作状态", filing.operatingStatus], ["协会公示托管人", filing.custodian],
+          ])) : ""}
           ${section("基金经理", managers)}
           ${section("管理人", companyBody)}
         </aside>

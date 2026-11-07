@@ -1,29 +1,29 @@
 {
   "status": "ready",
-  "generatedAt": "2026-11-07T03:36:23+08:00",
+  "generatedAt": "2026-11-08T00:52:12+08:00",
   "checks": {
     "pageCount": 7,
     "detailFileCount": 25238,
-    "detailTransportFileCount": 4857,
+    "detailTransportFileCount": 4874,
     "detailBundling": {
       "version": 1,
       "maxProducts": 4,
       "maxGzipBytes": 65536,
       "maxDecodedBytes": 786432,
       "keepIndividualAtBytes": 32768,
-      "bundleFiles": 3592,
-      "bundledProducts": 12094,
-      "maxActualGzipBytes": 65096,
-      "maxActualDecodedBytes": 786143,
+      "bundleFiles": 3610,
+      "bundledProducts": 12095,
+      "maxActualGzipBytes": 64256,
+      "maxActualDecodedBytes": 786255,
       "originalDetailFiles": 13359,
-      "detailTransportFiles": 4857,
-      "filesSaved": 8502,
-      "originalColdP50Bytes": 14715,
-      "originalColdP95Bytes": 26889,
-      "bundledColdP50Bytes": 50299,
-      "bundledColdP95Bytes": 61836,
-      "extraColdP95Bytes": 46867,
-      "maxExtraColdBytes": 60036
+      "detailTransportFiles": 4874,
+      "filesSaved": 8485,
+      "originalColdP50Bytes": 14867,
+      "originalColdP95Bytes": 27000,
+      "bundledColdP50Bytes": 50478,
+      "bundledColdP95Bytes": 61961,
+      "extraColdP95Bytes": 46925,
+      "maxExtraColdBytes": 58464
     },
     "anonymousDetailBundleCount": 256,
     "anonymousBundledProductsVerified": 12135,
@@ -47,7 +47,7 @@
     "cmbPublication": "cmb_display_20260911_v1",
     "cmbQuality": {
       "version": "cmb_display_20260911_v1",
-      "generatedAt": "2026-11-07T02:51:13+08:00",
+      "generatedAt": "2026-11-08T00:00:47+08:00",
       "products": 2905,
       "issueCount": 3,
       "issueShare": 0.0010327022375215145,
@@ -57,15 +57,15 @@
     },
     "scatterControls": {
       "status": "passed",
-      "version": 1,
+      "version": 2,
       "multiSelect": [
         "company",
         "strategy"
       ],
-      "defaultProductScope": "all",
+      "defaultProductScope": "recent_performance_30d",
       "paletteStorage": "browser_local",
       "companyMatching": "exact_disclosed_name",
-      "helperSha256": "8991c97dfe2fc088d6dbf4a2a752d92b01de1713c8c6b8d80785eb9ccebe65d2"
+      "helperSha256": "6103e785971ea8a51a87b0d161a38bde04829f9842625a53a6166b613880efe1"
     },
     "gffundsZone": {
       "status": "passed",
@@ -139,12 +139,12 @@
     "sourceAuditStatus": "warn",
     "accessScope": "public_catalog_plus_scoped_performance_analytics",
     "authenticatedPerformanceAnalyticsIncluded": true,
-    "restrictedAnalyticsDetailCount": 7701,
+    "restrictedAnalyticsDetailCount": 7692,
     "restrictedRawDataIncluded": false,
-    "rawDetailBytes": 2329028123,
-    "compressedDetailBytes": 253243744,
-    "compressionRatio": 0.108734,
-    "maxCompressedDetailBytes": 521365,
+    "rawDetailBytes": 2341461606,
+    "compressedDetailBytes": 255739531,
+    "compressionRatio": 0.109222,
+    "maxCompressedDetailBytes": 525649,
     "maxCompressedDetailFile": "anonymous/bc.js.gz",
     "oversizedFileCount": 0
   }

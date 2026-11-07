@@ -217,6 +217,11 @@
       productStatus:d.product?.sale_status||d.product?.product_status,
       recentOpenDates:d.terms?.recent_open_dates || d.terms?.recent_open_dates_json});
     const displayCore=window.PrivateFundBusinessText.coreElements(core,row.source);
+    displayCore.channelStrategy=[...new Set([d.product?.strategy_l1||row.strategy1,
+      d.product?.strategy_l2||row.strategy2,d.product?.strategy_l3||row.strategy3].filter(Boolean))].join(' / ');
+    const verifiedScale=window.PrivateFundBusinessText.latestVerifiedScale(d.scale);
+    displayCore.productScaleWan=verifiedScale?.wan ?? null;
+    displayCore.productScaleDate=verifiedScale?.date ?? null;
     displayCore.detailNotice=d.termsAvailability?.message || '';
     if(d.sourceEvidence?.message)displayCore.detailNotice=d.sourceEvidence.message+' '+displayCore.detailNotice;
     if(d.sourceEvidence?.internalDirectoryKey)displayCore.sourceProductId=d.sourceEvidence.officialProductCode || '源站未提供；内部目录键见详情';
@@ -413,6 +418,9 @@
         displayProductCode:row.internalDirectoryKey ? (row.officialProductCode || '源站未提供代码') : row.id,
         sourceEvidence:d.sourceEvidence||null, sourceDocuments:d.sourceEvidence?(d.documents||[]):[],
         periodicReports:d.periodicReports||[],
+        filingClassification:d.filingClassification||row.filingClassification||null,
+        ciccReportedInterval:row.source==='ciccwm_app'?(d.ciccReportedInterval||null):null,
+        crossChannelReferences:d.crossChannelReferences||[],
         sourceBonus:d.sourceEvidence?(d.terms?.anonymous_bonus||[]):[],
         sourceNav:row.source==='zocaifu_highend'?(d.nav||[]).map(n=>({date:n.nav_date,unit:n.unit_nav_raw,total:n.accumulated_nav_raw})):[],
         sourcePerformance:row.source==='zocaifu_highend'?(d.performance||[]).map(p=>({code:p.metric_code,value:p.value_raw,date:p.as_of_date})):[],

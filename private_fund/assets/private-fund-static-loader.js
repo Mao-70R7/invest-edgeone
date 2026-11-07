@@ -6,17 +6,33 @@
   const scriptUrl=inlineSource?new URL(inlineSource,location.href).href:(typeof document==='undefined'?null:document.currentScript?.src);
   let worker,workerId=0;
   const jobs=new Map();
+  function resetWorker(error){
+    worker?.terminate();
+    worker=null;
+    for(const job of jobs.values()){clearTimeout(job.timer);job.reject(error);}
+    jobs.clear();
+  }
   async function decodeBytes(bytes,sourceUrl='',expectedVariable=null){
     let result;
     // Small detail shards decode locally; an optional worker download must not
     // become another unbounded dependency before the first product can render.
-    if(typeof Worker==='function'&&scriptUrl&&bytes.byteLength>524288){
-      if(!worker){worker=new Worker(new URL('private-fund-data-worker.js'+new URL(scriptUrl).search,scriptUrl));
+    const useWorker=typeof Worker==='function'&&scriptUrl&&bytes.byteLength>524288;
+    if(useWorker&&!worker){
+      try{worker=new Worker(new URL('private-fund-data-worker.js'+new URL(scriptUrl).search,scriptUrl));}catch{}
+      if(worker){
         worker.onmessage=({data})=>{const job=jobs.get(data.id);if(!job)return;
           if(data.type==='header'){job.result=data;return;}if(data.type==='rows'){job.result.payload.rows.push(...data.rows);return;}
-          jobs.delete(data.id);data.error?job.reject(new Error(data.error)):job.resolve(data.type==='done'?job.result:data);};
-        worker.onerror=()=>{for(const job of jobs.values())job.reject(new Error('数据解析线程加载失败，请重试'));jobs.clear();worker.terminate();worker=null;};}
-      result=await new Promise((resolve,reject)=>{const id=++workerId;jobs.set(id,{resolve,reject});worker.postMessage({id,buffer:bytes.buffer},[bytes.buffer]);});
+          clearTimeout(job.timer);jobs.delete(data.id);data.error?job.reject(new Error(data.error)):job.resolve(data.type==='done'?job.result:data);};
+        worker.onerror=worker.onmessageerror=()=>resetWorker(new Error('数据解析线程加载失败，请重试'));
+      }
+    }
+    if(useWorker&&worker){
+      result=await new Promise((resolve,reject)=>{
+        const id=++workerId,timer=setTimeout(()=>resetWorker(new Error('数据解析超时，请重试')),60000);
+        jobs.set(id,{resolve,reject,timer});
+        try{worker.postMessage({id,buffer:bytes.buffer},[bytes.buffer]);}
+        catch(error){clearTimeout(timer);jobs.delete(id);reject(error);}
+      });
     }else{
       const blob=new Blob([bytes]);const text=(bytes[0]===31&&bytes[1]===139?await new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text():await blob.text()).trim();
       const m=text.match(/^window\.(__PRIVATE_FUND_[A-Z_]+__)=([\s\S]*);$/);
@@ -31,14 +47,24 @@
     const bar = document.getElementById("pageLoadBar");
     const text = document.getElementById("pageLoadText");
     const heading = document.getElementById("pageLoadTitle");
-    if (bar) bar.style.width = `${value}%`;
+    const updateBar=(indicator)=>{
+      if(!indicator)return;
+      if(indicator.tagName==='PROGRESS'){indicator.value=value;return;}
+      indicator.style.width=`${value}%`;
+      const track=indicator.parentElement;
+      track.removeAttribute('aria-hidden');
+      track.setAttribute('role','progressbar');
+      track.setAttribute('aria-label','页面加载进度');
+      track.setAttribute('aria-valuenow',value);
+    };
+    updateBar(bar);
     if (text && message) text.textContent = `${message} · ${value}%`;
     if (heading && title) heading.textContent = title;
     document.querySelectorAll("[data-product-load-region]").forEach((region) => {
       const progress = region.querySelector("[data-product-load-bar]");
       const status = region.querySelector("[data-product-load-text]");
-      if (progress) progress.style.width = `${value}%`;
-      if (status && message) status.textContent = `${message} · 约 ${value}%`;
+      updateBar(progress);
+      if (status && message) status.textContent = `${message} · ${value}%`;
     });
   }
 
@@ -61,15 +87,14 @@
   }
 
   async function fetchBytes(url, onProgress) {
-    const bounded = typeof document !== 'undefined' && ['private-fund-overview','private-fund-awards','private-fund-gffunds','private-fund-gffunds-manager'].includes(document.body?.dataset.page);
-    const controller = bounded ? new AbortController() : null;
+    const controller = new AbortController();
     let idleTimer, totalTimer;
-    const touch = () => { if(controller){clearTimeout(idleTimer);idleTimer=setTimeout(()=>controller.abort(),8000);} };
-    if(controller) totalTimer=setTimeout(()=>controller.abort(),90000);
+    const touch = () => {clearTimeout(idleTimer);idleTimer=setTimeout(()=>controller.abort(),15000);};
+    totalTimer=setTimeout(()=>controller.abort(),120000);
     touch();
     try {
     // Versioned URLs invalidate on every publication; allow same-version reuse.
-    const response = await fetch(url, { cache: "default", ...(controller ? {signal:controller.signal} : {}) });
+    const response = await fetch(url, { cache: "default", signal:controller.signal });
     touch();
     if (!response.ok) throw new Error(`数据包请求失败：${response.status} ${url}`);
     const total = Number(response.headers.get("content-length")) || 0;
@@ -109,25 +134,27 @@
     const start = Number(options.start ?? 8);
     const end = Number(options.end ?? 82);
     const label = options.label || "正在加载数据";
-    setProgress(start, "正在请求压缩数据", label);
+    const report=options.report || ((percent,message)=>setProgress(percent,message,label));
+    report(start, "正在请求数据");
     const bytes = await fetchBytes(url, (loaded, total) => {
       const ratio = total ? loaded / total : Math.min(.85, loaded / (1024 * 1024));
-      setProgress(start + (end - start) * clamp(ratio, 0, 1) * .72, "正在下载压缩数据", label);
+      report(start + (end - start) * clamp(ratio, 0, 1) * .72, "正在下载数据");
     });
-    setProgress(start + (end - start) * .78, "正在解压数据", label);
-    setProgress(start + (end - start) * .94, "正在后台解析数据", label);
-    const result=await decodeBytes(bytes,url);
+    report(start + (end - start) * .78, "正在解压和解析数据");
+    const result=await decodeBytes(bytes,url,options.variable);
     if(!result.name)throw new Error(`数据包格式无效：${url}`);
     window[result.name]=result.payload;
-    setProgress(end, "数据准备完成", label);
+    report(end, "数据准备完成");
   }
 
   function loadClassicScript(url) {
     return new Promise((resolve, reject) => {
       const script = document.createElement("script");
       script.src = url;
-      script.onload = resolve;
-      script.onerror = () => reject(new Error(`页面脚本加载失败：${url}`));
+      const fail=()=>{clearTimeout(timer);script.remove();reject(new Error(`页面脚本加载失败：${url}`));};
+      const timer=setTimeout(fail,20000);
+      script.onload = ()=>{clearTimeout(timer);resolve();};
+      script.onerror = fail;
       document.head.appendChild(script);
     });
   }
@@ -150,12 +177,14 @@
 
   const metricLoads=new WeakMap();
   const productLoads=new WeakMap();
-  async function ensureProductData(pack){
+  async function ensureProductData(pack,onProgress){
     if(pack.meta.completeProductData!==false)return;
     if(!productLoads.has(pack))productLoads.set(pack,(async()=>{
       const file=pack.meta.productExtraFile;if(file!=='./data/products-extra.js.gz')throw new Error('无效产品指标路径');
       const v=window.__PRIVATE_FUND_MANIFEST__?.assetVersion||window.__PRIVATE_FUND_MANIFEST__?.generatedAt||'';
-      const data=(await decodeBytes(await fetchBytes(file+'?v='+encodeURIComponent(v)),file)).payload;
+      const bytes=await fetchBytes(file+'?v='+encodeURIComponent(v),(loaded,total)=>onProgress?.(total?Math.min(85,loaded/total*85):null,'正在下载高级指标'));
+      onProgress?.(90,'正在解析高级指标');
+      const data=(await decodeBytes(bytes,file,'__PRIVATE_FUND_PRODUCT_EXTRA__')).payload;
       const byKey=new Map(data.rows.map(r=>[r.key,r]));
       if(byKey.size!==pack.rows.length||pack.rows.some(r=>!byKey.has(r.key)))throw new Error('产品指标覆盖不一致，请刷新页面');
       for(const row of pack.rows){const item=byKey.get(row.key);if(row.metricDetailsReady)item.metrics=row.metrics;Object.assign(row,item);}
@@ -176,38 +205,63 @@
   }
 
   async function bootProducts(options){
+    if(openLocalService())return;
+    let phase=5,finished=false;
     try{
+      const report=(value,message)=>{if(!finished){phase=Math.max(phase,value);setProgress(phase,message,options.label);}};
       const version=new URL(options.catalogUrl,location.href).searchParams.get('v')||'';
-      const cohort=window.BusinessQuery?.loadCohort(version);
+      report(5,'正在准备产品列表');
       const preload=document.createElement('link');preload.rel='preload';preload.as='script';preload.href=options.appUrl;document.head.append(preload);
-      await Promise.all([loadGzipScript(options.filterUrl,{start:5,end:15,label:options.label}),loadClassicScript(options.previewUrl)]);
-      window.PrivateFundProductPreview.mount(window.__PRIVATE_FUND_PRODUCT_FILTERS__);
-      const exact=await cohort;
+      // The quick filter preview is optional. It must never gate the list.
+      Promise.all([loadGzipScript(options.filterUrl,{start:5,end:12,report:()=>{},variable:'__PRIVATE_FUND_PRODUCT_FILTERS__'}),
+        loadClassicScript(options.previewUrl)]).then(()=>{
+        if(!finished)window.PrivateFundProductPreview.mount(window.__PRIVATE_FUND_PRODUCT_FILTERS__);
+      }).catch(()=>{});
+      const exact=await window.BusinessQuery?.loadCohort(version);
       if(exact)window.__PRIVATE_FUND_CATALOG__=exact;
-      else await loadGzipScript(options.catalogUrl,{start:18,end:85,label:options.label});
+      else await loadGzipScript(options.catalogUrl,{start:8,end:88,report,variable:'__PRIVATE_FUND_CATALOG__'});
+      finished=true;
+      setProgress(92,'正在绘制产品列表',options.label);
       await loadClassicScript(options.appUrl);
-    }catch(error){showError(error);}
+      await window.PrivateFundProductReady;
+      if(document.body.dataset.ready!=='true'&&document.body.dataset.loadError!=='true')throw new Error('产品列表未完成绘制');
+    }catch(error){finished=true;showError(error);}
+  }
+
+  function openLocalService(){
+    if(location.protocol!=='file:')return false;
+    const root=document.getElementById('mainContent');
+    const file=location.pathname.split('/').at(-1);
+    const href=new URL('/private_fund/'+file+location.search+location.hash,'http://127.0.0.1:18765');
+    root.innerHTML='<section class="loading-panel"><strong>请通过本地页面服务打开</strong><p>运行项目中的「01_启动私募分析页面服务.bat」，然后打开下方页面。</p><a class="primary-link">打开本地页面</a></section>';
+    root.querySelector('a').href=href.href;
+    return true;
   }
 
   function showError(error){
     const root=document.getElementById('mainContent'),regions=root?.querySelectorAll('[data-product-load-region]');
     if(regions?.length){regions.forEach(region=>{region.classList.add('is-error');region.setAttribute('aria-busy','false');region.querySelector('[data-product-load-text]').textContent='产品数据加载失败，请检查网络后重试。';const retry=region.querySelector('[data-product-load-retry]');retry.hidden=false;retry.onclick=()=>location.reload();});document.body.dataset.loadError='true';}
     else if(root){root.innerHTML='<section class="empty-panel"><strong>页面加载失败</strong><p></p><button type="button">重新加载</button></section>';root.querySelector('p').textContent=String(error?.message||error);root.querySelector('button').onclick=()=>location.reload();}
+    document.body.dataset.loadError='true';
     console.error(error);
   }
 
   async function boot({ catalogUrl, dataUrls = [], appUrl, label }) {
+    if(openLocalService())return;
     try {
       setProgress(5, "正在初始化页面", label);
       const urls = [catalogUrl, ...dataUrls].filter(Boolean);
+      const progress=urls.map(()=>0);
       await Promise.all(urls.map(async (url,index) => {
-        const start = 8 + (76 * index / urls.length);
-        const end = 8 + (76 * (index + 1) / urls.length);
-        try { await loadGzipScript(url, { start, end, label }); }
+        const report=(value,message)=>{
+          progress[index]=Math.max(progress[index],value);
+          setProgress(8+progress.reduce((sum,n)=>sum+n,0)/urls.length*.76,message,label);
+        };
+        try { await loadGzipScript(url, {start:0,end:100,report}); }
         catch(error) {
           if(!['private-fund-overview','private-fund-awards','private-fund-gffunds','private-fund-gffunds-manager'].includes(document.body.dataset.page))throw error;
-          setProgress(start, '连接中断，正在重试一次', label);
-          await loadGzipScript(url, { start, end, label });
+          report(0,'连接中断，正在重试一次');
+          await loadGzipScript(url, {start:0,end:100,report});
         }
       }));
       setProgress(88, "正在构建页面", label);
