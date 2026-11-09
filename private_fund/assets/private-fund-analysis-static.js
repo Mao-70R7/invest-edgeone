@@ -217,8 +217,8 @@
       productStatus:d.product?.sale_status||d.product?.product_status,
       recentOpenDates:d.terms?.recent_open_dates || d.terms?.recent_open_dates_json});
     const displayCore=window.PrivateFundBusinessText.coreElements(core,row.source);
-    displayCore.channelStrategy=[...new Set([d.product?.strategy_l1||row.strategy1,
-      d.product?.strategy_l2||row.strategy2,d.product?.strategy_l3||row.strategy3].filter(Boolean))].join(' / ');
+    displayCore.channelStrategy=[...new Set([d.product?.strategy_l1||row.sourceStrategy1,
+      d.product?.strategy_l2||row.sourceStrategy2,d.product?.strategy_l3].filter(v=>typeof v==='string'&&v.trim()&&!/^(待分类|待细分|未分类|未披露|未知|—|--)$/.test(v)))].join(' / ');
     const verifiedScale=window.PrivateFundBusinessText.latestVerifiedScale(d.scale);
     displayCore.productScaleWan=verifiedScale?.wan ?? null;
     displayCore.productScaleDate=verifiedScale?.date ?? null;
@@ -404,26 +404,43 @@
         displayMetrics.maxDrawdown=-Math.abs(reviewedDrawdown.value/100);
         metricSources.maxDrawdown={label:`已核验净值区间计算 · ${reviewedDrawdown.windowStart||'—'} 至 ${reviewedDrawdown.windowEnd||reviewedDrawdown.asOf||'—'}`};
       }
-      const reasonCodes={return1m:'return_1m',return3m:'return_3m',return6m:'return_6m',returnYtd:'return_ytd',return1y:'return_1y',returnSinceInception:'return_since',annualReturn:'annual_return_since',annualVol:'volatility_since',maxDrawdown:'drawdown_1y',sharpe:'sharpe_since',sortino:'sortino_since',calmar:'calmar_since',monthlyWin:'monthly_win_since'};
+      const reasonCodes={return1m:'return_1m',return3m:'return_3m',return6m:'return_6m',returnYtd:'return_ytd',return1y:'return_1y',returnSinceInception:'return_since',annualReturn:'annual_return_since',annualVol:'volatility_since',maxDrawdown:'drawdown_1y',sharpe:'sharpe_since',sortino:'sortino_since',calmar:'calmar_since',monthlyWin:'monthly_win_since',annualReturn1y:'annual_return_1y',annualVol1y:'volatility_1y',sharpe1y:'sharpe_1y'};
       for(const code of Object.keys(definitions)) if(!finite(displayMetrics[code])) {
         const reason=row.metricMissing?.[reasonCodes[code]];
         metricSources[code]={label:reason?.label||'历史、采样或分母条件不足',message:reason?.message};
       }
       const rawNavOnly=row.source==='zocaifu_highend' && (d.nav||[]).length>0 && !(d.analysisCurve||[]).length;
       if(rawNavOnly)for(const code of Object.keys(definitions))if(!finite(displayMetrics[code])) {
-        metricSources[code]={label:'原始净值已采集；统一收益口径待核',message:'来源单位净值和累计净值已保留。复权与收益计算口径尚未核验，暂不生成统一收益或排名；可在来源区域查看全部记录。'};
+        metricSources[code]={label:'口径待核',message:'来源单位净值和累计净值已保留，复权与收益计算口径尚未核验。'};
+      }
+      const howbuyNav = row.source==='howbuy' && (d.analysisCurve||[]).length>=2;
+      if(howbuyNav){
+        const mapped={return1m:'return_1m',return3m:'return_3m',return6m:'return_6m',returnYtd:'return_ytd',
+          return1y:'return_1y',maxDrawdown:'max_drawdown_1y',annualReturn1y:'annualized_return_1y',
+          annualVol1y:'annualized_volatility_1y',sharpe1y:'sharpe_ratio_1y',sortino1y:'sortino_ratio_1y',
+          calmar1y:'calmar_ratio_1y',monthlyWin1y:'positive_month_ratio_1y'};
+        const byCode=new Map((d.verifiedNavMetrics||[]).map(metric=>[metric.code,metric]));
+        for(const [key,code] of Object.entries(mapped)){
+          const metric=byCode.get('derived_'+code);
+          if(!finite(metric?.value))continue;
+          const reported=(d.catalog?.metrics||row.metrics)?.[code];
+          displayMetrics[key]=metric.value;
+          metricSources[key]={label:`复权净值计算 · ${metric.windowStart} 至 ${metric.windowEnd}`,
+            message:reported?.origin==='source'&&finite(reported.value)?
+              `好买另披露 ${reported.value.toFixed(2)}%（${reported.windowStart||'起点未披露'} 至 ${reported.windowEnd||reported.asOf||'终点未披露'}）`:undefined};
+        }
+        for(const key of ['returnSinceInception','annualReturn','annualVol','sharpe','sortino','calmar','monthlyWin']){
+          if(!finite(displayMetrics[key]))metricSources[key]={label:'完整历史待核验',message:'当前已核验的复权净值可用于符合条件的区间指标。成立以来指标需核验全期覆盖。'};
+        }
       }
       return {detailStatus,key:row.key,sourceId:row.source,sourceLabel:row.sourceLabel,productId:row.id,name:row.name,
-        rawNavOnly,
+        rawNavOnly, howbuyNav,
         displayProductCode:row.internalDirectoryKey ? (row.officialProductCode || '源站未提供代码') : row.id,
-        sourceEvidence:d.sourceEvidence||null, sourceDocuments:d.sourceEvidence?(d.documents||[]):[],
+        sourceEvidence:d.sourceEvidence||null,
         periodicReports:d.periodicReports||[],
         filingClassification:d.filingClassification||row.filingClassification||null,
         ciccReportedInterval:row.source==='ciccwm_app'?(d.ciccReportedInterval||null):null,
         crossChannelReferences:d.crossChannelReferences||[],
-        sourceBonus:d.sourceEvidence?(d.terms?.anonymous_bonus||[]):[],
-        sourceNav:row.source==='zocaifu_highend'?(d.nav||[]).map(n=>({date:n.nav_date,unit:n.unit_nav_raw,total:n.accumulated_nav_raw})):[],
-        sourcePerformance:row.source==='zocaifu_highend'?(d.performance||[]).map(p=>({code:p.metric_code,value:p.value_raw,date:p.as_of_date})):[],
         companyName:row.company,managerNames:d.managers?.length ? d.managers.map(m=>m.relation?.source_manager_name || m.profile?.source_manager_name).filter(Boolean) : (row.managers||[]),inceptionDate:row.inceptionDate,style:row.style,
         awards:(row.awards||[]).map(a=>({id:a.id,brand:a.brand,year:a.year,evaluationYear:a.evaluationYear,periodYears:a.periodYears,series:a.series,category:a.category,status:a.status,url:a.url,recipient:a.recipient})),
         reasons:row.key===key?['目标产品']:row.key===custom?.key?['自选对比',...(context.independent?['按自身大类独立评分']:[])]:reasons.get(row.key)||[],

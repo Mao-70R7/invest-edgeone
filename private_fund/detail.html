@@ -34,7 +34,7 @@
     @media(max-width:680px){.gf-attr-root{margin-top:16px}.gf-attr-scope{display:block;padding:13px}.gf-attr-scope b{display:block;margin-bottom:5px;white-space:normal}.gf-attr-section .head{align-items:flex-start;flex-direction:column;padding:11px 13px}.gf-attr-section .headNote{text-align:left}.gf-attr-body{padding:10px}.gf-attr-chart{height:235px}.gf-attr-pager{justify-content:space-between}.gf-attr-pager button{min-height:44px}}
     .radarBody.is-empty{grid-template-columns:minmax(0,1fr);align-items:start}.radarBody.is-empty .scoreLegend{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.scoreLegend>div{min-width:0}.axisScore{font-size:13px}@media(max-width:680px){.radarBody.is-empty .scoreLegend{grid-template-columns:1fr}}
   </style>
-  <script data-inline-src="./assets/private-fund-business-text.js?v=20261109T054256933939_github_publish_29592">
+  <script data-inline-src="./assets/private-fund-business-text.js?v=20261109T092122040765_github_publish_24764">
 /* Presentation only: source structures stay untouched in the exported detail. */
 (() => {
   const REVIEW='来源提供了结构化条款，具体内容待核对原文';
@@ -199,7 +199,7 @@
 })();
 
 </script>
-  <script data-inline-src="./assets/private-fund-experience.js?v=20261109T054256933939_github_publish_29592">
+  <script data-inline-src="./assets/private-fund-experience.js?v=20261109T092122040765_github_publish_24764">
 window.PrivateFundManagerZoneEnabled = false;
 /* Pure, source-preserving view models shared by the overview and history chart. */
 (() => {
@@ -580,7 +580,7 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
 })();
 
 </script>
-<script>window.__PRIVATE_FUND_ANALYSIS_SNAPSHOT_ENABLED__=true;</script><link rel="icon" href="data:,"><script data-inline-src="./assets/private-fund-analysis-static.js?v=20261109T054256933939_github_publish_29592">
+<script>window.__PRIVATE_FUND_ANALYSIS_SNAPSHOT_ENABLED__=true;</script><link rel="icon" href="data:,"><script data-inline-src="./assets/private-fund-analysis-static.js?v=20261109T092122040765_github_publish_24764">
 /* Static adapter for the existing product-analysis renderer. No local API. */
 (() => {
   const version = new URL(document.currentScript?.dataset?.inlineSrc || document.currentScript?.src || location.href, location.href).searchParams.get('v') || '';
@@ -800,8 +800,8 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
       productStatus:d.product?.sale_status||d.product?.product_status,
       recentOpenDates:d.terms?.recent_open_dates || d.terms?.recent_open_dates_json});
     const displayCore=window.PrivateFundBusinessText.coreElements(core,row.source);
-    displayCore.channelStrategy=[...new Set([d.product?.strategy_l1||row.strategy1,
-      d.product?.strategy_l2||row.strategy2,d.product?.strategy_l3||row.strategy3].filter(Boolean))].join(' / ');
+    displayCore.channelStrategy=[...new Set([d.product?.strategy_l1||row.sourceStrategy1,
+      d.product?.strategy_l2||row.sourceStrategy2,d.product?.strategy_l3].filter(v=>typeof v==='string'&&v.trim()&&!/^(待分类|待细分|未分类|未披露|未知|—|--)$/.test(v)))].join(' / ');
     const verifiedScale=window.PrivateFundBusinessText.latestVerifiedScale(d.scale);
     displayCore.productScaleWan=verifiedScale?.wan ?? null;
     displayCore.productScaleDate=verifiedScale?.date ?? null;
@@ -987,26 +987,43 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
         displayMetrics.maxDrawdown=-Math.abs(reviewedDrawdown.value/100);
         metricSources.maxDrawdown={label:`已核验净值区间计算 · ${reviewedDrawdown.windowStart||'—'} 至 ${reviewedDrawdown.windowEnd||reviewedDrawdown.asOf||'—'}`};
       }
-      const reasonCodes={return1m:'return_1m',return3m:'return_3m',return6m:'return_6m',returnYtd:'return_ytd',return1y:'return_1y',returnSinceInception:'return_since',annualReturn:'annual_return_since',annualVol:'volatility_since',maxDrawdown:'drawdown_1y',sharpe:'sharpe_since',sortino:'sortino_since',calmar:'calmar_since',monthlyWin:'monthly_win_since'};
+      const reasonCodes={return1m:'return_1m',return3m:'return_3m',return6m:'return_6m',returnYtd:'return_ytd',return1y:'return_1y',returnSinceInception:'return_since',annualReturn:'annual_return_since',annualVol:'volatility_since',maxDrawdown:'drawdown_1y',sharpe:'sharpe_since',sortino:'sortino_since',calmar:'calmar_since',monthlyWin:'monthly_win_since',annualReturn1y:'annual_return_1y',annualVol1y:'volatility_1y',sharpe1y:'sharpe_1y'};
       for(const code of Object.keys(definitions)) if(!finite(displayMetrics[code])) {
         const reason=row.metricMissing?.[reasonCodes[code]];
         metricSources[code]={label:reason?.label||'历史、采样或分母条件不足',message:reason?.message};
       }
       const rawNavOnly=row.source==='zocaifu_highend' && (d.nav||[]).length>0 && !(d.analysisCurve||[]).length;
       if(rawNavOnly)for(const code of Object.keys(definitions))if(!finite(displayMetrics[code])) {
-        metricSources[code]={label:'原始净值已采集；统一收益口径待核',message:'来源单位净值和累计净值已保留。复权与收益计算口径尚未核验，暂不生成统一收益或排名；可在来源区域查看全部记录。'};
+        metricSources[code]={label:'口径待核',message:'来源单位净值和累计净值已保留，复权与收益计算口径尚未核验。'};
+      }
+      const howbuyNav = row.source==='howbuy' && (d.analysisCurve||[]).length>=2;
+      if(howbuyNav){
+        const mapped={return1m:'return_1m',return3m:'return_3m',return6m:'return_6m',returnYtd:'return_ytd',
+          return1y:'return_1y',maxDrawdown:'max_drawdown_1y',annualReturn1y:'annualized_return_1y',
+          annualVol1y:'annualized_volatility_1y',sharpe1y:'sharpe_ratio_1y',sortino1y:'sortino_ratio_1y',
+          calmar1y:'calmar_ratio_1y',monthlyWin1y:'positive_month_ratio_1y'};
+        const byCode=new Map((d.verifiedNavMetrics||[]).map(metric=>[metric.code,metric]));
+        for(const [key,code] of Object.entries(mapped)){
+          const metric=byCode.get('derived_'+code);
+          if(!finite(metric?.value))continue;
+          const reported=(d.catalog?.metrics||row.metrics)?.[code];
+          displayMetrics[key]=metric.value;
+          metricSources[key]={label:`复权净值计算 · ${metric.windowStart} 至 ${metric.windowEnd}`,
+            message:reported?.origin==='source'&&finite(reported.value)?
+              `好买另披露 ${reported.value.toFixed(2)}%（${reported.windowStart||'起点未披露'} 至 ${reported.windowEnd||reported.asOf||'终点未披露'}）`:undefined};
+        }
+        for(const key of ['returnSinceInception','annualReturn','annualVol','sharpe','sortino','calmar','monthlyWin']){
+          if(!finite(displayMetrics[key]))metricSources[key]={label:'完整历史待核验',message:'当前已核验的复权净值可用于符合条件的区间指标。成立以来指标需核验全期覆盖。'};
+        }
       }
       return {detailStatus,key:row.key,sourceId:row.source,sourceLabel:row.sourceLabel,productId:row.id,name:row.name,
-        rawNavOnly,
+        rawNavOnly, howbuyNav,
         displayProductCode:row.internalDirectoryKey ? (row.officialProductCode || '源站未提供代码') : row.id,
-        sourceEvidence:d.sourceEvidence||null, sourceDocuments:d.sourceEvidence?(d.documents||[]):[],
+        sourceEvidence:d.sourceEvidence||null,
         periodicReports:d.periodicReports||[],
         filingClassification:d.filingClassification||row.filingClassification||null,
         ciccReportedInterval:row.source==='ciccwm_app'?(d.ciccReportedInterval||null):null,
         crossChannelReferences:d.crossChannelReferences||[],
-        sourceBonus:d.sourceEvidence?(d.terms?.anonymous_bonus||[]):[],
-        sourceNav:row.source==='zocaifu_highend'?(d.nav||[]).map(n=>({date:n.nav_date,unit:n.unit_nav_raw,total:n.accumulated_nav_raw})):[],
-        sourcePerformance:row.source==='zocaifu_highend'?(d.performance||[]).map(p=>({code:p.metric_code,value:p.value_raw,date:p.as_of_date})):[],
         companyName:row.company,managerNames:d.managers?.length ? d.managers.map(m=>m.relation?.source_manager_name || m.profile?.source_manager_name).filter(Boolean) : (row.managers||[]),inceptionDate:row.inceptionDate,style:row.style,
         awards:(row.awards||[]).map(a=>({id:a.id,brand:a.brand,year:a.year,evaluationYear:a.evaluationYear,periodYears:a.periodYears,series:a.series,category:a.category,status:a.status,url:a.url,recipient:a.recipient})),
         reasons:row.key===key?['目标产品']:row.key===custom?.key?['自选对比',...(context.independent?['按自身大类独立评分']:[])]:reasons.get(row.key)||[],
@@ -1077,7 +1094,7 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
   window.PrivateFundAnalysisStatic = {request,build,rank,bucket,profile,volatilityEligible,referenceCandidates,scoringReason,axisObservations,cohort,referenceCohort,broadCohort,comparisonGroup,sixComplete,freshPerformance,todayShanghai,definitions};
 })();
 
-</script><script data-inline-src="./assets/private-fund-static-loader.js?v=20261109T054256933939_github_publish_29592&amp;nav=business_query_v4">
+</script><script data-inline-src="./assets/private-fund-static-loader.js?v=20261109T092122040765_github_publish_24764&amp;nav=business_query_v4">
 (() => {
   "use strict";
 
@@ -1424,30 +1441,6 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
         if(active)document.getElementById(active)?.focus({preventScroll:true});
       });
     }
-    function anonymousEvidence(t){
-      const e=t.sourceEvidence;if(!e)return '';
-      const referenceBody=window.PrivateFundPublicReferences.render({directoryFacts:e.directoryFacts});
-      const docs=t.sourceDocuments||[],nav=(t.sourceNav||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
-      const metrics=t.sourcePerformance||[];
-      const names={return_last_1d:'日收益',return_last_1w:'近一周收益',return_last_1m:'近一月收益',return_last_3m:'近三月收益',return_last_6m:'近六月收益',return_last_1y:'近一年收益',return_last_2y:'近两年收益',return_last_3y:'近三年收益',return_last_5y:'近五年收益',return_ytd:'今年以来收益',return_current_month:'本月收益',return_since_inception:'成立以来收益',annualized_return_since_inception:'成立以来年化收益',volatility_1y:'近一年波动率',max_drawdown_1y:'近一年最大回撤',sharpe_ratio_1y:'近一年夏普比率',drawdown_recovery_days_1y:'近一年回撤修复天数'};
-      let navChart='';
-      const valid=nav.filter(n=>Number.isFinite(Number(n.unit))&&Number(n.unit)>0);
-      if(valid.length>1){
-        const low=Math.min(...valid.map(n=>Number(n.unit))),high=Math.max(...valid.map(n=>Number(n.unit))),span=high-low||1;
-        const start=Date.parse(valid[0].date),end=Date.parse(valid.at(-1).date),timeSpan=end-start||1;
-        const points=valid.map(n=>`${50+(Date.parse(n.date)-start)/timeSpan*790},${190-(Number(n.unit)-low)/span*145}`).join(' ');
-        navChart=`<svg viewBox="0 0 900 235" role="img" aria-label="来源单位净值原值走势" style="width:100%;height:auto;max-height:280px"><line x1="50" x2="840" y1="190" y2="190" stroke="#d7e0e7"/><polyline points="${points}" fill="none" stroke="#224E72" stroke-width="2"/><text x="50" y="25" fill="#16324f">单位净值原值 · ${esc(low)} 至 ${esc(high)}</text><text x="50" y="220" fill="#64748b">${esc(valid[0].date)}</text><text x="840" y="220" text-anchor="end" fill="#64748b">${esc(valid.at(-1).date)}</text></svg>`;
-      }
-      const fieldLabels={registration_number:'备案号',inception_date:'成立日期',maturity_date:'到期日期',custodian_name:'托管人',currency:'币种',strategy_l1:'投资策略',risk_level:'风险等级',scale:'产品规模',holdings:'完整持仓',documents:'报告文件'};
-      const absent=Object.entries(e.fieldStatus||{}).filter(([k,v])=>fieldLabels[k]&&/not_|missing|blank|unverified|expected|only_|empty|means_registration/.test(String(v))).map(([k])=>fieldLabels[k]);
-      const docBody=docs.length?`<details class="section" open><summary>披露文件（${docs.length} 条）</summary><div class="tableWrap" style="max-height:420px"><table><thead><tr><th>披露日期</th><th>文件名称</th><th>本次获取状态</th></tr></thead><tbody>${docs.slice().sort((a,b)=>String(b.document_date).localeCompare(String(a.document_date))).map(d=>`<tr><td>${esc(d.document_date)}</td><td>${/^https?:\/\//.test(d.document_url||'')?`<a href="${esc(d.document_url)}" target="_blank" rel="noopener noreferrer">${esc(d.document_type)}</a>`:esc(d.document_type)}</td><td>${d.document_download_status==='success'?'已下载并核验内容哈希':d.document_download_status==='login_required_skipped'?'访问受限，已跳过':'链接已记录；正文未确认'}</td></tr>`).join('')}</tbody></table></div></details>`:'<p class="headNote">本次匿名响应未提供可登记的报告文件。</p>';
-      const bonusBody=t.sourceBonus?.length?`<details class="section"><summary>分红与份额变更（${t.sourceBonus.length} 条）</summary><p class="headNote">以下为来源返回的原始值与类型代码，未换算金额或份额；仅为本次接口返回范围。</p><div class="tableWrap"><table><thead><tr><th>日期原值</th><th>分红值原值</th><th>累计值原值</th><th>变更类型代码</th><th>变更比率原值</th></tr></thead><tbody>${t.sourceBonus.map(b=>`<tr><td>${esc(b.zRhtXdt)}</td><td>${esc(b.zRhtAmt)}</td><td>${esc(b.zRhtCum)}</td><td>${esc(b.zDacTyp||'—')}</td><td>${esc(b.zDacRat)}</td></tr>`).join('')}</tbody></table></div></details>`:'';
-      const navBody=nav.length?`<details class="section"><summary>查看全部 ${nav.length} 条来源净值</summary><div class="tableWrap" style="max-height:380px"><table><thead><tr><th>日期</th><th>单位净值原值</th><th>累计净值原值</th></tr></thead><tbody>${nav.slice().reverse().map(n=>`<tr><td>${esc(n.date)}</td><td>${esc(n.unit)}</td><td>${n.total==null?'—':esc(n.total)}</td></tr>`).join('')}</tbody></table></div></details>`:'';
-      const metricBody=metrics.length?`<details class="section"><summary>来源收益与风险指标（${metrics.length} 项）</summary><p class="headNote">保留来源原值；尺度及具体统计区间未独立核验，不进入统一排名。日期关联同产品净值日。</p><div class="tableWrap"><table><thead><tr><th>指标</th><th>来源原值</th><th>关联日期</th></tr></thead><tbody>${metrics.map(m=>`<tr><td>${esc(names[m.code]||m.code.replace(/^(volatility|max_drawdown|drawdown_recovery_days|sharpe_ratio|benchmark_excess_return)_(1m|3m|6m|1y|3y|ytd|since_inception)$/,(_,type,period)=>({"1m":"近一月","3m":"近三月","6m":"近六月","1y":"近一年","3y":"近三年",ytd:"今年以来",since_inception:"成立以来"}[period])+({volatility:"波动率",max_drawdown:"最大回撤",drawdown_recovery_days:"回撤修复天数",sharpe_ratio:"夏普比率",benchmark_excess_return:"超基准收益原值"}[type])))}</td><td>${esc(m.value)}</td><td>${esc(m.date)}</td></tr>`).join('')}</tbody></table></div></details>`:'';
-      const quoteBody=e.publicRankQuotes?.length?`<details class="section" open><summary>公开榜单原值（${e.publicRankQuotes.length} 条）</summary><p class="headNote">来源日期仅有月日，年份未披露；收益显示尺度尚未核实。以下原值不进入带日期净值、收益曲线或统一排名。</p><div class="tableWrap"><table><thead><tr><th>来源区间</th><th>来源日期</th><th>净值原值</th><th>收益显示原值</th><th>来源</th></tr></thead><tbody>${e.publicRankQuotes.map(q=>`<tr><td>${esc(q.period_raw)}</td><td>${esc(q.nav_date_raw)} · 年份未披露</td><td>${esc(q.nav_raw)}</td><td>${esc(q.return_raw)}</td><td><a href="${esc(q.source_url)}" target="_blank" rel="noopener noreferrer">来源页面 ↗</a></td></tr>`).join('')}</tbody></table></div></details>`:'';
-      const priorDates=e.priorPublicFieldDates?.length?`<p class="headNote">部分字段沿用既有公开观测，原采集时间保留为 ${e.priorPublicFieldDates.map(esc).join('、')}；不视为本次重新核验。</p>`:'';
-      return `<section class="card section" id="anonymousSourceEvidence"><div class="head"><h2>来源、净值与披露文件</h2><div class="headNote">匿名采集 · ${esc(e.collectedAt)}</div></div><div style="padding:18px"><p>${esc(e.message)}</p>${absent.length?`<p class="headNote">本次匿名响应未提供或口径待核：${esc([...new Set(absent)].join('、'))}。缺失不补零。</p>`:''}${priorDates}${referenceBody}${quoteBody}${navChart}${navBody}${metricBody}${bonusBody}${docBody}<details class="section"><summary>采集证据</summary><p style="overflow-wrap:anywhere">原始响应：${esc(e.rawEvidencePath)}</p><p>${/^https?:\/\//.test(e.sourceUrl||'')?`<a href="${esc(e.sourceUrl)}" target="_blank" rel="noopener noreferrer">官方来源地址 ↗</a>`:''}</p></details></div></section>`;
-    }
     function filingInfo(t,c){const f=t.filingClassification;if(!f)return '';
       const url=/^https:\/\/gs\.amac\.org\.cn\/amac-infodisc\/res\/pof\/fund\/\d+\.html$/.test(f.url||'')?f.url:null;
       const minor = f.minor || (f.minorStatus === 'not_in_official_list' ? '协会列表未列示' : '协会公示未披露');
@@ -1465,12 +1458,11 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
       <section class="card hero"><div class="heroTop"><div><h1>${esc(t.name)}</h1><div class="meta"><span>来源代码：${esc(t.displayProductCode||t.productId)}</span><span>销售渠道：${esc(t.sourceLabel)}</span><span>管理人：${esc(t.companyName)}</span><span>基金经理：${esc((t.managerNames||[]).join('、')||'未披露')}</span><span class="tag">${esc(t.style.label)}</span></div></div><div class="fresh"><strong>${t.rawNavOnly?"统一收益口径待核":"业绩截止 "+show(c.latestPerformanceDate)}</strong>快照更新 ${esc(d.meta.databaseModifiedAt.slice(0,16).replace('T',' '))}<br>本地计算 ${d.meta.queryDurationMs} ms</div></div>${t.sourceEvidence?.message?`<p class="headNote" style="padding:8px 0">${esc(t.sourceEvidence.message)}</p>`:""}${awardHistory(t)}
       <div class="core">
         ${coreItem('成立时间',c.inceptionDate)}${coreItem('产品规模',scaleText(c),'neutral',scaleSource(c))}${coreItem('起投金额',joinAmount(c.subscriptionThreshold,c.subscriptionThresholdUnit))}${coreItem('风险等级',c.riskLevel)}${coreItem('管理费',c.managementFee)}${coreItem('业绩报酬',c.performanceFee)}
-        ${metricCoreItem('近1月','return1m')}${metricCoreItem('近3月','return3m')}${metricCoreItem('近6月','return6m')}${metricCoreItem('近1年','return1y')}${metricCoreItem('今年以来','returnYtd')}${metricCoreItem('完整可用期','returnSinceInception')}
-        ${metricCoreItem('成立以来年化收益','annualReturn')}${metricCoreItem('近1年最大回撤','maxDrawdown')}${metricCoreItem('成立以来年化波动','annualVol')}${metricCoreItem('成立以来夏普','sharpe')}
+        ${metricCoreItem('近1月','return1m')}${metricCoreItem('近3月','return3m')}${metricCoreItem('近6月','return6m')}${metricCoreItem('今年以来','returnYtd')}${metricCoreItem('近1年','return1y')}${metricCoreItem('完整可用期','returnSinceInception')}
+        ${metricCoreItem('近1年最大回撤','maxDrawdown')}${t.howbuyNav?`${metricCoreItem('近1年年化收益','annualReturn1y')}${metricCoreItem('近1年年化波动','annualVol1y')}${metricCoreItem('近1年夏普','sharpe1y')}`:`${metricCoreItem('成立以来年化收益','annualReturn')}${metricCoreItem('成立以来年化波动','annualVol')}${metricCoreItem('成立以来夏普','sharpe')}`}
       </div></section>
       ${t.representativeProduct?`<section class="card section" style="padding:14px"><b>同系列代表产品参考：</b><a href="./detail.html?id=${encodeURIComponent(t.representativeProduct.key)}">${esc(t.representativeProduct.name)} · 查看走势</a><p>App展示的此参考业绩属于代表产品，不属于当前募集份额。</p></section>`:''}
       ${t.periodicReports?.length&&window.PrivateFundPeriodicReports?`<section class="card section" id="periodicReports"><div class="head"><h2>季报解析</h2><div class="headNote">按报告期 · 保留原值与缺失说明</div></div><div style="padding:18px">${window.PrivateFundPeriodicReports.renderDetail(t.periodicReports)}</div></section>`:''}
-      ${anonymousEvidence(t)}
       ${filingInfo(t,c)}
       ${t.ciccReportedInterval?`<section class="card section" id="ciccReportedInterval"><div class="head"><h2>${t.ciccReportedInterval.period==='3m'?'中金原报近三月收益':'中金原报区间收益'}</h2></div><div class="core">${coreItem('可核区间',`${t.ciccReportedInterval.start} 至 ${t.ciccReportedInterval.end}`)}${coreItem('区间累计收益',`${(100*t.ciccReportedInterval.value).toFixed(2)}%`,tone('return3m',t.ciccReportedInterval.value),'中金财富 · 同源复权净值核对')}</div></section>`:''}
       ${otherChannelFacts(t)}
@@ -1492,7 +1484,7 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
     function scaleAmount(c){return c.productScaleWan??window.PrivateFundBusinessText.scaleInWan(c.productScaleRaw,c.productScaleUnit,c.productScaleStatus??'')}
     function scaleText(c){return window.PrivateFundBusinessText.formatScaleWan(scaleAmount(c))}
     function scaleSource(c){return scaleAmount(c)===null?'':c.productScaleDate||''}
-    function metricCoreItem(k,c){const t=state.data.target,v=t.metrics?.[c],src=t.metricSources?.[c],display=v==null?(t.rawNavOnly?'口径待核':'待完整净值'):metricText(c,v);return`<div class="coreItem"><div class="coreLabel">${esc(k)}</div><div class="coreValue ${tone(c,v)}" title="${esc(display)}">${esc(display)}</div><div class="coreSource" title="${esc(src?.message||src?.label||'数据不足')}">${esc(src?.label||'数据不足')}</div></div>`}
+    function metricCoreItem(k,c){const t=state.data.target,v=t.metrics?.[c],src=t.metricSources?.[c],display=v==null?'—':metricText(c,v);return`<div class="coreItem"><div class="coreLabel">${esc(k)}</div><div class="coreValue ${tone(c,v)}" title="${esc(display)}">${esc(display)}</div><div class="coreSource" title="${esc(src?.message||src?.label||'数据不足')}">${esc(src?.label||'数据不足')}</div>${v!=null&&src?.message?`<div class="coreSource">${esc(src.message)}</div>`:''}</div>`}
     function joinAmount(v,u){if(v==null||v==="")return"未披露";const clean=s=>String(s||"").replace(/[（(]?\s*(?:(?:费率)?单位(?:尚未|未|待)(?:核实|核验|确认|明确|披露)|单位不明|(?:尚未|未|待)(?:核实|核验|确认)(?:的)?单位|source_raw_currency_unit|source_unspecified|source_native|source_raw|unverified|unknown)\s*[）)]?/g,"").trim(),value=clean(String(v)),unit=clean(u);return !unit||value.includes(unit)?value:value+unit;}
     function kv(k,v){return`<div class="k">${esc(k)}</div><div>${show(v)}</div>`}
     function showCompareResults(html){const box=$('#compareResults');if(!box)return;box.innerHTML=html;box.hidden=false}
@@ -1581,10 +1573,10 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
       if(window.PrivateFundIncome?.render(state.data.target,state.historyRange,drawPerformanceChart))return;
       const d=state.data,target=d.target,peer=selectedProduct(),svgEl=$('#lineChart'),empty=$('#chartEmpty'),tip=$('#chartTooltip');
       let series=[
-        {key:'target',name:target.name,color:'#a51e26',curve:target.curve||[]},
+        {key:'target',name:target.name,color:'#a51e26',curve:target.curve||[],breakGaps:target.howbuyNav},
         {key:'benchmark',name:'市场基准（未包含）',color:'#7d8794',curve:[]}
       ];
-      if(peer)series.push({key:'peer',name:peer.name,color:'#315f9b',curve:peer.curve||[]});
+      if(peer)series.push({key:'peer',name:peer.name,color:'#315f9b',curve:peer.curve||[],breakGaps:peer.howbuyNav});
       const history=window.PrivateFundExperience,targetHistory=history.historyWindow(target.curve,'since');
       series=series.filter(s=>s.key!=='benchmark').map(s=>{
         const selectedWindow=history.historyWindow(s.curve,state.historyRange,targetHistory.last);
@@ -1598,7 +1590,7 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
       $('#curveRange').textContent=targetRaw.length?`${targetRaw[0].date} 至 ${targetRaw.at(-1).date} · ${targetRaw.length}点 · ${series[0].cadence}`:target.rawNavOnly?'原始净值已采集；统一收益口径待核':'暂无历史序列';
       let valid=series.filter(s=>s.raw.length>1);
       empty.style.display='none';tip.style.display='none';
-      if(targetRaw.length<2){empty.style.display='flex';empty.textContent=target.detailStatus==='pending'?'目标走势正在加载，指标与六维比较已可查看':target.detailStatus==='failed'?'目标走势暂未载入，请点击上方重试；已有指标保留':target.rawNavOnly?'原始净值走势和明细见上方；复权与收益口径核验后再纳入统一分析':'所选区间目标产品不足2个真实披露点，请切换更长区间';svgEl.innerHTML='';$('#chartBasis').textContent='不补零、不插造缺失净值';return}
+      if(targetRaw.length<2){empty.style.display='flex';empty.textContent=target.detailStatus==='pending'?'目标走势正在加载，已披露指标可先查看':target.detailStatus==='failed'?'目标走势暂未载入，请点击上方重试；已有指标保留':target.rawNavOnly?'原始净值已保留，复权与收益口径待核验':'所选区间目标产品不足2个真实披露点，请切换更长区间';svgEl.innerHTML='';$('#chartBasis').textContent='不补零、不插造缺失净值';return}
       const targetStart=targetRaw.length?targetRaw[0].x:Math.min(...valid.flatMap(s=>s.raw.map(p=>p.x))),targetEnd=targetRaw.length?targetRaw.at(-1).x:Math.max(...valid.flatMap(s=>s.raw.map(p=>p.x)));
       const peerSeries=valid.find(s=>s.key==='peer'),commonStart=peerSeries?Math.max(targetStart,peerSeries.raw[0].x):targetStart;
       valid=valid.map(s=>{
@@ -1616,15 +1608,23 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
       const tickCount=W<480?3:5;
       for(let i=0;i<tickCount;i++){const xx=L+i*(W-L-R)/(tickCount-1),dt=new Date(xmin+i*(xmax-xmin)/(tickCount-1)),label=(xmax-xmin)/DAY_MS<=190?dt.toISOString().slice(5,10):dt.toISOString().slice(0,7);svg+=`<text x="${xx}" y="${H-10}" text-anchor="${i===0?'start':i===tickCount-1?'end':'middle'}" font-size="11" fill="#778292">${label}</text>`}
       if(peerSeries&&commonStart>xmin){const xx=x(commonStart);svg+=`<line x1="${xx}" y1="${T}" x2="${xx}" y2="${H-B}" stroke="#9aa3ad" stroke-dasharray="4 4"/><text x="${Math.min(xx+5,W-95)}" y="${T+12}" font-size="10" fill="#7b8490">竞品同窗起点</text>`}
+      let hasGaps=false;
       valid.forEach(s=>{
-        const path=s.smooth?monotoneCurvePath(s.points,x,y):linearCurvePath(s.points,x,y);
+        const segments=[[]];
+        s.points.forEach((p,i)=>{
+          if(s.breakGaps&&i&&p.x-s.points[i-1].x>45*DAY_MS)segments.push([]);
+          segments.at(-1).push(p);
+        });
+        hasGaps ||= segments.length>1;
+        const path=segments.map(points=>s.smooth?monotoneCurvePath(points,x,y):linearCurvePath(points,x,y)).join(' ');
         svg+=`<path d="${path}" fill="none" stroke="${s.color}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" data-series="${s.key}" data-render-mode="${s.smooth?'monotone':'linear'}" data-cadence-days="${s.cadenceDays??''}"/>`;
+        for(const [point,...remaining] of segments)if(!remaining.length)svg+=`<circle cx="${x(point.x)}" cy="${y(point.y)}" r="2.4" fill="${s.color}"/>`;
       });
       svg+=`<g id="chartHover" visibility="hidden"><line id="chartCross" y1="${T}" y2="${H-B}" stroke="#75808d" stroke-dasharray="3 3"/><g id="chartDots"></g></g>`;
       svgEl.setAttribute('viewBox',`0 0 ${W} ${H}`);svgEl.innerHTML=svg;
       const rangeLabel=history.ranges.find(r=>r[0]===state.historyRange)[1];
       const basis=`${rangeLabel} · 以目标最新披露日为区间终点；目标曲线按指标同口径使用目标日期当日或之前、容差内最近披露值作为起点，竞品按可对齐区间归一。${state.historyRange==='since'?'仅展示已取得的完整历史，不代表成立起即完整。':''}指标排名仍按${d.meta.comparisonWindowLabel||'同类组观察窗口'}口径，不随图表区间切换`;
-      $('#chartBasis').textContent=basis+(valid.some(s=>s.smooth)?'；低频产品仅做保形平滑连线，悬停和指标仍取真实披露点':'');
+      $('#chartBasis').textContent=basis+(hasGaps?'；相邻净值披露相隔超过45天的区段已断开':'')+(valid.some(s=>s.smooth)?'；低频产品仅做保形平滑连线，悬停和指标仍取真实披露点':'');
       const nearest=(points,t)=>{let lo=0,hi=points.length-1;while(lo<hi){const mid=Math.floor((lo+hi)/2);if(points[mid].x<t)lo=mid+1;else hi=mid}if(lo>0&&Math.abs(points[lo-1].x-t)<=Math.abs(points[lo].x-t))return points[lo-1];return points[lo]};
       const reference=(valid.find(s=>s.key==='target')||valid[0]).points;
       const showAt=(clientX,clientY)=>{

@@ -68,7 +68,7 @@ window.PrivateFundProductReady = (async () => {
     state.focus = params.get('view') !== 'all';
     state.cardOpen = params.get('card') !== 'folded';
     state.page = Math.max(1, Number(params.get("page")) || 1);
-    state.sort = ['name','source','company','strategy','filing','inception','latest','x','y','ready'].includes(params.get('sort')) ? params.get('sort') : 'x';
+    state.sort = ['name','source','company','strategy','filing','filingMinor','inception','latest','x','y','ready'].includes(params.get('sort')) ? params.get('sort') : 'x';
     state.direction = params.get('direction') === 'asc' ? 'asc' : 'desc';
   }
   applyParams();
@@ -85,8 +85,10 @@ window.PrivateFundProductReady = (async () => {
     return metricValue(row, state.xMetric) !== null && metricValue(row, state.yMetric) !== null;
   }
 
+  const channelStrategy = row => [...new Set([row.sourceStrategy1,row.sourceStrategy2,row.strategy3]
+    .map(value=>String(value??'').trim()).filter(value=>value&&!/^(待分类|待细分|未分类|未披露|未知|—|--)$/.test(value)))].join(' / ');
   function filterRows() {
-    const matches=F.compile(advanced,filterAsOf),getters={name:r=>r.name,source:r=>r.sourceLabel,company:r=>[r.company,...(r.managers||[])].join('、'),strategy:r=>r.strategy1,filing:r=>r.filingClassification?.major,inception:r=>r.inceptionDate||r.filterFacts?.firstDate,latest:r=>F.latestDisclosureDate(r),x:r=>metricValue(r,state.xMetric),y:r=>metricValue(r,state.yMetric),ready:r=>Number(isPlottable(r))};
+    const matches=F.compile(advanced,filterAsOf),getters={name:r=>r.name,source:r=>r.sourceLabel,company:r=>[r.company,...(r.managers||[])].join('、'),strategy:channelStrategy,filing:r=>r.filingClassification?.major,filingMinor:r=>r.filingClassification?.minor,inception:r=>r.inceptionDate||r.filterFacts?.firstDate,latest:r=>F.latestDisclosureDate(r),x:r=>metricValue(r,state.xMetric),y:r=>metricValue(r,state.yMetric),ready:r=>Number(isPlottable(r))};
     return window.PrivateFundTables.sorted(C.filter(businessQuery.apply(rows), state).filter(r=>matches(r)&&A.matches(r,state)),getters[state.sort],state.direction);
   }
 
@@ -139,7 +141,7 @@ window.PrivateFundProductReady = (async () => {
       <div id="summaryStrip" class="summary-strip"></div>
       <div class="table-wrap">
         <table class="product-table" data-external-sort="true">
-          <thead><tr><th>产品</th><th>来源</th><th>管理人 / 经理</th><th>策略</th><th>中基协分类</th><th>成立日</th><th>最新业绩 / 序列</th><th id="xTableHead"></th><th id="yTableHead"></th><th>坐标状态</th></tr></thead>
+          <thead><tr><th>产品</th><th>来源</th><th>管理人 / 经理</th><th>渠道策略</th><th>协会基金大类</th><th>协会基金小类</th><th>成立日</th><th>最新业绩 / 序列</th><th id="xTableHead"></th><th id="yTableHead"></th><th>坐标状态</th></tr></thead>
           <tbody id="productTableBody"></tbody>
         </table>
       </div>
@@ -345,8 +347,8 @@ window.PrivateFundProductReady = (async () => {
     const pageRows = filtered.slice(start, start + state.pageSize);
     elements.xHead.textContent = metricLabel(state.xMetric);
     elements.yHead.textContent = metricLabel(state.yMetric);
-    const keys=['name','source','company','strategy','filing','inception','latest','x','y','ready'];
-    const labels=['产品','来源','管理人 / 经理','策略','中基协分类','成立日','最新业绩 / 序列',metricLabel(state.xMetric),metricLabel(state.yMetric),'坐标状态'];
+    const keys=['name','source','company','strategy','filing','filingMinor','inception','latest','x','y','ready'];
+    const labels=['产品','来源','管理人 / 经理','渠道策略','协会基金大类','协会基金小类','成立日','最新业绩 / 序列',metricLabel(state.xMetric),metricLabel(state.yMetric),'坐标状态'];
     elements.body.closest('table').querySelectorAll('thead th').forEach((th,i)=>window.PrivateFundTables.header(th,labels[i],state.sort===keys[i],state.direction,()=>{state.direction=state.sort===keys[i]&&state.direction==='desc'?'asc':'desc';state.sort=keys[i];state.page=1;render();}));
     const backQuery = window.location.search.replace(/^\?/, "");
     elements.body.innerHTML = pageRows.map((row) => {
@@ -358,14 +360,15 @@ window.PrivateFundProductReady = (async () => {
         <td><a class="product-link" href="${P.esc(P.detailHref(row.key, backQuery))}">${P.esc(row.name || row.id)}</a><span class="cell-sub">${P.esc(row.internalDirectoryKey ? (row.officialProductCode || "源站未提供代码 · 内部目录记录") : row.id)}${row.registrationNumber ? ` · ${P.esc(row.registrationNumber)}` : ""}</span>${A.badges(row)}</td>
         <td>${P.sourceBadge(row.source)}</td>
         <td>${P.esc(company)}${managers ? `<span class="cell-sub">经理：${P.esc(managers)}</span>` : ""}</td>
-        <td>${P.esc(row.strategy1 || "未分类")}<span class="cell-sub">${P.esc(row.strategy2 || row.strategy3 || "")}</span></td>
-        <td>${filing?.major?P.esc(filing.major):'<span class="cell-sub">待核验</span>'}${filing?.minor?`<span class="cell-sub">${P.esc(filing.minor)}</span>`:''}${filing?.code?`<span class="cell-sub">备案号 ${P.esc(filing.code)}</span>`:''}</td>
+        <td>${P.esc(channelStrategy(row)||'未披露')}</td>
+        <td>${P.esc(filing?.major||'待核验')}${filing?.code?`<span class="cell-sub">备案号 ${P.esc(filing.code)}</span>`:''}</td>
+        <td>${P.esc(filing?.minor||(filing?'协会未披露':'—'))}</td>
         <td>${P.esc(P.formatDate(row.inceptionDate||row.filterFacts?.firstDate))}${!row.inceptionDate&&row.filterFacts?.firstDate?'<span class="cell-sub">净值起点</span>':''}</td>
         <td>${P.esc(P.formatDate(F.latestDisclosureDate(row)))}<span class="cell-sub">${row.source==='zocaifu_highend'&&row.latestNavDate&&!Number(row.analysisPointCount||0)?'原始净值已保留':`${Number(row.analysisPointCount || 0).toLocaleString("zh-CN")}点`}${row.derivedMetricCount ? ` · ${Number(row.derivedMetricCount).toLocaleString("zh-CN")}项衍生指标` : ""}</span></td>
         <td data-metric="${P.esc(state.xMetric)}">${renderMetricCell(row, state.xMetric)}</td><td data-metric="${P.esc(state.yMetric)}">${renderMetricCell(row, state.yMetric)}</td>
         <td><span class="data-state ${ready ? "is-ready" : ""}">${ready ? "可绘制" : "所选指标暂缺"}</span></td>
       </tr>`;
-    }).join("") || '<tr><td colspan="10">没有符合条件的产品。</td></tr>';
+    }).join("") || `<tr><td colspan="${keys.length}">没有符合条件的产品。</td></tr>`;
     elements.pager.innerHTML = `<span>第 ${state.page.toLocaleString("zh-CN")} / ${pages.toLocaleString("zh-CN")} 页 · 每页 ${state.pageSize} 条</span><div class="pager-actions"><button type="button" data-page="prev" ${state.page <= 1 ? "disabled" : ""}>上一页</button><button type="button" data-page="next" ${state.page >= pages ? "disabled" : ""}>下一页</button></div>`;
   }
 
