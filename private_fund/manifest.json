@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-11-09T09:40:42+08:00",
-  "packagedAt": "2026-11-09T10:34:02+08:00",
-  "runId": "20261109T092122040765_github_publish_24764",
+  "generatedAt": "2026-11-09T12:59:46+08:00",
+  "packagedAt": "2026-11-09T14:24:30+08:00",
+  "runId": "20261109T123922130750_github_publish_28368",
   "pages": [
     "index.html",
     "products.html",
@@ -29,10 +29,10 @@
   },
   "gffundsResearchPublished": false,
   "counts": {
-    "catalogProducts": 25284,
-    "detailFiles": 25284,
-    "defaultScatterPlottable": 10989,
-    "defaultScatterEvidenceRail": 14295,
+    "catalogProducts": 25286,
+    "detailFiles": 25286,
+    "defaultScatterPlottable": 10992,
+    "defaultScatterEvidenceRail": 14294,
     "sourceProducts": {
       "ciccwm_app": 1060,
       "ciccwm_public": 9295,
@@ -40,7 +40,7 @@
       "geshang": 314,
       "gffunds_highend": 68,
       "harvestwm_highend": 1099,
-      "howbuy": 2840,
+      "howbuy": 2842,
       "jsfund_highend": 350,
       "ruiyuan_highend": 137,
       "simuwang": 5644,
@@ -60,7 +60,7 @@
     "geshang": 314,
     "gffunds_highend": 68,
     "harvestwm_highend": 1099,
-    "howbuy": 2840,
+    "howbuy": 2842,
     "jsfund_highend": 350,
     "ruiyuan_highend": 137,
     "simuwang": 5644,
@@ -72,7 +72,7 @@
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-11-09T09:40:42+08:00",
+    "generatedAt": "2026-11-09T12:59:46+08:00",
     "products": 2905,
     "issueCount": 3,
     "issueShare": 0.0010327022375215145,
@@ -94,36 +94,36 @@
     "warning": "同图仅表示公式与尺度统一；格上复权净值、排排网复权收益与广发/嘉实/睿远/招商来源累计净值的费用、分红处理和估值频率未完全统一。累计净值不等同于分红再投资收益；排名仅作分类内研究参考。"
   },
   "allProductMarksContract": {
-    "totalEligible": 25284,
+    "totalEligible": 25286,
     "plottableRule": "selected_x_and_y_are_strict_numeric",
     "missingRule": "every_non_plottable_product_is_rendered_in_evidence_rail"
   },
-  "detailFileCount": 25284,
-  "detailTransportFileCount": 4888,
+  "detailFileCount": 25286,
+  "detailTransportFileCount": 4889,
   "detailBundling": {
     "version": 1,
     "maxProducts": 4,
     "maxGzipBytes": 65536,
     "maxDecodedBytes": 786432,
     "keepIndividualAtBytes": 32768,
-    "bundleFiles": 3622,
+    "bundleFiles": 3623,
     "bundledProducts": 12139,
-    "maxActualGzipBytes": 64260,
+    "maxActualGzipBytes": 64278,
     "maxActualDecodedBytes": 786255,
     "originalDetailFiles": 13405,
-    "detailTransportFiles": 4888,
-    "filesSaved": 8517,
-    "originalColdP50Bytes": 14876,
-    "originalColdP95Bytes": 27009,
-    "bundledColdP50Bytes": 50466,
-    "bundledColdP95Bytes": 61953,
-    "extraColdP95Bytes": 46906,
-    "maxExtraColdBytes": 58643
+    "detailTransportFiles": 4889,
+    "filesSaved": 8516,
+    "originalColdP50Bytes": 14882,
+    "originalColdP95Bytes": 27014,
+    "bundledColdP50Bytes": 50468,
+    "bundledColdP95Bytes": 61954,
+    "extraColdP95Bytes": 46924,
+    "maxExtraColdBytes": 58639
   },
   "anonymousDetailBundles": {
     "version": 1,
     "files": 256,
-    "products": 12135
+    "products": 12137
   },
   "compression": "deterministic_gzip_browser_decompression",
   "navigation": [
@@ -165,43 +165,43 @@
       "maxGzipBytes": 65536,
       "maxDecodedBytes": 786432,
       "keepIndividualAtBytes": 32768,
-      "bundleFiles": 3622,
+      "bundleFiles": 3623,
       "bundledProducts": 12139,
-      "maxActualGzipBytes": 64260,
+      "maxActualGzipBytes": 64278,
       "maxActualDecodedBytes": 786255,
       "originalDetailFiles": 13405,
-      "detailTransportFiles": 4888,
-      "filesSaved": 8517,
-      "originalColdP50Bytes": 14876,
-      "originalColdP95Bytes": 27009,
-      "bundledColdP50Bytes": 50466,
-      "bundledColdP95Bytes": 61953,
-      "extraColdP95Bytes": 46906,
-      "maxExtraColdBytes": 58643
+      "detailTransportFiles": 4889,
+      "filesSaved": 8516,
+      "originalColdP50Bytes": 14882,
+      "originalColdP95Bytes": 27014,
+      "bundledColdP50Bytes": 50468,
+      "bundledColdP95Bytes": 61954,
+      "extraColdP95Bytes": 46924,
+      "maxExtraColdBytes": 58639
     },
     "productTransport": {
-      "products": 25284,
-      "bytes": 2213965,
-      "filterBytes": 83441,
-      "extraBytes": 8164040
+      "products": 25286,
+      "bytes": 2249997,
+      "filterBytes": 83454,
+      "extraBytes": 8167123
     },
     "analysisTransport": {
       "version": 2,
-      "products": 25284,
+      "products": 25286,
       "productBuckets": 2048,
       "startDate": "2026-11-09",
       "endDate": "2026-11-24"
     },
-    "baselineCatalogBytes": 442073726,
-    "baselineCatalogGzipBytes": 41092494,
-    "encodedCatalogBytes": 116815479,
+    "baselineCatalogBytes": 442704786,
+    "baselineCatalogGzipBytes": 41190041,
+    "encodedCatalogBytes": 117034959,
     "routeDataGzipBytes": {
-      "catalog": 14167635,
-      "products": 2213965,
-      "overview": 882112,
-      "peers": 8472965,
-      "detail-index": 4574091,
-      "awards-zone": 728464
+      "catalog": 14226324,
+      "products": 2249997,
+      "overview": 882945,
+      "peers": 8488148,
+      "detail-index": 4575305,
+      "awards-zone": 729130
     }
   },
   "scatterControls": {

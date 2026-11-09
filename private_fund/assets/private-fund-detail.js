@@ -292,7 +292,8 @@
         </div>
         <aside class="detail-column">
           ${section("产品信息", definitions([
-            ["产品编码", provenance?.internalDirectoryKey ? (provenance.officialProductCode || "源站未提供") : product.source_product_id], ["备案号", filing?.code || product.registration_number],
+            ["产品编码", provenance?.internalDirectoryKey ? (provenance.officialProductCode || "源站未提供") : product.source_product_id], ["协会备案号", filing?.code],
+            ["渠道披露编码", product.registration_number !== filing?.code ? product.registration_number : null],
             ["产品类型", product.product_type], ["组织 / 合同形式", product.legal_form || product.contract_type],
             ["产品状态", catalogRow.productStatus], ["销售状态", product.sale_status],
             ["风险等级", catalogRow.riskLevel], ["币种", product.currency],
@@ -300,6 +301,7 @@
             ["托管人", product.custodian_name], ["更新日期", P.formatDateTime(product.collected_at)],
           ]) + filingLink)}
           ${filing ? section("备案信息", definitions([
+            ["备案口径", filing.matchBasis === "verified_share_parent_filing" ? "母基金备案，渠道记录为份额" : null],
             ["协会公示产品名称", filing.officialName], ["协会公示管理人", filing.officialManager],
             ["协会基金大类", filing.major], ["协会基金小类", filing.minor || (filing.minorStatus === "not_in_official_list" ? "协会列表未列示" : "协会公示未披露")],
             ["协会备案日期", filing.registeredAt], ["协会公示成立日期", filing.officialEstablishmentDate],

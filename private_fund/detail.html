@@ -34,7 +34,7 @@
     @media(max-width:680px){.gf-attr-root{margin-top:16px}.gf-attr-scope{display:block;padding:13px}.gf-attr-scope b{display:block;margin-bottom:5px;white-space:normal}.gf-attr-section .head{align-items:flex-start;flex-direction:column;padding:11px 13px}.gf-attr-section .headNote{text-align:left}.gf-attr-body{padding:10px}.gf-attr-chart{height:235px}.gf-attr-pager{justify-content:space-between}.gf-attr-pager button{min-height:44px}}
     .radarBody.is-empty{grid-template-columns:minmax(0,1fr);align-items:start}.radarBody.is-empty .scoreLegend{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.scoreLegend>div{min-width:0}.axisScore{font-size:13px}@media(max-width:680px){.radarBody.is-empty .scoreLegend{grid-template-columns:1fr}}
   </style>
-  <script data-inline-src="./assets/private-fund-business-text.js?v=20261109T092122040765_github_publish_24764">
+  <script data-inline-src="./assets/private-fund-business-text.js?v=20261109T123922130750_github_publish_28368">
 /* Presentation only: source structures stay untouched in the exported detail. */
 (() => {
   const REVIEW='来源提供了结构化条款，具体内容待核对原文';
@@ -199,7 +199,7 @@
 })();
 
 </script>
-  <script data-inline-src="./assets/private-fund-experience.js?v=20261109T092122040765_github_publish_24764">
+  <script data-inline-src="./assets/private-fund-experience.js?v=20261109T123922130750_github_publish_28368">
 window.PrivateFundManagerZoneEnabled = false;
 /* Pure, source-preserving view models shared by the overview and history chart. */
 (() => {
@@ -580,7 +580,7 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
 })();
 
 </script>
-<script>window.__PRIVATE_FUND_ANALYSIS_SNAPSHOT_ENABLED__=true;</script><link rel="icon" href="data:,"><script data-inline-src="./assets/private-fund-analysis-static.js?v=20261109T092122040765_github_publish_24764">
+<script>window.__PRIVATE_FUND_ANALYSIS_SNAPSHOT_ENABLED__=true;</script><link rel="icon" href="data:,"><script data-inline-src="./assets/private-fund-analysis-static.js?v=20261109T123922130750_github_publish_28368">
 /* Static adapter for the existing product-analysis renderer. No local API. */
 (() => {
   const version = new URL(document.currentScript?.dataset?.inlineSrc || document.currentScript?.src || location.href, location.href).searchParams.get('v') || '';
@@ -1022,6 +1022,7 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
         sourceEvidence:d.sourceEvidence||null,
         periodicReports:d.periodicReports||[],
         filingClassification:d.filingClassification||row.filingClassification||null,
+        channelRegistrationNumber:row.registrationNumber||d.product?.registration_number||null,
         ciccReportedInterval:row.source==='ciccwm_app'?(d.ciccReportedInterval||null):null,
         crossChannelReferences:d.crossChannelReferences||[],
         companyName:row.company,managerNames:d.managers?.length ? d.managers.map(m=>m.relation?.source_manager_name || m.profile?.source_manager_name).filter(Boolean) : (row.managers||[]),inceptionDate:row.inceptionDate,style:row.style,
@@ -1094,7 +1095,7 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
   window.PrivateFundAnalysisStatic = {request,build,rank,bucket,profile,volatilityEligible,referenceCandidates,scoringReason,axisObservations,cohort,referenceCohort,broadCohort,comparisonGroup,sixComplete,freshPerformance,todayShanghai,definitions};
 })();
 
-</script><script data-inline-src="./assets/private-fund-static-loader.js?v=20261109T092122040765_github_publish_24764&amp;nav=business_query_v4">
+</script><script data-inline-src="./assets/private-fund-static-loader.js?v=20261109T123922130750_github_publish_28368&amp;nav=business_query_v4">
 (() => {
   "use strict";
 
@@ -1444,7 +1445,9 @@ window.TianyanAssistantConfig = {"apiBase": "/ai-api", "title": "天眼 AI 助�
     function filingInfo(t,c){const f=t.filingClassification;if(!f)return '';
       const url=/^https:\/\/gs\.amac\.org\.cn\/amac-infodisc\/res\/pof\/fund\/\d+\.html$/.test(f.url||'')?f.url:null;
       const minor = f.minor || (f.minorStatus === 'not_in_official_list' ? '协会列表未列示' : '协会公示未披露');
-      return `<section class="card section" id="filingClassification"><div class="head"><h2>备案信息</h2></div><div class="core">${coreItem('备案编码',f.code)}${coreItem('协会公示产品名称',f.officialName)}${coreItem('协会公示管理人',f.officialManager)}${coreItem('协会基金大类',f.major)}${coreItem('协会基金小类',minor)}${coreItem('渠道策略',c.channelStrategy||c.strategy)}${coreItem('协会备案日期',f.registeredAt)}${coreItem('协会公示成立日期',f.officialEstablishmentDate)}${coreItem('协会公示运作状态',f.operatingStatus)}${coreItem('协会公示托管人',f.custodian)}</div>${url?`<p style="padding:0 18px"><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">中基协备案公示 ↗</a></p>`:''}</section>`;
+      const sourceCode=t.channelRegistrationNumber && t.channelRegistrationNumber!==f.code ? coreItem('渠道披露编码',t.channelRegistrationNumber) : '';
+      const scope=f.matchBasis==='verified_share_parent_filing' ? coreItem('备案口径','母基金备案，渠道记录为份额') : '';
+      return `<section class="card section" id="filingClassification"><div class="head"><h2>备案信息</h2></div><div class="core">${coreItem('备案编码',f.code)}${sourceCode}${scope}${coreItem('协会公示产品名称',f.officialName)}${coreItem('协会公示管理人',f.officialManager)}${coreItem('协会基金大类',f.major)}${coreItem('协会基金小类',minor)}${coreItem('渠道策略',c.channelStrategy||c.strategy)}${coreItem('协会备案日期',f.registeredAt)}${coreItem('协会公示成立日期',f.officialEstablishmentDate)}${coreItem('协会公示运作状态',f.operatingStatus)}${coreItem('协会公示托管人',f.custodian)}</div>${url?`<p style="padding:0 18px"><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">中基协备案公示 ↗</a></p>`:''}</section>`;
     }
     function otherChannelFacts(t){const refs=new Map();
       for(const row of [...(t.sourceEvidence?.publicProductReferences||[]),...(t.crossChannelReferences||[])]){

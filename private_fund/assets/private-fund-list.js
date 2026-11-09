@@ -356,8 +356,10 @@ window.PrivateFundProductReady = (async () => {
       const company = P.clean(row.company) || "未披露管理人";
       const managers = (row.managers || []).join("、");
       const filing=row.filingClassification;
+      const differingCode=filing?.code && row.registrationNumber && filing.code!==row.registrationNumber;
+      const filingCodes=differingCode ? ` · 渠道编码 ${row.registrationNumber} · 协会备案号 ${filing.code}` : row.registrationNumber ? ` · ${row.registrationNumber}` : "";
       return `<tr data-key="${P.esc(row.key)}" tabindex="0" aria-selected="${row.key === state.selected}" class="${row.key === state.selected ? "is-selected " : ""}${row.source === "gffunds_highend" ? "is-gffunds" : ""}">
-        <td><a class="product-link" href="${P.esc(P.detailHref(row.key, backQuery))}">${P.esc(row.name || row.id)}</a><span class="cell-sub">${P.esc(row.internalDirectoryKey ? (row.officialProductCode || "源站未提供代码 · 内部目录记录") : row.id)}${row.registrationNumber ? ` · ${P.esc(row.registrationNumber)}` : ""}</span>${A.badges(row)}</td>
+        <td><a class="product-link" href="${P.esc(P.detailHref(row.key, backQuery))}">${P.esc(row.name || row.id)}</a><span class="cell-sub">${P.esc(row.internalDirectoryKey ? (row.officialProductCode || "源站未提供代码 · 内部目录记录") : row.id)}${P.esc(filingCodes)}</span>${A.badges(row)}</td>
         <td>${P.sourceBadge(row.source)}</td>
         <td>${P.esc(company)}${managers ? `<span class="cell-sub">经理：${P.esc(managers)}</span>` : ""}</td>
         <td>${P.esc(channelStrategy(row)||'未披露')}</td>

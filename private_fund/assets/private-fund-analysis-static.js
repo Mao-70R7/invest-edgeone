@@ -439,6 +439,7 @@
         sourceEvidence:d.sourceEvidence||null,
         periodicReports:d.periodicReports||[],
         filingClassification:d.filingClassification||row.filingClassification||null,
+        channelRegistrationNumber:row.registrationNumber||d.product?.registration_number||null,
         ciccReportedInterval:row.source==='ciccwm_app'?(d.ciccReportedInterval||null):null,
         crossChannelReferences:d.crossChannelReferences||[],
         companyName:row.company,managerNames:d.managers?.length ? d.managers.map(m=>m.relation?.source_manager_name || m.profile?.source_manager_name).filter(Boolean) : (row.managers||[]),inceptionDate:row.inceptionDate,style:row.style,
