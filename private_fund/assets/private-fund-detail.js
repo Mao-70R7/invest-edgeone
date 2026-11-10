@@ -210,8 +210,11 @@
       ["投研团队", company.research_team], ["风控说明", company.risk_control],
       ["投资理念", company.investment_philosophy], ["来源简介", company.introduction],
     ]);
+    const displayedStart = catalogRow.source === "xueqiu" && terms.subscription_threshold
+      ? [terms.subscription_threshold, terms.subscription_threshold_unit].filter(Boolean).join(" ")
+      : terms.subscription_threshold;
     const termsBody = definitions([
-      ["认购起点", terms.subscription_threshold], ["追加起点", terms.minimum_additional_amount],
+      [catalogRow.source === "xueqiu" ? "雪球页面展示起投金额" : "认购起点", displayedStart], ["追加起点", terms.minimum_additional_amount],
       ["锁定 / 封闭期", terms.lockup_period || terms.quasi_lockup_period], ["开放日", terms.open_day],
       ["赎回开放规则", terms.redemption_open_day], ["认购费", terms.subscription_fee || terms.purchase_fee],
       ["赎回费", terms.redemption_fee], ["管理费", terms.management_fee],
