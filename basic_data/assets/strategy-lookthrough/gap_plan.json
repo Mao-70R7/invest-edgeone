@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "strategyCount": 2738,
+  "calculatedCount": 2245,
+  "blockedCount": 493,
+  "blockedGroups": {
+    "缺少基金配置": 461,
+    "权重待核验": 5,
+    "信号组合": 18,
+    "测试组合": 9
+  },
+  "allocationBasisCounts": {
+    "latest_observed_current": 1256,
+    "user_confirmed_shared_daily": 73,
+    "official_rebalance_target": 909,
+    "historical_exact": 3,
+    "parent_strategy_reference": 4
+  },
+  "channels": [
+    {
+      "channel": "天天基金/投顾",
+      "total": 1132,
+      "ready": 1097,
+      "缺少基金配置": 9,
+      "权重待核验": 3,
+      "信号组合": 14,
+      "测试组合": 9
+    },
+    {
+      "channel": "且慢/盈米基金",
+      "total": 610,
+      "ready": 607,
+      "缺少基金配置": 2,
+      "权重待核验": 1,
+      "信号组合": 0,
+      "测试组合": 0
+    },
+    {
+      "channel": "广发银行发现精彩",
+      "total": 380,
+      "ready": 81,
+      "缺少基金配置": 299,
+      "权重待核验": 0,
+      "信号组合": 0,
+      "测试组合": 0
+    },
+    {
+      "channel": "广发基金",
+      "total": 166,
+      "ready": 150,
+      "缺少基金配置": 14,
+      "权重待核验": 0,
+      "信号组合": 2,
+      "测试组合": 0
+    },
+    {
+      "channel": "好买基金",
+      "total": 88,
+      "ready": 87,
+      "缺少基金配置": 0,
+      "权重待核验": 1,
+      "信号组合": 0,
+      "测试组合": 0
+    },
+    {
+      "channel": "中信建投",
+      "total": 63,
+      "ready": 0,
+      "缺少基金配置": 63,
+      "权重待核验": 0,
+      "信号组合": 0,
+      "测试组合": 0
+    },
+    {
+      "channel": "广发证券（gfsec_fima）",
+      "total": 56,
+      "ready": 55,
+      "缺少基金配置": 0,
+      "权重待核验": 0,
+      "信号组合": 1,
+      "测试组合": 0
+    },
+    {
+      "channel": "广发证券（gfsec_robot）",
+      "total": 49,
+      "ready": 0,
+      "缺少基金配置": 49,
+      "权重待核验": 0,
+      "信号组合": 0,
+      "测试组合": 0
+    },
+    {
+      "channel": "中欧财富",
+      "total": 48,
+      "ready": 46,
+      "缺少基金配置": 1,
+      "权重待核验": 0,
+      "信号组合": 1,
+      "测试组合": 0
+    },
+    {
+      "channel": "金融街证券",
+      "total": 43,
+      "ready": 43,
+      "缺少基金配置": 0,
+      "权重待核验": 0,
+      "信号组合": 0,
+      "测试组合": 0
+    },
+    {
+      "channel": "南方基金",
+      "total": 35,
+      "ready": 35,
+      "缺少基金配置": 0,
+      "权重待核验": 0,
+      "信号组合": 0,
+      "测试组合": 0
+    },
+    {
+      "channel": "富国基金",
+      "total": 26,
+      "ready": 22,
+      "缺少基金配置": 4,
+      "权重待核验": 0,
+      "信号组合": 0,
+      "测试组合": 0
+    },
+    {
+      "channel": "华夏财富",
+      "total": 22,
+      "ready": 22,
+      "缺少基金配置": 0,
+      "权重待核验": 0,
+      "信号组合": 0,
+      "测试组合": 0
+    },
+    {
+      "channel": "汇添富基金/现金宝投顾",
+      "total": 8,
+      "ready": 0,
+      "缺少基金配置": 8,
+      "权重待核验": 0,
+      "信号组合": 0,
+      "测试组合": 0
+    },
+    {
+      "channel": "招商基金/招财乐投顾",
+      "total": 4,
+      "ready": 0,
+      "缺少基金配置": 4,
+      "权重待核验": 0,
+      "信号组合": 0,
+      "测试组合": 0
+    },
+    {
+      "channel": "易方达财富/e钱包",
+      "total": 4,
+      "ready": 0,
+      "缺少基金配置": 4,
+      "权重待核验": 0,
+      "信号组合": 0,
+      "测试组合": 0
+    },
+    {
+      "channel": "嘉实财富",
+      "total": 4,
+      "ready": 0,
+      "缺少基金配置": 4,
+      "权重待核验": 0,
+      "信号组合": 0,
+      "测试组合": 0
+    }
+  ],
+  "officialAssetsCompleteWithinTolerance": 2213,
+  "officialAssetsIncompleteCount": 32,
+  "f10IncompleteCount": 28,
+  "fundReportTasks": 24,
+  "affectedUniqueFundShares": 24,
+  "modelSnapshotSha256": "62f6bf93c49ddb10f9621889a0d332811c81e4acda59a5eab1b1595237879c52",
+  "productionAttributionEligible": false,
+  "officialAssetsCompleteTolerancePp": 0.02,
+  "methodology": "按渠道策略ID、基金份额及报告期登记；重复渠道不合并。基金任务按可复用策略数排序，权重跨策略合计仅供排期，不是市场仓位或资产规模。",
+  "boundary": "总资产报告完整只说明资产穿透输入；归因仍须净资产分母、披露时点、真实权重、指数与净值独立验真。",
+  "originalCasesModified": false,
+  "asOf": "2026-11-11",
+  "sourceGeneratedAt": "2026-11-11T02:38:41+08:00",
+  "csvEvidence": {
+    "blocked_strategy_gaps.csv": {
+      "rows": 493,
+      "sha256": "1d05f52a91d197a691943ff433695d1258ac2737c835c609ec548ba92171afb4"
+    },
+    "fund_asset_report_gaps.csv": {
+      "rows": 24,
+      "sha256": "f119b3bebbc5f03960ac08a4a131f25c4856deff4076fe385b91a6cff096a962"
+    },
+    "strategy_report_gaps.csv": {
+      "rows": 32,
+      "sha256": "a1a2b3d5f3e8afd8d1bf18deb89975a1a9066427c797b6c85800ecfdc06af33f"
+    }
+  }
+}

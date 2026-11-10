@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-11T03:58:31.732834+08:00",
+  "retiredModules": [
+    "legacy_ai_strategy",
+    "standalone_fund_economic_pack",
+    "public_field_dictionary",
+    "all_market_product_ranking"
+  ],
+  "enabledPages": [
+    "机构总览",
+    "策略列表",
+    "策略对比",
+    "策略详情",
+    "资产穿透分析",
+    "调仓月报",
+    "业绩归因"
+  ],
+  "authority": "explicit_user_request_20261030",
+  "databaseChecksRemainRequired": true,
+  "rankingUnderlyingDataDeleted": false,
+  "sharedStrategyAndFundDataRetained": true
+}

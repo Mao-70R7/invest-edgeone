@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-11T03:58:31+08:00",
+  "status": "ready",
+  "checks": {
+    "monthlyRebalanceMonthCount": 12,
+    "strategySummaryCount": 2655,
+    "strategyDetailCount": 2655,
+    "strategyDetailMissingCount": 0,
+    "strategyDetailParseErrorCount": 0,
+    "strategyDetailDeclaredIncompleteCount": 734,
+    "strategyDetailWithoutHoldingCount": 437,
+    "strategyDetailWithoutCurveCount": 436,
+    "strategyDetailReferencedFundCount": 6409,
+    "selectedFundCount": 0,
+    "enhancedFundDetailCount": 0,
+    "baseOnlyFundCount": 0,
+    "brokenFundDetailCount": 0,
+    "forbiddenFundDetailPageCount": 0,
+    "forbiddenFundDetailFileCount": 0,
+    "strategyDetailSourceCount": 2655,
+    "strategyDetailDeclaredCompleteCount": 1921,
+    "activeStrategyCount": 2078,
+    "activeStrategyWithoutCurveCount": 303,
+    "currentHoldingStrategyCount": 2191,
+    "currentHoldingFundReferenceCount": 38979,
+    "currentHoldingRankMissingReferenceCount": 169,
+    "activeCurrentHoldingRankMissingReferenceCount": 157,
+    "inactiveCurrentHoldingRankMissingReferenceCount": 12,
+    "currentHoldingScaleErrorReferenceCount": 0,
+    "historyRebalanceStrategyCount": 2049,
+    "assessedHistoryRebalanceStrategyCount": 1737,
+    "unassessedHistoryRebalanceStrategyCount": 312,
+    "officialPerformanceImageReferenceCount": 0,
+    "officialPerformanceImageInvalidReferenceCount": 0,
+    "officialPerformanceImageMissingSourceAssetCount": 0,
+    "currentHolding近一月RankedReferenceCount": 38900,
+    "currentHolding近三月RankedReferenceCount": 38917,
+    "currentHolding近6月RankedReferenceCount": 38916,
+    "currentHolding近1年RankedReferenceCount": 38818,
+    "officialPerformanceImagePublishedAssetCount": 0,
+    "officialPerformanceImageMissingPublishedAssetCount": 0,
+    "fundDetailParsedCount": 0,
+    "fundDetailNavChartCount": 0,
+    "fundDetailNavChartMissingCount": 0,
+    "fundDetailBenchmarkChartCount": 0,
+    "fundDetailChartScaleErrorCount": 0,
+    "fundDetailParseErrorCount": 0,
+    "holdingSnapshotSourceRowCount": 513795,
+    "holdingSnapshotPublishedRowCount": 127628,
+    "holdingSnapshotStrategyCount": 2126,
+    "strategy-lookthroughFileCount": 5561,
+    "strategy-lookthroughBytes": 1204106076,
+    "monthly-rebalance-reportsFileCount": 14,
+    "monthly-rebalance-reportsBytes": 21134316
+  },
+  "policy": {
+    "blockingZeroChecks": [
+      "strategyDetailMissingCount",
+      "strategyDetailParseErrorCount",
+      "officialPerformanceImageInvalidReferenceCount",
+      "officialPerformanceImageMissingSourceAssetCount",
+      "officialPerformanceImageMissingPublishedAssetCount",
+      "forbiddenFundDetailPageCount",
+      "forbiddenFundDetailFileCount",
+      "currentHoldingScaleErrorReferenceCount"
+    ],
+    "warningOnlyChecks": [
+      "activeCurrentHoldingRankMissingReferenceCount"
+    ],
+    "warningCounts": {
+      "activeCurrentHoldingRankMissingReferenceCount": 157
+    }
+  },
+  "warnings": [
+    {
+      "type": "source_strategy_data_incomplete",
+      "count": 734,
+      "note": "源数据已明确标记不完整，发布集保留真实缺失状态，不做推测补齐。"
+    },
+    {
+      "type": "active_strategy_without_curve",
+      "count": 303,
+      "note": "活跃策略没有任何可画曲线时保留真实缺失状态；正常披露策略应为0。"
+    },
+    {
+      "type": "current_holding_rank_missing",
+      "count": 169,
+      "activeCount": 157,
+      "inactiveCount": 12,
+      "note": "同类排名缺失属于可披露的覆盖率缺口，不阻断其他准确数据发布；页面不把缺失仓位计为前50%。"
+    },
+    {
+      "type": "history_rebalance_unassessed",
+      "count": 312,
+      "note": "历史事件仅为建仓或底层净值不足时不计算胜率，页面展示具体原因。"
+    }
+  ],
+  "pageVersionValidation": {
+    "status": "passed",
+    "buildId": "minimal-cfd754be8f25",
+    "pageCount": 18
+  },
+  "monthlyRebalanceValidation": {
+    "status": "passed",
+    "monthCount": 12,
+    "latestMonth": "2026-10",
+    "databaseRecomputed": true
+  },
+  "sourceValidation": {
+    "status": "passed",
+    "validatedAt": "2026-11-11T04:05:42+08:00",
+    "databasePath": "E:\\天眼系统\\数据库\\analysis_zh_current.sqlite",
+    "dbIndependentRecompute": true,
+    "checksComplete": true,
+    "inputSnapshotAudit": null,
+    "errorCount": 0
+  }
+}
