@@ -42,8 +42,24 @@
   form.append(label, input, send);
   const tools = el("div", "ty-assistant-tools");
   const logout = el("button", "ty-assistant-text-button", "新对话"); logout.type = "button";
-  tools.append(logout);
-  footer.append(form, tools); panel.append(header, notice, transcript, footer); overlay.append(panel);
+  const exportOpen = el("button", "ty-assistant-text-button", "私募导出"); exportOpen.type = "button";
+  exportOpen.setAttribute("aria-expanded", "false");
+  const exportBox = el("div", "ty-assistant-export"); exportBox.hidden = true;
+  const exportLabel = el("label", "", "净值日期"); exportLabel.htmlFor = "tyPrivateExportDate";
+  const exportDate = el("input"); exportDate.type = "date"; exportDate.id = "tyPrivateExportDate";
+  const priorFriday = new Date(); priorFriday.setDate(priorFriday.getDate() - ((priorFriday.getDay() + 6) % 7) - 3);
+  const localDay = day => `${day.getFullYear()}-${String(day.getMonth()+1).padStart(2,"0")}-${String(day.getDate()).padStart(2,"0")}`;
+  exportDate.value = localDay(priorFriday); exportDate.max = localDay(new Date());
+  const exportSubmit = el("button", "ty-assistant-primary", "生成表格"); exportSubmit.type = "button";
+  exportBox.append(exportLabel, exportDate, exportSubmit, el("small", "", "含产品数据、业绩、规模及管理人和经理统计。"));
+  exportOpen.onclick = () => { exportBox.hidden = !exportBox.hidden; exportOpen.setAttribute("aria-expanded", String(!exportBox.hidden)); if (!exportBox.hidden) exportDate.focus(); };
+  exportSubmit.onclick = () => {
+    if (!exportDate.value || !exportDate.checkValidity()) { exportDate.reportValidity(); return; }
+    input.value = "私募导出 " + exportDate.value.replaceAll("-", "");
+    exportBox.hidden = true; exportOpen.setAttribute("aria-expanded", "false"); form.requestSubmit();
+  };
+  tools.append(exportOpen, logout);
+  footer.append(exportBox,form, tools); panel.append(header, notice, transcript, footer); overlay.append(panel);
   document.body.append(overlay);
 
   function persist() {
@@ -93,7 +109,7 @@
     } finally { clearTimeout(timeout); }
   }
   function safeResultURL(value) {
-    try { const u = new URL(value); return u.protocol === "https:" && u.hostname === "gfinvest.site" && !u.username && !u.password && (!u.port || u.port === "443"); } catch (_) { return false; }
+    try { const u = new URL(value); return u.protocol === "https:" && ["gfinvest.site","private.gfinvest.site"].includes(u.hostname) && !u.username && !u.password && (!u.port || u.port === "443"); } catch (_) { return false; }
   }
   function resultLink(label, url) {
     if (!safeResultURL(url)) return null;
@@ -233,7 +249,7 @@
       if (match[3]) node.append(el("strong", "", match[3]));
       else {
         let safe = false;
-        try { const url = new URL(match[2]); safe = url.protocol === "https:" && url.hostname === "gfinvest.site"; } catch (_) {}
+        try { const url = new URL(match[2]); safe = url.protocol === "https:" && ["gfinvest.site","private.gfinvest.site"].includes(url.hostname); } catch (_) {}
         if (safe) { const link = el("a", "", match[1]); link.href = match[2]; link.target = "_blank"; link.rel = "noopener noreferrer"; node.append(link); }
         else node.append(document.createTextNode(match[1]));
       }

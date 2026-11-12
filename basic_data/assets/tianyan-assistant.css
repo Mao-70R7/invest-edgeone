@@ -103,3 +103,8 @@
  .ty-result-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
  .ty-result-facts{grid-template-columns:110px minmax(0,1fr)}
 }
+
+.ty-assistant-export{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:0 0 14px;font-size:13px;color:#17324D}
+.ty-assistant-export[hidden]{display:none}
+.ty-assistant-export input{font:inherit;padding:8px;border:1px solid #cbd5e1;border-radius:6px;color:#17324D;max-width:100%}
+.ty-assistant-export small{flex-basis:100%;color:#66717E;font-size:12px}

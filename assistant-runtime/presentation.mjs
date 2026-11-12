@@ -11,7 +11,7 @@ export function publicPresentation(value,answer) {
     const url=v=>{
       if(v===null || v===undefined)return null;
       const p=new URL(str(v,24000));
-      if(p.protocol!=='https:' || p.hostname!=='gfinvest.site' || p.username || p.password || (p.port && p.port!=='443'))throw Error();
+      if(p.protocol!=='https:' || !['gfinvest.site','private.gfinvest.site'].includes(p.hostname) || p.username || p.password || (p.port && p.port!=='443'))throw Error();
       return v;
     };
     const notes=(value.notes||[]).map(v=>str(v,1200));if(notes.length>12)throw Error();
