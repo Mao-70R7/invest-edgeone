@@ -22,23 +22,23 @@
   },
   "productTransport": {
     "products": 25423,
-    "bytes": 2260758,
-    "filterBytes": 83700,
-    "extraBytes": 8224121
+    "bytes": 2260777,
+    "filterBytes": 83699,
+    "extraBytes": 8224147
   },
   "analysisTransport": {
     "version": 2,
     "products": 25423,
     "productBuckets": 2048,
-    "startDate": "2026-11-12",
-    "endDate": "2026-11-27"
+    "startDate": "2026-11-13",
+    "endDate": "2026-11-28"
   },
   "baselineCatalogBytes": 445800023,
   "baselineCatalogGzipBytes": 41562378,
   "encodedCatalogBytes": 117816053,
   "routeDataGzipBytes": {
     "catalog": 14325504,
-    "products": 2260758,
+    "products": 2260777,
     "overview": 888974,
     "peers": 8546252,
     "detail-index": 4633790,
