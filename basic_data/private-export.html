@@ -1,10 +1,10 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>私募导出助手 · 天眼</title>
 <link rel="icon" href="data:,"><link rel="stylesheet" href="./assets/tianyan-assistant.css?v=private-export-20261112">
 <style>body{margin:0;background:#f4f6f8;color:#17324d;font:16px/1.8 "Microsoft YaHei",sans-serif}main{max-width:820px;margin:80px auto;padding:40px;background:#fff;border-top:4px solid #17324d}h1{font-size:30px;margin:0 0 16px}p{color:#66717e}button{font:inherit;background:#17324d;color:#fff;border:0;padding:12px 24px;border-radius:6px;cursor:pointer}a{color:#17324d}small{display:block;color:#66717e;margin:20px 0}@media(max-width:600px){main{margin:24px 16px;padding:24px}h1{font-size:25px}}</style>
-<script src="./assets/tianyan-assistant-config.js?v=private-export-20261112"></script><script defer src="./assets/tianyan-assistant.js?v=private-export-20261112"></script></head><body><main>
-<h1>私募导出助手</h1><p>选择一个净值日期，生成固定格式的私募产品表格。</p>
+<script src="./assets/tianyan-assistant-config.js?v=private-export-20261112"></script><script>window.TianyanAssistantConfig={...window.TianyanAssistantConfig,mode:'private_competitor'};</script><script defer src="./assets/tianyan-assistant.js?v=private-benchmark-20261112"></script></head><body><main>
+<h1>私募竞品与导出助手</h1><p>统一实际净值日期，先看高规模标杆，再看广发产品表现。</p>
 <button type="button" data-tianyan-assistant>选择日期并导出</button>
-<small>包含产品业绩、规模、口径说明，以及管理人和基金经理规模统计。广发基金管理产品标红。</small>
-<p>也可以直接发送：<strong>私募导出 20261030</strong> 或 <strong>私募导出 上周五</strong>。</p>
+<small>竞品分析包含重点结论、广发逐只对标、高规模产品，以及机构和基金经理旗下产品表现。默认观察规模不低于1亿元的产品；广发规模缺失产品仍保留业绩对比。</small>
+<p>飞书快捷提问：<strong>私募竞品 20261030</strong>。只要全部明细：<strong>私募导出 20261030</strong>。</p>
 <a href="https://private.gfinvest.site/private_fund/products.html" target="_blank" rel="noopener">查看天眼私募产品</a>
 </main><script>document.addEventListener('DOMContentLoaded',()=>{const trigger=document.querySelector('[data-tianyan-assistant]');trigger.addEventListener('click',()=>{const button=[...document.querySelectorAll('.ty-assistant-tools button')].find(x=>x.textContent==='私募导出');if(button&&button.getAttribute('aria-expanded')!=='true')button.click();});});</script></body></html>

@@ -2,6 +2,7 @@
 (() => {
   "use strict";
   const config = window.TianyanAssistantConfig || {};
+  const privateMode = config.mode === "private_competitor";
   const api = (config.apiBase || "").replace(/\/$/, "");
   const localPreview = location.protocol === "file:" || ["127.0.0.1", "localhost", "[::1]"].includes(location.hostname);
   const previewCrossOriginApi = localPreview && api && new URL(api, location.href).origin !== location.origin;
@@ -50,12 +51,18 @@
   const priorFriday = new Date(); priorFriday.setDate(priorFriday.getDate() - ((priorFriday.getDay() + 6) % 7) - 3);
   const localDay = day => `${day.getFullYear()}-${String(day.getMonth()+1).padStart(2,"0")}-${String(day.getDate()).padStart(2,"0")}`;
   exportDate.value = localDay(priorFriday); exportDate.max = localDay(new Date());
+  const exportKindLabel = el("label", "", "导出内容"); exportKindLabel.htmlFor = "tyPrivateExportKind";
+  const exportKind = el("select"); exportKind.id = "tyPrivateExportKind";
+  for (const [value, text] of [["benchmark", "竞品分析（含广发对标）"], ["data", "全部产品数据"]]) {
+    const option = el("option", "", text); option.value = value; exportKind.append(option);
+  }
+  exportKind.value = privateMode ? "benchmark" : "data";
   const exportSubmit = el("button", "ty-assistant-primary", "生成表格"); exportSubmit.type = "button";
-  exportBox.append(exportLabel, exportDate, exportSubmit, el("small", "", "含产品数据、业绩、规模及管理人和经理统计。"));
+  exportBox.append(exportLabel, exportDate, exportKindLabel, exportKind, exportSubmit, el("small", "", "实际净值同日对齐；规模缺失保留。竞品分析含高规模标杆与广发对标。"));
   exportOpen.onclick = () => { exportBox.hidden = !exportBox.hidden; exportOpen.setAttribute("aria-expanded", String(!exportBox.hidden)); if (!exportBox.hidden) exportDate.focus(); };
   exportSubmit.onclick = () => {
     if (!exportDate.value || !exportDate.checkValidity()) { exportDate.reportValidity(); return; }
-    input.value = "私募导出 " + exportDate.value.replaceAll("-", "");
+    input.value = (exportKind.value === "benchmark" ? "私募竞品 " : "私募导出 ") + exportDate.value.replaceAll("-", "");
     exportBox.hidden = true; exportOpen.setAttribute("aria-expanded", "false"); form.requestSubmit();
   };
   tools.append(exportOpen, logout);
@@ -276,9 +283,9 @@
     let newlyCompleted = null;
     if (!tasks.length) {
       const welcome = el("div", "ty-assistant-welcome");
-      welcome.append(el("p", "ty-assistant-eyebrow", "从一个具体问题开始"), el("h3", "", "把产品筛选和评价条件说清楚"),
-        el("p", "", "答复会保留数据时间、筛选口径和查看来源的链接。缺少关键条件时，助手会继续追问。"));
-      for (const question of ["当前持仓中出现次数最多的权益基金，给出前十", "成立超过一年，近一年收益超过10%、成立以来最大回撤小于30%的投顾组合有哪些？"]) {
+      welcome.append(el("p", "ty-assistant-eyebrow", privateMode ? "同日业绩 · 规模标杆 · 广发对标" : "从一个具体问题开始"), el("h3", "", privateMode ? "先看规模标杆，再看广发表现" : "把产品筛选和评价条件说清楚"),
+        el("p", "", privateMode ? "选择净值日即可生成竞品分析。重点看高规模产品、经理及机构旗下产品的收益与回撤；广发产品逐只对照。" : "答复会保留数据时间、筛选口径和查看来源的链接。缺少关键条件时，助手会继续追问。"));
+      for (const question of (privateMode ? ["私募竞品 20261030", "私募导出 上周五"] : ["当前持仓中出现次数最多的权益基金，给出前十", "成立超过一年，近一年收益超过10%、成立以来最大回撤小于30%的投顾组合有哪些？"])) {
         const example = el("button", "ty-assistant-example", question); example.type = "button";
         example.onclick = () => { input.value = question; input.focus(); }; welcome.append(example);
       }
