@@ -1,0 +1,113 @@
+{
+  "release_id": "wealth_shelf_quality_20261030",
+  "as_of": "2026-10-28",
+  "snapshot_at": "2026-10-30T12:19:53.638424+08:00",
+  "prepared_at": "2026-10-30T12:31:57.702468+08:00",
+  "summary": [
+    {
+      "source": "harvestwm_highend",
+      "channel": "嘉实财富",
+      "products": 1088,
+      "scales": 450,
+      "scale_yi": 881.609837,
+      "NAV": 1036,
+      "recent_NAV": 847,
+      "manager_names_products": 923,
+      "finer_strategy_products": 0,
+      "stale_scale_products": 19,
+      "severely_stale_scale_products": 16,
+      "performance": {
+        "ytd": 558,
+        "1w": 718,
+        "1m": 724,
+        "3m": 686,
+        "6m": 610,
+        "1y": 527,
+        "2y": 357,
+        "3y": 270
+      }
+    },
+    {
+      "source": "ciccwm_app",
+      "channel": "中金财富",
+      "products": 1060,
+      "scales": 395,
+      "scale_yi": 322.5948558335,
+      "NAV": 1044,
+      "recent_NAV": 974,
+      "manager_names_products": 350,
+      "finer_strategy_products": 0,
+      "stale_scale_products": 6,
+      "severely_stale_scale_products": 6,
+      "performance": {
+        "ytd": 710,
+        "1w": 911,
+        "1m": 909,
+        "3m": 845,
+        "6m": 762,
+        "1y": 657,
+        "2y": 550,
+        "3y": 487
+      }
+    },
+    {
+      "source": "howbuy",
+      "channel": "好买财富",
+      "products": 2835,
+      "scales": 2384,
+      "scale_yi": 2617.743007,
+      "NAV": 2835,
+      "recent_NAV": 2835,
+      "manager_names_products": 2834,
+      "finer_strategy_products": 1605,
+      "stale_scale_products": 4,
+      "severely_stale_scale_products": 0,
+      "performance": {
+        "ytd": 2704,
+        "1w": 0,
+        "1m": 0,
+        "3m": 0,
+        "6m": 2727,
+        "1y": 2681,
+        "2y": 2609,
+        "3y": 2352
+      }
+    },
+    {
+      "source": "zocaifu_highend",
+      "channel": "中欧财富",
+      "products": 80,
+      "scales": 38,
+      "scale_yi": 23.0932146724,
+      "NAV": 77,
+      "recent_NAV": 77,
+      "manager_names_products": 80,
+      "finer_strategy_products": 0,
+      "stale_scale_products": 25,
+      "severely_stale_scale_products": 10,
+      "performance": {
+        "ytd": 43,
+        "1w": 61,
+        "1m": 60,
+        "3m": 58,
+        "6m": 54,
+        "1y": 36,
+        "2y": 20,
+        "3y": 13
+      }
+    }
+  ],
+  "notes": [
+    "各来源独立，不做跨来源拼接或外部同类排名",
+    "规模为各单品最近已核验披露，非渠道保有量",
+    "合计首行；缺失不补零"
+  ],
+  "files": {
+    "four_channel_data.json.gz": "429c4b557043e3e37dfa9858029aa0af32eb999307f80e360ee53b5f430903fa",
+    "four_channel_products.csv": "c9ee23fe54c246ab38ea2f728bafb6a14d843525638c32c19f8f459e89fd4c71",
+    "four_channel_report.html": "e56991a9985f03dbeef79349d5291c9188b609fb3044434bdb104d75cd265e96",
+    "index.html": "d21ec3e3a0d0d1166a28df9fde3e15def5c86a50acb38050c6c7378f411d2317",
+    "shelf_scale_data.json": "8828709209540e1695e3bb9a9376c36817bea8426fa0cfb3ce055d0a1dcd110e",
+    "shelf_scale_report.html": "8345c59577cd066ad47b8d19d5d5a5c5c368a2ee998637f693ba7f3e8a77074c"
+  }
+}
