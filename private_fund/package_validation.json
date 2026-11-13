@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "generatedAt": "2026-11-14T00:02:42+08:00",
+  "generatedAt": "2026-11-14T01:52:05+08:00",
   "checks": {
     "pageCount": 7,
     "detailFileCount": 25423,
@@ -13,17 +13,17 @@
       "keepIndividualAtBytes": 32768,
       "bundleFiles": 3657,
       "bundledProducts": 12246,
-      "maxActualGzipBytes": 64729,
+      "maxActualGzipBytes": 64745,
       "maxActualDecodedBytes": 752861,
       "originalDetailFiles": 13524,
       "detailTransportFiles": 4935,
       "filesSaved": 8589,
       "originalColdP50Bytes": 14892,
-      "originalColdP95Bytes": 26976,
-      "bundledColdP50Bytes": 50434,
-      "bundledColdP95Bytes": 61936,
-      "extraColdP95Bytes": 46933,
-      "maxExtraColdBytes": 58879
+      "originalColdP95Bytes": 26980,
+      "bundledColdP50Bytes": 50428,
+      "bundledColdP95Bytes": 61943,
+      "extraColdP95Bytes": 46937,
+      "maxExtraColdBytes": 58882
     },
     "anonymousDetailBundleCount": 256,
     "anonymousBundledProductsVerified": 12155,
@@ -47,7 +47,7 @@
     "cmbPublication": "cmb_display_20260911_v1",
     "cmbQuality": {
       "version": "cmb_display_20260911_v1",
-      "generatedAt": "2026-11-13T22:25:21+08:00",
+      "generatedAt": "2026-11-14T00:33:52+08:00",
       "products": 2908,
       "issueCount": 5,
       "issueShare": 0.0017193947730398899,
@@ -141,10 +141,10 @@
     "authenticatedPerformanceAnalyticsIncluded": true,
     "restrictedAnalyticsDetailCount": 7703,
     "restrictedRawDataIncluded": false,
-    "rawDetailBytes": 2411228188,
-    "compressedDetailBytes": 263301258,
+    "rawDetailBytes": 2411228608,
+    "compressedDetailBytes": 263300776,
     "compressionRatio": 0.109198,
-    "maxCompressedDetailBytes": 554165,
+    "maxCompressedDetailBytes": 554150,
     "maxCompressedDetailFile": "anonymous/bc.js.gz",
     "oversizedFileCount": 0
   }
