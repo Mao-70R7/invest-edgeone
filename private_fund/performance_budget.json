@@ -8,23 +8,23 @@
     "keepIndividualAtBytes": 32768,
     "bundleFiles": 3657,
     "bundledProducts": 12246,
-    "maxActualGzipBytes": 64747,
+    "maxActualGzipBytes": 64743,
     "maxActualDecodedBytes": 752861,
     "originalDetailFiles": 13524,
     "detailTransportFiles": 4935,
     "filesSaved": 8589,
     "originalColdP50Bytes": 14892,
     "originalColdP95Bytes": 26980,
-    "bundledColdP50Bytes": 50435,
-    "bundledColdP95Bytes": 61942,
-    "extraColdP95Bytes": 46932,
-    "maxExtraColdBytes": 58886
+    "bundledColdP50Bytes": 50434,
+    "bundledColdP95Bytes": 61943,
+    "extraColdP95Bytes": 46923,
+    "maxExtraColdBytes": 58882
   },
   "productTransport": {
     "products": 25423,
-    "bytes": 2263029,
-    "filterBytes": 83677,
-    "extraBytes": 8238494
+    "bytes": 2263575,
+    "filterBytes": 83691,
+    "extraBytes": 8237588
   },
   "analysisTransport": {
     "version": 2,
@@ -33,15 +33,15 @@
     "startDate": "2026-11-14",
     "endDate": "2026-11-29"
   },
-  "baselineCatalogBytes": 445991399,
-  "baselineCatalogGzipBytes": 41625837,
-  "encodedCatalogBytes": 118025444,
+  "baselineCatalogBytes": 445994674,
+  "baselineCatalogGzipBytes": 41623435,
+  "encodedCatalogBytes": 118043204,
   "routeDataGzipBytes": {
-    "catalog": 14343743,
-    "products": 2263029,
-    "overview": 890013,
-    "peers": 8557036,
-    "detail-index": 4637341,
-    "awards-zone": 732868
+    "catalog": 14342228,
+    "products": 2263575,
+    "overview": 890090,
+    "peers": 8559731,
+    "detail-index": 4637836,
+    "awards-zone": 732878
   }
 }
