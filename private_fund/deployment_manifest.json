@@ -7,7 +7,7 @@
     "productCount": 25423,
     "detailFileCount": 25423,
     "fileCountExcludingManifest": 7703,
-    "totalBytesExcludingManifest": 388486862,
+    "totalBytesExcludingManifest": 388487342,
     "rawDetailBytes": 2412238798,
     "compressedDetailBytes": 263372151,
     "maxCompressedDetailBytes": 554120
@@ -38480,13 +38480,13 @@
     },
     {
       "path": "gffunds.html",
-      "size": 122121,
-      "sha256": "a191861248913089321e2b9db9736fb7e4327cd7e10cb53d88bcd44e5d8ea972"
+      "size": 122361,
+      "sha256": "27be45fa4af7d0dcd797278cd53255dea17cd3d0c45f6cf1741fb474cf7737bc"
     },
     {
       "path": "index.html",
-      "size": 189396,
-      "sha256": "8d3b69bfdb52ddef3b18e810c465b0c142eee4262f250903781e98a9c2d72d87"
+      "size": 189636,
+      "sha256": "982a3da11926e84b05bb6bbf8bf2c81f5a1ec941ce81f2b02b72a5d644d77be3"
     },
     {
       "path": "manifest.js",
