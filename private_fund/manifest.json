@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-11-16T21:02:17+08:00",
-  "packagedAt": "2026-11-16T22:42:45+08:00",
-  "runId": "20261116T223050099632_github_publish_18140",
+  "generatedAt": "2026-11-17T00:10:21+08:00",
+  "packagedAt": "2026-11-17T01:30:32+08:00",
+  "runId": "20261116T234949721561_github_publish_34240",
   "pages": [
     "index.html",
     "products.html",
@@ -24,8 +24,8 @@
     "historyReadyCount": 66,
     "verifiedOneYearMetricCount": 40,
     "fullPortfolioProductCount": 0,
-    "latestPerformanceDate": "2026-11-13",
-    "activeCutoffDate": "2026-10-13"
+    "latestPerformanceDate": "2026-11-16",
+    "activeCutoffDate": "2026-10-16"
   },
   "gffundsResearchPublished": false,
   "counts": {
@@ -72,7 +72,7 @@
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-11-16T21:02:17+08:00",
+    "generatedAt": "2026-11-17T00:10:21+08:00",
     "products": 2908,
     "issueCount": 5,
     "issueShare": 0.0017193947730398899,
@@ -108,17 +108,17 @@
     "keepIndividualAtBytes": 32768,
     "bundleFiles": 3660,
     "bundledProducts": 12249,
-    "maxActualGzipBytes": 64730,
+    "maxActualGzipBytes": 64738,
     "maxActualDecodedBytes": 756435,
     "originalDetailFiles": 13525,
     "detailTransportFiles": 4936,
     "filesSaved": 8589,
-    "originalColdP50Bytes": 14906,
-    "originalColdP95Bytes": 26985,
-    "bundledColdP50Bytes": 50435,
-    "bundledColdP95Bytes": 61963,
-    "extraColdP95Bytes": 46924,
-    "maxExtraColdBytes": 58205
+    "originalColdP50Bytes": 14904,
+    "originalColdP95Bytes": 26987,
+    "bundledColdP50Bytes": 50433,
+    "bundledColdP95Bytes": 61960,
+    "extraColdP95Bytes": 46923,
+    "maxExtraColdBytes": 58214
   },
   "anonymousDetailBundles": {
     "version": 1,
@@ -167,41 +167,41 @@
       "keepIndividualAtBytes": 32768,
       "bundleFiles": 3660,
       "bundledProducts": 12249,
-      "maxActualGzipBytes": 64730,
+      "maxActualGzipBytes": 64738,
       "maxActualDecodedBytes": 756435,
       "originalDetailFiles": 13525,
       "detailTransportFiles": 4936,
       "filesSaved": 8589,
-      "originalColdP50Bytes": 14906,
-      "originalColdP95Bytes": 26985,
-      "bundledColdP50Bytes": 50435,
-      "bundledColdP95Bytes": 61963,
-      "extraColdP95Bytes": 46924,
-      "maxExtraColdBytes": 58205
+      "originalColdP50Bytes": 14904,
+      "originalColdP95Bytes": 26987,
+      "bundledColdP50Bytes": 50433,
+      "bundledColdP95Bytes": 61960,
+      "extraColdP95Bytes": 46923,
+      "maxExtraColdBytes": 58214
     },
     "productTransport": {
       "products": 25425,
-      "bytes": 2266793,
-      "filterBytes": 83698,
-      "extraBytes": 8239979
+      "bytes": 2266895,
+      "filterBytes": 83706,
+      "extraBytes": 8240770
     },
     "analysisTransport": {
       "version": 2,
       "products": 25425,
       "productBuckets": 2048,
-      "startDate": "2026-11-16",
-      "endDate": "2026-12-01"
+      "startDate": "2026-11-17",
+      "endDate": "2026-12-02"
     },
-    "baselineCatalogBytes": 446220903,
-    "baselineCatalogGzipBytes": 41707894,
-    "encodedCatalogBytes": 117997654,
+    "baselineCatalogBytes": 446221063,
+    "baselineCatalogGzipBytes": 41708092,
+    "encodedCatalogBytes": 117996538,
     "routeDataGzipBytes": {
-      "catalog": 14378078,
-      "products": 2266793,
-      "overview": 892104,
-      "peers": 8589661,
-      "detail-index": 4646008,
-      "awards-zone": 733283
+      "catalog": 14378499,
+      "products": 2266895,
+      "overview": 892050,
+      "peers": 8589467,
+      "detail-index": 4646017,
+      "awards-zone": 733282
     }
   },
   "scatterControls": {
