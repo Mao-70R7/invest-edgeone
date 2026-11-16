@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "runId": "20261116T205458632091_github_publish_18140",
-  "generatedAt": "2026-11-16T22:16:04+08:00",
+  "runId": "20261116T223050099632_github_publish_18140",
+  "generatedAt": "2026-11-16T22:43:39+08:00",
   "entry": "index.html",
   "stats": {
     "productCount": 25425,
@@ -161,7 +161,7 @@
     {
       "path": "awards.html",
       "size": 152747,
-      "sha256": "22d0a9b43c2dbc3fcb7a668ebf2ccabb46ce4e41b72dd89c2f74fd2bd8d9ca7b"
+      "sha256": "5bb62ffe59a5f1512f171316f58d1e47e3b3644e53625ddf16a4ba2755e60e3f"
     },
     {
       "path": "cmb-review.json",
@@ -36451,7 +36451,7 @@
     {
       "path": "data/navigation/index.json",
       "size": 1537726,
-      "sha256": "514ce85675c8f3cfc4bd336527b03f4101b0e60bc35fd828bc27c990d94a07a4"
+      "sha256": "303629fa0693fdbb36726c74a1f194ee41e792f4e7040157189bc77191b48d16"
     },
     {
       "path": "data/overview.js.gz",
@@ -38476,37 +38476,37 @@
     {
       "path": "detail.html",
       "size": 181578,
-      "sha256": "b9e37bd58d8d2dae63760ddbfd289d75ca8283395482901f07997eb175bbd498"
+      "sha256": "4c63430c95de891c88e988593ff673b5df94545e4703416a14291e216b65d56c"
     },
     {
       "path": "gffunds-manager.html",
       "size": 122411,
-      "sha256": "8aab9e24dcaee1238d3c61bd22079c8f28ccff721afecccfec2110b8e12f5b16"
+      "sha256": "99d9c97e0b5268136410d1994f1199b602a159612fc1ba5bf295c19d547dca13"
     },
     {
       "path": "gffunds.html",
       "size": 122361,
-      "sha256": "5efa67080002cbddb1accc6f7f8de37774c3d76799300cc16388c8edbd743b11"
+      "sha256": "feca5a70561d5572bd3064cb5f9fa37a6e5c5d8076efc719490bd288e51d4a94"
     },
     {
       "path": "index.html",
       "size": 189636,
-      "sha256": "c68166b2c93ae90f9aa1cf93ca9c6c6d663a4ef9f6edd6bcd7d9b1e9c8b41890"
+      "sha256": "8690e4ea1b2f3a8a3b82a925aa667bdb4da286b12eea2ed5335b9b6115a0130a"
     },
     {
       "path": "manifest.js",
       "size": 5089,
-      "sha256": "344de4d4db4eaa7688b213e5a148d0337932b7ef657a3bfac1b0c509624bc532"
+      "sha256": "1d62b250fc2dccaae76dd32b2605fb4a86e6173235ebdbbb390391a82831c6d5"
     },
     {
       "path": "manifest.json",
       "size": 6356,
-      "sha256": "4ff98c236eaca70e71f5b835cc56aff2d01bbf7756524f80129877ca9db1c30e"
+      "sha256": "bb8cf61369b77c3d36564e79164ff47412bf4d45e6810406efd320087e2fa8e2"
     },
     {
       "path": "package_validation.json",
       "size": 4328,
-      "sha256": "b0e2291642473bd9165240a5415b245d3cac3c4c9555484477e76c061b9fed9b"
+      "sha256": "40c486f0e4af695f9499af181d9d2775ee68cfc0d33b8959c5a7997e9b15bfd4"
     },
     {
       "path": "performance_budget.json",
@@ -38516,7 +38516,7 @@
     {
       "path": "products.html",
       "size": 5863,
-      "sha256": "69080a96add2cecdc1e94d2d1f5ab29ada5f4dbed1870a3414e3aaed9b3f20ad"
+      "sha256": "a6b4f5c4ec9ced1c9b558d7ee2fdc536e295718ae8c564a82fdc8d1e4f12c123"
     },
     {
       "path": "reports.html",
@@ -38526,7 +38526,7 @@
     {
       "path": "version.json",
       "size": 151,
-      "sha256": "798fa8855c0e0f369c94adabcb33788275ec83ae3eb9e94040a342b80ecd2459"
+      "sha256": "9cc1c8a8a9c7520d59f4f6702720e6def424def3ac884effb5cc5bb81b971f24"
     },
     {
       "path": "招商产品App核对清单.md",
