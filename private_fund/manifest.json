@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.4.0",
-  "generatedAt": "2026-11-18T02:49:52+08:00",
-  "packagedAt": "2026-11-18T04:12:01+08:00",
-  "runId": "20261118T022920390918_github_publish_20636",
+  "generatedAt": "2026-11-18T14:23:04+08:00",
+  "packagedAt": "2026-11-18T15:36:08+08:00",
+  "runId": "20261118T152840421802_github_publish_27584",
   "pages": [
     "index.html",
     "products.html",
@@ -31,8 +31,8 @@
   "counts": {
     "catalogProducts": 16117,
     "detailFiles": 16117,
-    "defaultScatterPlottable": 11149,
-    "defaultScatterEvidenceRail": 4968,
+    "defaultScatterPlottable": 11155,
+    "defaultScatterEvidenceRail": 4962,
     "sourceProducts": {
       "ciccwm_app": 1060,
       "cmb_private_investment": 2908,
@@ -70,7 +70,7 @@
   "cmbPublication": "cmb_display_20260911_v1",
   "cmbQuality": {
     "version": "cmb_display_20260911_v1",
-    "generatedAt": "2026-11-18T02:49:52+08:00",
+    "generatedAt": "2026-11-18T14:23:04+08:00",
     "products": 2908,
     "issueCount": 5,
     "issueShare": 0.0017193947730398899,
@@ -97,7 +97,7 @@
     "missingRule": "every_non_plottable_product_is_rendered_in_evidence_rail"
   },
   "detailFileCount": 16117,
-  "detailTransportFileCount": 4938,
+  "detailTransportFileCount": 4939,
   "detailBundling": {
     "version": 1,
     "maxProducts": 4,
@@ -105,18 +105,18 @@
     "maxDecodedBytes": 786432,
     "keepIndividualAtBytes": 32768,
     "bundleFiles": 3665,
-    "bundledProducts": 12255,
-    "maxActualGzipBytes": 64931,
+    "bundledProducts": 12254,
+    "maxActualGzipBytes": 64987,
     "maxActualDecodedBytes": 756435,
     "originalDetailFiles": 13528,
-    "detailTransportFiles": 4938,
-    "filesSaved": 8590,
-    "originalColdP50Bytes": 14910,
-    "originalColdP95Bytes": 27001,
-    "bundledColdP50Bytes": 50432,
-    "bundledColdP95Bytes": 61961,
-    "extraColdP95Bytes": 46931,
-    "maxExtraColdBytes": 58238
+    "detailTransportFiles": 4939,
+    "filesSaved": 8589,
+    "originalColdP50Bytes": 14916,
+    "originalColdP95Bytes": 27012,
+    "bundledColdP50Bytes": 50411,
+    "bundledColdP95Bytes": 61950,
+    "extraColdP95Bytes": 46917,
+    "maxExtraColdBytes": 58254
   },
   "anonymousDetailBundles": {
     "version": 1,
@@ -164,24 +164,24 @@
       "maxDecodedBytes": 786432,
       "keepIndividualAtBytes": 32768,
       "bundleFiles": 3665,
-      "bundledProducts": 12255,
-      "maxActualGzipBytes": 64931,
+      "bundledProducts": 12254,
+      "maxActualGzipBytes": 64987,
       "maxActualDecodedBytes": 756435,
       "originalDetailFiles": 13528,
-      "detailTransportFiles": 4938,
-      "filesSaved": 8590,
-      "originalColdP50Bytes": 14910,
-      "originalColdP95Bytes": 27001,
-      "bundledColdP50Bytes": 50432,
-      "bundledColdP95Bytes": 61961,
-      "extraColdP95Bytes": 46931,
-      "maxExtraColdBytes": 58238
+      "detailTransportFiles": 4939,
+      "filesSaved": 8589,
+      "originalColdP50Bytes": 14916,
+      "originalColdP95Bytes": 27012,
+      "bundledColdP50Bytes": 50411,
+      "bundledColdP95Bytes": 61950,
+      "extraColdP95Bytes": 46917,
+      "maxExtraColdBytes": 58254
     },
     "productTransport": {
       "products": 16117,
-      "bytes": 1811968,
-      "filterBytes": 78981,
-      "extraBytes": 7987382
+      "bytes": 1808457,
+      "filterBytes": 78986,
+      "extraBytes": 7982720
     },
     "analysisTransport": {
       "version": 2,
@@ -190,16 +190,16 @@
       "startDate": "2026-11-18",
       "endDate": "2026-12-03"
     },
-    "baselineCatalogBytes": 351585485,
-    "baselineCatalogGzipBytes": 40185066,
-    "encodedCatalogBytes": 94045963,
+    "baselineCatalogBytes": 351613202,
+    "baselineCatalogGzipBytes": 40180412,
+    "encodedCatalogBytes": 93956781,
     "routeDataGzipBytes": {
-      "catalog": 13736270,
-      "products": 1811968,
-      "overview": 644401,
-      "peers": 8043284,
-      "detail-index": 4184352,
-      "awards-zone": 600564
+      "catalog": 13706408,
+      "products": 1808457,
+      "overview": 643361,
+      "peers": 8008266,
+      "detail-index": 4173979,
+      "awards-zone": 599690
     }
   },
   "scatterControls": {
