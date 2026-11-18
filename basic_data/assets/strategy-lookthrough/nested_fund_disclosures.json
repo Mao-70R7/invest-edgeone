@@ -1,0 +1,598 @@
+{
+  "schemaVersion": 2,
+  "sourceStrategyId": "ttfund__IF5A1JH",
+  "asOf": "2026-11-08",
+  "funds": [
+    {
+      "fundCode": "000217",
+      "fundName": "华安黄金ETF联接C",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "1542df4646ad4f10204a2846dc41c672c2ad31125631d4dfd3dfb45e64530c3d",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830988179_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 91.81639532481906,
+      "rows": [
+        {
+          "name": "华安易富黄金交易型开放式证券投资基金",
+          "fairValue": "38313733857.28",
+          "reportedNavPct": "92.53",
+          "targetCode": "518880",
+          "targetSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610261830936726_1.pdf",
+          "targetPdfSha256": "981d20a68470b055c464468a790cfa0e2a6df44c3ff76966045e7508911ec5cc",
+          "derivativeContracts": [],
+          "parentWeightPct": 91.81639532481906,
+          "bookAssetPctOfParent": {
+            "其他": 0.03623768370245353,
+            "商品": 91.56123445495166,
+            "现金": 0.2189231861649474
+          }
+        }
+      ]
+    },
+    {
+      "fundCode": "006075",
+      "fundName": "博时标普500ETF联接C",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "f65609ae9c8635928f810b6c9bd9aaa0065582fe2483544f8f312759c18fd54b",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830984284_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 92.09069336077775,
+      "rows": [
+        {
+          "name": "博时标普500ETF(QDII)",
+          "fairValue": "9265345877.41",
+          "reportedNavPct": "92.35",
+          "targetCode": "513500",
+          "targetSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610261830937361_1.pdf",
+          "targetPdfSha256": "a71729a06e1777e49c80b8ac33cbef40a5209925825d50ccef62bd84fc989a42",
+          "derivativeContracts": [
+            "ES2612"
+          ],
+          "parentWeightPct": 92.09069336077775,
+          "bookAssetPctOfParent": {
+            "其他": 0.33286891974645083,
+            "现金": 3.236941546229702,
+            "股票": 88.52088289480159
+          }
+        }
+      ]
+    },
+    {
+      "fundCode": "006381",
+      "fundName": "华夏恒生ETF联接C",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "48b7288ffcf9d2879a77694f3c783223b0dfcc6f168fb296f62d9d4572d919f3",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830988408_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 91.45505699196664,
+      "rows": [
+        {
+          "name": "华夏恒生ETF",
+          "fairValue": "3413177190.05",
+          "reportedNavPct": "91.61",
+          "targetCode": "159920",
+          "targetSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610261830930670_1.pdf",
+          "targetPdfSha256": "7953e773c3bf1dbbb47e865c867a894d9f4691b0117237569a20dff453cebfc5",
+          "derivativeContracts": [],
+          "parentWeightPct": 91.45505699196664,
+          "bookAssetPctOfParent": {
+            "其他": 0.8718202214559492,
+            "现金": 6.558412029564168,
+            "股票": 84.02482474094651
+          }
+        }
+      ]
+    },
+    {
+      "fundCode": "007722",
+      "fundName": "天弘标普500发起(QDII-FOF)C",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "8cf07f8dabb339e9882dd75d5a752ded305ed0b93fa97f863d5a199808954a45",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830984011_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 90.33432217945742,
+      "rows": [
+        {
+          "name": "StateStreetSPDRS&P500ETFTrust",
+          "fairValue": "915304575.58",
+          "reportedNavPct": "19.68",
+          "parentWeightPct": 19.4954711584863
+        },
+        {
+          "name": "iSharesCoreS&P500ETF",
+          "fairValue": "915042741.83",
+          "reportedNavPct": "19.68",
+          "parentWeightPct": 19.489894247305443
+        },
+        {
+          "name": "VanguardS&P500ETF",
+          "fairValue": "912682028.66",
+          "reportedNavPct": "19.63",
+          "parentWeightPct": 19.439612388406147
+        },
+        {
+          "name": "StateStreetSPDRPortfolioS&P500ETF",
+          "fairValue": "882632160.96",
+          "reportedNavPct": "18.98",
+          "parentWeightPct": 18.799567156806106
+        },
+        {
+          "name": "iSharesCoreS&P500UCITSETF",
+          "fairValue": "484938885.40",
+          "reportedNavPct": "10.43",
+          "parentWeightPct": 10.328924716620604
+        },
+        {
+          "name": "InvescoS&P500UCITSETF",
+          "fairValue": "130559913.50",
+          "reportedNavPct": "2.81",
+          "parentWeightPct": 2.78085251183282
+        }
+      ]
+    },
+    {
+      "fundCode": "008706",
+      "fundName": "建信富时100指数(QDII)C人民币",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "07a08c27cc80cc9e06ff1fe59467693c7851009cc88d89924def62f844fd8aff",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610261830906333_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 0.9899989610586254,
+      "rows": [
+        {
+          "name": "SCOTTISHMORTGAGEINVTRPLC",
+          "fairValue": "9767029.74",
+          "reportedNavPct": "0.66",
+          "parentWeightPct": 0.6585086466453606
+        },
+        {
+          "name": "POLARCAPITALTECHNOLOGYTR",
+          "fairValue": "4327698.72",
+          "reportedNavPct": "0.29",
+          "parentWeightPct": 0.2917803163355638
+        },
+        {
+          "name": "F&CINVESTMENTTRUSTPLC",
+          "fairValue": "588980.47",
+          "reportedNavPct": "0.04",
+          "parentWeightPct": 0.03970999807770099
+        }
+      ]
+    },
+    {
+      "fundCode": "015016",
+      "fundName": "华安德国(DAX)联接(QDII)C",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "272e74549ae02e36ef20ad10aa9d786812660550a1f3526c7e1f394b5e90ecbb",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830988043_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 92.28421020473662,
+      "rows": [
+        {
+          "name": "华安国际龙头(DAX)交易型开放式指数证券投资基金",
+          "fairValue": "617766101.08",
+          "reportedNavPct": "93.90",
+          "targetCode": "513030",
+          "targetSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610261830936601_1.pdf",
+          "targetPdfSha256": "39fee6271e0f3d74d15c97a15f08b460a75c7751910ce00595249012a57c5504",
+          "derivativeContracts": [
+            "FDAX2612"
+          ],
+          "parentWeightPct": 92.28421020473662,
+          "bookAssetPctOfParent": {
+            "其他": 0.766276012146974,
+            "现金": 6.9600467458849025,
+            "股票": 84.55788744670475
+          }
+        }
+      ]
+    },
+    {
+      "fundCode": "016453",
+      "fundName": "南方纳斯达克100指数发起(QDII)C",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "53d4cc9bc571db8914d34e0ea0ba64da254ba010dd295cd704e3f872114b98c8",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830974867_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 2.5211850539567586,
+      "rows": [
+        {
+          "name": "InvescoNasdaq100ETF",
+          "fairValue": "392753944.77",
+          "reportedNavPct": "2.54",
+          "parentWeightPct": 2.5211850539567586
+        }
+      ]
+    },
+    {
+      "fundCode": "270023",
+      "fundName": "广发全球精选股票(QDII)人民币A",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "16020a468d33493366aa2ace68ca09228c1c0a1ae724f8c54ef8dbf4f331a7e0",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830977488_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 1.7726973414957408,
+      "rows": [
+        {
+          "name": "Value Partners Fund Series OFC - VP HK-US Dividend Low Volatility ETF",
+          "fairValue": "211892598.82",
+          "reportedNavPct": "0.92",
+          "parentWeightPct": 0.8959730813156175
+        },
+        {
+          "name": "GF HKEX Tech & US Tech 100 Index ETF",
+          "fairValue": "85841696.98",
+          "reportedNavPct": "0.37",
+          "parentWeightPct": 0.3629756309415401
+        },
+        {
+          "name": "GF MSCI Global Strategic Metals Select ETF",
+          "fairValue": "51994653.92",
+          "reportedNavPct": "0.23",
+          "parentWeightPct": 0.21985576912110832
+        },
+        {
+          "name": "GFI Unit Trust Series - GFI Global Income Bond Fund",
+          "fairValue": "39343329.52",
+          "reportedNavPct": "0.17",
+          "parentWeightPct": 0.16636052592471617
+        },
+        {
+          "name": "KraneShares Public-Private AI & Technology ETF",
+          "fairValue": "30160680.37",
+          "reportedNavPct": "0.13",
+          "parentWeightPct": 0.12753233419275856
+        }
+      ]
+    },
+    {
+      "fundCode": "000216",
+      "fundName": "华安黄金ETF联接C",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "1542df4646ad4f10204a2846dc41c672c2ad31125631d4dfd3dfb45e64530c3d",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830988179_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 91.81639532481906,
+      "rows": [
+        {
+          "name": "华安易富黄金交易型开放式证券投资基金",
+          "fairValue": "38313733857.28",
+          "reportedNavPct": "92.53",
+          "targetCode": "518880",
+          "targetSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610261830936726_1.pdf",
+          "targetPdfSha256": "981d20a68470b055c464468a790cfa0e2a6df44c3ff76966045e7508911ec5cc",
+          "derivativeContracts": [],
+          "parentWeightPct": 91.81639532481906,
+          "bookAssetPctOfParent": {
+            "其他": 0.03623768370245353,
+            "商品": 91.56123445495166,
+            "现金": 0.2189231861649474
+          }
+        }
+      ],
+      "sourceShareCode": "000217"
+    },
+    {
+      "fundCode": "022653",
+      "fundName": "华安黄金ETF联接C",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "1542df4646ad4f10204a2846dc41c672c2ad31125631d4dfd3dfb45e64530c3d",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830988179_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 91.81639532481906,
+      "rows": [
+        {
+          "name": "华安易富黄金交易型开放式证券投资基金",
+          "fairValue": "38313733857.28",
+          "reportedNavPct": "92.53",
+          "targetCode": "518880",
+          "targetSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610261830936726_1.pdf",
+          "targetPdfSha256": "981d20a68470b055c464468a790cfa0e2a6df44c3ff76966045e7508911ec5cc",
+          "derivativeContracts": [],
+          "parentWeightPct": 91.81639532481906,
+          "bookAssetPctOfParent": {
+            "其他": 0.03623768370245353,
+            "商品": 91.56123445495166,
+            "现金": 0.2189231861649474
+          }
+        }
+      ],
+      "sourceShareCode": "000217"
+    },
+    {
+      "fundCode": "018738",
+      "fundName": "博时标普500ETF联接C",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "f65609ae9c8635928f810b6c9bd9aaa0065582fe2483544f8f312759c18fd54b",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830984284_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 92.09069336077775,
+      "rows": [
+        {
+          "name": "博时标普500ETF(QDII)",
+          "fairValue": "9265345877.41",
+          "reportedNavPct": "92.35",
+          "targetCode": "513500",
+          "targetSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610261830937361_1.pdf",
+          "targetPdfSha256": "a71729a06e1777e49c80b8ac33cbef40a5209925825d50ccef62bd84fc989a42",
+          "derivativeContracts": [
+            "ES2612"
+          ],
+          "parentWeightPct": 92.09069336077775,
+          "bookAssetPctOfParent": {
+            "其他": 0.33286891974645083,
+            "现金": 3.236941546229702,
+            "股票": 88.52088289480159
+          }
+        }
+      ],
+      "sourceShareCode": "006075"
+    },
+    {
+      "fundCode": "050025",
+      "fundName": "博时标普500ETF联接C",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "f65609ae9c8635928f810b6c9bd9aaa0065582fe2483544f8f312759c18fd54b",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830984284_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 92.09069336077775,
+      "rows": [
+        {
+          "name": "博时标普500ETF(QDII)",
+          "fairValue": "9265345877.41",
+          "reportedNavPct": "92.35",
+          "targetCode": "513500",
+          "targetSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610261830937361_1.pdf",
+          "targetPdfSha256": "a71729a06e1777e49c80b8ac33cbef40a5209925825d50ccef62bd84fc989a42",
+          "derivativeContracts": [
+            "ES2612"
+          ],
+          "parentWeightPct": 92.09069336077775,
+          "bookAssetPctOfParent": {
+            "其他": 0.33286891974645083,
+            "现金": 3.236941546229702,
+            "股票": 88.52088289480159
+          }
+        }
+      ],
+      "sourceShareCode": "006075"
+    },
+    {
+      "fundCode": "000071",
+      "fundName": "华夏恒生ETF联接C",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "48b7288ffcf9d2879a77694f3c783223b0dfcc6f168fb296f62d9d4572d919f3",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830988408_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 91.45505699196664,
+      "rows": [
+        {
+          "name": "华夏恒生ETF",
+          "fairValue": "3413177190.05",
+          "reportedNavPct": "91.61",
+          "targetCode": "159920",
+          "targetSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610261830930670_1.pdf",
+          "targetPdfSha256": "7953e773c3bf1dbbb47e865c867a894d9f4691b0117237569a20dff453cebfc5",
+          "derivativeContracts": [],
+          "parentWeightPct": 91.45505699196664,
+          "bookAssetPctOfParent": {
+            "其他": 0.8718202214559492,
+            "现金": 6.558412029564168,
+            "股票": 84.02482474094651
+          }
+        }
+      ],
+      "sourceShareCode": "006381"
+    },
+    {
+      "fundCode": "007721",
+      "fundName": "天弘标普500发起(QDII-FOF)C",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "8cf07f8dabb339e9882dd75d5a752ded305ed0b93fa97f863d5a199808954a45",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830984011_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 90.33432217945742,
+      "rows": [
+        {
+          "name": "StateStreetSPDRS&P500ETFTrust",
+          "fairValue": "915304575.58",
+          "reportedNavPct": "19.68",
+          "parentWeightPct": 19.4954711584863
+        },
+        {
+          "name": "iSharesCoreS&P500ETF",
+          "fairValue": "915042741.83",
+          "reportedNavPct": "19.68",
+          "parentWeightPct": 19.489894247305443
+        },
+        {
+          "name": "VanguardS&P500ETF",
+          "fairValue": "912682028.66",
+          "reportedNavPct": "19.63",
+          "parentWeightPct": 19.439612388406147
+        },
+        {
+          "name": "StateStreetSPDRPortfolioS&P500ETF",
+          "fairValue": "882632160.96",
+          "reportedNavPct": "18.98",
+          "parentWeightPct": 18.799567156806106
+        },
+        {
+          "name": "iSharesCoreS&P500UCITSETF",
+          "fairValue": "484938885.40",
+          "reportedNavPct": "10.43",
+          "parentWeightPct": 10.328924716620604
+        },
+        {
+          "name": "InvescoS&P500UCITSETF",
+          "fairValue": "130559913.50",
+          "reportedNavPct": "2.81",
+          "parentWeightPct": 2.78085251183282
+        }
+      ],
+      "sourceShareCode": "007722"
+    },
+    {
+      "fundCode": "539003",
+      "fundName": "建信富时100指数(QDII)C人民币",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "07a08c27cc80cc9e06ff1fe59467693c7851009cc88d89924def62f844fd8aff",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610261830906333_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 0.9899989610586254,
+      "rows": [
+        {
+          "name": "SCOTTISHMORTGAGEINVTRPLC",
+          "fairValue": "9767029.74",
+          "reportedNavPct": "0.66",
+          "parentWeightPct": 0.6585086466453606
+        },
+        {
+          "name": "POLARCAPITALTECHNOLOGYTR",
+          "fairValue": "4327698.72",
+          "reportedNavPct": "0.29",
+          "parentWeightPct": 0.2917803163355638
+        },
+        {
+          "name": "F&CINVESTMENTTRUSTPLC",
+          "fairValue": "588980.47",
+          "reportedNavPct": "0.04",
+          "parentWeightPct": 0.03970999807770099
+        }
+      ],
+      "sourceShareCode": "008706"
+    },
+    {
+      "fundCode": "000614",
+      "fundName": "华安德国(DAX)联接(QDII)C",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "272e74549ae02e36ef20ad10aa9d786812660550a1f3526c7e1f394b5e90ecbb",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830988043_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 92.28421020473662,
+      "rows": [
+        {
+          "name": "华安国际龙头(DAX)交易型开放式指数证券投资基金",
+          "fairValue": "617766101.08",
+          "reportedNavPct": "93.90",
+          "targetCode": "513030",
+          "targetSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610261830936601_1.pdf",
+          "targetPdfSha256": "39fee6271e0f3d74d15c97a15f08b460a75c7751910ce00595249012a57c5504",
+          "derivativeContracts": [
+            "FDAX2612"
+          ],
+          "parentWeightPct": 92.28421020473662,
+          "bookAssetPctOfParent": {
+            "其他": 0.766276012146974,
+            "现金": 6.9600467458849025,
+            "股票": 84.55788744670475
+          }
+        }
+      ],
+      "sourceShareCode": "015016"
+    },
+    {
+      "fundCode": "016452",
+      "fundName": "南方纳斯达克100指数发起(QDII)C",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "53d4cc9bc571db8914d34e0ea0ba64da254ba010dd295cd704e3f872114b98c8",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830974867_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 2.5211850539567586,
+      "rows": [
+        {
+          "name": "InvescoNasdaq100ETF",
+          "fairValue": "392753944.77",
+          "reportedNavPct": "2.54",
+          "parentWeightPct": 2.5211850539567586
+        }
+      ],
+      "sourceShareCode": "016453"
+    },
+    {
+      "fundCode": "021277",
+      "fundName": "广发全球精选股票(QDII)人民币A",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "16020a468d33493366aa2ace68ca09228c1c0a1ae724f8c54ef8dbf4f331a7e0",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830977488_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 1.7726973414957408,
+      "rows": [
+        {
+          "name": "Value Partners Fund Series OFC - VP HK-US Dividend Low Volatility ETF",
+          "fairValue": "211892598.82",
+          "reportedNavPct": "0.92",
+          "parentWeightPct": 0.8959730813156175
+        },
+        {
+          "name": "GF HKEX Tech & US Tech 100 Index ETF",
+          "fairValue": "85841696.98",
+          "reportedNavPct": "0.37",
+          "parentWeightPct": 0.3629756309415401
+        },
+        {
+          "name": "GF MSCI Global Strategic Metals Select ETF",
+          "fairValue": "51994653.92",
+          "reportedNavPct": "0.23",
+          "parentWeightPct": 0.21985576912110832
+        },
+        {
+          "name": "GFI Unit Trust Series - GFI Global Income Bond Fund",
+          "fairValue": "39343329.52",
+          "reportedNavPct": "0.17",
+          "parentWeightPct": 0.16636052592471617
+        },
+        {
+          "name": "KraneShares Public-Private AI & Technology ETF",
+          "fairValue": "30160680.37",
+          "reportedNavPct": "0.13",
+          "parentWeightPct": 0.12753233419275856
+        }
+      ],
+      "sourceShareCode": "270023"
+    },
+    {
+      "fundCode": "023402",
+      "fundName": "广发全球精选股票(QDII)人民币A",
+      "reportDate": "2026-09-30",
+      "parentPdfSha256": "16020a468d33493366aa2ace68ca09228c1c0a1ae724f8c54ef8dbf4f331a7e0",
+      "parentSourceUrl": "https://pdf.dfcfw.com/pdf/H2_AN202610271830977488_1.pdf",
+      "gap": null,
+      "investmentPctOfParent": 1.7726973414957408,
+      "rows": [
+        {
+          "name": "Value Partners Fund Series OFC - VP HK-US Dividend Low Volatility ETF",
+          "fairValue": "211892598.82",
+          "reportedNavPct": "0.92",
+          "parentWeightPct": 0.8959730813156175
+        },
+        {
+          "name": "GF HKEX Tech & US Tech 100 Index ETF",
+          "fairValue": "85841696.98",
+          "reportedNavPct": "0.37",
+          "parentWeightPct": 0.3629756309415401
+        },
+        {
+          "name": "GF MSCI Global Strategic Metals Select ETF",
+          "fairValue": "51994653.92",
+          "reportedNavPct": "0.23",
+          "parentWeightPct": 0.21985576912110832
+        },
+        {
+          "name": "GFI Unit Trust Series - GFI Global Income Bond Fund",
+          "fairValue": "39343329.52",
+          "reportedNavPct": "0.17",
+          "parentWeightPct": 0.16636052592471617
+        },
+        {
+          "name": "KraneShares Public-Private AI & Technology ETF",
+          "fairValue": "30160680.37",
+          "reportedNavPct": "0.13",
+          "parentWeightPct": 0.12753233419275856
+        }
+      ],
+      "sourceShareCode": "270023"
+    }
+  ],
+  "proofSha256": "bb7fca64792d1b944f4d34b0c41df1c4cd6fb89c4ecdafa9269326cc10e2592a"
+}
