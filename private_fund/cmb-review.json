@@ -1,9 +1,9 @@
 {
   "version": "cmb_display_20260911_v1",
-  "generatedAt": "2026-11-18T21:06:50+08:00",
-  "products": 2908,
-  "issueCount": 5,
-  "issueShare": 0.0017193947730398899,
+  "generatedAt": "2026-11-19T10:59:27+08:00",
+  "products": 2909,
+  "issueCount": 6,
+  "issueShare": 0.002062564455139223,
   "maxIssueShare": 0.05,
   "incomeCurveProducts": 14,
   "expectedNoHistoryProducts": 0,
@@ -19,6 +19,14 @@
     {
       "id": "T17236",
       "name": "华润信托-鹏扬稳利1期尊享AF号",
+      "company": "华润深国投信托有限公司",
+      "latestNavDate": null,
+      "analysisPointCount": 0,
+      "dataQualityNote": "历史接口此前返回空；请核对App是否有业绩走势"
+    },
+    {
+      "id": "T17237",
+      "name": "华润信托-鹏扬稳利1期尊享AG号",
       "company": "华润深国投信托有限公司",
       "latestNavDate": null,
       "analysisPointCount": 0,
