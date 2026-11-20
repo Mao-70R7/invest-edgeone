@@ -128,7 +128,8 @@
     "数据总览",
     "产品列表",
     "广发专区",
-    "获奖专区"
+    "获奖专区",
+    "四渠道货架"
   ],
   "awardsZone": "data/awards-zone.js.gz",
   "awardsSummary": {
