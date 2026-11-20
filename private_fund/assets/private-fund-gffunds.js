@@ -97,7 +97,8 @@
     return items.map((product) => `<tr>
       <td><a class="gf-primary-link" href="${productHref(product, managerId)}">${esc(product.name)}</a><small>${esc(product.id)} · ${esc(product.strategyType)}</small></td>
       <td>${esc((product.managerNames || []).join("、"))}</td>
-      <td>${P.formatDate(product.latestPerformanceDate)}</td>
+      <td>${P.formatDate(product.latestPerformanceDate)}${product.cumulativeReturnDisclosureGap === "official_cumulative_return_not_disclosed"
+        ? `<small>${product.officialCumulativeReturnDate ? `官方累计收益截至 ${esc(P.formatDate(product.officialCumulativeReturnDate))}，后续未披露` : "官方累计收益未披露"}</small>` : ""}</td>
       <td>${Number(product.historyPointCount || 0).toLocaleString("zh-CN")}</td>
       <td>${metricCell("return1m", metric(product, "return1m"))}</td>
       <td>${metricCell("return3m", metric(product, "return3m"))}</td>
