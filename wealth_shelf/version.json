@@ -1,0 +1,180 @@
+{
+  "release_id": "wealth_shelf_watch_20261113",
+  "as_of": "2026-11-13",
+  "snapshot_at": "2026-11-13T10:40:36.990037+08:00",
+  "prepared_at": "2026-11-13T11:04:25.790058+08:00",
+  "summary": [
+    {
+      "channel": "嘉实财富",
+      "source": "harvestwm_highend",
+      "products": 1088,
+      "scales": 448,
+      "scale_yi": 857.751474,
+      "over_1e8": 169,
+      "updated_big": 160,
+      "latest_nav": "2026-11-12",
+      "periods": {
+        "ytd": 550,
+        "1w": 697,
+        "1m": 718,
+        "3m": 692,
+        "6m": 612,
+        "1y": 526,
+        "2y": 353,
+        "3y": 273
+      },
+      "large_periods": {
+        "ytd": 135,
+        "1w": 148,
+        "1m": 158,
+        "3m": 158,
+        "6m": 153,
+        "1y": 125,
+        "2y": 54,
+        "3y": 40
+      },
+      "reference_periods": {
+        "ytd": 7,
+        "1w": 2,
+        "1m": 8,
+        "3m": 3,
+        "6m": 8,
+        "1y": 2,
+        "2y": 2,
+        "3y": 1
+      }
+    },
+    {
+      "channel": "中金财富",
+      "source": "ciccwm_app",
+      "products": 1060,
+      "scales": 396,
+      "scale_yi": 321.8463548125,
+      "over_1e8": 119,
+      "updated_big": 16,
+      "latest_nav": "2026-11-10",
+      "periods": {
+        "ytd": 159,
+        "1w": 209,
+        "1m": 210,
+        "3m": 195,
+        "6m": 171,
+        "1y": 153,
+        "2y": 134,
+        "3y": 125
+      },
+      "large_periods": {
+        "ytd": 9,
+        "1w": 5,
+        "1m": 9,
+        "3m": 9,
+        "6m": 9,
+        "1y": 9,
+        "2y": 5,
+        "3y": 4
+      },
+      "reference_periods": {
+        "ytd": 73,
+        "1w": 106,
+        "1m": 110,
+        "3m": 107,
+        "6m": 88,
+        "1y": 66,
+        "2y": 38,
+        "3y": 35
+      }
+    },
+    {
+      "channel": "好买财富",
+      "source": "howbuy",
+      "products": 2835,
+      "scales": 2386,
+      "scale_yi": 2618.075393,
+      "over_1e8": 717,
+      "updated_big": 688,
+      "latest_nav": "2026-11-11",
+      "periods": {
+        "ytd": 2671,
+        "1w": 2607,
+        "1m": 0,
+        "3m": 0,
+        "6m": 2696,
+        "1y": 2646,
+        "2y": 2581,
+        "3y": 2338
+      },
+      "large_periods": {
+        "ytd": 674,
+        "1w": 666,
+        "1m": 0,
+        "3m": 0,
+        "6m": 680,
+        "1y": 672,
+        "2y": 657,
+        "3y": 608
+      },
+      "reference_periods": {
+        "ytd": 31,
+        "1w": 33,
+        "1m": 699,
+        "3m": 713,
+        "6m": 32,
+        "1y": 31,
+        "2y": 31,
+        "3y": 31
+      }
+    },
+    {
+      "channel": "中欧财富",
+      "source": "zocaifu_highend",
+      "products": 80,
+      "scales": 41,
+      "scale_yi": 52.6020305216,
+      "over_1e8": 8,
+      "updated_big": 8,
+      "latest_nav": "2026-11-12",
+      "periods": {
+        "ytd": 45,
+        "1w": 66,
+        "1m": 64,
+        "3m": 60,
+        "6m": 58,
+        "1y": 40,
+        "2y": 21,
+        "3y": 14
+      },
+      "large_periods": {
+        "ytd": 5,
+        "1w": 6,
+        "1m": 6,
+        "3m": 6,
+        "6m": 6,
+        "1y": 5,
+        "2y": 2,
+        "3y": 1
+      },
+      "reference_periods": {
+        "ytd": 0,
+        "1w": 0,
+        "1m": 0,
+        "3m": 0,
+        "6m": 0,
+        "1y": 0,
+        "2y": 0,
+        "3y": 0
+      }
+    }
+  ],
+  "scope": "原已验收货架产品/份额范围；最新已验收入库事实；不跨来源拼接",
+  "files": {
+    "four_channel_data.json.gz": "c622870b6f3ce78bc655052351886fdcef58fb354139b36d81113ecfbc2a1dd6",
+    "four_channel_products.csv": "92f4df864c733d53e8812157e74f71736fe5b5281aa300ccfde4be33db5c2edb",
+    "four_channel_report.html": "3ce76793bda624f0f3c17129b166447ede594965fbb5d3978783b835c999746a",
+    "index.html": "2d5d1113f5e20092bc619ab6c1cc71deafc70069693a903270661772665c702d",
+    "scale_performance_tracking.csv": "748b5ab09ab939422c05689755d30cee4c32198422d9c48545e16f19f431b422",
+    "shelf_scale_data.json": "e98e0dfad9851e65ce6f1e2354cbc7159d4dd1069fbd8a090fde6ca3957d5d14",
+    "shelf_scale_report.html": "8ead9ff141087f0a75adef13bcec57f66dd312df1af4016ac8303a4f67dcc680",
+    "shelf_scale_watch.css": "4d23438103248f48d4e98d430e3c994ebf29fd2b5ca610cb9d77c60615057367",
+    "shelf_scale_watch.js": "d414bcd8da24d99b92d8c7fa409f5338773c6380499a51cdfd2a9c910b3de386"
+  }
+}

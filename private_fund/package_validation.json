@@ -1,0 +1,159 @@
+{
+  "status": "ready",
+  "generatedAt": "2026-11-21T20:51:12+08:00",
+  "checks": {
+    "pageCount": 7,
+    "detailFileCount": 16123,
+    "detailTransportFileCount": 4944,
+    "detailBundling": {
+      "version": 1,
+      "maxProducts": 4,
+      "maxGzipBytes": 65536,
+      "maxDecodedBytes": 786432,
+      "keepIndividualAtBytes": 32768,
+      "bundleFiles": 3674,
+      "bundledProducts": 12263,
+      "maxActualGzipBytes": 64862,
+      "maxActualDecodedBytes": 757849,
+      "originalDetailFiles": 13533,
+      "detailTransportFiles": 4944,
+      "filesSaved": 8589,
+      "originalColdP50Bytes": 14950,
+      "originalColdP95Bytes": 27022,
+      "bundledColdP50Bytes": 50406,
+      "bundledColdP95Bytes": 61910,
+      "extraColdP95Bytes": 46933,
+      "maxExtraColdBytes": 58251
+    },
+    "anonymousDetailBundleCount": 256,
+    "anonymousBundledProductsVerified": 2846,
+    "catalogRowCount": 16123,
+    "sourceProductCounts": {
+      "ciccwm_app": 1060,
+      "cmb_private_investment": 2909,
+      "geshang": 314,
+      "gffunds_highend": 68,
+      "harvestwm_highend": 1112,
+      "howbuy": 2846,
+      "jsfund_highend": 350,
+      "ruiyuan_highend": 137,
+      "simuwang": 5644,
+      "xueqiu": 1602,
+      "zocaifu_highend": 81
+    },
+    "harvestwmPublication": "harvestwm_business_display_20261026_v1",
+    "harvestwmExpectedProducts": 1112,
+    "cmbPublication": "cmb_display_20260911_v1",
+    "cmbQuality": {
+      "version": "cmb_display_20260911_v1",
+      "generatedAt": "2026-11-21T19:37:50+08:00",
+      "products": 2909,
+      "issueCount": 6,
+      "issueShare": 0.002062564455139223,
+      "maxIssueShare": 0.05,
+      "incomeCurveProducts": 14,
+      "expectedNoHistoryProducts": 0
+    },
+    "scatterControls": {
+      "status": "passed",
+      "version": 2,
+      "multiSelect": [
+        "company",
+        "strategy"
+      ],
+      "defaultProductScope": "recent_performance_30d",
+      "paletteStorage": "browser_local",
+      "companyMatching": "exact_disclosed_name",
+      "helperSha256": "333ee4b12a9eca2f4c62f652aa831646a1230441fa6e47ed7737dd0d6a5a3b48"
+    },
+    "gffundsZone": {
+      "status": "passed",
+      "productCount": 68,
+      "managerCount": 21,
+      "publicReportProductCount": 52,
+      "partialHoldingProductCount": 51,
+      "sourceFreshness": {
+        "status": "passed",
+        "basis": "authenticated_nav_admission_and_official_cumulative_return_v2",
+        "cacheProductCount": 123,
+        "checkedZoneProductCount": 67,
+        "navCheckedProductCount": 67,
+        "cumulativeReturnCheckedProductCount": 60,
+        "cumulativeReturnDisclosureGapCount": 7,
+        "staleProductCount": 0
+      },
+      "restrictedRawDataIncluded": false
+    },
+    "detailExperience": "peer_benchmark_public_v3",
+    "navigation": {
+      "index.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "获奖专区",
+        "四渠道货架",
+        "天眼投顾 ↗"
+      ],
+      "products.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "获奖专区",
+        "四渠道货架",
+        "天眼投顾 ↗"
+      ],
+      "detail.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "获奖专区",
+        "四渠道货架",
+        "天眼投顾 ↗"
+      ],
+      "gffunds.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "获奖专区",
+        "四渠道货架",
+        "天眼投顾 ↗"
+      ],
+      "gffunds-manager.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "获奖专区",
+        "四渠道货架",
+        "天眼投顾 ↗"
+      ],
+      "awards.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "获奖专区",
+        "四渠道货架",
+        "天眼投顾 ↗"
+      ],
+      "reports.html": [
+        "数据总览",
+        "产品列表",
+        "广发专区",
+        "获奖专区",
+        "四渠道货架",
+        "天眼投顾 ↗"
+      ]
+    },
+    "sourceValidationStatus": "passed",
+    "sourceAuditStatus": "warn",
+    "accessScope": "public_catalog_plus_scoped_performance_analytics",
+    "authenticatedPerformanceAnalyticsIncluded": true,
+    "restrictedAnalyticsDetailCount": 7707,
+    "restrictedRawDataIncluded": false,
+    "rawDetailBytes": 2264528926,
+    "compressedDetailBytes": 260546963,
+    "compressionRatio": 0.115056,
+    "maxCompressedDetailBytes": 544446,
+    "maxCompressedDetailFile": "anonymous/bc.js.gz",
+    "oversizedFileCount": 0
+  }
+}
