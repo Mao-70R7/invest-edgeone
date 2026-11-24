@@ -1,0 +1,219 @@
+{
+  "schemaVersion": "1.4.0",
+  "generatedAt": "2026-11-24T20:44:32+08:00",
+  "packagedAt": "2026-11-24T21:49:34+08:00",
+  "runId": "20261124T203721296300_github_publish_5268",
+  "pages": [
+    "index.html",
+    "products.html",
+    "detail.html",
+    "gffunds.html",
+    "gffunds-manager.html",
+    "awards.html",
+    "reports.html"
+  ],
+  "managerZoneEnabled": false,
+  "catalog": "data/catalog.js.gz",
+  "gffundsZone": "data/gffunds-zone.js.gz",
+  "gffundsZoneSummary": {
+    "productCount": 68,
+    "managerCount": 20,
+    "managerGroupCount": 21,
+    "unassignedProductCount": 3,
+    "activeProductCount": 59,
+    "historyReadyCount": 64,
+    "verifiedOneYearMetricCount": 40,
+    "fullPortfolioProductCount": 0,
+    "latestPerformanceDate": "2026-11-23",
+    "activeCutoffDate": "2026-10-23"
+  },
+  "gffundsResearchPublished": false,
+  "counts": {
+    "catalogProducts": 16125,
+    "detailFiles": 16125,
+    "defaultScatterPlottable": 11186,
+    "defaultScatterEvidenceRail": 4939,
+    "sourceProducts": {
+      "ciccwm_app": 1060,
+      "cmb_private_investment": 2909,
+      "geshang": 314,
+      "gffunds_highend": 68,
+      "harvestwm_highend": 1113,
+      "howbuy": 2846,
+      "jsfund_highend": 350,
+      "ruiyuan_highend": 137,
+      "simuwang": 5644,
+      "xueqiu": 1603,
+      "zocaifu_highend": 81
+    },
+    "metricDefinitions": 35,
+    "gffundsProducts": 68,
+    "gffundsZoneProducts": 68,
+    "gffundsZoneManagers": 21,
+    "gffundsZoneStaleProducts": 0
+  },
+  "sourceCounts": {
+    "ciccwm_app": 1060,
+    "cmb_private_investment": 2909,
+    "geshang": 314,
+    "gffunds_highend": 68,
+    "harvestwm_highend": 1113,
+    "howbuy": 2846,
+    "jsfund_highend": 350,
+    "ruiyuan_highend": 137,
+    "simuwang": 5644,
+    "xueqiu": 1603,
+    "zocaifu_highend": 81
+  },
+  "harvestwmPublication": "harvestwm_business_display_20261026_v1",
+  "harvestwmExpectedProducts": 1113,
+  "cmbPublication": "cmb_display_20260911_v1",
+  "cmbQuality": {
+    "version": "cmb_display_20260911_v1",
+    "generatedAt": "2026-11-24T20:44:32+08:00",
+    "products": 2909,
+    "issueCount": 6,
+    "issueShare": 0.002062564455139223,
+    "maxIssueShare": 0.05,
+    "incomeCurveProducts": 14,
+    "expectedNoHistoryProducts": 0
+  },
+  "accessScope": "public_catalog_plus_scoped_performance_analytics",
+  "authenticatedPerformanceAnalyticsIncluded": true,
+  "restrictedRawDataIncluded": false,
+  "productIdentity": "source_isolated",
+  "comparability": {
+    "defaultMode": "verified_shared_axis",
+    "crossSourceRankingAllowed": true,
+    "crossSourceScoringAllowed": true,
+    "researchPeerRankingAllowed": true,
+    "referenceOnly": true,
+    "formulaAlignment": "formula_aligned_only",
+    "warning": "同图仅表示公式与尺度统一；格上复权净值、排排网复权收益与广发/嘉实/睿远/招商来源累计净值的费用、分红处理和估值频率未完全统一。累计净值不等同于分红再投资收益；排名仅作分类内研究参考。"
+  },
+  "allProductMarksContract": {
+    "totalEligible": 16125,
+    "plottableRule": "selected_x_and_y_are_strict_numeric",
+    "missingRule": "every_non_plottable_product_is_rendered_in_evidence_rail"
+  },
+  "detailFileCount": 16125,
+  "detailTransportFileCount": 4944,
+  "detailBundling": {
+    "version": 1,
+    "maxProducts": 4,
+    "maxGzipBytes": 65536,
+    "maxDecodedBytes": 786432,
+    "keepIndividualAtBytes": 32768,
+    "bundleFiles": 3674,
+    "bundledProducts": 12265,
+    "maxActualGzipBytes": 64877,
+    "maxActualDecodedBytes": 760965,
+    "originalDetailFiles": 13535,
+    "detailTransportFiles": 4944,
+    "filesSaved": 8591,
+    "originalColdP50Bytes": 14951,
+    "originalColdP95Bytes": 27049,
+    "bundledColdP50Bytes": 50476,
+    "bundledColdP95Bytes": 61919,
+    "extraColdP95Bytes": 46941,
+    "maxExtraColdBytes": 58346
+  },
+  "anonymousDetailBundles": {
+    "version": 1,
+    "files": 256,
+    "products": 2846
+  },
+  "compression": "deterministic_gzip_browser_decompression",
+  "navigation": [
+    "数据总览",
+    "产品列表",
+    "广发专区",
+    "获奖专区",
+    "四渠道货架"
+  ],
+  "awardsZone": "data/awards-zone.js.gz",
+  "awardsSummary": {
+    "recordCount": 2609,
+    "byType": {
+      "产品": 698,
+      "公司": 1366,
+      "经理": 545
+    },
+    "byBrand": {
+      "英华": 949,
+      "金长江": 753,
+      "金牛": 451,
+      "金阳光": 456
+    },
+    "scatterEntities": {
+      "公司": 377,
+      "经理": 334,
+      "产品": 614
+    },
+    "scatterLinked": {
+      "公司": 188,
+      "经理": 123,
+      "产品": 69
+    }
+  },
+  "performance": {
+    "method": "lossless_record_encoding_and_route_specific_data",
+    "detailBundling": {
+      "version": 1,
+      "maxProducts": 4,
+      "maxGzipBytes": 65536,
+      "maxDecodedBytes": 786432,
+      "keepIndividualAtBytes": 32768,
+      "bundleFiles": 3674,
+      "bundledProducts": 12265,
+      "maxActualGzipBytes": 64877,
+      "maxActualDecodedBytes": 760965,
+      "originalDetailFiles": 13535,
+      "detailTransportFiles": 4944,
+      "filesSaved": 8591,
+      "originalColdP50Bytes": 14951,
+      "originalColdP95Bytes": 27049,
+      "bundledColdP50Bytes": 50476,
+      "bundledColdP95Bytes": 61919,
+      "extraColdP95Bytes": 46941,
+      "maxExtraColdBytes": 58346
+    },
+    "productTransport": {
+      "products": 16125,
+      "bytes": 1810681,
+      "filterBytes": 79028,
+      "extraBytes": 8006402
+    },
+    "analysisTransport": {
+      "version": 2,
+      "products": 16125,
+      "productBuckets": 2048,
+      "startDate": "2026-11-24",
+      "endDate": "2026-12-09"
+    },
+    "baselineCatalogBytes": 352292999,
+    "baselineCatalogGzipBytes": 40434089,
+    "encodedCatalogBytes": 94237889,
+    "routeDataGzipBytes": {
+      "catalog": 13760017,
+      "products": 1810681,
+      "overview": 643025,
+      "peers": 8017541,
+      "detail-index": 4157514,
+      "awards-zone": 599241
+    }
+  },
+  "scatterControls": {
+    "status": "passed",
+    "version": 2,
+    "multiSelect": [
+      "company",
+      "strategy"
+    ],
+    "defaultProductScope": "recent_performance_30d",
+    "paletteStorage": "browser_local",
+    "companyMatching": "exact_disclosed_name",
+    "helperSha256": "333ee4b12a9eca2f4c62f652aa831646a1230441fa6e47ed7737dd0d6a5a3b48"
+  },
+  "detailExperience": "peer_benchmark_public_v3"
+}

@@ -1,0 +1,16 @@
+{
+  "contract": "private_site_split_v1",
+  "repository": "https://github.com/Mao-70R7/invest-edgeone.git",
+  "branch": "private-release",
+  "sourceMain": "185567a7e3c35f0eba396a878e472ebea80daa6a",
+  "preservedSubtrees": {
+    "private_fund": "a85249232d3a67f83c8a48a454d4a4656221e736",
+    "wealth_shelf": "a4395b673045f4955143cced6e11c43f4cf63b1e"
+  },
+  "fileCount": 7593,
+  "businessBytes": 377086046,
+  "businessFilesByteIdentical": true,
+  "targetOrigin": "https://private.gfinvest.site",
+  "entryPath": "/private_fund/",
+  "mainBranchModified": false
+}
