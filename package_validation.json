@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-27T14:40:09+08:00",
+  "status": "ready",
+  "checks": {
+    "monthlyRebalanceMonthCount": 12,
+    "strategySummaryCount": 2703,
+    "strategyDetailCount": 2703,
+    "strategyDetailMissingCount": 0,
+    "strategyDetailParseErrorCount": 0,
+    "strategyDetailDeclaredIncompleteCount": 779,
+    "strategyDetailWithoutHoldingCount": 467,
+    "strategyDetailWithoutCurveCount": 466,
+    "strategyDetailReferencedFundCount": 6434,
+    "selectedFundCount": 0,
+    "enhancedFundDetailCount": 0,
+    "baseOnlyFundCount": 0,
+    "brokenFundDetailCount": 0,
+    "forbiddenFundDetailPageCount": 0,
+    "forbiddenFundDetailFileCount": 0,
+    "strategyDetailSourceCount": 2703,
+    "strategyDetailDeclaredCompleteCount": 1924,
+    "activeStrategyCount": 2123,
+    "activeStrategyWithoutCurveCount": 333,
+    "currentHoldingStrategyCount": 2209,
+    "currentHoldingFundReferenceCount": 39201,
+    "currentHoldingRankMissingReferenceCount": 278,
+    "activeCurrentHoldingRankMissingReferenceCount": 266,
+    "inactiveCurrentHoldingRankMissingReferenceCount": 12,
+    "currentHoldingScaleErrorReferenceCount": 0,
+    "historyRebalanceStrategyCount": 2054,
+    "assessedHistoryRebalanceStrategyCount": 1720,
+    "unassessedHistoryRebalanceStrategyCount": 334,
+    "officialPerformanceImageReferenceCount": 0,
+    "officialPerformanceImageInvalidReferenceCount": 0,
+    "officialPerformanceImageMissingSourceAssetCount": 0,
+    "currentHolding近一月RankedReferenceCount": 39009,
+    "currentHolding近三月RankedReferenceCount": 39021,
+    "currentHolding近6月RankedReferenceCount": 39023,
+    "currentHolding近1年RankedReferenceCount": 38931,
+    "officialPerformanceImagePublishedAssetCount": 0,
+    "officialPerformanceImageMissingPublishedAssetCount": 0,
+    "fundDetailParsedCount": 0,
+    "fundDetailNavChartCount": 0,
+    "fundDetailNavChartMissingCount": 0,
+    "fundDetailBenchmarkChartCount": 0,
+    "fundDetailChartScaleErrorCount": 0,
+    "fundDetailParseErrorCount": 0,
+    "holdingSnapshotSourceRowCount": 529463,
+    "holdingSnapshotPublishedRowCount": 130561,
+    "holdingSnapshotStrategyCount": 2165,
+    "strategy-lookthroughFileCount": 2873,
+    "strategy-lookthroughBytes": 668259255,
+    "monthly-rebalance-reportsFileCount": 14,
+    "monthly-rebalance-reportsBytes": 21153361,
+    "lookthroughWrapperCloneBytesAvoided": 563338806
+  },
+  "policy": {
+    "blockingZeroChecks": [
+      "strategyDetailMissingCount",
+      "strategyDetailParseErrorCount",
+      "officialPerformanceImageInvalidReferenceCount",
+      "officialPerformanceImageMissingSourceAssetCount",
+      "officialPerformanceImageMissingPublishedAssetCount",
+      "forbiddenFundDetailPageCount",
+      "forbiddenFundDetailFileCount",
+      "currentHoldingScaleErrorReferenceCount"
+    ],
+    "warningOnlyChecks": [
+      "activeCurrentHoldingRankMissingReferenceCount"
+    ],
+    "warningCounts": {
+      "activeCurrentHoldingRankMissingReferenceCount": 266
+    }
+  },
+  "warnings": [
+    {
+      "type": "source_strategy_data_incomplete",
+      "count": 779,
+      "note": "源数据已明确标记不完整，发布集保留真实缺失状态，不做推测补齐。"
+    },
+    {
+      "type": "active_strategy_without_curve",
+      "count": 333,
+      "note": "活跃策略没有任何可画曲线时保留真实缺失状态；正常披露策略应为0。"
+    },
+    {
+      "type": "current_holding_rank_missing",
+      "count": 278,
+      "activeCount": 266,
+      "inactiveCount": 12,
+      "note": "同类排名缺失属于可披露的覆盖率缺口，不阻断其他准确数据发布；页面不把缺失仓位计为前50%。"
+    },
+    {
+      "type": "history_rebalance_unassessed",
+      "count": 334,
+      "note": "历史事件仅为建仓或底层净值不足时不计算胜率，页面展示具体原因。"
+    }
+  ],
+  "pageVersionValidation": {
+    "status": "passed",
+    "buildId": "minimal-e62985455e99",
+    "pageCount": 18
+  },
+  "monthlyRebalanceValidation": {
+    "status": "passed",
+    "monthCount": 12,
+    "latestMonth": "2026-10",
+    "databaseRecomputed": true
+  },
+  "sourceValidation": {
+    "status": "passed",
+    "validatedAt": "2026-11-27T15:35:39+08:00",
+    "databasePath": "E:\\天眼系统\\数据库\\analysis_zh_current.sqlite",
+    "dbIndependentRecompute": true,
+    "checksComplete": true,
+    "inputSnapshotAudit": null,
+    "errorCount": 0
+  }
+}
